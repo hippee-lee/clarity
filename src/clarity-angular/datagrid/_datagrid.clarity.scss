@@ -57,6 +57,10 @@
         &.datagrid-fixed-width {
             flex: 0 0 auto;
         }
+
+        &--hidden {
+            display: none;
+        }
     }
 
     // Class only applied temporarily when computing columns width
@@ -437,6 +441,25 @@
         .pagination {
             margin-left: $clr_baselineRem_1_5;
             height: $clr_baselineRem_1_5 - 2px;
+        }
+
+        .column-switch-wrapper {
+            margin-right: auto;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .column-switch {
+                border-radius: $clr-default-borderradius;
+                position: absolute;
+                bottom: $clr-baselineRem_1_25;
+                padding: $clr-button-padding;
+                background-color: $clr-white;
+                border: 1px solid $clr-light-midtone-gray;
+                width: 250px;
+            }
         }
     }
 

@@ -22,6 +22,7 @@ import {DatagridStringFilteringDemo} from "./string-filtering/string-filtering";
 import {DatagridPlaceholderDemo} from "./placeholder/placeholder";
 import {DatagridScrollingDemo} from "./scrolling/scrolling";
 import {DatagridColumnSizingDemo} from "./column-sizing/column-sizing";
+import {DatagridHideShowDemo} from "./hide-show-columns/hide-show";
 
 const ROUTES: Routes = [
     {
@@ -44,6 +45,7 @@ const ROUTES: Routes = [
             {path: "scrolling", component: DatagridScrollingDemo},
             {path: "column-sizing", component: DatagridColumnSizingDemo},
             {path: "full", component: DatagridFullDemo},
+            {path: "hide-show", component: DatagridHideShowDemo},
         ]
     }
 ];

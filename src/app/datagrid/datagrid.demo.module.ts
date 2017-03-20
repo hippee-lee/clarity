@@ -28,6 +28,7 @@ import {DatagridColumnSizingDemo} from "./column-sizing/column-sizing";
 
 import {ColorFilter} from "./utils/color-filter";
 import {Example} from "./utils/example";
+import {DatagridHideShowDemo} from "./hide-show-columns/hide-show";
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import {Example} from "./utils/example";
         DatagridCustomRenderingDemo,
         DatagridFilteringDemo,
         DatagridFullDemo,
+        DatagridHideShowDemo,
         DatagridPaginationDemo,
         DatagridSelectionDemo,
         DatagridSelectionSingleDemo,

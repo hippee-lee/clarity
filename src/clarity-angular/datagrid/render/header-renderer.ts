@@ -16,6 +16,7 @@ export class DatagridHeaderRenderer implements OnDestroy {
 
     constructor(private el: ElementRef, private renderer: Renderer, private domAdapter: DomAdapter,
                 organizer: DatagridRenderOrganizer) {
+
         this.subscription = organizer.clearWidths.subscribe(() => this.clearWidth());
     }
 
