@@ -35,12 +35,17 @@
     </div>
 
     <!-- Custom placeholder overrides the default empty one -->
-    <ng-content select="clr-dg-placeholder"></ng-content>
-    <clr-dg-placeholder *ngIf="!placeholder"></clr-dg-placeholder>
+    <div #footer>
+        <clr-dg-placeholder *ngIf="!placeholder"></clr-dg-placeholder>
+    </div>
+    <!--<ng-content select="clr-dg-placeholder"></ng-content>-->
+
 
     <!--
         This is not inside the table because there is no good way of having a single column span
         everything when using custom elements with display:table-cell.
+
+        Q: How to use #reference here so I can @ViewChild it?
     -->
     <ng-content select="clr-dg-footer"></ng-content>
 

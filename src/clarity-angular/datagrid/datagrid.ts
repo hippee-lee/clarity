@@ -24,14 +24,15 @@ import {RowActionService} from "./providers/row-action-service";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
 import {DatagridActionOverflow} from "./datagrid-action-overflow";
 import {DatagridStringFilterImpl} from "./built-in/filters/datagrid-string-filter-impl";
-
-
-
+import {HideableColumnService} from "./providers/hideable-column.service";
+import {DatagridFooter} from "./datagrid-footer";
+import {DatagridHideableColumnDirective} from "./datagrid-hidable-column.directive";
 
 @Component({
     selector: "clr-datagrid",
     templateUrl: "./datagrid.html",
-    providers: [Selection, Sort, FiltersProvider, Page, RowActionService, Items, DatagridRenderOrganizer],
+    providers: [Selection, Sort, FiltersProvider, Page, RowActionService, Items, DatagridRenderOrganizer,
+        HideableColumnService],
     host: {
         "[class.datagrid-container]": "true"
     }
@@ -175,6 +176,13 @@ export class Datagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     }
 
     /**
+     * DatagridHideableColumnDirective detection
+     *
+     * - Instantiate a DatagridColumnToggle instance and add it to the footer in first position.
+     */
+    @ContentChildren(DatagridHideableColumnDirective, {descendants: true}) dgHideDirectives: QueryList<DatagridHideableColumnDirective>;
+
+    /**
      * Custom placeholder detection
      */
     @ContentChild(DatagridPlaceholder) public placeholder: DatagridPlaceholder;
@@ -191,7 +199,7 @@ export class Datagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      * We get deep nested DatagridActionOverflow children components, listen to the changes in them,
      * and figure out if the datagrid has at least one actionable row.
      */
-    @ContentChildren(DatagridActionOverflow, { descendants: true }) public actionableRows: QueryList<DatagridRow>;
+    @ContentChildren(DatagridActionOverflow, {descendants: true}) public actionableRows: QueryList<DatagridRow>;
 
     ngAfterContentInit() {
         // TODO: Move all this to ngOnInit() once https://github.com/angular/angular/issues/12818 goes in.
@@ -218,6 +226,8 @@ export class Datagrid implements AfterContentInit, AfterViewInit, OnDestroy {
             this.items.all = this.rows.map((row: DatagridRow) => row.item);
 
         }
+
+        console.log("DatagridHiddenDirectives: ", this.dgHideDirectives);
     }
 
     /**

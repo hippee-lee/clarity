@@ -11,6 +11,7 @@ import {DatagridActionBar} from "./datagrid-action-bar";
 import {DatagridActionOverflow} from "./datagrid-action-overflow";
 import {DatagridCell} from "./datagrid-cell";
 import {DatagridColumn} from "./datagrid-column";
+import {DatagridColumnToggle} from "./datagrid-column-toggle";
 import {DatagridFilter} from "./datagrid-filter";
 import {DatagridFooter} from "./datagrid-footer";
 import {DatagridItems} from "./datagrid-items";
@@ -26,10 +27,14 @@ import {DatagridBodyRenderer} from "./render/body-renderer";
 import {DatagridRowRenderer} from "./render/row-renderer";
 import {DatagridCellRenderer} from "./render/cell-renderer";
 
+import {DatagridHideableColumnDirective} from "./datagrid-hidable-column.directive";
+
 export * from "./datagrid";
 export * from "./datagrid-action-bar";
 export * from "./datagrid-action-overflow";
 export * from "./datagrid-column";
+export * from "./datagrid-column-toggle";
+export * from "./datagrid-hidable-column.directive";
 export * from "./datagrid-filter";
 export * from "./datagrid-items";
 export * from "./datagrid-row";
@@ -53,6 +58,8 @@ export const DATAGRID_DIRECTIVES: Type<any>[] = [
     DatagridActionBar,
     DatagridActionOverflow,
     DatagridColumn,
+    DatagridColumnToggle,
+    DatagridHideableColumnDirective,
     DatagridFilter,
     DatagridItems,
     DatagridRow,
