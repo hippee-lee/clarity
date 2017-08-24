@@ -22,7 +22,9 @@ export function View_KSButtons_0(_l) {
         (_l()(), i0.ɵted(null, ['Danger'])), (_l()(), i0.ɵted(null, ['\n'])),
         (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-danger'],
             ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class',
-                'btn btn-link']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Link'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+                'btn btn-link']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Link 1'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class',
+                'btn btn-link']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Link 2'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class',
+                'btn btn-link']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Link 3'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
 }
 export function View_KSButtons_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSButtons_0, RenderType_KSButtons)),
