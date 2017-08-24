@@ -1,0 +1,29 @@
+<!--
+  ~ Copyright (c) 2016 VMware, Inc. All Rights Reserved.
+  ~ This software is released under MIT license.
+  ~ The full license information can be found in LICENSE in the root directory of this project.
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>Clarity Kitchen Sink</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/clarity-icons.min.css">
+    <link rel="stylesheet" href="assets/clarity-ui.min.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="assets/shim.min.js"></script>
+    <script src="assets/zone.js"></script>
+    <script src="assets/web-animations.min.js"></script>
+    <script src="assets/custom-elements.min.js"></script>
+    <script src="assets/clarity-icons.min.js"></script>
+    <script>window.module = 'aot';</script>
+</head>
+
+<body>
+<kitchen-sink-app>Loading...</kitchen-sink-app>
+<script src="dist/build.js"></script>
+</body>
+</html>
