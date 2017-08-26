@@ -4,7 +4,7 @@
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-import * as i0 from './app.component.css.shim.ngstyle';
+import * as i0 from './main.css.shim.ngstyle';
 import * as i1 from '@angular/core';
 import * as i2 from 'clarity-angular/layout/main-container/main-container';
 import * as i3 from 'clarity-angular/layout/nav/clrResponsiveNavigationService';
@@ -25,7 +25,7 @@ var styles_KitchenSinkApp = [i0.styles];
 export var RenderType_KitchenSinkApp = i1.ɵcrt({ encapsulation: 0,
     styles: styles_KitchenSinkApp, data: {} });
 export function View_KitchenSinkApp_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵeld(0, null, null, 229, 'clr-main-container', [], [[2, 'main-container', null]], null, null, null, null)), i1.ɵdid(212992, null, 0, i2.MainContainer, [i1.ElementRef, i3.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 30, 'clr-header', [['class', 'header-6']], [[2, 'header',
+    return i1.ɵvid(0, [(_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵeld(0, null, null, 225, 'clr-main-container', [], [[2, 'main-container', null]], null, null, null, null)), i1.ɵdid(212992, null, 0, i2.MainContainer, [i1.ElementRef, i3.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 30, 'clr-header', [['class', 'header-6']], [[2, 'header',
                 null]], null, null, i4.View_Header_0, i4.RenderType_Header)),
         i1.ɵdid(245760, null, 0, i5.Header, [i3.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(0, ['\n        '])), (_l()(),
             i1.ɵeld(0, null, 0, 26, 'div', [['class', 'branding']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 23, 'a', [['class', 'nav-link'], ['routerLink', '/']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
@@ -51,10 +51,10 @@ export function View_KitchenSinkApp_0(_l) {
         (_l()(), i1.ɵeld(0, null, null, 0, ':svg:polyline', [['fill', '#98441E'],
             ['id', 'Fill-6'], ['points', '18.0314053 3.98921729 11.5267517 7.97364692 18.0439938 11.8578324 24.9058951 7.91831944']], null, null, null, null, null)),
         (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 1, 'span', [['class', 'title']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['Clarity Kitchen Sink'])),
-        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(0, ['\n    '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 193, 'div', [['class',
+        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(0, ['\n    '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 189, 'div', [['class',
                 'content-container']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 4, 'main', [['class', 'content-area']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(16777216, null, null, 1, 'router-outlet', [], null, null, null, null, null)), i1.ɵdid(212992, null, 0, i6.RouterOutlet, [i6.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver,
             [8, null], i1.ChangeDetectorRef], null, null),
-        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 184, 'nav', [['class', 'sidenav'], ['style', 'overflow: scroll']], null, [[null,
+        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 180, 'nav', [['class', 'sidenav'], ['style', 'overflow: scroll']], null, [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
@@ -63,8 +63,8 @@ export function View_KitchenSinkApp_0(_l) {
             }
             return ad;
         }, null, null)), i1.ɵdid(1196032, null, 0, i8.NavLevelDirective, [i3.ClrResponsiveNavigationService, i1.ElementRef], { _level: [0, '_level'] }, null), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
-            i1.ɵeld(0, null, null, 168, 'div', [['class', 'sidenav-content']], null, null, null, null, null)),
-        (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 165, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2,
+            i1.ɵeld(0, null, null, 176, 'div', [['class', 'sidenav-content']], null, null, null, null, null)),
+        (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 173, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2,
                 'is-collapsed', null], [2, 'has-nav-groups', null], [2,
                 'has-icons', null]], null, null, i9.View_VerticalNav_0, i9.RenderType_VerticalNav)), i1.ɵprd(512, null, i10.VerticalNavService, i10.VerticalNavService, []), i1.ɵprd(512, null, i11.VerticalNavIconService, i11.VerticalNavIconService, []), i1.ɵprd(512, null, i12.VerticalNavGroupService, i12.VerticalNavGroupService, []), i1.ɵdid(180224, null, 0, i13.VerticalNav, [i10.VerticalNavService, i11.VerticalNavIconService, i12.VerticalNavGroupService], null, null), (_l()(), i1.ɵted(0, ['\n                    '])),
         (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
@@ -97,7 +97,7 @@ export function View_KitchenSinkApp_0(_l) {
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 3, { links: 1 }), i1.ɵqud(603979776, 4, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Badges\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'buttons'],
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'button-groups'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -111,8 +111,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 5, { links: 1 }), i1.ɵqud(603979776, 6, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Buttons\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'button-groups'],
+            i1.ɵted(1, ['\n                        Button Groups\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'buttons'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -126,8 +126,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 7, { links: 1 }), i1.ɵqud(603979776, 8, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Button Groups\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'checkboxes'],
+            i1.ɵted(1, ['\n                        Buttons\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'cards'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -141,8 +141,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 9, { links: 1 }), i1.ɵqud(603979776, 10, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Checkboxes\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'colors'],
+            i1.ɵted(1, ['\n                        Cards\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'checkboxes'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -156,8 +156,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 11, { links: 1 }), i1.ɵqud(603979776, 12, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Colors\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'datagrids'],
+            i1.ɵted(1, ['\n                        Checkboxes\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'colors'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -171,8 +171,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 13, { links: 1 }), i1.ɵqud(603979776, 14, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Datagrid\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'dropdowns'],
+            i1.ɵted(1, ['\n                        Colors\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'datagrids'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -186,8 +186,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 15, { links: 1 }), i1.ɵqud(603979776, 16, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Dropdowns\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'forms'],
+            i1.ɵted(1, ['\n                        Datagrid\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'dropdowns'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -201,8 +201,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 17, { links: 1 }), i1.ɵqud(603979776, 18, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Forms\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'inputs'],
+            i1.ɵted(1, ['\n                        Dropdowns\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'forms'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -216,8 +216,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 19, { links: 1 }), i1.ɵqud(603979776, 20, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Inputs\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'labels'],
+            i1.ɵted(1, ['\n                        Forms\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'inputs'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -231,8 +231,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 21, { links: 1 }), i1.ɵqud(603979776, 22, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Labels\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'modals'],
+            i1.ɵted(1, ['\n                        Inputs\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'labels'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -246,8 +246,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 23, { links: 1 }), i1.ɵqud(603979776, 24, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Modals\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'radios'],
+            i1.ɵted(1, ['\n                        Labels\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'modals'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -261,8 +261,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 25, { links: 1 }), i1.ɵqud(603979776, 26, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Radios\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'selects'],
+            i1.ɵted(1, ['\n                        Modals\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'radios'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -276,8 +276,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 27, { links: 1 }), i1.ɵqud(603979776, 28, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Selects\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'signposts'],
+            i1.ɵted(1, ['\n                        Radios\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'selects'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -291,8 +291,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 29, { links: 1 }), i1.ɵqud(603979776, 30, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Signposts\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'stackviews'],
+            i1.ɵted(1, ['\n                        Selects\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'signposts'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -306,8 +306,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 31, { links: 1 }), i1.ɵqud(603979776, 32, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Stack Views\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tabs'],
+            i1.ɵted(1, ['\n                        Signposts\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'stackviews'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -321,8 +321,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 33, { links: 1 }), i1.ɵqud(603979776, 34, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Tabs\n                    '])), (_l()(),
-            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tooltips'],
+            i1.ɵted(1, ['\n                        Stack Views\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tabs'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -336,8 +336,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 35, { links: 1 }), i1.ɵqud(603979776, 36, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Tooltips\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'treeviews'],
+            i1.ɵted(1, ['\n                        Tabs\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tooltips'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -351,8 +351,8 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 37, { links: 1 }), i1.ɵqud(603979776, 38, { linksWithHrefs: 1 }), (_l()(),
-            i1.ɵted(1, ['\n                        Treeviews\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'vertical-nav'],
+            i1.ɵted(1, ['\n                        Tooltips\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'treeviews'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
@@ -366,12 +366,23 @@ export function View_KitchenSinkApp_0(_l) {
             i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 39, { links: 1 }), i1.ɵqud(603979776, 40, { linksWithHrefs: 1 }), (_l()(),
+            i1.ɵted(1, ['\n                        Treeviews\n                    '])),
+        (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'vertical-nav'],
+            ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 217).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[42, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
+            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+            i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
+        i1.ɵqud(603979776, 41, { links: 1 }), i1.ɵqud(603979776, 42, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Vertical Nav\n                    '])),
-        (_l()(), i1.ɵted(0, ['\n\n                '])), (_l()(), i1.ɵted(null, ['\n            '])),
-        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵted(null, ['\n                    '])),
-        (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵted(null, ['\n                        '])),
-        (_l()(), i1.ɵted(null, ['\n                            '])), (_l()(), i1.ɵted(null, ['\n                               '])), (_l()(), i1.ɵted(null, ['\n                        '])),
-        (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵted(null, ['\n            '])),
+        (_l()(), i1.ɵted(0, ['\n                '])), (_l()(), i1.ɵted(null, ['\n            '])),
         (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵted(null, ['\n']))], function (_ck, _v) {
         _ck(_v, 2, 0);
         _ck(_v, 5, 0);
@@ -388,78 +399,82 @@ export function View_KitchenSinkApp_0(_l) {
         _ck(_v, 65, 0, currVal_15);
         var currVal_16 = 'active';
         _ck(_v, 66, 0, currVal_16);
-        var currVal_19 = 'buttons';
+        var currVal_19 = 'button-groups';
         _ck(_v, 73, 0, currVal_19);
         var currVal_20 = 'active';
         _ck(_v, 74, 0, currVal_20);
-        var currVal_23 = 'button-groups';
+        var currVal_23 = 'buttons';
         _ck(_v, 81, 0, currVal_23);
         var currVal_24 = 'active';
         _ck(_v, 82, 0, currVal_24);
-        var currVal_27 = 'checkboxes';
+        var currVal_27 = 'cards';
         _ck(_v, 89, 0, currVal_27);
         var currVal_28 = 'active';
         _ck(_v, 90, 0, currVal_28);
-        var currVal_31 = 'colors';
+        var currVal_31 = 'checkboxes';
         _ck(_v, 97, 0, currVal_31);
         var currVal_32 = 'active';
         _ck(_v, 98, 0, currVal_32);
-        var currVal_35 = 'datagrids';
+        var currVal_35 = 'colors';
         _ck(_v, 105, 0, currVal_35);
         var currVal_36 = 'active';
         _ck(_v, 106, 0, currVal_36);
-        var currVal_39 = 'dropdowns';
+        var currVal_39 = 'datagrids';
         _ck(_v, 113, 0, currVal_39);
         var currVal_40 = 'active';
         _ck(_v, 114, 0, currVal_40);
-        var currVal_43 = 'forms';
+        var currVal_43 = 'dropdowns';
         _ck(_v, 121, 0, currVal_43);
         var currVal_44 = 'active';
         _ck(_v, 122, 0, currVal_44);
-        var currVal_47 = 'inputs';
+        var currVal_47 = 'forms';
         _ck(_v, 129, 0, currVal_47);
         var currVal_48 = 'active';
         _ck(_v, 130, 0, currVal_48);
-        var currVal_51 = 'labels';
+        var currVal_51 = 'inputs';
         _ck(_v, 137, 0, currVal_51);
         var currVal_52 = 'active';
         _ck(_v, 138, 0, currVal_52);
-        var currVal_55 = 'modals';
+        var currVal_55 = 'labels';
         _ck(_v, 145, 0, currVal_55);
         var currVal_56 = 'active';
         _ck(_v, 146, 0, currVal_56);
-        var currVal_59 = 'radios';
+        var currVal_59 = 'modals';
         _ck(_v, 153, 0, currVal_59);
         var currVal_60 = 'active';
         _ck(_v, 154, 0, currVal_60);
-        var currVal_63 = 'selects';
+        var currVal_63 = 'radios';
         _ck(_v, 161, 0, currVal_63);
         var currVal_64 = 'active';
         _ck(_v, 162, 0, currVal_64);
-        var currVal_67 = 'signposts';
+        var currVal_67 = 'selects';
         _ck(_v, 169, 0, currVal_67);
         var currVal_68 = 'active';
         _ck(_v, 170, 0, currVal_68);
-        var currVal_71 = 'stackviews';
+        var currVal_71 = 'signposts';
         _ck(_v, 177, 0, currVal_71);
         var currVal_72 = 'active';
         _ck(_v, 178, 0, currVal_72);
-        var currVal_75 = 'tabs';
+        var currVal_75 = 'stackviews';
         _ck(_v, 185, 0, currVal_75);
         var currVal_76 = 'active';
         _ck(_v, 186, 0, currVal_76);
-        var currVal_79 = 'tooltips';
+        var currVal_79 = 'tabs';
         _ck(_v, 193, 0, currVal_79);
         var currVal_80 = 'active';
         _ck(_v, 194, 0, currVal_80);
-        var currVal_83 = 'treeviews';
+        var currVal_83 = 'tooltips';
         _ck(_v, 201, 0, currVal_83);
         var currVal_84 = 'active';
         _ck(_v, 202, 0, currVal_84);
-        var currVal_87 = 'vertical-nav';
+        var currVal_87 = 'treeviews';
         _ck(_v, 209, 0, currVal_87);
         var currVal_88 = 'active';
         _ck(_v, 210, 0, currVal_88);
+        var currVal_91 = 'vertical-nav';
+        _ck(_v, 217, 0, currVal_91);
+        var currVal_92 = 'active';
+        _ck(_v, 218, 0, currVal_92);
     }, function (_ck, _v) {
         var currVal_0 = true;
         _ck(_v, 1, 0, currVal_0);
@@ -532,6 +547,9 @@ export function View_KitchenSinkApp_0(_l) {
         var currVal_85 = i1.ɵnov(_v, 209).target;
         var currVal_86 = i1.ɵnov(_v, 209).href;
         _ck(_v, 207, 0, currVal_85, currVal_86);
+        var currVal_89 = i1.ɵnov(_v, 217).target;
+        var currVal_90 = i1.ɵnov(_v, 217).href;
+        _ck(_v, 215, 0, currVal_89, currVal_90);
     });
 }
 export function View_KitchenSinkApp_Host_0(_l) {

@@ -5,16 +5,293 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/forms/checkboxes.component';
+import * as i1 from '../../node_modules/clarity-angular/forms/checkbox/checkbox.ngfactory';
+import * as i2 from '@angular/forms';
+import * as i3 from 'clarity-angular/forms/checkbox/checkbox';
+import * as i4 from '../../../containers/forms/checkboxes.component';
+import * as i5 from '@angular/common';
 var styles_KSCheckboxes = [];
 export var RenderType_KSCheckboxes = i0.ɵcrt({ encapsulation: 2, styles: styles_KSCheckboxes,
     data: {} });
+function View_KSCheckboxes_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 3, 'clr-checkbox', [], [[2, 'checkbox', null], [2, 'checkbox-inline', null],
+            [2, 'disabled', null]], [[null, 'clrCheckedChange']], function (_v, en, $event) {
+            var ad = true;
+            if (('clrCheckedChange' === en)) {
+                var pd_0 = ((_v.context.$implicit.running = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_Checkbox_0, i1.RenderType_Checkbox)), i0.ɵprd(5120, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i3.Checkbox]), i0.ɵdid(49152, null, 0, i3.Checkbox, [], { disabled: [0,
+                'disabled'], checked: [1, 'checked'] }, { change: 'clrCheckedChange' }), (_l()(), i0.ɵted(0, ['\n                ', '\n                ', '\n            ']))], function (_ck, _v) {
+        var currVal_3 = _v.context.$implicit.disabled;
+        var currVal_4 = _v.context.$implicit.running;
+        _ck(_v, 2, 0, currVal_3, currVal_4);
+    }, function (_ck, _v) {
+        var currVal_0 = !i0.ɵnov(_v, 2).inline;
+        var currVal_1 = i0.ɵnov(_v, 2).inline;
+        var currVal_2 = i0.ɵnov(_v, 2).disabled;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_5 = _v.context.$implicit.ip;
+        var currVal_6 = (_v.context.$implicit.disabled ? ' is disabled.' : (_v.context.$implicit.running ? ' is running.' : 'is off.'));
+        _ck(_v, 3, 0, currVal_5, currVal_6);
+    });
+}
 export function View_KSCheckboxes_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Checkboxes'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Checkboxes'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 146, 'form', [['novalidate', '']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'submit'], [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 5).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 5).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i2.ɵbf, [], null, null), i0.ɵdid(16384, [['testForm', 4]], 0, i2.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i2.ControlContainer, null, [i2.NgForm]), i0.ɵdid(16384, null, 0, i2.NgControlStatusGroup, [i2.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 139, 'section', [['class', 'form-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Checkboxes'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 36, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Default/Stacked checkbox group'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'checkrads_1'], ['type', 'checkbox']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Checkbox 1'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['id', 'checkrads_2'],
+                ['type', 'checkbox']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_2']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Checkbox 2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox disabled']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['disabled', ''], ['id', 'checkrads_3'], ['type', 'checkbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_3']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['A disabled and unchecked checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox disabled']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['disabled', ''], ['id', 'checkrads_4'], ['type', 'checkbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['A disabled and checked checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 36, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Inline checkbox group'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'checkrads_5'], ['type', 'checkbox']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_5']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Checkbox 1'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['id',
+                'checkrads_6'], ['type', 'checkbox']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_6']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Checkbox 2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox-inline disabled']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['disabled', ''], ['id', 'checkrads_7'], ['type', 'checkbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_7']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['A disabled and unchecked checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'checkbox-inline disabled']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['disabled', ''], ['id', 'checkrads_8'], ['type', 'checkbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_8']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['A disabled and checked checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Indeterminate Checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 23, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 3, 'clr-checkbox', [['id', 'checkbox_9'], ['type', 'checkbox']], [[2, 'checkbox',
+                null], [2, 'checkbox-inline', null], [2, 'disabled', null]], [[null, 'clrIndeterminateChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrIndeterminateChange' === en)) {
+                var pd_0 = ((_co.indeterminateState = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_Checkbox_0, i1.RenderType_Checkbox)), i0.ɵprd(5120, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i3.Checkbox]), i0.ɵdid(49152, null, 0, i3.Checkbox, [], { _id: [0, '_id'], indeterminate: [1, 'indeterminate'] }, { indeterminateChange: 'clrIndeterminateChange' }),
+        (_l()(), i0.ɵted(0, ['\n                    Clarity indeterminate checkbox\n                '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-sm'],
+            ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onToggleIndeterminateState() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                        Toggle Indeterminate State\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'checkrads_10'], ['type', 'checkbox']], [[8, 'indeterminate',
+                0]], null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_10']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Native indeterminate checkbox'])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'b', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['NOTE:'])), (_l()(), i0.ɵted(null, [' Native checkbox elements must set indeterminate state with JavaScript.\n                '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 15, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Clarity Checkbox'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'clr-checkbox', [['id', 'formCheckbox'], ['name', 'active'],
+            ['type', 'checkbox']], [[2, 'checkbox', null], [2, 'checkbox-inline',
+                null], [2, 'disabled', null], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('ngModelChange' === en)) {
+                var pd_0 = ((_co.active = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_Checkbox_0, i1.RenderType_Checkbox)), i0.ɵdid(49152, null, 0, i3.Checkbox, [], { _id: [0, '_id'], name: [1, 'name'] }, null),
+        i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i3.Checkbox]), i0.ɵdid(671744, null, 0, i2.NgModel, [[2, i2.ControlContainer],
+            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'],
+            model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(0, ['\n                Clarity Checkbox\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                State: ',
+            '\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 9, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled Clarity Checkbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'clr-checkbox', [['id', 'formCheckboxDisabled'],
+            ['type', 'checkbox']], [[2, 'checkbox', null], [2, 'checkbox-inline',
+                null], [2, 'disabled', null]], null, null, i1.View_Checkbox_0, i1.RenderType_Checkbox)), i0.ɵprd(5120, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i3.Checkbox]), i0.ɵdid(49152, null, 0, i3.Checkbox, [], { _id: [0, '_id'], disabled: [1, 'disabled'] }, null), (_l()(), i0.ɵted(0, ['\n                Clarity Checkbox\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 23, 'form', [['novalidate', '']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'submit'], [null,
+                'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 153).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 153).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i2.ɵbf, [], null, null), i0.ɵdid(16384, [['form', 4]], 0, i2.NgForm, [[8,
+                null], [8, null]], null, null), i0.ɵprd(2048, null, i2.ControlContainer, null, [i2.NgForm]), i0.ɵdid(16384, null, 0, i2.NgControlStatusGroup, [i2.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 16, 'section', [['class', 'form-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['With ngForm & ngModel'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'clr-checkbox', [['id', 'checkrads_11'],
+            ['name', 'termsCheckbox']], [[2, 'checkbox', null], [2, 'checkbox-inline',
+                null], [2, 'disabled', null], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('ngModelChange' === en)) {
+                var pd_0 = ((_co.termsAgreement = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_Checkbox_0, i1.RenderType_Checkbox)), i0.ɵdid(49152, null, 0, i3.Checkbox, [], { _id: [0, '_id'], name: [1, 'name'], inline: [2, 'inline'] }, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i3.Checkbox]), i0.ɵdid(671744, null, 0, i2.NgModel, [[2, i2.ControlContainer],
+            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'],
+            model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(0, ['\n                I agree to the terms and conditions. ',
+            '\n            '])), i0.ɵpid(0, i5.JsonPipe, []), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 17, 'form', [['novalidate', '']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'submit'], [null,
+                'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 178).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 178).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i2.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i2.NgForm, [[8,
+                null], [8, null]], null, null), i0.ɵprd(2048, null, i2.ControlContainer, null, [i2.NgForm]), i0.ɵdid(16384, null, 0, i2.NgControlStatusGroup, [i2.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 10, 'section', [['class', 'form-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['With a list of objects'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSCheckboxes_1)), i0.ɵdid(802816, null, 0, i5.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_10 = 'checkbox_9';
+        var currVal_11 = _co.indeterminateState;
+        _ck(_v, 99, 0, currVal_10, currVal_11);
+        var currVal_23 = 'formCheckbox';
+        var currVal_24 = 'active';
+        _ck(_v, 127, 0, currVal_23, currVal_24);
+        var currVal_25 = 'active';
+        var currVal_26 = _co.active;
+        _ck(_v, 129, 0, currVal_25, currVal_26);
+        var currVal_31 = 'formCheckboxDisabled';
+        var currVal_32 = true;
+        _ck(_v, 145, 0, currVal_31, currVal_32);
+        var currVal_50 = 'checkrads_11';
+        var currVal_51 = 'termsCheckbox';
+        var currVal_52 = true;
+        _ck(_v, 165, 0, currVal_50, currVal_51, currVal_52);
+        var currVal_53 = 'termsCheckbox';
+        var currVal_54 = _co.termsAgreement;
+        _ck(_v, 167, 0, currVal_53, currVal_54);
+        var currVal_63 = _co.list;
+        _ck(_v, 190, 0, currVal_63);
+    }, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = i0.ɵnov(_v, 7).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 7).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 7).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 7).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 7).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 7).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 7).ngClassPending;
+        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+        var currVal_7 = !i0.ɵnov(_v, 99).inline;
+        var currVal_8 = i0.ɵnov(_v, 99).inline;
+        var currVal_9 = i0.ɵnov(_v, 99).disabled;
+        _ck(_v, 97, 0, currVal_7, currVal_8, currVal_9);
+        var currVal_12 = _co.nativeIndeterminateState;
+        _ck(_v, 108, 0, currVal_12);
+        var currVal_13 = !i0.ɵnov(_v, 127).inline;
+        var currVal_14 = i0.ɵnov(_v, 127).inline;
+        var currVal_15 = i0.ɵnov(_v, 127).disabled;
+        var currVal_16 = i0.ɵnov(_v, 131).ngClassUntouched;
+        var currVal_17 = i0.ɵnov(_v, 131).ngClassTouched;
+        var currVal_18 = i0.ɵnov(_v, 131).ngClassPristine;
+        var currVal_19 = i0.ɵnov(_v, 131).ngClassDirty;
+        var currVal_20 = i0.ɵnov(_v, 131).ngClassValid;
+        var currVal_21 = i0.ɵnov(_v, 131).ngClassInvalid;
+        var currVal_22 = i0.ɵnov(_v, 131).ngClassPending;
+        _ck(_v, 126, 0, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22);
+        var currVal_27 = _co.active;
+        _ck(_v, 135, 0, currVal_27);
+        var currVal_28 = !i0.ɵnov(_v, 145).inline;
+        var currVal_29 = i0.ɵnov(_v, 145).inline;
+        var currVal_30 = i0.ɵnov(_v, 145).disabled;
+        _ck(_v, 143, 0, currVal_28, currVal_29, currVal_30);
+        var currVal_33 = i0.ɵnov(_v, 155).ngClassUntouched;
+        var currVal_34 = i0.ɵnov(_v, 155).ngClassTouched;
+        var currVal_35 = i0.ɵnov(_v, 155).ngClassPristine;
+        var currVal_36 = i0.ɵnov(_v, 155).ngClassDirty;
+        var currVal_37 = i0.ɵnov(_v, 155).ngClassValid;
+        var currVal_38 = i0.ɵnov(_v, 155).ngClassInvalid;
+        var currVal_39 = i0.ɵnov(_v, 155).ngClassPending;
+        _ck(_v, 151, 0, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37, currVal_38, currVal_39);
+        var currVal_40 = !i0.ɵnov(_v, 165).inline;
+        var currVal_41 = i0.ɵnov(_v, 165).inline;
+        var currVal_42 = i0.ɵnov(_v, 165).disabled;
+        var currVal_43 = i0.ɵnov(_v, 169).ngClassUntouched;
+        var currVal_44 = i0.ɵnov(_v, 169).ngClassTouched;
+        var currVal_45 = i0.ɵnov(_v, 169).ngClassPristine;
+        var currVal_46 = i0.ɵnov(_v, 169).ngClassDirty;
+        var currVal_47 = i0.ɵnov(_v, 169).ngClassValid;
+        var currVal_48 = i0.ɵnov(_v, 169).ngClassInvalid;
+        var currVal_49 = i0.ɵnov(_v, 169).ngClassPending;
+        _ck(_v, 164, 0, currVal_40, currVal_41, currVal_42, currVal_43, currVal_44, currVal_45, currVal_46, currVal_47, currVal_48, currVal_49);
+        var currVal_55 = i0.ɵunv(_v, 170, 0, i0.ɵnov(_v, 171).transform(i0.ɵnov(_v, 153).value));
+        _ck(_v, 170, 0, currVal_55);
+        var currVal_56 = i0.ɵnov(_v, 180).ngClassUntouched;
+        var currVal_57 = i0.ɵnov(_v, 180).ngClassTouched;
+        var currVal_58 = i0.ɵnov(_v, 180).ngClassPristine;
+        var currVal_59 = i0.ɵnov(_v, 180).ngClassDirty;
+        var currVal_60 = i0.ɵnov(_v, 180).ngClassValid;
+        var currVal_61 = i0.ɵnov(_v, 180).ngClassInvalid;
+        var currVal_62 = i0.ɵnov(_v, 180).ngClassPending;
+        _ck(_v, 176, 0, currVal_56, currVal_57, currVal_58, currVal_59, currVal_60, currVal_61, currVal_62);
+    });
 }
 export function View_KSCheckboxes_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSCheckboxes_0, RenderType_KSCheckboxes)), i0.ɵdid(49152, null, 0, i1.KSCheckboxes, [], null, null)], null, null);
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 2, 'ng-component', [], null, null, null, View_KSCheckboxes_0, RenderType_KSCheckboxes)), i0.ɵprd(512, null, i4.Status, i4.Status, []),
+        i0.ɵdid(49152, null, 0, i4.KSCheckboxes, [i4.Status], null, null)], null, null);
 }
-export var KSCheckboxesNgFactory = i0.ɵccf('ng-component', i1.KSCheckboxes, View_KSCheckboxes_Host_0, {}, {}, []);
+export var KSCheckboxesNgFactory = i0.ɵccf('ng-component', i4.KSCheckboxes, View_KSCheckboxes_Host_0, {}, {}, []);
 //# sourceMappingURL=checkboxes.component.ngfactory.js.map

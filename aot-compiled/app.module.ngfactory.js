@@ -12,136 +12,136 @@ import * as i4 from './containers/emphasis/alerts.component.ngfactory';
 import * as i5 from './containers/emphasis/badges.component.ngfactory';
 import * as i6 from './containers/buttons/buttons.component.ngfactory';
 import * as i7 from './containers/buttons/button-groups.component.ngfactory';
-import * as i8 from './containers/colors/colors.component.ngfactory';
-import * as i9 from './containers/data/datagrid.component.ngfactory';
-import * as i10 from './containers/data/stackview.component.ngfactory';
-import * as i11 from './containers/data/tree-view.component.ngfactory';
-import * as i12 from './containers/emphasis/labels.component.ngfactory';
-import * as i13 from './containers/forms/checkboxes.component.ngfactory';
-import * as i14 from './containers/forms/forms.component.ngfactory';
-import * as i15 from './containers/forms/inputs.component.ngfactory';
-import * as i16 from './containers/forms/radios.component.ngfactory';
-import * as i17 from './containers/forms/selects.component.ngfactory';
-import * as i18 from './containers/modal/modals.component.ngfactory';
-import * as i19 from './containers/nav/tabs.component.ngfactory';
-import * as i20 from './containers/nav/vertical-nav.component.ngfactory';
-import * as i21 from './containers/popover/dropdowns.component.ngfactory';
-import * as i22 from './containers/popover/signposts.component.ngfactory';
-import * as i23 from './containers/popover/tooltips.component.ngfactory';
-import * as i24 from './containers/typography/typography.component.ngfactory';
-import * as i25 from './containers/wizard/wizards.component.ngfactory';
-import * as i26 from './app.component.ngfactory';
-import * as i27 from '@angular/common';
-import * as i28 from '@angular/platform-browser';
-import * as i29 from '@angular/animations/browser';
-import * as i30 from '@angular/platform-browser/animations';
-import * as i31 from '@angular/animations';
-import * as i32 from 'clarity-angular/layout/nav/clrResponsiveNavigationService';
-import * as i33 from 'clarity-angular/layout/nav/clrResponsiveNavigationProvider';
-import * as i34 from '@angular/forms';
-import * as i35 from '@angular/router';
-import * as i36 from 'clarity-angular/icon/icon.module';
-import * as i37 from 'clarity-angular/layout/main-container/main-container.module';
-import * as i38 from 'clarity-angular/popover/common/popover.module';
-import * as i39 from 'clarity-angular/utils/conditional/conditional.module';
-import * as i40 from 'clarity-angular/popover/dropdown/dropdown.module';
-import * as i41 from 'clarity-angular/layout/nav/navigation.module';
-import * as i42 from 'clarity-angular/utils/template-ref/template-ref.module';
-import * as i43 from 'clarity-angular/layout/tabs/tabs.module';
-import * as i44 from 'clarity-angular/utils/expand/if-expand.module';
-import * as i45 from 'clarity-angular/layout/vertical-nav/vertical-nav.module';
-import * as i46 from 'clarity-angular/layout/layout.module';
-import * as i47 from 'clarity-angular/button/button-group/button-group.module';
-import * as i48 from 'clarity-angular/forms/forms.module';
-import * as i49 from 'clarity-angular/utils/loading/loading.module';
-import * as i50 from 'clarity-angular/utils/outside-click/outside-click.module';
-import * as i51 from 'clarity-angular/data/datagrid/datagrid.module';
-import * as i52 from 'clarity-angular/data/stack-view/stack-view.module';
-import * as i53 from 'clarity-angular/data/tree-view/tree-view.module';
-import * as i54 from 'clarity-angular/data/data.module';
-import * as i55 from 'clarity-angular/emphasis/alert/alert.module';
-import * as i56 from 'clarity-angular/popover/signpost/signpost.module';
-import * as i57 from 'clarity-angular/popover/tooltip/tooltip.module';
-import * as i58 from 'clarity-angular/popover/popover.module';
-import * as i59 from '../containers/emphasis/alerts.component';
-import * as i60 from '../containers/emphasis/badges.component';
-import * as i61 from '../containers/buttons/buttons.component';
-import * as i62 from '../containers/buttons/button-groups.component';
-import * as i63 from '../containers/colors/colors.component';
-import * as i64 from '../containers/data/datagrid.component';
-import * as i65 from '../containers/data/stackview.component';
-import * as i66 from '../containers/data/tree-view.component';
-import * as i67 from '../containers/emphasis/labels.component';
-import * as i68 from '../containers/forms/checkboxes.component';
-import * as i69 from '../containers/forms/forms.component';
-import * as i70 from '../containers/forms/inputs.component';
-import * as i71 from '../containers/forms/radios.component';
-import * as i72 from '../containers/forms/selects.component';
-import * as i73 from '../containers/modal/modals.component';
-import * as i74 from '../containers/nav/tabs.component';
-import * as i75 from '../containers/nav/vertical-nav.component';
-import * as i76 from '../containers/popover/dropdowns.component';
-import * as i77 from '../containers/popover/signposts.component';
-import * as i78 from '../containers/popover/tooltips.component';
-import * as i79 from '../containers/typography/typography.component';
-import * as i80 from '../containers/wizard/wizards.component';
+import * as i8 from './containers/cards/cards.component.ngfactory';
+import * as i9 from './containers/colors/colors.component.ngfactory';
+import * as i10 from './containers/data/datagrid.component.ngfactory';
+import * as i11 from './containers/data/stackview.component.ngfactory';
+import * as i12 from './containers/data/tree-view.component.ngfactory';
+import * as i13 from './containers/emphasis/labels.component.ngfactory';
+import * as i14 from './containers/forms/checkboxes.component.ngfactory';
+import * as i15 from './containers/forms/forms.component.ngfactory';
+import * as i16 from './containers/forms/inputs.component.ngfactory';
+import * as i17 from './containers/forms/radios.component.ngfactory';
+import * as i18 from './containers/forms/selects.component.ngfactory';
+import * as i19 from './containers/modal/modals.component.ngfactory';
+import * as i20 from './containers/nav/tabs.component.ngfactory';
+import * as i21 from './containers/nav/vertical-nav.component.ngfactory';
+import * as i22 from './containers/popover/dropdowns.component.ngfactory';
+import * as i23 from './containers/popover/signposts.component.ngfactory';
+import * as i24 from './containers/popover/tooltips.component.ngfactory';
+import * as i25 from './containers/typography/typography.component.ngfactory';
+import * as i26 from './containers/wizard/wizards.component.ngfactory';
+import * as i27 from './app.component.ngfactory';
+import * as i28 from '@angular/common';
+import * as i29 from '@angular/platform-browser';
+import * as i30 from '@angular/animations/browser';
+import * as i31 from '@angular/platform-browser/animations';
+import * as i32 from '@angular/animations';
+import * as i33 from '@angular/forms';
+import * as i34 from 'clarity-angular/layout/nav/clrResponsiveNavigationService';
+import * as i35 from 'clarity-angular/layout/nav/clrResponsiveNavigationProvider';
+import * as i36 from '@angular/router';
+import * as i37 from 'clarity-angular/icon/icon.module';
+import * as i38 from 'clarity-angular/layout/main-container/main-container.module';
+import * as i39 from 'clarity-angular/popover/common/popover.module';
+import * as i40 from 'clarity-angular/utils/conditional/conditional.module';
+import * as i41 from 'clarity-angular/popover/dropdown/dropdown.module';
+import * as i42 from 'clarity-angular/layout/nav/navigation.module';
+import * as i43 from 'clarity-angular/utils/template-ref/template-ref.module';
+import * as i44 from 'clarity-angular/layout/tabs/tabs.module';
+import * as i45 from 'clarity-angular/utils/expand/if-expand.module';
+import * as i46 from 'clarity-angular/layout/vertical-nav/vertical-nav.module';
+import * as i47 from 'clarity-angular/layout/layout.module';
+import * as i48 from 'clarity-angular/button/button-group/button-group.module';
+import * as i49 from 'clarity-angular/forms/forms.module';
+import * as i50 from 'clarity-angular/utils/loading/loading.module';
+import * as i51 from 'clarity-angular/utils/outside-click/outside-click.module';
+import * as i52 from 'clarity-angular/data/datagrid/datagrid.module';
+import * as i53 from 'clarity-angular/data/stack-view/stack-view.module';
+import * as i54 from 'clarity-angular/data/tree-view/tree-view.module';
+import * as i55 from 'clarity-angular/data/data.module';
+import * as i56 from 'clarity-angular/emphasis/alert/alert.module';
+import * as i57 from 'clarity-angular/popover/signpost/signpost.module';
+import * as i58 from 'clarity-angular/popover/tooltip/tooltip.module';
+import * as i59 from 'clarity-angular/popover/popover.module';
+import * as i60 from '../containers/emphasis/alerts.component';
+import * as i61 from '../containers/emphasis/badges.component';
+import * as i62 from '../containers/buttons/buttons.component';
+import * as i63 from '../containers/buttons/button-groups.component';
+import * as i64 from '../containers/cards/cards.component';
+import * as i65 from '../containers/colors/colors.component';
+import * as i66 from '../containers/data/datagrid.component';
+import * as i67 from '../containers/data/stackview.component';
+import * as i68 from '../containers/data/tree-view.component';
+import * as i69 from '../containers/emphasis/labels.component';
+import * as i70 from '../containers/forms/checkboxes.component';
+import * as i71 from '../containers/forms/forms.component';
+import * as i72 from '../containers/forms/inputs.component';
+import * as i73 from '../containers/forms/radios.component';
+import * as i74 from '../containers/forms/selects.component';
+import * as i75 from '../containers/modal/modals.component';
+import * as i76 from '../containers/nav/tabs.component';
+import * as i77 from '../containers/nav/vertical-nav.component';
+import * as i78 from '../containers/popover/dropdowns.component';
+import * as i79 from '../containers/popover/signposts.component';
+import * as i80 from '../containers/popover/tooltips.component';
+import * as i81 from '../containers/typography/typography.component';
+import * as i82 from '../containers/wizard/wizards.component';
 export var KitchenSinkModuleNgFactory = i0.ɵcmf(i1.KitchenSinkModule, [i2.KitchenSinkApp], function (_l) {
     return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.TemplateRefContainerNgFactory, i4.KSAlertsNgFactory, i5.KSBadgesNgFactory,
-                    i6.KSButtonsNgFactory, i7.KSButtonGroupsNgFactory, i8.KSColorsNgFactory,
-                    i9.KSDatagridNgFactory, i10.KSStackViewNgFactory, i11.KSTreeViewNgFactory,
-                    i12.KSLabelsNgFactory, i13.KSCheckboxesNgFactory, i14.KSFormsNgFactory,
-                    i15.KSInputsNgFactory, i16.KSRadiosNgFactory, i17.KSSelectsNgFactory, i18.KSModalsNgFactory,
-                    i19.KSTabsNgFactory, i20.KSVerticalNavNgFactory, i21.KSDropdownsNgFactory,
-                    i22.KSSignpostsNgFactory, i23.KSTooltipsNgFactory, i24.KSTypographyNgFactory,
-                    i25.KSWizardsNgFactory, i26.KitchenSinkAppNgFactory]], [3, i0.ComponentFactoryResolver],
-            i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]),
-        i0.ɵmpd(4608, i27.NgLocalization, i27.NgLocaleLocalization, [i0.LOCALE_ID]),
-        i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵl, []),
-        i0.ɵmpd(4608, i28.DomSanitizer, i28.ɵe, [i27.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i28.DomSanitizer]), i0.ɵmpd(4608, i28.HAMMER_GESTURE_CONFIG, i28.HammerGestureConfig, []), i0.ɵmpd(5120, i28.EVENT_MANAGER_PLUGINS, function (p0_0, p1_0, p2_0, p2_1) {
-            return [new i28.ɵDomEventsPlugin(p0_0), new i28.ɵKeyEventsPlugin(p1_0),
-                new i28.ɵHammerGesturesPlugin(p2_0, p2_1)];
-        }, [i27.DOCUMENT, i27.DOCUMENT, i27.DOCUMENT, i28.HAMMER_GESTURE_CONFIG]),
-        i0.ɵmpd(4608, i28.EventManager, i28.EventManager, [i28.EVENT_MANAGER_PLUGINS,
-            i0.NgZone]), i0.ɵmpd(135680, i28.ɵDomSharedStylesHost, i28.ɵDomSharedStylesHost, [i27.DOCUMENT]), i0.ɵmpd(4608, i28.ɵDomRendererFactory2, i28.ɵDomRendererFactory2, [i28.EventManager, i28.ɵDomSharedStylesHost]), i0.ɵmpd(5120, i29.AnimationDriver, i30.ɵc, []), i0.ɵmpd(5120, i29.ɵAnimationStyleNormalizer, i30.ɵd, []), i0.ɵmpd(4608, i29.ɵAnimationEngine, i30.ɵb, [i29.AnimationDriver,
-            i29.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i30.ɵe, [i28.ɵDomRendererFactory2, i29.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(6144, i28.ɵSharedStylesHost, null, [i28.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i28.Meta, i28.Meta, [i27.DOCUMENT]), i0.ɵmpd(4608, i28.Title, i28.Title, [i27.DOCUMENT]), i0.ɵmpd(4608, i31.AnimationBuilder, i30.ɵBrowserAnimationBuilder, [i0.RendererFactory2,
-            i28.DOCUMENT]), i0.ɵmpd(5120, i32.ClrResponsiveNavigationService, i33.clrResponsiveNavigationProvider, [[3, i32.ClrResponsiveNavigationService]]), i0.ɵmpd(4608, i34.ɵi, i34.ɵi, []), i0.ɵmpd(5120, i35.ActivatedRoute, i35.ɵf, [i35.Router]),
-        i0.ɵmpd(4608, i35.NoPreloading, i35.NoPreloading, []), i0.ɵmpd(6144, i35.PreloadingStrategy, null, [i35.NoPreloading]), i0.ɵmpd(135680, i35.RouterPreloader, i35.RouterPreloader, [i35.Router, i0.NgModuleFactoryLoader,
-            i0.Compiler, i0.Injector, i35.PreloadingStrategy]), i0.ɵmpd(4608, i35.PreloadAllModules, i35.PreloadAllModules, []), i0.ɵmpd(5120, i35.ROUTER_INITIALIZER, i35.ɵi, [i35.ɵg]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) {
+                    i6.KSButtonsNgFactory, i7.KSButtonGroupsNgFactory, i8.KSCardsNgFactory,
+                    i9.KSColorsNgFactory, i10.KSDatagridNgFactory, i11.KSStackViewNgFactory,
+                    i12.KSTreeViewNgFactory, i13.KSLabelsNgFactory, i14.KSCheckboxesNgFactory,
+                    i15.KSFormsNgFactory, i16.KSInputsNgFactory, i17.KSRadiosNgFactory, i18.KSSelectsNgFactory,
+                    i19.KSModalsNgFactory, i20.KSTabsNgFactory, i21.KSVerticalNavNgFactory,
+                    i22.KSDropdownsNgFactory, i23.KSSignpostsNgFactory, i24.KSTooltipsNgFactory,
+                    i25.KSTypographyNgFactory, i26.KSWizardsNgFactory, i27.KitchenSinkAppNgFactory]],
+            [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i28.NgLocalization, i28.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵl, []), i0.ɵmpd(4608, i29.DomSanitizer, i29.ɵe, [i28.DOCUMENT]),
+        i0.ɵmpd(6144, i0.Sanitizer, null, [i29.DomSanitizer]), i0.ɵmpd(4608, i29.HAMMER_GESTURE_CONFIG, i29.HammerGestureConfig, []), i0.ɵmpd(5120, i29.EVENT_MANAGER_PLUGINS, function (p0_0, p1_0, p2_0, p2_1) {
+            return [new i29.ɵDomEventsPlugin(p0_0), new i29.ɵKeyEventsPlugin(p1_0),
+                new i29.ɵHammerGesturesPlugin(p2_0, p2_1)];
+        }, [i28.DOCUMENT, i28.DOCUMENT, i28.DOCUMENT, i29.HAMMER_GESTURE_CONFIG]),
+        i0.ɵmpd(4608, i29.EventManager, i29.EventManager, [i29.EVENT_MANAGER_PLUGINS,
+            i0.NgZone]), i0.ɵmpd(135680, i29.ɵDomSharedStylesHost, i29.ɵDomSharedStylesHost, [i28.DOCUMENT]), i0.ɵmpd(4608, i29.ɵDomRendererFactory2, i29.ɵDomRendererFactory2, [i29.EventManager, i29.ɵDomSharedStylesHost]), i0.ɵmpd(5120, i30.AnimationDriver, i31.ɵc, []), i0.ɵmpd(5120, i30.ɵAnimationStyleNormalizer, i31.ɵd, []), i0.ɵmpd(4608, i30.ɵAnimationEngine, i31.ɵb, [i30.AnimationDriver,
+            i30.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i31.ɵe, [i29.ɵDomRendererFactory2, i30.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(6144, i29.ɵSharedStylesHost, null, [i29.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i29.Meta, i29.Meta, [i28.DOCUMENT]), i0.ɵmpd(4608, i29.Title, i29.Title, [i28.DOCUMENT]), i0.ɵmpd(4608, i32.AnimationBuilder, i31.ɵBrowserAnimationBuilder, [i0.RendererFactory2,
+            i29.DOCUMENT]), i0.ɵmpd(4608, i33.ɵi, i33.ɵi, []), i0.ɵmpd(5120, i34.ClrResponsiveNavigationService, i35.clrResponsiveNavigationProvider, [[3, i34.ClrResponsiveNavigationService]]), i0.ɵmpd(5120, i36.ActivatedRoute, i36.ɵf, [i36.Router]), i0.ɵmpd(4608, i36.NoPreloading, i36.NoPreloading, []), i0.ɵmpd(6144, i36.PreloadingStrategy, null, [i36.NoPreloading]),
+        i0.ɵmpd(135680, i36.RouterPreloader, i36.RouterPreloader, [i36.Router, i0.NgModuleFactoryLoader,
+            i0.Compiler, i0.Injector, i36.PreloadingStrategy]), i0.ɵmpd(4608, i36.PreloadAllModules, i36.PreloadAllModules, []), i0.ɵmpd(5120, i36.ROUTER_INITIALIZER, i36.ɵi, [i36.ɵg]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) {
             return [p0_0];
-        }, [i35.ROUTER_INITIALIZER]), i0.ɵmpd(512, i27.CommonModule, i27.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i28.ɵa, []), i0.ɵmpd(1024, i0.NgProbeToken, function () {
-            return [i35.ɵb()];
-        }, []), i0.ɵmpd(512, i35.ɵg, i35.ɵg, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p0_1, p1_0) {
-            return [i28.ɵc(p0_0, p0_1), i35.ɵh(p1_0)];
-        }, [[2, i28.NgProbeToken], [2, i0.NgProbeToken], i35.ɵg]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ɵe, i0.ɵe, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver,
+        }, [i36.ROUTER_INITIALIZER]), i0.ɵmpd(512, i28.CommonModule, i28.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i29.ɵa, []), i0.ɵmpd(1024, i0.NgProbeToken, function () {
+            return [i36.ɵb()];
+        }, []), i0.ɵmpd(512, i36.ɵg, i36.ɵg, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p0_1, p1_0) {
+            return [i29.ɵc(p0_0, p0_1), i36.ɵh(p1_0)];
+        }, [[2, i29.NgProbeToken], [2, i0.NgProbeToken], i36.ɵg]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ɵe, i0.ɵe, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver,
             i0.ApplicationInitStatus]), i0.ɵmpd(2048, i0.ApplicationRef, null, [i0.ɵe]), i0.ɵmpd(512, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]),
-        i0.ɵmpd(512, i28.BrowserModule, i28.BrowserModule, [[3, i28.BrowserModule]]),
-        i0.ɵmpd(512, i30.BrowserAnimationsModule, i30.BrowserAnimationsModule, []),
-        i0.ɵmpd(512, i36.ClrIconModule, i36.ClrIconModule, []), i0.ɵmpd(512, i37.ClrMainContainerModule, i37.ClrMainContainerModule, []),
-        i0.ɵmpd(512, i38.ClrCommonPopoverModule, i38.ClrCommonPopoverModule, []),
-        i0.ɵmpd(512, i39.ClrConditionalModule, i39.ClrConditionalModule, []),
-        i0.ɵmpd(512, i40.ClrDropdownModule, i40.ClrDropdownModule, []), i0.ɵmpd(512, i41.ClrNavigationModule, i41.ClrNavigationModule, []), i0.ɵmpd(512, i42.ClrTemplateRefModule, i42.ClrTemplateRefModule, []), i0.ɵmpd(512, i43.ClrTabsModule, i43.ClrTabsModule, []), i0.ɵmpd(512, i44.ClrIfExpandModule, i44.ClrIfExpandModule, []), i0.ɵmpd(512, i45.ClrVerticalNavModule, i45.ClrVerticalNavModule, []), i0.ɵmpd(512, i46.ClrLayoutModule, i46.ClrLayoutModule, []), i0.ɵmpd(512, i47.ClrButtonGroupModule, i47.ClrButtonGroupModule, []), i0.ɵmpd(512, i48.ClrFormsModule, i48.ClrFormsModule, []), i0.ɵmpd(512, i34.ɵba, i34.ɵba, []),
-        i0.ɵmpd(512, i34.FormsModule, i34.FormsModule, []), i0.ɵmpd(512, i49.ClrLoadingModule, i49.ClrLoadingModule, []), i0.ɵmpd(512, i50.ClrOutsideClickModule, i50.ClrOutsideClickModule, []), i0.ɵmpd(512, i51.ClrDatagridModule, i51.ClrDatagridModule, []), i0.ɵmpd(512, i52.ClrStackViewModule, i52.ClrStackViewModule, []), i0.ɵmpd(512, i53.ClrTreeViewModule, i53.ClrTreeViewModule, []), i0.ɵmpd(512, i54.ClrDataModule, i54.ClrDataModule, []), i0.ɵmpd(512, i55.ClrAlertModule, i55.ClrAlertModule, []),
-        i0.ɵmpd(512, i56.ClrSignpostModule, i56.ClrSignpostModule, []), i0.ɵmpd(512, i57.ClrTooltipModule, i57.ClrTooltipModule, []), i0.ɵmpd(512, i58.ClrPopoverModule, i58.ClrPopoverModule, []), i0.ɵmpd(1024, i35.ɵa, i35.ɵd, [[3, i35.Router]]), i0.ɵmpd(512, i35.UrlSerializer, i35.DefaultUrlSerializer, []), i0.ɵmpd(512, i35.ChildrenOutletContexts, i35.ChildrenOutletContexts, []), i0.ɵmpd(256, i35.ROUTER_CONFIGURATION, {}, []),
-        i0.ɵmpd(1024, i27.LocationStrategy, i35.ɵc, [i27.PlatformLocation, [2, i27.APP_BASE_HREF],
-            i35.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i27.Location, i27.Location, [i27.LocationStrategy]),
+        i0.ɵmpd(512, i29.BrowserModule, i29.BrowserModule, [[3, i29.BrowserModule]]),
+        i0.ɵmpd(512, i31.BrowserAnimationsModule, i31.BrowserAnimationsModule, []),
+        i0.ɵmpd(512, i33.ɵba, i33.ɵba, []), i0.ɵmpd(512, i33.FormsModule, i33.FormsModule, []), i0.ɵmpd(512, i37.ClrIconModule, i37.ClrIconModule, []),
+        i0.ɵmpd(512, i38.ClrMainContainerModule, i38.ClrMainContainerModule, []),
+        i0.ɵmpd(512, i39.ClrCommonPopoverModule, i39.ClrCommonPopoverModule, []),
+        i0.ɵmpd(512, i40.ClrConditionalModule, i40.ClrConditionalModule, []),
+        i0.ɵmpd(512, i41.ClrDropdownModule, i41.ClrDropdownModule, []), i0.ɵmpd(512, i42.ClrNavigationModule, i42.ClrNavigationModule, []), i0.ɵmpd(512, i43.ClrTemplateRefModule, i43.ClrTemplateRefModule, []), i0.ɵmpd(512, i44.ClrTabsModule, i44.ClrTabsModule, []), i0.ɵmpd(512, i45.ClrIfExpandModule, i45.ClrIfExpandModule, []), i0.ɵmpd(512, i46.ClrVerticalNavModule, i46.ClrVerticalNavModule, []), i0.ɵmpd(512, i47.ClrLayoutModule, i47.ClrLayoutModule, []), i0.ɵmpd(512, i48.ClrButtonGroupModule, i48.ClrButtonGroupModule, []), i0.ɵmpd(512, i49.ClrFormsModule, i49.ClrFormsModule, []), i0.ɵmpd(512, i50.ClrLoadingModule, i50.ClrLoadingModule, []), i0.ɵmpd(512, i51.ClrOutsideClickModule, i51.ClrOutsideClickModule, []), i0.ɵmpd(512, i52.ClrDatagridModule, i52.ClrDatagridModule, []), i0.ɵmpd(512, i53.ClrStackViewModule, i53.ClrStackViewModule, []), i0.ɵmpd(512, i54.ClrTreeViewModule, i54.ClrTreeViewModule, []), i0.ɵmpd(512, i55.ClrDataModule, i55.ClrDataModule, []),
+        i0.ɵmpd(512, i56.ClrAlertModule, i56.ClrAlertModule, []), i0.ɵmpd(512, i57.ClrSignpostModule, i57.ClrSignpostModule, []), i0.ɵmpd(512, i58.ClrTooltipModule, i58.ClrTooltipModule, []), i0.ɵmpd(512, i59.ClrPopoverModule, i59.ClrPopoverModule, []), i0.ɵmpd(1024, i36.ɵa, i36.ɵd, [[3, i36.Router]]), i0.ɵmpd(512, i36.UrlSerializer, i36.DefaultUrlSerializer, []), i0.ɵmpd(512, i36.ChildrenOutletContexts, i36.ChildrenOutletContexts, []), i0.ɵmpd(256, i36.ROUTER_CONFIGURATION, {}, []),
+        i0.ɵmpd(1024, i28.LocationStrategy, i36.ɵc, [i28.PlatformLocation, [2, i28.APP_BASE_HREF],
+            i36.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i28.Location, i28.Location, [i28.LocationStrategy]),
         i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]),
-        i0.ɵmpd(1024, i35.ROUTES, function () {
+        i0.ɵmpd(1024, i36.ROUTES, function () {
             return [[{ path: '', redirectTo: 'alerts', pathMatch: 'full' }, { path: 'alerts',
-                        component: i59.KSAlerts }, { path: 'badges', component: i60.KSBadges }, { path: 'buttons',
-                        component: i61.KSButtons }, { path: 'button-groups', component: i62.KSButtonGroups },
-                    { path: 'colors', component: i63.KSColors }, { path: 'datagrids', component: i64.KSDatagrid },
-                    { path: 'stackviews', component: i65.KSStackView }, { path: 'treeviews', component: i66.KSTreeView },
-                    { path: 'labels', component: i67.KSLabels }, { path: 'checkboxes', component: i68.KSCheckboxes },
-                    { path: 'forms', component: i69.KSForms }, { path: 'inputs', component: i70.KSInputs },
-                    { path: 'radios', component: i71.KSRadios }, { path: 'selects', component: i72.KSSelects },
-                    { path: 'modals', component: i73.KSModals }, { path: 'tabs', component: i74.KSTabs },
-                    { path: 'vertical-nav', component: i75.KSVerticalNav }, { path: 'dropdowns',
-                        component: i76.KSDropdowns }, { path: 'signposts', component: i77.KSSignposts },
-                    { path: 'tooltips', component: i78.KSTooltips }, { path: 'typography', component: i79.KSTypography },
-                    { path: 'wizards', component: i80.KSWizards }]];
-        }, []), i0.ɵmpd(1024, i35.Router, i35.ɵe, [i0.ApplicationRef, i35.UrlSerializer,
-            i35.ChildrenOutletContexts, i27.Location, i0.Injector, i0.NgModuleFactoryLoader,
-            i0.Compiler, i35.ROUTES, i35.ROUTER_CONFIGURATION, [2, i35.UrlHandlingStrategy],
-            [2, i35.RouteReuseStrategy]]), i0.ɵmpd(512, i35.RouterModule, i35.RouterModule, [[2, i35.ɵa], [2, i35.Router]]), i0.ɵmpd(512, i1.KitchenSinkModule, i1.KitchenSinkModule, [])]);
+                        component: i60.KSAlerts }, { path: 'badges', component: i61.KSBadges }, { path: 'buttons',
+                        component: i62.KSButtons }, { path: 'button-groups', component: i63.KSButtonGroups },
+                    { path: 'cards', component: i64.KSCards }, { path: 'colors', component: i65.KSColors },
+                    { path: 'datagrids', component: i66.KSDatagrid }, { path: 'stackviews', component: i67.KSStackView },
+                    { path: 'treeviews', component: i68.KSTreeView }, { path: 'labels', component: i69.KSLabels },
+                    { path: 'checkboxes', component: i70.KSCheckboxes }, { path: 'forms', component: i71.KSForms },
+                    { path: 'inputs', component: i72.KSInputs }, { path: 'radios', component: i73.KSRadios },
+                    { path: 'selects', component: i74.KSSelects }, { path: 'modals', component: i75.KSModals },
+                    { path: 'tabs', component: i76.KSTabs }, { path: 'vertical-nav', component: i77.KSVerticalNav },
+                    { path: 'dropdowns', component: i78.KSDropdowns }, { path: 'signposts', component: i79.KSSignposts },
+                    { path: 'tooltips', component: i80.KSTooltips }, { path: 'typography', component: i81.KSTypography },
+                    { path: 'wizards', component: i82.KSWizards }]];
+        }, []), i0.ɵmpd(1024, i36.Router, i36.ɵe, [i0.ApplicationRef, i36.UrlSerializer,
+            i36.ChildrenOutletContexts, i28.Location, i0.Injector, i0.NgModuleFactoryLoader,
+            i0.Compiler, i36.ROUTES, i36.ROUTER_CONFIGURATION, [2, i36.UrlHandlingStrategy],
+            [2, i36.RouteReuseStrategy]]), i0.ɵmpd(512, i36.RouterModule, i36.RouterModule, [[2, i36.ɵa], [2, i36.Router]]), i0.ɵmpd(512, i1.KitchenSinkModule, i1.KitchenSinkModule, [])]);
 });
 //# sourceMappingURL=app.module.ngfactory.js.map

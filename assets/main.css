@@ -1,0 +1,53 @@
+/* Clarity Overrides*/
+
+.sidenav {
+    overflow: scroll;
+    width: auto;
+    border-right: none;
+}
+
+.sidenav-content {
+    margin-bottom: 0;
+}
+
+.clr-vertical-nav .nav-link:hover, .clr-vertical-nav .nav-link.active {
+    background-color: #fafafa;
+}
+
+
+/* Override the header styles */
+.header > .branding > .nav-link > .clr-icon {
+    height: 36px;
+    width: 36px;
+    margin-right: 12px;
+}
+
+/* Give our global alerts some space for this example. */
+clr-alert {
+    /*flex: 1 0 50%;*/
+    margin: 25px;
+}
+
+
+/* flexbox grid hack*/
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content-wrapper .col {
+    margin: 12px;
+    flex: 1 0 auto;
+    max-width: 400px;
+    min-width: 45%;
+}
+
+.col.inverse {
+    background-color: #313131;
+    padding: 12px;
+    flex: 1 0 auto;
+}
+
+
+/* Color port */

@@ -5,16 +5,293 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/buttons/button-groups.component';
+import * as i1 from '../../node_modules/clarity-angular/button/button-group/button-group.ngfactory';
+import * as i2 from 'clarity-angular/button/providers/buttonInGroup.service';
+import * as i3 from 'clarity-angular/button/button-group/button-group';
+import * as i4 from '../../node_modules/clarity-angular/button/button-group/button.ngfactory';
+import * as i5 from 'clarity-angular/button/button-group/button';
+import * as i6 from 'clarity-angular/icon/icon';
+import * as i7 from '../../../containers/buttons/button-groups.component';
 var styles_KSButtonGroups = [];
 export var RenderType_KSButtonGroups = i0.ɵcrt({ encapsulation: 2,
     styles: styles_KSButtonGroups, data: {} });
 export function View_KSButtonGroups_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Button groups here'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Button Groups'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Primary Button Groups'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 85, 'div', [['class', 'content-wrapper']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Primary'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-primary']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Success'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-success']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Warning'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Primary Small Button Groups'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 85, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Primary'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-primary']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Success'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-success']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Warning'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Outline Button Groups'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 85, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Primary Outline'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-outline-primary']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Success Outline'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-outline-success']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Warning Outline'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-outline-warning']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled Outline'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-outline-warning']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Outline Small Button Groups'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 85, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Primary Outline'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-outline-primary']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Success Outline'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-outline-success']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Warning Outline'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-outline-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled Outline'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-sm btn-outline-warning']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled', '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['disabled',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Button Group Links'])), (_l()(),
+            i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 16, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-link']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Inverse Button Group'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class',
+                'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 16, 'div', [['class', 'col inverse']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'btn-group btn-inverse']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Button Group w/ Disabled'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 34, 'div', [['class',
+                'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 31, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 28, 'clr-button-group', [], [[2, 'btn-group', null]], [['document', 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 420).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 1, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['id', 'test'], ['name', 'button1']], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[1, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { name: [0, 'name'] }, null), (_l()(), i0.ɵted(0, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['type', 'button']], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[1, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['disabled', '']], null, null, null, i4.View_Button_0, i4.RenderType_Button)),
+        i0.ɵdid(4243456, [[1, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { disabled: [0,
+                'disabled'] }, null), (_l()(), i0.ɵted(0, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['disabled', 'false']], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[1, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { disabled: [0, 'disabled'] }, null), (_l()(), i0.ɵted(0, ['4'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['disabled', '123']], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[1,
+                4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { disabled: [0, 'disabled'] }, null), (_l()(), i0.ɵted(0, ['5'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[1, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null),
+        (_l()(), i0.ɵted(0, ['6'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Button Group w/ Overflow'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 38, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 35, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 32, 'clr-button-group', [['class', 'btn-primary']], [[2, 'btn-group', null]], [['document', 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 459).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 2, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['4'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['5'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['6'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[2, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['7'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Mixed Button Group'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 30, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 27, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 24, 'clr-button-group', [['class', 'btn-primary']], [[2, 'btn-group', null]], [['document', 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 502).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 3, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[3, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[3, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['2'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['class', 'btn btn-success']], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[3, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { classNames: [0, 'classNames'] }, null),
+        (_l()(), i0.ɵted(0, ['3'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [['class', 'btn btn-danger']], null, null, null, i4.View_Button_0, i4.RenderType_Button)),
+        i0.ɵdid(4243456, [[3, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { classNames: [0,
+                'classNames'] }, null), (_l()(), i0.ɵted(0, ['4'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[3, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['5'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Icon Button Groups'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 157, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 50, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Primary Icons'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 44, 'clr-button-group', [['class', 'btn-primary']], [[2, 'btn-group', null]], [['document', 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 540).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 4, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[4, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'home']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Home'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[4, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cog']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Settings'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[4, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'user']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['User'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[4, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cloud']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class',
+                'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Cloud'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 50, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Outline Icons'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 44, 'clr-button-group', [], [[2, 'btn-group', null]], [['document', 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 592).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 5, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[5, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'home']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Home'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[5, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cog']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Settings'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[5, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'user']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['User'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[5, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cloud']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class',
+                'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Cloud'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 50, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Flat Icons'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 44, 'clr-button-group', [['class', 'btn-link btn-icon-link']], [[2, 'btn-group', null]], [['document',
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('document:click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 644).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_ButtonGroup_0, i1.RenderType_ButtonGroup)), i0.ɵprd(512, null, i2.ButtonInGroupService, i2.ButtonInGroupService, []), i0.ɵdid(1097728, null, 1, i3.ButtonGroup, [i2.ButtonInGroupService, i0.ElementRef], null, null), i0.ɵqud(603979776, 6, { buttons: 1 }), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[6, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'home']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Home'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[6, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cog']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Settings'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[6, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'user']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class', 'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['User'])), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'clr-button', [], null, null, null, i4.View_Button_0, i4.RenderType_Button)), i0.ɵdid(4243456, [[6, 4]], 0, i5.Button, [[3, i2.ButtonInGroupService]], { inMenu: [0, 'inMenu'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'cloud']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i6.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'span', [['class',
+                'clr-icon-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Cloud'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var currVal_1 = 'button1';
+        _ck(_v, 424, 0, currVal_1);
+        var currVal_2 = 'button';
+        _ck(_v, 428, 0, currVal_2);
+        var currVal_3 = '';
+        _ck(_v, 432, 0, currVal_3);
+        var currVal_4 = 'false';
+        _ck(_v, 436, 0, currVal_4);
+        var currVal_5 = '123';
+        _ck(_v, 440, 0, currVal_5);
+        var currVal_7 = true;
+        _ck(_v, 479, 0, currVal_7);
+        var currVal_8 = true;
+        _ck(_v, 483, 0, currVal_8);
+        var currVal_9 = true;
+        _ck(_v, 487, 0, currVal_9);
+        var currVal_11 = 'btn btn-success';
+        _ck(_v, 514, 0, currVal_11);
+        var currVal_12 = 'btn btn-danger';
+        _ck(_v, 518, 0, currVal_12);
+        var currVal_14 = true;
+        _ck(_v, 564, 0, currVal_14);
+        var currVal_15 = true;
+        _ck(_v, 574, 0, currVal_15);
+        var currVal_17 = true;
+        _ck(_v, 616, 0, currVal_17);
+        var currVal_18 = true;
+        _ck(_v, 626, 0, currVal_18);
+        var currVal_20 = true;
+        _ck(_v, 668, 0, currVal_20);
+        var currVal_21 = true;
+        _ck(_v, 678, 0, currVal_21);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        _ck(_v, 418, 0, currVal_0);
+        var currVal_6 = true;
+        _ck(_v, 457, 0, currVal_6);
+        var currVal_10 = true;
+        _ck(_v, 500, 0, currVal_10);
+        var currVal_13 = true;
+        _ck(_v, 538, 0, currVal_13);
+        var currVal_16 = true;
+        _ck(_v, 590, 0, currVal_16);
+        var currVal_19 = true;
+        _ck(_v, 642, 0, currVal_19);
+    });
 }
 export function View_KSButtonGroups_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSButtonGroups_0, RenderType_KSButtonGroups)), i0.ɵdid(49152, null, 0, i1.KSButtonGroups, [], null, null)], null, null);
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSButtonGroups_0, RenderType_KSButtonGroups)), i0.ɵdid(49152, null, 0, i7.KSButtonGroups, [], null, null)], null, null);
 }
-export var KSButtonGroupsNgFactory = i0.ɵccf('ng-component', i1.KSButtonGroups, View_KSButtonGroups_Host_0, {}, {}, []);
+export var KSButtonGroupsNgFactory = i0.ɵccf('ng-component', i7.KSButtonGroups, View_KSButtonGroups_Host_0, {}, {}, []);
 //# sourceMappingURL=button-groups.component.ngfactory.js.map

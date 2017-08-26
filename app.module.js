@@ -10,6 +10,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClrAlertModule, ClrButtonGroupModule, ClrDataModule, ClrFormsModule, ClrIconModule, ClrLayoutModule, ClrPopoverModule } from "clarity-angular";
@@ -17,6 +18,7 @@ import { KitchenSinkApp } from "./app.component";
 import { ROUTING } from "./app.routing";
 import { KSButtonGroups } from "./containers/buttons/button-groups.component";
 import { KSButtons } from "./containers/buttons/buttons.component";
+import { KSCards } from "./containers/cards/cards.component";
 import { KSColors } from "./containers/colors/colors.component";
 import { KSDatagrid } from "./containers/data/datagrid.component";
 import { KSStackView } from "./containers/data/stackview.component";
@@ -45,14 +47,14 @@ var KitchenSinkModule = (function () {
 KitchenSinkModule = __decorate([
     NgModule({
         imports: [
-            BrowserAnimationsModule, BrowserModule,
+            BrowserAnimationsModule, BrowserModule, FormsModule,
             ClrLayoutModule,
             ClrIconModule, ClrButtonGroupModule, ClrDataModule, ClrFormsModule, ClrAlertModule, ClrPopoverModule, ROUTING
         ],
         declarations: [
             KitchenSinkApp, KSAlerts, KSBadges, KSButtons, KSButtonGroups, KSColors, KSDatagrid, KSStackView,
             KSTreeView, KSLabels, KSCheckboxes, KSForms, KSInputs, KSRadios, KSSelects, KSModals,
-            KSTabs, KSVerticalNav, KSDropdowns, KSSignposts, KSTooltips, KSTypography, KSWizards
+            KSTabs, KSVerticalNav, KSDropdowns, KSSignposts, KSTooltips, KSTypography, KSWizards, KSCards
         ],
         bootstrap: [KitchenSinkApp]
     })

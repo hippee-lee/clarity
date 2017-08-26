@@ -1,6 +1,7 @@
 import { RouterModule } from "@angular/router";
 import { KSButtonGroups } from "./containers/buttons/button-groups.component";
 import { KSButtons } from "./containers/buttons/buttons.component";
+import { KSCards } from "./containers/cards/cards.component";
 import { KSColors } from "./containers/colors/colors.component";
 import { KSDatagrid } from "./containers/data/datagrid.component";
 import { KSStackView } from "./containers/data/stackview.component";
@@ -27,6 +28,7 @@ export var APP_ROUTES = [
     { path: "badges", component: KSBadges },
     { path: "buttons", component: KSButtons },
     { path: "button-groups", component: KSButtonGroups },
+    { path: "cards", component: KSCards },
     { path: "colors", component: KSColors },
     { path: "datagrids", component: KSDatagrid },
     { path: "stackviews", component: KSStackView },

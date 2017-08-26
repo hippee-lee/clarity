@@ -50,7 +50,7 @@ var KitchenSinkApp = (function () {
     return KitchenSinkApp;
 }());
 KitchenSinkApp = __decorate([
-    Component({ selector: "kitchen-sink-app", templateUrl: "./app.component.html", styleUrls: ["./app.component.css"] }),
+    Component({ selector: "kitchen-sink-app", templateUrl: "./app.component.html", styleUrls: ["./main.css"] }),
     __metadata("design:paramtypes", [])
 ], KitchenSinkApp);
 export { KitchenSinkApp };
