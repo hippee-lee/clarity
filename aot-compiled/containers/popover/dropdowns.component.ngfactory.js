@@ -5,17 +5,231 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/popover/dropdowns.component';
+import * as i1 from '../../node_modules/clarity-angular/popover/dropdown/dropdown-menu.ngfactory';
+import * as i2 from 'clarity-angular/popover/dropdown/dropdown-menu';
+import * as i3 from 'clarity-angular/popover/dropdown/dropdown-item';
+import * as i4 from 'clarity-angular/popover/dropdown/dropdown';
+import * as i5 from 'clarity-angular/utils/conditional/if-open.service';
+import * as i6 from '@angular/router';
+import * as i7 from '@angular/common';
+import * as i8 from '../../node_modules/clarity-angular/popover/dropdown/dropdown.ngfactory';
+import * as i9 from 'clarity-angular/popover/dropdown/dropdown-trigger';
+import * as i10 from 'clarity-angular/icon/icon';
+import * as i11 from 'clarity-angular/utils/conditional/if-open.directive';
+import * as i12 from '../../../containers/popover/dropdowns.component';
 var styles_KSDropdowns = [];
 export var RenderType_KSDropdowns = i0.ɵcrt({ encapsulation: 2, styles: styles_KSDropdowns,
     data: {} });
+function View_KSDropdowns_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'clr-dropdown-menu', [['clrPosition', 'bottom-right']], [[2, 'dropdown-menu', null], [4, 'visibility',
+                null]], null, null, i1.View_DropdownMenu_0, i1.RenderType_DropdownMenu)),
+        i0.ɵdid(8568832, null, 0, i2.DropdownMenu, [i0.Injector, [1, i0.ElementRef],
+            [3, i2.DropdownMenu]], { position: [0, 'position'] }, null), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 3, 'a', [['clrDropdownItem',
+                ''], ['routerLink', 'dropdowns']], [[2, 'dropdown-item', null], [1, 'target',
+                0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 4).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('click' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        i0.ɵdid(671744, null, 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
+            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), (_l()(),
+            i0.ɵted(null, ['Dropdowns'])), (_l()(), i0.ɵted(0, ['\n    ']))], function (_ck, _v) {
+        var currVal_2 = 'bottom-right';
+        _ck(_v, 1, 0, currVal_2);
+        var currVal_6 = 'dropdowns';
+        _ck(_v, 5, 0, currVal_6);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 1).hidden;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = true;
+        var currVal_4 = i0.ɵnov(_v, 5).target;
+        var currVal_5 = i0.ɵnov(_v, 5).href;
+        _ck(_v, 3, 0, currVal_3, currVal_4, currVal_5);
+    });
+}
 export function View_KSDropdowns_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Dropdowns'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Dropdowns'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Dropdown w/ nested menu'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 65, 'clr-dropdown', [], [[2,
+                    'dropdown', null], [2, 'open', null]], null, null, i8.View_Dropdown_0, i8.RenderType_Dropdown)), i0.ɵprd(512, null, i5.IfOpenService, i5.IfOpenService, []), i0.ɵdid(49152, null, 0, i4.Dropdown, [[3, i4.Dropdown], i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵeld(0, null, 0, 5, 'button', [['class', 'btn btn-outline-primary'], ['clrDropdownTrigger', ''], ['id', 'current']], [[2, 'dropdown-toggle', null], [2, 'dropdown-item', null], [2,
+                'expandable', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 11).onDropdownTriggerClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DropdownTrigger, [i4.Dropdown, i5.IfOpenService], null, null), (_l()(), i0.ɵted(null, ['\n        Dropdown\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'caret down']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i10.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵeld(0, null, 0, 53, 'clr-dropdown-menu', [], [[2, 'dropdown-menu', null],
+            [4, 'visibility', null]], null, null, i1.View_DropdownMenu_0, i1.RenderType_DropdownMenu)), i0.ɵdid(8568832, null, 0, i2.DropdownMenu, [i0.Injector, [1, i0.ElementRef], [3, i2.DropdownMenu]], null, null),
+        (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'label', [['class', 'dropdown-header']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Dropdown header'])),
+        (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'a', [['clrDropdownItem',
+                ''], ['href', 'javascript://']], [[2, 'dropdown-item', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 24).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['Action 1'])), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'a', [['class', 'disabled'], ['clrDropdownItem',
+                ''], ['href', 'javascript://']], [[2, 'dropdown-item', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 28).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['Disabled Action'])), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, 0, 0, 'div', [['class', 'dropdown-divider']], null, null, null, null, null)), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 32, 'clr-dropdown', [], [[2, 'dropdown', null], [2, 'open', null]], null, null, i8.View_Dropdown_0, i8.RenderType_Dropdown)), i0.ɵprd(512, null, i5.IfOpenService, i5.IfOpenService, []), i0.ɵdid(49152, null, 0, i4.Dropdown, [[3, i4.Dropdown], i5.IfOpenService], null, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'button', [['clrDropdownTrigger', ''], ['id', 'sub-menu-1']], [[2, 'dropdown-toggle', null],
+            [2, 'dropdown-item', null], [2, 'expandable', null], [2,
+                'active', null]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 38).onDropdownTriggerClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DropdownTrigger, [i4.Dropdown, i5.IfOpenService], null, null), (_l()(), i0.ɵted(null, ['Link 1'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 23, 'clr-dropdown-menu', [], [[2, 'dropdown-menu', null],
+            [4, 'visibility', null]], null, null, i1.View_DropdownMenu_0, i1.RenderType_DropdownMenu)), i0.ɵdid(8568832, null, 0, i2.DropdownMenu, [i0.Injector, [1, i0.ElementRef], [3, i2.DropdownMenu]], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'a', [['clrDropdownItem', ''], ['href', 'javascript://']], [[2, 'dropdown-item',
+                null]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 45).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['Foo'])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 15, 'clr-dropdown', [], [[2, 'dropdown',
+                null], [2, 'open', null]], null, null, i8.View_Dropdown_0, i8.RenderType_Dropdown)), i0.ɵprd(512, null, i5.IfOpenService, i5.IfOpenService, []), i0.ɵdid(49152, null, 0, i4.Dropdown, [[3, i4.Dropdown],
+            i5.IfOpenService], null, null), (_l()(), i0.ɵted(0, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'button', [['clrDropdownTrigger', ''], ['id',
+                'sub-menu-2']], [[2, 'dropdown-toggle', null], [2, 'dropdown-item', null],
+            [2, 'expandable', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 53).onDropdownTriggerClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DropdownTrigger, [i4.Dropdown, i5.IfOpenService], null, null), (_l()(), i0.ɵted(null, ['Bar'])), (_l()(), i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 6, 'clr-dropdown-menu', [['clrPosition', 'left-bottom']], [[2,
+                'dropdown-menu', null], [4, 'visibility', null]], null, null, i1.View_DropdownMenu_0, i1.RenderType_DropdownMenu)), i0.ɵdid(8568832, null, 0, i2.DropdownMenu, [i0.Injector, [1, i0.ElementRef], [3, i2.DropdownMenu]], { position: [0, 'position'] }, null), (_l()(), i0.ɵted(0, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'a', [['clrDropdownItem', ''], ['href', 'javascript://']], [[2, 'dropdown-item', null]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 60).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['Baz'])), (_l()(), i0.ɵted(0, ['\n                    '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, 0, 2, 'a', [['clrDropdownItem', ''], ['href', 'javascript://']], [[2, 'dropdown-item', null]], [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                if (('click' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 68).onDropdownItemClick() !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i3.DropdownItem, [i4.Dropdown, i0.ElementRef, i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['Link 2'])), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(),
+            i0.ɵted(0, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Dropdown w/ icon button'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 16, 'clr-dropdown', [], [[2,
+                    'dropdown', null], [2, 'open', null]], null, null, i8.View_Dropdown_0, i8.RenderType_Dropdown)), i0.ɵprd(512, null, i5.IfOpenService, i5.IfOpenService, []), i0.ɵdid(49152, null, 0, i4.Dropdown, [[3, i4.Dropdown], i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵeld(0, null, 0, 8, 'button', [['class', 'nav-icon'], ['clrDropdownTrigger', '']], [[2, 'dropdown-toggle', null],
+            [2, 'dropdown-item', null], [2, 'expandable', null], [2,
+                'active', null]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 81).onDropdownTriggerClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DropdownTrigger, [i4.Dropdown, i5.IfOpenService], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'user']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i10.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'caret down']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i10.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSDropdowns_1)),
+        i0.ɵdid(147456, null, 0, i11.IfOpenDirective, [i5.IfOpenService, i0.TemplateRef,
+            i0.ViewContainerRef], { open: [0, 'open'] }, null), (_l()(), i0.ɵted(0, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var currVal_27 = 'left-bottom';
+        _ck(_v, 57, 0, currVal_27);
+        var currVal_36 = null;
+        _ck(_v, 91, 0, currVal_36);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 8).ifOpenService.open;
+        _ck(_v, 6, 0, currVal_0, currVal_1);
+        var currVal_2 = i0.ɵnov(_v, 11).isRootLevelToggle;
+        var currVal_3 = !i0.ɵnov(_v, 11).isRootLevelToggle;
+        var currVal_4 = !i0.ɵnov(_v, 11).isRootLevelToggle;
+        var currVal_5 = i0.ɵnov(_v, 11).active;
+        _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 18).hidden;
+        _ck(_v, 17, 0, currVal_6, currVal_7);
+        var currVal_8 = true;
+        _ck(_v, 23, 0, currVal_8);
+        var currVal_9 = true;
+        _ck(_v, 27, 0, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 35).ifOpenService.open;
+        _ck(_v, 33, 0, currVal_10, currVal_11);
+        var currVal_12 = i0.ɵnov(_v, 38).isRootLevelToggle;
+        var currVal_13 = !i0.ɵnov(_v, 38).isRootLevelToggle;
+        var currVal_14 = !i0.ɵnov(_v, 38).isRootLevelToggle;
+        var currVal_15 = i0.ɵnov(_v, 38).active;
+        _ck(_v, 37, 0, currVal_12, currVal_13, currVal_14, currVal_15);
+        var currVal_16 = true;
+        var currVal_17 = i0.ɵnov(_v, 42).hidden;
+        _ck(_v, 41, 0, currVal_16, currVal_17);
+        var currVal_18 = true;
+        _ck(_v, 44, 0, currVal_18);
+        var currVal_19 = true;
+        var currVal_20 = i0.ɵnov(_v, 50).ifOpenService.open;
+        _ck(_v, 48, 0, currVal_19, currVal_20);
+        var currVal_21 = i0.ɵnov(_v, 53).isRootLevelToggle;
+        var currVal_22 = !i0.ɵnov(_v, 53).isRootLevelToggle;
+        var currVal_23 = !i0.ɵnov(_v, 53).isRootLevelToggle;
+        var currVal_24 = i0.ɵnov(_v, 53).active;
+        _ck(_v, 52, 0, currVal_21, currVal_22, currVal_23, currVal_24);
+        var currVal_25 = true;
+        var currVal_26 = i0.ɵnov(_v, 57).hidden;
+        _ck(_v, 56, 0, currVal_25, currVal_26);
+        var currVal_28 = true;
+        _ck(_v, 59, 0, currVal_28);
+        var currVal_29 = true;
+        _ck(_v, 67, 0, currVal_29);
+        var currVal_30 = true;
+        var currVal_31 = i0.ɵnov(_v, 78).ifOpenService.open;
+        _ck(_v, 76, 0, currVal_30, currVal_31);
+        var currVal_32 = i0.ɵnov(_v, 81).isRootLevelToggle;
+        var currVal_33 = !i0.ɵnov(_v, 81).isRootLevelToggle;
+        var currVal_34 = !i0.ɵnov(_v, 81).isRootLevelToggle;
+        var currVal_35 = i0.ɵnov(_v, 81).active;
+        _ck(_v, 80, 0, currVal_32, currVal_33, currVal_34, currVal_35);
+    });
 }
 export function View_KSDropdowns_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSDropdowns_0, RenderType_KSDropdowns)),
-        i0.ɵdid(49152, null, 0, i1.KSDropdowns, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i12.KSDropdowns, [], null, null)], null, null);
 }
-export var KSDropdownsNgFactory = i0.ɵccf('ng-component', i1.KSDropdowns, View_KSDropdowns_Host_0, {}, {}, []);
+export var KSDropdownsNgFactory = i0.ɵccf('ng-component', i12.KSDropdowns, View_KSDropdowns_Host_0, {}, {}, []);
 //# sourceMappingURL=dropdowns.component.ngfactory.js.map

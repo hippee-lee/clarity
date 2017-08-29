@@ -14,6 +14,8 @@ import { KSForms } from "./containers/forms/forms.component";
 import { KSInputs } from "./containers/forms/inputs.component";
 import { KSRadios } from "./containers/forms/radios.component";
 import { KSSelects } from "./containers/forms/selects.component";
+import { KSLists } from "./containers/lists/lists.component";
+import { KSLogin } from "./containers/login/login.component";
 import { KSModals } from "./containers/modal/modals.component";
 import { KSTabs } from "./containers/nav/tabs.component";
 import { KSVerticalNav } from "./containers/nav/vertical-nav.component";
@@ -34,6 +36,8 @@ export var APP_ROUTES = [
     { path: "stackviews", component: KSStackView },
     { path: "treeviews", component: KSTreeView },
     { path: "labels", component: KSLabels },
+    { path: "lists", component: KSLists },
+    { path: "login", component: KSLogin },
     { path: "checkboxes", component: KSCheckboxes },
     { path: "forms", component: KSForms },
     { path: "inputs", component: KSInputs },

@@ -10,7 +10,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClrAlertModule, ClrButtonGroupModule, ClrDataModule, ClrFormsModule, ClrIconModule, ClrLayoutModule, ClrPopoverModule } from "clarity-angular";
@@ -21,6 +21,7 @@ import { KSButtons } from "./containers/buttons/buttons.component";
 import { KSCards } from "./containers/cards/cards.component";
 import { KSColors } from "./containers/colors/colors.component";
 import { KSDatagrid } from "./containers/data/datagrid.component";
+import { FakeLoader } from "./containers/data/fake-loader";
 import { KSStackView } from "./containers/data/stackview.component";
 import { KSTreeView } from "./containers/data/tree-view.component";
 import { KSAlerts } from "./containers/emphasis/alerts.component";
@@ -31,6 +32,8 @@ import { KSForms } from "./containers/forms/forms.component";
 import { KSInputs } from "./containers/forms/inputs.component";
 import { KSRadios } from "./containers/forms/radios.component";
 import { KSSelects } from "./containers/forms/selects.component";
+import { KSLists } from "./containers/lists/lists.component";
+import { KSLogin } from "./containers/login/login.component";
 import { KSModals } from "./containers/modal/modals.component";
 import { KSTabs } from "./containers/nav/tabs.component";
 import { KSVerticalNav } from "./containers/nav/vertical-nav.component";
@@ -47,14 +50,15 @@ var KitchenSinkModule = (function () {
 KitchenSinkModule = __decorate([
     NgModule({
         imports: [
-            BrowserAnimationsModule, BrowserModule, FormsModule,
+            BrowserAnimationsModule, BrowserModule, FormsModule, ReactiveFormsModule,
             ClrLayoutModule,
             ClrIconModule, ClrButtonGroupModule, ClrDataModule, ClrFormsModule, ClrAlertModule, ClrPopoverModule, ROUTING
         ],
         declarations: [
-            KitchenSinkApp, KSAlerts, KSBadges, KSButtons, KSButtonGroups, KSColors, KSDatagrid, KSStackView,
-            KSTreeView, KSLabels, KSCheckboxes, KSForms, KSInputs, KSRadios, KSSelects, KSModals,
-            KSTabs, KSVerticalNav, KSDropdowns, KSSignposts, KSTooltips, KSTypography, KSWizards, KSCards
+            KitchenSinkApp, KSAlerts, KSBadges, KSButtons, KSButtonGroups, KSColors, KSDatagrid,
+            KSStackView, KSTreeView, KSLabels, KSCheckboxes, KSForms, KSInputs, KSLists,
+            KSRadios, KSSelects, KSModals, KSTabs, KSVerticalNav, KSDropdowns, KSSignposts,
+            KSTooltips, KSTypography, KSWizards, KSCards, FakeLoader, KSLogin
         ],
         bootstrap: [KitchenSinkApp]
     })

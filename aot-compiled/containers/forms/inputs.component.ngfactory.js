@@ -5,17 +5,112 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/forms/inputs.component';
+import * as i1 from '@angular/forms';
+import * as i2 from '../../../containers/forms/inputs.component';
 var styles_KSInputs = [];
 export var RenderType_KSInputs = i0.ɵcrt({ encapsulation: 2, styles: styles_KSInputs,
     data: {} });
 export function View_KSInputs_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Inputs'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Inputs'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 149, 'form', [['novalidate', '']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'submit'],
+                [null, 'reset']], function (_v, en, $event) {
+                var ad = true;
+                if (('submit' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 5).onSubmit($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('reset' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 5).onReset() !== false);
+                    ad = (pd_1 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i1.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i1.NgForm, [[8, null],
+            [8, null]], null, null), i0.ɵprd(2048, null, i1.ControlContainer, null, [i1.NgForm]), i0.ɵdid(16384, null, 0, i1.NgControlStatusGroup, [i1.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 142, 'section', [['class',
+                'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Input Fields'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 16, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Textbox [type="text"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['disabled', ''], ['id', 'formFields_1'], ['placeholder',
+                'Email'], ['size', '35'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_2'], ['placeholder', 'Email 2'], ['size', '45'], ['type', 'text']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_3'], ['placeholder', 'Email'], ['size',
+                '25'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_4'], ['placeholder',
+                    'Email 2'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_5'],
+            ['placeholder', 'Email'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_6'],
+            ['placeholder', 'Email 2'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_7']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Textbox [type="password"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_7'], ['placeholder', 'Password'],
+            ['type', 'password']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_8']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Textarea'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 0, 'textarea', [['id', 'formFields_8'],
+                ['rows', '5']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_9']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Textbox [type="url"]'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formFields_9'], ['placeholder', 'https://vmware.github.io/clarity/'],
+            ['size', '35'], ['type', 'url']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_10']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Texbox [type="tel"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_10'], ['placeholder', '(123) 456-7890'],
+            ['type', 'tel']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_11']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Texbox [type="date"]'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_11'],
+            ['type', 'date']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_12']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Texbox [type="time"]'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_12'],
+            ['type', 'time']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'datetime-local']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Texbox [type="datetime-local"]'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'datetime-local'],
+            ['type', 'datetime-local']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_13']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_13'],
+            ['readonly', ''], ['size', '25'], ['type', 'text'], ['value', 'This is a read only textbox']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class',
+                'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_14']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="number"]'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_14'],
+            ['readonly', ''], ['type', 'number'], ['value', '24']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_15']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="url"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_15'], ['readonly', ''], ['size',
+                '25'], ['type', 'url'], ['value', 'http://www.vmware.com']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_16']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="tel"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_16'], ['readonly', ''], ['type',
+                'tel'], ['value', '123-456-7890']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_17']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="password"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_17'], ['readonly', ''], ['type',
+                'password'], ['value', 'strongpassword']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_18']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="time"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_18'], ['readonly', ''], ['type',
+                'time'], ['value', '13:01']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formfields_19']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Readonly Textbox [type="date"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'formfields_19'], ['readonly', ''], ['type',
+                'date'], ['value', '2017-12-25']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'datetime-local-readonly']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Texbox [type="datetime-local"]'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'datetime-local-readonly'], ['readonly', ''],
+            ['type', 'datetime-local']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 7).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 7).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 7).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 7).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 7).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 7).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 7).ngClassPending;
+        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+    });
 }
 export function View_KSInputs_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSInputs_0, RenderType_KSInputs)),
-        i0.ɵdid(49152, null, 0, i1.KSInputs, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i2.KSInputs, [], null, null)], null, null);
 }
-export var KSInputsNgFactory = i0.ɵccf('ng-component', i1.KSInputs, View_KSInputs_Host_0, {}, {}, []);
+export var KSInputsNgFactory = i0.ɵccf('ng-component', i2.KSInputs, View_KSInputs_Host_0, {}, {}, []);
 //# sourceMappingURL=inputs.component.ngfactory.js.map

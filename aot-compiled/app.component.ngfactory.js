@@ -6,28 +6,72 @@
 /* tslint:disable */
 import * as i0 from './main.css.shim.ngstyle';
 import * as i1 from '@angular/core';
-import * as i2 from 'clarity-angular/layout/main-container/main-container';
-import * as i3 from 'clarity-angular/layout/nav/clrResponsiveNavigationService';
-import * as i4 from './node_modules/clarity-angular/layout/nav/header.ngfactory';
-import * as i5 from 'clarity-angular/layout/nav/header';
-import * as i6 from '@angular/router';
-import * as i7 from '@angular/common';
-import * as i8 from 'clarity-angular/layout/nav/navLevelDirective';
-import * as i9 from './node_modules/clarity-angular/layout/vertical-nav/vertical-nav.ngfactory';
-import * as i10 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav.service';
-import * as i11 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-icon.service';
-import * as i12 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-group.service';
-import * as i13 from 'clarity-angular/layout/vertical-nav/vertical-nav';
-import * as i14 from './node_modules/clarity-angular/layout/vertical-nav/vertical-nav-link.ngfactory';
-import * as i15 from 'clarity-angular/layout/vertical-nav/vertical-nav-link';
-import * as i16 from '../app.component';
+import * as i2 from './node_modules/clarity-angular/popover/dropdown/dropdown-menu.ngfactory';
+import * as i3 from 'clarity-angular/popover/dropdown/dropdown-menu';
+import * as i4 from 'clarity-angular/popover/dropdown/dropdown-item';
+import * as i5 from 'clarity-angular/popover/dropdown/dropdown';
+import * as i6 from 'clarity-angular/utils/conditional/if-open.service';
+import * as i7 from '@angular/router';
+import * as i8 from '@angular/common';
+import * as i9 from 'clarity-angular/layout/main-container/main-container';
+import * as i10 from 'clarity-angular/layout/nav/clrResponsiveNavigationService';
+import * as i11 from './node_modules/clarity-angular/layout/nav/header.ngfactory';
+import * as i12 from 'clarity-angular/layout/nav/header';
+import * as i13 from './node_modules/clarity-angular/popover/dropdown/dropdown.ngfactory';
+import * as i14 from 'clarity-angular/popover/dropdown/dropdown-trigger';
+import * as i15 from 'clarity-angular/icon/icon';
+import * as i16 from 'clarity-angular/utils/conditional/if-open.directive';
+import * as i17 from 'clarity-angular/layout/nav/navLevelDirective';
+import * as i18 from './node_modules/clarity-angular/layout/vertical-nav/vertical-nav.ngfactory';
+import * as i19 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav.service';
+import * as i20 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-icon.service';
+import * as i21 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-group.service';
+import * as i22 from 'clarity-angular/layout/vertical-nav/vertical-nav';
+import * as i23 from './node_modules/clarity-angular/layout/vertical-nav/vertical-nav-link.ngfactory';
+import * as i24 from 'clarity-angular/layout/vertical-nav/vertical-nav-link';
+import * as i25 from '../app.component';
 var styles_KitchenSinkApp = [i0.styles];
 export var RenderType_KitchenSinkApp = i1.ɵcrt({ encapsulation: 0,
     styles: styles_KitchenSinkApp, data: {} });
+function View_KitchenSinkApp_1(_l) {
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 7, 'clr-dropdown-menu', [['clrPosition', 'bottom-right']], [[2, 'dropdown-menu', null], [4, 'visibility',
+                null]], null, null, i2.View_DropdownMenu_0, i2.RenderType_DropdownMenu)),
+        i1.ɵdid(8568832, null, 0, i3.DropdownMenu, [i1.Injector, [1, i1.ElementRef],
+            [3, i3.DropdownMenu]], { position: [0, 'position'] }, null), (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 3, 'a', [['clrDropdownItem',
+                ''], ['routerLink', 'dropdowns']], [[2, 'dropdown-item', null], [1, 'target',
+                0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 4).onDropdownItemClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('click' === en)) {
+                var pd_1 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i1.ɵdid(16384, null, 0, i4.DropdownItem, [i5.Dropdown, i1.ElementRef, i6.IfOpenService], null, null),
+        i1.ɵdid(671744, null, 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), (_l()(),
+            i1.ɵted(null, ['Dropdowns'])), (_l()(), i1.ɵted(0, ['\n                ']))], function (_ck, _v) {
+        var currVal_2 = 'bottom-right';
+        _ck(_v, 1, 0, currVal_2);
+        var currVal_6 = 'dropdowns';
+        _ck(_v, 5, 0, currVal_6);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i1.ɵnov(_v, 1).hidden;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = true;
+        var currVal_4 = i1.ɵnov(_v, 5).target;
+        var currVal_5 = i1.ɵnov(_v, 5).href;
+        _ck(_v, 3, 0, currVal_3, currVal_4, currVal_5);
+    });
+}
 export function View_KitchenSinkApp_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵeld(0, null, null, 225, 'clr-main-container', [], [[2, 'main-container', null]], null, null, null, null)), i1.ɵdid(212992, null, 0, i2.MainContainer, [i1.ElementRef, i3.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 30, 'clr-header', [['class', 'header-6']], [[2, 'header',
-                null]], null, null, i4.View_Header_0, i4.RenderType_Header)),
-        i1.ɵdid(245760, null, 0, i5.Header, [i3.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(0, ['\n        '])), (_l()(),
+    return i1.ɵvid(0, [(_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵeld(0, null, null, 259, 'clr-main-container', [], [[2, 'main-container', null]], null, null, null, null)), i1.ɵdid(212992, null, 0, i9.MainContainer, [i1.ElementRef, i10.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 48, 'clr-header', [['class', 'header-6']], [[2, 'header',
+                null]], null, null, i11.View_Header_0, i11.RenderType_Header)),
+        i1.ɵdid(245760, null, 0, i12.Header, [i10.ClrResponsiveNavigationService], null, null), (_l()(), i1.ɵted(0, ['\n        '])), (_l()(),
             i1.ɵeld(0, null, 0, 26, 'div', [['class', 'branding']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 23, 'a', [['class', 'nav-link'], ['routerLink', '/']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
@@ -35,7 +79,7 @@ export function View_KitchenSinkApp_0(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i1.ɵdid(671744, null, 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute, i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(),
+        }, null, null)), i1.ɵdid(671744, null, 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute, i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(),
             i1.ɵeld(0, null, null, 16, 'span', [['class', 'clr-icon']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵeld(0, null, null, 13, ':svg:svg', [[':xmlns:xlink', 'http://www.w3.org/1999/xlink'], ['height',
                 '36px'], ['version', '1.1'], ['viewBox', '0 0 36 36'], ['width', '36px'], ['xmlns',
                 'http://www.w3.org/2000/svg']], null, null, null, null, null)), (_l()(), i1.ɵted(null, [' '])), (_l()(),
@@ -51,34 +95,50 @@ export function View_KitchenSinkApp_0(_l) {
         (_l()(), i1.ɵeld(0, null, null, 0, ':svg:polyline', [['fill', '#98441E'],
             ['id', 'Fill-6'], ['points', '18.0314053 3.98921729 11.5267517 7.97364692 18.0439938 11.8578324 24.9058951 7.91831944']], null, null, null, null, null)),
         (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 1, 'span', [['class', 'title']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['Clarity Kitchen Sink'])),
-        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(0, ['\n    '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 189, 'div', [['class',
-                'content-container']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 4, 'main', [['class', 'content-area']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(16777216, null, null, 1, 'router-outlet', [], null, null, null, null, null)), i1.ɵdid(212992, null, 0, i6.RouterOutlet, [i6.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver,
-            [8, null], i1.ChangeDetectorRef], null, null),
-        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 180, 'nav', [['class', 'sidenav'], ['style', 'overflow: scroll']], null, [[null,
-                'click']], function (_v, en, $event) {
+        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(0, ['\n        '])), (_l()(), i1.ɵeld(0, null, 0, 16, 'div', [['class', 'header-actions']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])),
+        (_l()(), i1.ɵeld(0, null, null, 13, 'clr-dropdown', [], [[2, 'dropdown', null], [2, 'open', null]], null, null, i13.View_Dropdown_0, i13.RenderType_Dropdown)), i1.ɵprd(512, null, i6.IfOpenService, i6.IfOpenService, []), i1.ɵdid(49152, null, 0, i5.Dropdown, [[3, i5.Dropdown], i6.IfOpenService], null, null),
+        (_l()(), i1.ɵted(0, ['\n                '])), (_l()(), i1.ɵeld(0, null, 0, 5, 'button', [['class', 'nav-icon'], ['clrDropdownTrigger', '']], [[2, 'dropdown-toggle',
+                null], [2, 'dropdown-item', null], [2, 'expandable', null],
+            [2, 'active', null]], [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 45).onMouseClick($event.target) !== false);
+                var pd_0 = (i1.ɵnov(_v, 42).onDropdownTriggerClick($event) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i1.ɵdid(1196032, null, 0, i8.NavLevelDirective, [i3.ClrResponsiveNavigationService, i1.ElementRef], { _level: [0, '_level'] }, null), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
-            i1.ɵeld(0, null, null, 176, 'div', [['class', 'sidenav-content']], null, null, null, null, null)),
-        (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 173, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2,
+        }, null, null)), i1.ɵdid(16384, null, 0, i14.DropdownTrigger, [i5.Dropdown, i6.IfOpenService], null, null), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bars']], null, null, null, null, null)), i1.ɵdid(16384, null, 0, i15.IconCustomTag, [], null, null), (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵted(0, ['\n                '])), (_l()(),
+            i1.ɵand(16777216, null, 0, 1, null, View_KitchenSinkApp_1)),
+        i1.ɵdid(147456, null, 0, i16.IfOpenDirective, [i6.IfOpenService, i1.TemplateRef,
+            i1.ViewContainerRef], { open: [0, 'open'] }, null), (_l()(), i1.ɵted(0, ['\n            '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(),
+            i1.ɵted(0, ['\n    '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(),
+            i1.ɵeld(0, null, null, 205, 'div', [['class', 'content-container']], null, null, null, null, null)),
+        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 4, 'main', [['class', 'content-area']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(16777216, null, null, 1, 'router-outlet', [], null, null, null, null, null)), i1.ɵdid(212992, null, 0, i7.RouterOutlet, [i7.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver,
+            [8, null], i1.ChangeDetectorRef], null, null),
+        (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 196, 'nav', [['class', 'sidenav'], ['style', 'overflow: scroll']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 63).onMouseClick($event.target) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i1.ɵdid(1196032, null, 0, i17.NavLevelDirective, [i10.ClrResponsiveNavigationService, i1.ElementRef], { _level: [0, '_level'] }, null), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(),
+            i1.ɵeld(0, null, null, 192, 'div', [['class', 'sidenav-content']], null, null, null, null, null)),
+        (_l()(), i1.ɵted(null, ['\n                '])), (_l()(), i1.ɵeld(0, null, null, 189, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2,
                 'is-collapsed', null], [2, 'has-nav-groups', null], [2,
-                'has-icons', null]], null, null, i9.View_VerticalNav_0, i9.RenderType_VerticalNav)), i1.ɵprd(512, null, i10.VerticalNavService, i10.VerticalNavService, []), i1.ɵprd(512, null, i11.VerticalNavIconService, i11.VerticalNavIconService, []), i1.ɵprd(512, null, i12.VerticalNavGroupService, i12.VerticalNavGroupService, []), i1.ɵdid(180224, null, 0, i13.VerticalNav, [i10.VerticalNavService, i11.VerticalNavIconService, i12.VerticalNavGroupService], null, null), (_l()(), i1.ɵted(0, ['\n                    '])),
+                'has-icons', null]], null, null, i18.View_VerticalNav_0, i18.RenderType_VerticalNav)), i1.ɵprd(512, null, i19.VerticalNavService, i19.VerticalNavService, []), i1.ɵprd(512, null, i20.VerticalNavIconService, i20.VerticalNavIconService, []), i1.ɵprd(512, null, i21.VerticalNavGroupService, i21.VerticalNavGroupService, []), i1.ɵdid(180224, null, 0, i22.VerticalNav, [i19.VerticalNavService, i20.VerticalNavIconService, i21.VerticalNavGroupService], null, null), (_l()(), i1.ɵted(0, ['\n                    '])),
         (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
                 ''], ['routerLink', 'alerts'], ['routerLinkActive', 'active']], [[1, 'target',
                 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 57).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 75).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[2, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[2, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 1, { links: 1 }), i1.ɵqud(603979776, 2, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Alerts\n                    '])), (_l()(),
@@ -87,13 +147,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 65).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 83).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[4, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[4, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 3, { links: 1 }), i1.ɵqud(603979776, 4, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Badges\n                    '])), (_l()(),
@@ -102,13 +162,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 73).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 91).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[6, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[6, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 5, { links: 1 }), i1.ɵqud(603979776, 6, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Button Groups\n                    '])),
@@ -117,13 +177,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 81).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 99).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[8, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[8, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 7, { links: 1 }), i1.ɵqud(603979776, 8, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Buttons\n                    '])),
@@ -132,13 +192,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 89).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 107).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[10, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[10, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 9, { links: 1 }), i1.ɵqud(603979776, 10, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Cards\n                    '])), (_l()(),
@@ -147,13 +207,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 97).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 115).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[12, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[12, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 11, { links: 1 }), i1.ɵqud(603979776, 12, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Checkboxes\n                    '])),
@@ -162,13 +222,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 105).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 123).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[14, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[14, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 13, { links: 1 }), i1.ɵqud(603979776, 14, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Colors\n                    '])), (_l()(),
@@ -177,13 +237,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 113).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 131).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[16, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[16, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 15, { links: 1 }), i1.ɵqud(603979776, 16, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Datagrid\n                    '])),
@@ -192,13 +252,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 121).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 139).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[18, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[18, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 17, { links: 1 }), i1.ɵqud(603979776, 18, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Dropdowns\n                    '])),
@@ -207,13 +267,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 129).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 147).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[20, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[20, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 19, { links: 1 }), i1.ɵqud(603979776, 20, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Forms\n                    '])), (_l()(),
@@ -222,13 +282,13 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 137).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 155).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[22, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[22, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 21, { links: 1 }), i1.ɵqud(603979776, 22, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Inputs\n                    '])), (_l()(),
@@ -237,150 +297,180 @@ export function View_KitchenSinkApp_0(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 145).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 163).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[24, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[24, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
         i1.ɵqud(603979776, 23, { links: 1 }), i1.ɵqud(603979776, 24, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Labels\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'lists'],
+            ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 171).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[26, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
+            i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
+        i1.ɵqud(603979776, 25, { links: 1 }), i1.ɵqud(603979776, 26, { linksWithHrefs: 1 }), (_l()(),
+            i1.ɵted(1, ['\n                        Lists\n                    '])), (_l()(),
+            i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'login'],
+            ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 179).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[28, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
+            i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
+        i1.ɵqud(603979776, 27, { links: 1 }), i1.ɵqud(603979776, 28, { linksWithHrefs: 1 }), (_l()(),
+            i1.ɵted(1, ['\n                        Login\n                    '])), (_l()(),
             i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'modals'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 153).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 187).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[26, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[30, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 25, { links: 1 }), i1.ɵqud(603979776, 26, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 29, { links: 1 }), i1.ɵqud(603979776, 30, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Modals\n                    '])), (_l()(),
             i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'radios'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 161).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 195).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[28, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[32, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 27, { links: 1 }), i1.ɵqud(603979776, 28, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 31, { links: 1 }), i1.ɵqud(603979776, 32, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Radios\n                    '])), (_l()(),
             i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'selects'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 169).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 203).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[30, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[34, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 29, { links: 1 }), i1.ɵqud(603979776, 30, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 33, { links: 1 }), i1.ɵqud(603979776, 34, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Selects\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'signposts'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 177).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 211).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[32, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[36, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 31, { links: 1 }), i1.ɵqud(603979776, 32, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 35, { links: 1 }), i1.ɵqud(603979776, 36, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Signposts\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'stackviews'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 185).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 219).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[34, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[38, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 33, { links: 1 }), i1.ɵqud(603979776, 34, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 37, { links: 1 }), i1.ɵqud(603979776, 38, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Stack Views\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tabs'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 193).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 227).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[36, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[40, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 35, { links: 1 }), i1.ɵqud(603979776, 36, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 39, { links: 1 }), i1.ɵqud(603979776, 40, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Tabs\n                    '])), (_l()(),
             i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'tooltips'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 201).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 235).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[38, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[42, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 37, { links: 1 }), i1.ɵqud(603979776, 38, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 41, { links: 1 }), i1.ɵqud(603979776, 42, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Tooltips\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'treeviews'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 209).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 243).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[40, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[44, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 39, { links: 1 }), i1.ɵqud(603979776, 40, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 43, { links: 1 }), i1.ɵqud(603979776, 44, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Treeviews\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                    '])), (_l()(), i1.ɵeld(0, null, 0, 6, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLink', 'vertical-nav'],
             ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i1.ɵnov(_v, 217).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                var pd_0 = (i1.ɵnov(_v, 251).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, i14.View_VerticalNavLink_0, i14.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i15.VerticalNavLink, [], null, null),
-        i1.ɵdid(671744, [[42, 4]], 0, i6.RouterLinkWithHref, [i6.Router, i6.ActivatedRoute,
-            i7.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i6.RouterLinkActive, [i6.Router, i1.ElementRef, i1.Renderer2,
+        }, i23.View_VerticalNavLink_0, i23.RenderType_VerticalNavLink)), i1.ɵdid(49152, null, 0, i24.VerticalNavLink, [], null, null),
+        i1.ɵdid(671744, [[46, 4]], 0, i7.RouterLinkWithHref, [i7.Router, i7.ActivatedRoute,
+            i8.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i1.ɵdid(1720320, null, 2, i7.RouterLinkActive, [i7.Router, i1.ElementRef, i1.Renderer2,
             i1.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
-        i1.ɵqud(603979776, 41, { links: 1 }), i1.ɵqud(603979776, 42, { linksWithHrefs: 1 }), (_l()(),
+        i1.ɵqud(603979776, 45, { links: 1 }), i1.ɵqud(603979776, 46, { linksWithHrefs: 1 }), (_l()(),
             i1.ɵted(1, ['\n                        Vertical Nav\n                    '])),
         (_l()(), i1.ɵted(0, ['\n                '])), (_l()(), i1.ɵted(null, ['\n            '])),
         (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵted(null, ['\n']))], function (_ck, _v) {
@@ -388,93 +478,103 @@ export function View_KitchenSinkApp_0(_l) {
         _ck(_v, 5, 0);
         var currVal_4 = '/';
         _ck(_v, 10, 0, currVal_4);
-        _ck(_v, 41, 0);
-        var currVal_5 = 2;
-        _ck(_v, 45, 0, currVal_5);
-        var currVal_11 = 'alerts';
-        _ck(_v, 57, 0, currVal_11);
-        var currVal_12 = 'active';
-        _ck(_v, 58, 0, currVal_12);
-        var currVal_15 = 'badges';
-        _ck(_v, 65, 0, currVal_15);
-        var currVal_16 = 'active';
-        _ck(_v, 66, 0, currVal_16);
-        var currVal_19 = 'button-groups';
-        _ck(_v, 73, 0, currVal_19);
-        var currVal_20 = 'active';
-        _ck(_v, 74, 0, currVal_20);
-        var currVal_23 = 'buttons';
-        _ck(_v, 81, 0, currVal_23);
-        var currVal_24 = 'active';
-        _ck(_v, 82, 0, currVal_24);
-        var currVal_27 = 'cards';
-        _ck(_v, 89, 0, currVal_27);
-        var currVal_28 = 'active';
-        _ck(_v, 90, 0, currVal_28);
-        var currVal_31 = 'checkboxes';
-        _ck(_v, 97, 0, currVal_31);
-        var currVal_32 = 'active';
-        _ck(_v, 98, 0, currVal_32);
-        var currVal_35 = 'colors';
-        _ck(_v, 105, 0, currVal_35);
-        var currVal_36 = 'active';
-        _ck(_v, 106, 0, currVal_36);
-        var currVal_39 = 'datagrids';
-        _ck(_v, 113, 0, currVal_39);
-        var currVal_40 = 'active';
-        _ck(_v, 114, 0, currVal_40);
-        var currVal_43 = 'dropdowns';
-        _ck(_v, 121, 0, currVal_43);
-        var currVal_44 = 'active';
-        _ck(_v, 122, 0, currVal_44);
-        var currVal_47 = 'forms';
-        _ck(_v, 129, 0, currVal_47);
-        var currVal_48 = 'active';
-        _ck(_v, 130, 0, currVal_48);
-        var currVal_51 = 'inputs';
-        _ck(_v, 137, 0, currVal_51);
-        var currVal_52 = 'active';
-        _ck(_v, 138, 0, currVal_52);
-        var currVal_55 = 'labels';
-        _ck(_v, 145, 0, currVal_55);
-        var currVal_56 = 'active';
-        _ck(_v, 146, 0, currVal_56);
-        var currVal_59 = 'modals';
-        _ck(_v, 153, 0, currVal_59);
-        var currVal_60 = 'active';
-        _ck(_v, 154, 0, currVal_60);
-        var currVal_63 = 'radios';
-        _ck(_v, 161, 0, currVal_63);
-        var currVal_64 = 'active';
-        _ck(_v, 162, 0, currVal_64);
-        var currVal_67 = 'selects';
-        _ck(_v, 169, 0, currVal_67);
-        var currVal_68 = 'active';
-        _ck(_v, 170, 0, currVal_68);
-        var currVal_71 = 'signposts';
-        _ck(_v, 177, 0, currVal_71);
-        var currVal_72 = 'active';
-        _ck(_v, 178, 0, currVal_72);
-        var currVal_75 = 'stackviews';
-        _ck(_v, 185, 0, currVal_75);
-        var currVal_76 = 'active';
-        _ck(_v, 186, 0, currVal_76);
-        var currVal_79 = 'tabs';
-        _ck(_v, 193, 0, currVal_79);
-        var currVal_80 = 'active';
-        _ck(_v, 194, 0, currVal_80);
-        var currVal_83 = 'tooltips';
-        _ck(_v, 201, 0, currVal_83);
-        var currVal_84 = 'active';
-        _ck(_v, 202, 0, currVal_84);
-        var currVal_87 = 'treeviews';
-        _ck(_v, 209, 0, currVal_87);
-        var currVal_88 = 'active';
-        _ck(_v, 210, 0, currVal_88);
-        var currVal_91 = 'vertical-nav';
-        _ck(_v, 217, 0, currVal_91);
-        var currVal_92 = 'active';
-        _ck(_v, 218, 0, currVal_92);
+        var currVal_11 = null;
+        _ck(_v, 49, 0, currVal_11);
+        _ck(_v, 59, 0);
+        var currVal_12 = 2;
+        _ck(_v, 63, 0, currVal_12);
+        var currVal_18 = 'alerts';
+        _ck(_v, 75, 0, currVal_18);
+        var currVal_19 = 'active';
+        _ck(_v, 76, 0, currVal_19);
+        var currVal_22 = 'badges';
+        _ck(_v, 83, 0, currVal_22);
+        var currVal_23 = 'active';
+        _ck(_v, 84, 0, currVal_23);
+        var currVal_26 = 'button-groups';
+        _ck(_v, 91, 0, currVal_26);
+        var currVal_27 = 'active';
+        _ck(_v, 92, 0, currVal_27);
+        var currVal_30 = 'buttons';
+        _ck(_v, 99, 0, currVal_30);
+        var currVal_31 = 'active';
+        _ck(_v, 100, 0, currVal_31);
+        var currVal_34 = 'cards';
+        _ck(_v, 107, 0, currVal_34);
+        var currVal_35 = 'active';
+        _ck(_v, 108, 0, currVal_35);
+        var currVal_38 = 'checkboxes';
+        _ck(_v, 115, 0, currVal_38);
+        var currVal_39 = 'active';
+        _ck(_v, 116, 0, currVal_39);
+        var currVal_42 = 'colors';
+        _ck(_v, 123, 0, currVal_42);
+        var currVal_43 = 'active';
+        _ck(_v, 124, 0, currVal_43);
+        var currVal_46 = 'datagrids';
+        _ck(_v, 131, 0, currVal_46);
+        var currVal_47 = 'active';
+        _ck(_v, 132, 0, currVal_47);
+        var currVal_50 = 'dropdowns';
+        _ck(_v, 139, 0, currVal_50);
+        var currVal_51 = 'active';
+        _ck(_v, 140, 0, currVal_51);
+        var currVal_54 = 'forms';
+        _ck(_v, 147, 0, currVal_54);
+        var currVal_55 = 'active';
+        _ck(_v, 148, 0, currVal_55);
+        var currVal_58 = 'inputs';
+        _ck(_v, 155, 0, currVal_58);
+        var currVal_59 = 'active';
+        _ck(_v, 156, 0, currVal_59);
+        var currVal_62 = 'labels';
+        _ck(_v, 163, 0, currVal_62);
+        var currVal_63 = 'active';
+        _ck(_v, 164, 0, currVal_63);
+        var currVal_66 = 'lists';
+        _ck(_v, 171, 0, currVal_66);
+        var currVal_67 = 'active';
+        _ck(_v, 172, 0, currVal_67);
+        var currVal_70 = 'login';
+        _ck(_v, 179, 0, currVal_70);
+        var currVal_71 = 'active';
+        _ck(_v, 180, 0, currVal_71);
+        var currVal_74 = 'modals';
+        _ck(_v, 187, 0, currVal_74);
+        var currVal_75 = 'active';
+        _ck(_v, 188, 0, currVal_75);
+        var currVal_78 = 'radios';
+        _ck(_v, 195, 0, currVal_78);
+        var currVal_79 = 'active';
+        _ck(_v, 196, 0, currVal_79);
+        var currVal_82 = 'selects';
+        _ck(_v, 203, 0, currVal_82);
+        var currVal_83 = 'active';
+        _ck(_v, 204, 0, currVal_83);
+        var currVal_86 = 'signposts';
+        _ck(_v, 211, 0, currVal_86);
+        var currVal_87 = 'active';
+        _ck(_v, 212, 0, currVal_87);
+        var currVal_90 = 'stackviews';
+        _ck(_v, 219, 0, currVal_90);
+        var currVal_91 = 'active';
+        _ck(_v, 220, 0, currVal_91);
+        var currVal_94 = 'tabs';
+        _ck(_v, 227, 0, currVal_94);
+        var currVal_95 = 'active';
+        _ck(_v, 228, 0, currVal_95);
+        var currVal_98 = 'tooltips';
+        _ck(_v, 235, 0, currVal_98);
+        var currVal_99 = 'active';
+        _ck(_v, 236, 0, currVal_99);
+        var currVal_102 = 'treeviews';
+        _ck(_v, 243, 0, currVal_102);
+        var currVal_103 = 'active';
+        _ck(_v, 244, 0, currVal_103);
+        var currVal_106 = 'vertical-nav';
+        _ck(_v, 251, 0, currVal_106);
+        var currVal_107 = 'active';
+        _ck(_v, 252, 0, currVal_107);
     }, function (_ck, _v) {
         var currVal_0 = true;
         _ck(_v, 1, 0, currVal_0);
@@ -483,77 +583,91 @@ export function View_KitchenSinkApp_0(_l) {
         var currVal_2 = i1.ɵnov(_v, 10).target;
         var currVal_3 = i1.ɵnov(_v, 10).href;
         _ck(_v, 9, 0, currVal_2, currVal_3);
-        var currVal_6 = i1.ɵnov(_v, 53).collapsed;
-        var currVal_7 = i1.ɵnov(_v, 53).hasNavGroups;
-        var currVal_8 = i1.ɵnov(_v, 53).hasIcons;
-        _ck(_v, 49, 0, currVal_6, currVal_7, currVal_8);
-        var currVal_9 = i1.ɵnov(_v, 57).target;
-        var currVal_10 = i1.ɵnov(_v, 57).href;
-        _ck(_v, 55, 0, currVal_9, currVal_10);
-        var currVal_13 = i1.ɵnov(_v, 65).target;
-        var currVal_14 = i1.ɵnov(_v, 65).href;
-        _ck(_v, 63, 0, currVal_13, currVal_14);
-        var currVal_17 = i1.ɵnov(_v, 73).target;
-        var currVal_18 = i1.ɵnov(_v, 73).href;
-        _ck(_v, 71, 0, currVal_17, currVal_18);
-        var currVal_21 = i1.ɵnov(_v, 81).target;
-        var currVal_22 = i1.ɵnov(_v, 81).href;
-        _ck(_v, 79, 0, currVal_21, currVal_22);
-        var currVal_25 = i1.ɵnov(_v, 89).target;
-        var currVal_26 = i1.ɵnov(_v, 89).href;
-        _ck(_v, 87, 0, currVal_25, currVal_26);
-        var currVal_29 = i1.ɵnov(_v, 97).target;
-        var currVal_30 = i1.ɵnov(_v, 97).href;
-        _ck(_v, 95, 0, currVal_29, currVal_30);
-        var currVal_33 = i1.ɵnov(_v, 105).target;
-        var currVal_34 = i1.ɵnov(_v, 105).href;
-        _ck(_v, 103, 0, currVal_33, currVal_34);
-        var currVal_37 = i1.ɵnov(_v, 113).target;
-        var currVal_38 = i1.ɵnov(_v, 113).href;
-        _ck(_v, 111, 0, currVal_37, currVal_38);
-        var currVal_41 = i1.ɵnov(_v, 121).target;
-        var currVal_42 = i1.ɵnov(_v, 121).href;
-        _ck(_v, 119, 0, currVal_41, currVal_42);
-        var currVal_45 = i1.ɵnov(_v, 129).target;
-        var currVal_46 = i1.ɵnov(_v, 129).href;
-        _ck(_v, 127, 0, currVal_45, currVal_46);
-        var currVal_49 = i1.ɵnov(_v, 137).target;
-        var currVal_50 = i1.ɵnov(_v, 137).href;
-        _ck(_v, 135, 0, currVal_49, currVal_50);
-        var currVal_53 = i1.ɵnov(_v, 145).target;
-        var currVal_54 = i1.ɵnov(_v, 145).href;
-        _ck(_v, 143, 0, currVal_53, currVal_54);
-        var currVal_57 = i1.ɵnov(_v, 153).target;
-        var currVal_58 = i1.ɵnov(_v, 153).href;
-        _ck(_v, 151, 0, currVal_57, currVal_58);
-        var currVal_61 = i1.ɵnov(_v, 161).target;
-        var currVal_62 = i1.ɵnov(_v, 161).href;
-        _ck(_v, 159, 0, currVal_61, currVal_62);
-        var currVal_65 = i1.ɵnov(_v, 169).target;
-        var currVal_66 = i1.ɵnov(_v, 169).href;
-        _ck(_v, 167, 0, currVal_65, currVal_66);
-        var currVal_69 = i1.ɵnov(_v, 177).target;
-        var currVal_70 = i1.ɵnov(_v, 177).href;
-        _ck(_v, 175, 0, currVal_69, currVal_70);
-        var currVal_73 = i1.ɵnov(_v, 185).target;
-        var currVal_74 = i1.ɵnov(_v, 185).href;
-        _ck(_v, 183, 0, currVal_73, currVal_74);
-        var currVal_77 = i1.ɵnov(_v, 193).target;
-        var currVal_78 = i1.ɵnov(_v, 193).href;
-        _ck(_v, 191, 0, currVal_77, currVal_78);
-        var currVal_81 = i1.ɵnov(_v, 201).target;
-        var currVal_82 = i1.ɵnov(_v, 201).href;
-        _ck(_v, 199, 0, currVal_81, currVal_82);
-        var currVal_85 = i1.ɵnov(_v, 209).target;
-        var currVal_86 = i1.ɵnov(_v, 209).href;
-        _ck(_v, 207, 0, currVal_85, currVal_86);
-        var currVal_89 = i1.ɵnov(_v, 217).target;
-        var currVal_90 = i1.ɵnov(_v, 217).href;
-        _ck(_v, 215, 0, currVal_89, currVal_90);
+        var currVal_5 = true;
+        var currVal_6 = i1.ɵnov(_v, 39).ifOpenService.open;
+        _ck(_v, 37, 0, currVal_5, currVal_6);
+        var currVal_7 = i1.ɵnov(_v, 42).isRootLevelToggle;
+        var currVal_8 = !i1.ɵnov(_v, 42).isRootLevelToggle;
+        var currVal_9 = !i1.ɵnov(_v, 42).isRootLevelToggle;
+        var currVal_10 = i1.ɵnov(_v, 42).active;
+        _ck(_v, 41, 0, currVal_7, currVal_8, currVal_9, currVal_10);
+        var currVal_13 = i1.ɵnov(_v, 71).collapsed;
+        var currVal_14 = i1.ɵnov(_v, 71).hasNavGroups;
+        var currVal_15 = i1.ɵnov(_v, 71).hasIcons;
+        _ck(_v, 67, 0, currVal_13, currVal_14, currVal_15);
+        var currVal_16 = i1.ɵnov(_v, 75).target;
+        var currVal_17 = i1.ɵnov(_v, 75).href;
+        _ck(_v, 73, 0, currVal_16, currVal_17);
+        var currVal_20 = i1.ɵnov(_v, 83).target;
+        var currVal_21 = i1.ɵnov(_v, 83).href;
+        _ck(_v, 81, 0, currVal_20, currVal_21);
+        var currVal_24 = i1.ɵnov(_v, 91).target;
+        var currVal_25 = i1.ɵnov(_v, 91).href;
+        _ck(_v, 89, 0, currVal_24, currVal_25);
+        var currVal_28 = i1.ɵnov(_v, 99).target;
+        var currVal_29 = i1.ɵnov(_v, 99).href;
+        _ck(_v, 97, 0, currVal_28, currVal_29);
+        var currVal_32 = i1.ɵnov(_v, 107).target;
+        var currVal_33 = i1.ɵnov(_v, 107).href;
+        _ck(_v, 105, 0, currVal_32, currVal_33);
+        var currVal_36 = i1.ɵnov(_v, 115).target;
+        var currVal_37 = i1.ɵnov(_v, 115).href;
+        _ck(_v, 113, 0, currVal_36, currVal_37);
+        var currVal_40 = i1.ɵnov(_v, 123).target;
+        var currVal_41 = i1.ɵnov(_v, 123).href;
+        _ck(_v, 121, 0, currVal_40, currVal_41);
+        var currVal_44 = i1.ɵnov(_v, 131).target;
+        var currVal_45 = i1.ɵnov(_v, 131).href;
+        _ck(_v, 129, 0, currVal_44, currVal_45);
+        var currVal_48 = i1.ɵnov(_v, 139).target;
+        var currVal_49 = i1.ɵnov(_v, 139).href;
+        _ck(_v, 137, 0, currVal_48, currVal_49);
+        var currVal_52 = i1.ɵnov(_v, 147).target;
+        var currVal_53 = i1.ɵnov(_v, 147).href;
+        _ck(_v, 145, 0, currVal_52, currVal_53);
+        var currVal_56 = i1.ɵnov(_v, 155).target;
+        var currVal_57 = i1.ɵnov(_v, 155).href;
+        _ck(_v, 153, 0, currVal_56, currVal_57);
+        var currVal_60 = i1.ɵnov(_v, 163).target;
+        var currVal_61 = i1.ɵnov(_v, 163).href;
+        _ck(_v, 161, 0, currVal_60, currVal_61);
+        var currVal_64 = i1.ɵnov(_v, 171).target;
+        var currVal_65 = i1.ɵnov(_v, 171).href;
+        _ck(_v, 169, 0, currVal_64, currVal_65);
+        var currVal_68 = i1.ɵnov(_v, 179).target;
+        var currVal_69 = i1.ɵnov(_v, 179).href;
+        _ck(_v, 177, 0, currVal_68, currVal_69);
+        var currVal_72 = i1.ɵnov(_v, 187).target;
+        var currVal_73 = i1.ɵnov(_v, 187).href;
+        _ck(_v, 185, 0, currVal_72, currVal_73);
+        var currVal_76 = i1.ɵnov(_v, 195).target;
+        var currVal_77 = i1.ɵnov(_v, 195).href;
+        _ck(_v, 193, 0, currVal_76, currVal_77);
+        var currVal_80 = i1.ɵnov(_v, 203).target;
+        var currVal_81 = i1.ɵnov(_v, 203).href;
+        _ck(_v, 201, 0, currVal_80, currVal_81);
+        var currVal_84 = i1.ɵnov(_v, 211).target;
+        var currVal_85 = i1.ɵnov(_v, 211).href;
+        _ck(_v, 209, 0, currVal_84, currVal_85);
+        var currVal_88 = i1.ɵnov(_v, 219).target;
+        var currVal_89 = i1.ɵnov(_v, 219).href;
+        _ck(_v, 217, 0, currVal_88, currVal_89);
+        var currVal_92 = i1.ɵnov(_v, 227).target;
+        var currVal_93 = i1.ɵnov(_v, 227).href;
+        _ck(_v, 225, 0, currVal_92, currVal_93);
+        var currVal_96 = i1.ɵnov(_v, 235).target;
+        var currVal_97 = i1.ɵnov(_v, 235).href;
+        _ck(_v, 233, 0, currVal_96, currVal_97);
+        var currVal_100 = i1.ɵnov(_v, 243).target;
+        var currVal_101 = i1.ɵnov(_v, 243).href;
+        _ck(_v, 241, 0, currVal_100, currVal_101);
+        var currVal_104 = i1.ɵnov(_v, 251).target;
+        var currVal_105 = i1.ɵnov(_v, 251).href;
+        _ck(_v, 249, 0, currVal_104, currVal_105);
     });
 }
 export function View_KitchenSinkApp_Host_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'kitchen-sink-app', [], null, null, null, View_KitchenSinkApp_0, RenderType_KitchenSinkApp)), i1.ɵdid(49152, null, 0, i16.KitchenSinkApp, [], null, null)], null, null);
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'kitchen-sink-app', [], null, null, null, View_KitchenSinkApp_0, RenderType_KitchenSinkApp)), i1.ɵdid(49152, null, 0, i25.KitchenSinkApp, [], null, null)], null, null);
 }
-export var KitchenSinkAppNgFactory = i1.ɵccf('kitchen-sink-app', i16.KitchenSinkApp, View_KitchenSinkApp_Host_0, {}, {}, []);
+export var KitchenSinkAppNgFactory = i1.ɵccf('kitchen-sink-app', i25.KitchenSinkApp, View_KitchenSinkApp_Host_0, {}, {}, []);
 //# sourceMappingURL=app.component.ngfactory.js.map

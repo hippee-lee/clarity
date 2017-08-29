@@ -5,17 +5,1792 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/data/datagrid.component';
+import * as i1 from '../../node_modules/clarity-angular/data/datagrid/datagrid-row.ngfactory';
+import * as i2 from 'clarity-angular/utils/loading/loading-listener';
+import * as i3 from 'clarity-angular/utils/expand/providers/expand';
+import * as i4 from 'clarity-angular/data/datagrid/datagrid-row';
+import * as i5 from 'clarity-angular/data/datagrid/providers/selection';
+import * as i6 from 'clarity-angular/data/datagrid/providers/row-action-service';
+import * as i7 from 'clarity-angular/data/datagrid/providers/global-expandable-rows';
+import * as i8 from 'clarity-angular/data/datagrid/providers/hideable-column.service';
+import * as i9 from 'clarity-angular/data/datagrid/render/row-renderer';
+import * as i10 from 'clarity-angular/data/datagrid/render/render-organizer';
+import * as i11 from 'clarity-angular/data/datagrid/chocolate/actionable-oompa-loompa';
+import * as i12 from 'clarity-angular/data/datagrid/chocolate/datagrid-willy-wonka';
+import * as i13 from 'clarity-angular/data/datagrid/chocolate/expandable-oompa-loompa';
+import * as i14 from 'clarity-angular/data/datagrid/animation-hack/row-expand-animation';
+import * as i15 from 'clarity-angular/data/datagrid/render/dom-adapter';
+import * as i16 from '../../node_modules/clarity-angular/data/datagrid/datagrid-cell.ngfactory';
+import * as i17 from 'clarity-angular/data/datagrid/datagrid-cell';
+import * as i18 from 'clarity-angular/data/datagrid/render/cell-renderer';
+import * as i19 from 'clarity-angular/icon/icon';
+import * as i20 from '@angular/common';
+import * as i21 from '../../node_modules/clarity-angular/data/datagrid/datagrid-action-overflow.ngfactory';
+import * as i22 from 'clarity-angular/data/datagrid/datagrid-action-overflow';
+import * as i23 from '../../node_modules/clarity-angular/data/datagrid/datagrid-row-detail.ngfactory';
+import * as i24 from 'clarity-angular/data/datagrid/datagrid-row-detail';
+import * as i25 from '../../../containers/data/fake-loader';
+import * as i26 from 'clarity-angular/utils/loading/loading';
+import * as i27 from 'clarity-angular/utils/expand/if-expanded';
+import * as i28 from 'clarity-angular/data/datagrid/datagrid-detail-registerer';
+import * as i29 from '../../node_modules/clarity-angular/data/datagrid/datagrid-column.ngfactory';
+import * as i30 from 'clarity-angular/data/datagrid/providers/drag-dispatcher';
+import * as i31 from 'clarity-angular/data/datagrid/datagrid-column';
+import * as i32 from 'clarity-angular/data/datagrid/providers/sort';
+import * as i33 from 'clarity-angular/data/datagrid/providers/filters';
+import * as i34 from 'clarity-angular/data/datagrid/render/column-resizer';
+import * as i35 from 'clarity-angular/data/datagrid/render/header-renderer';
+import * as i36 from 'clarity-angular/data/datagrid/datagrid-hidable-column.directive';
+import * as i37 from '../../../containers/data/datagrid.component';
+import * as i38 from '../../node_modules/clarity-angular/data/datagrid/datagrid.ngfactory';
+import * as i39 from 'clarity-angular/data/datagrid/providers/page';
+import * as i40 from 'clarity-angular/data/datagrid/providers/items';
+import * as i41 from 'clarity-angular/data/datagrid/datagrid';
+import * as i42 from 'clarity-angular/data/datagrid/render/main-renderer';
+import * as i43 from '../../node_modules/clarity-angular/data/datagrid/datagrid-footer.ngfactory';
+import * as i44 from 'clarity-angular/data/datagrid/datagrid-footer';
+import * as i45 from 'clarity-angular/data/datagrid/datagrid-items';
+import * as i46 from '../../node_modules/clarity-angular/data/datagrid/datagrid-action-bar.ngfactory';
+import * as i47 from 'clarity-angular/data/datagrid/datagrid-action-bar';
+import * as i48 from '@angular/forms';
+import * as i49 from '../../node_modules/clarity-angular/data/datagrid/datagrid-placeholder.ngfactory';
+import * as i50 from 'clarity-angular/data/datagrid/datagrid-placeholder';
+import * as i51 from '../../node_modules/clarity-angular/data/datagrid/datagrid-pagination.ngfactory';
+import * as i52 from 'clarity-angular/data/datagrid/datagrid-pagination';
 var styles_KSDatagrid = [];
 export var RenderType_KSDatagrid = i0.ɵcrt({ encapsulation: 2, styles: styles_KSDatagrid,
     data: {} });
+function View_KSDatagrid_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 37, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[4, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], null, null), i0.ɵqud(603979776, 10, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 11, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2,
+            i3.Expand, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[10, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 12, { signpost: 1 }), i0.ɵdid(147456, [[11, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[10, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 13, { signpost: 1 }), i0.ɵdid(147456, [[11, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[10, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 14, { signpost: 1 }), i0.ɵdid(147456, [[11, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), i0.ɵppd(1), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[10, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 15, { signpost: 1 }), i0.ɵdid(147456, [[11, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n    ']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_2 = true;
+        var currVal_3 = i0.ɵnov(_v, 12).hidden;
+        var currVal_4 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 18).hidden;
+        var currVal_8 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_6, currVal_7, currVal_8);
+        var currVal_9 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 24).hidden;
+        var currVal_12 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_10, currVal_11, currVal_12);
+        var currVal_13 = i0.ɵunv(_v, 27, 0, _ck(_v, 28, 0, i0.ɵnov(_v.parent, 0), _v.context.$implicit.creation));
+        _ck(_v, 27, 0, currVal_13);
+        var currVal_14 = true;
+        var currVal_15 = i0.ɵnov(_v, 31).hidden;
+        var currVal_16 = (i0.ɵnov(_v, 31).signpost.length > 0);
+        _ck(_v, 30, 0, currVal_14, currVal_15, currVal_16);
+        var currVal_17 = _v.context.$implicit.color;
+        _ck(_v, 35, 0, currVal_17);
+    });
+}
+function View_KSDatagrid_2(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'em', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['No user selected.']))], null, null);
+}
+function View_KSDatagrid_3(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class',
+                'username']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['', '']))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.singleSelected.name;
+        _ck(_v, 1, 0, currVal_0);
+    });
+}
+function View_KSDatagrid_4(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 37, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[19, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], { item: [0, 'item'] }, null),
+        i0.ɵqud(603979776, 25, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 26, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2, i3.Expand, i10.DatagridRenderOrganizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[25, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 27, { signpost: 1 }), i0.ɵdid(147456, [[26, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[25, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 28, { signpost: 1 }), i0.ɵdid(147456, [[26, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[25, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 29, { signpost: 1 }), i0.ɵdid(147456, [[26, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), i0.ɵppd(1), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[25, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 30, { signpost: 1 }), i0.ɵdid(147456, [[26, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(1, ['\n        ']))], function (_ck, _v) {
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = true;
+        var currVal_4 = i0.ɵnov(_v, 12).hidden;
+        var currVal_5 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = true;
+        var currVal_8 = i0.ɵnov(_v, 18).hidden;
+        var currVal_9 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_7, currVal_8, currVal_9);
+        var currVal_10 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_10);
+        var currVal_11 = true;
+        var currVal_12 = i0.ɵnov(_v, 24).hidden;
+        var currVal_13 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_11, currVal_12, currVal_13);
+        var currVal_14 = i0.ɵunv(_v, 27, 0, _ck(_v, 28, 0, i0.ɵnov(_v.parent, 0), _v.context.$implicit.creation));
+        _ck(_v, 27, 0, currVal_14);
+        var currVal_15 = true;
+        var currVal_16 = i0.ɵnov(_v, 31).hidden;
+        var currVal_17 = (i0.ɵnov(_v, 31).signpost.length > 0);
+        _ck(_v, 30, 0, currVal_15, currVal_16, currVal_17);
+        var currVal_18 = _v.context.$implicit.color;
+        _ck(_v, 35, 0, currVal_18);
+    });
+}
+function View_KSDatagrid_5(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'em', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['No user selected.']))], null, null);
+}
+function View_KSDatagrid_6(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class',
+                'username']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['', '']))], null, function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit.name;
+        _ck(_v, 1, 0, currVal_0);
+    });
+}
+function View_KSDatagrid_7(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'em', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['No user selected.']))], null, null);
+}
+function View_KSDatagrid_8(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class',
+                'username']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['', '']))], null, function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit.name;
+        _ck(_v, 1, 0, currVal_0);
+    });
+}
+function View_KSDatagrid_9(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'em', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['No user selected.']))], null, null);
+}
+function View_KSDatagrid_10(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class',
+                'username']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['', '']))], null, function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit.name;
+        _ck(_v, 1, 0, currVal_0);
+    });
+}
+function View_KSDatagrid_11(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'em', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['No user selected.']))], null, null);
+}
+function View_KSDatagrid_12(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class',
+                'username']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['', '']))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.toEdit.name;
+        _ck(_v, 1, 0, currVal_0);
+    });
+}
+function View_KSDatagrid_14(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 3, 'button', [['class',
+                'btn btn-sm btn-secondary'], ['type', 'button']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onEdit() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'pencil']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, [' Edit']))], null, null);
+}
+function View_KSDatagrid_13(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 14, 'div', [['aria-label',
+                'Available Actions'], ['class', 'btn-group'], ['role', 'group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-sm btn-secondary'],
+            ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onAdd() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'plus']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, [' Add\n                                                                                                                            to\n                                                                                                                            group'])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-sm btn-secondary'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onDelete() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'close']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, [' Delete'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_14)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = (_co.selected.length == 1);
+        _ck(_v, 13, 0, currVal_0);
+    }, null);
+}
+function View_KSDatagrid_15(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 53, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[34, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], { item: [0, 'item'] }, null),
+        i0.ɵqud(603979776, 40, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 41, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2, i3.Expand, i10.DatagridRenderOrganizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 0, 14, 'clr-dg-action-overflow', [], null, null, null, i21.View_DatagridActionOverflow_0, i21.RenderType_DatagridActionOverflow)),
+        i0.ɵdid(180224, null, 0, i22.DatagridActionOverflow, [i6.RowActionService], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 4, 'button', [['class', 'action-item']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onEdit(_v.context.$implicit) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'note']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n                    Edit\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 4, 'button', [['class', 'action-item']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.onDelete(_v.context.$implicit) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'trash']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n                    Delete\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(1, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)),
+        i0.ɵdid(49152, [[40, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 42, { signpost: 1 }), i0.ɵdid(147456, [[41, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden', null],
+            [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[40,
+                4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 43, { signpost: 1 }), i0.ɵdid(147456, [[41, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[40, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 44, { signpost: 1 }), i0.ɵdid(147456, [[41, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), i0.ɵppd(1), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[40, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 45, { signpost: 1 }), i0.ɵdid(147456, [[41, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(1, ['\n        ']))], function (_ck, _v) {
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = true;
+        var currVal_4 = i0.ɵnov(_v, 28).hidden;
+        var currVal_5 = (i0.ɵnov(_v, 28).signpost.length > 0);
+        _ck(_v, 27, 0, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = _v.context.$implicit.id;
+        _ck(_v, 31, 0, currVal_6);
+        var currVal_7 = true;
+        var currVal_8 = i0.ɵnov(_v, 34).hidden;
+        var currVal_9 = (i0.ɵnov(_v, 34).signpost.length > 0);
+        _ck(_v, 33, 0, currVal_7, currVal_8, currVal_9);
+        var currVal_10 = _v.context.$implicit.name;
+        _ck(_v, 37, 0, currVal_10);
+        var currVal_11 = true;
+        var currVal_12 = i0.ɵnov(_v, 40).hidden;
+        var currVal_13 = (i0.ɵnov(_v, 40).signpost.length > 0);
+        _ck(_v, 39, 0, currVal_11, currVal_12, currVal_13);
+        var currVal_14 = i0.ɵunv(_v, 43, 0, _ck(_v, 44, 0, i0.ɵnov(_v.parent, 0), _v.context.$implicit.creation));
+        _ck(_v, 43, 0, currVal_14);
+        var currVal_15 = true;
+        var currVal_16 = i0.ɵnov(_v, 47).hidden;
+        var currVal_17 = (i0.ɵnov(_v, 47).signpost.length > 0);
+        _ck(_v, 46, 0, currVal_15, currVal_16, currVal_17);
+        var currVal_18 = _v.context.$implicit.color;
+        _ck(_v, 51, 0, currVal_18);
+    });
+}
+function View_KSDatagrid_16(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 43, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[49, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], null, null), i0.ɵqud(603979776, 56, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 57, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2,
+            i3.Expand, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[56, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 58, { signpost: 1 }), i0.ɵdid(147456, [[57, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[56, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 59, { signpost: 1 }), i0.ɵdid(147456, [[57, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[56, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 60, { signpost: 1 }), i0.ɵdid(147456, [[57, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), i0.ɵppd(1), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[56, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 61, { signpost: 1 }), i0.ɵdid(147456, [[57, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[56, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 62, { signpost: 1 }), i0.ɵdid(147456, [[57, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n    ']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_2 = true;
+        var currVal_3 = i0.ɵnov(_v, 12).hidden;
+        var currVal_4 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 18).hidden;
+        var currVal_8 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_6, currVal_7, currVal_8);
+        var currVal_9 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 24).hidden;
+        var currVal_12 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_10, currVal_11, currVal_12);
+        var currVal_13 = i0.ɵunv(_v, 27, 0, _ck(_v, 28, 0, i0.ɵnov(_v.parent, 0), _v.context.$implicit.creation));
+        _ck(_v, 27, 0, currVal_13);
+        var currVal_14 = true;
+        var currVal_15 = i0.ɵnov(_v, 31).hidden;
+        var currVal_16 = (i0.ɵnov(_v, 31).signpost.length > 0);
+        _ck(_v, 30, 0, currVal_14, currVal_15, currVal_16);
+        var currVal_17 = _v.context.$implicit.pokemon.name;
+        _ck(_v, 34, 0, currVal_17);
+        var currVal_18 = true;
+        var currVal_19 = i0.ɵnov(_v, 37).hidden;
+        var currVal_20 = (i0.ɵnov(_v, 37).signpost.length > 0);
+        _ck(_v, 36, 0, currVal_18, currVal_19, currVal_20);
+        var currVal_21 = _v.context.$implicit.color;
+        _ck(_v, 41, 0, currVal_21);
+    });
+}
+function View_KSDatagrid_17(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 42, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[66, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], null, null), i0.ɵqud(603979776, 73, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 74, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2,
+            i3.Expand, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n                '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[73, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 75, { signpost: 1 }), i0.ɵdid(147456, [[74, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[73, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 76, { signpost: 1 }), i0.ɵdid(147456, [[74, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n                '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[73, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 77, { signpost: 1 }), i0.ɵdid(147456, [[74, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n                '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[73, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 78, { signpost: 1 }), i0.ɵdid(147456, [[74, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵted(1, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[73, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 79, { signpost: 1 }), i0.ɵdid(147456, [[74, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['This is a very wide column.'])), (_l()(), i0.ɵted(1, ['\n            ']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_2 = true;
+        var currVal_3 = i0.ɵnov(_v, 12).hidden;
+        var currVal_4 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 18).hidden;
+        var currVal_8 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_6, currVal_7, currVal_8);
+        var currVal_9 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 24).hidden;
+        var currVal_12 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_10, currVal_11, currVal_12);
+        var currVal_13 = _v.context.$implicit.pokemon.name;
+        _ck(_v, 27, 0, currVal_13);
+        var currVal_14 = true;
+        var currVal_15 = i0.ɵnov(_v, 30).hidden;
+        var currVal_16 = (i0.ɵnov(_v, 30).signpost.length > 0);
+        _ck(_v, 29, 0, currVal_14, currVal_15, currVal_16);
+        var currVal_17 = _v.context.$implicit.color;
+        _ck(_v, 34, 0, currVal_17);
+        var currVal_18 = true;
+        var currVal_19 = i0.ɵnov(_v, 38).hidden;
+        var currVal_20 = (i0.ɵnov(_v, 38).signpost.length > 0);
+        _ck(_v, 37, 0, currVal_18, currVal_19, currVal_20);
+    });
+}
+function View_KSDatagrid_18(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 28, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[83, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], null, null), i0.ɵqud(603979776, 88, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 89, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2,
+            i3.Expand, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[88, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 90, { signpost: 1 }), i0.ɵdid(147456, [[89, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[88, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 91, { signpost: 1 }), i0.ɵdid(147456, [[89, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[88, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 92, { signpost: 1 }), i0.ɵdid(147456, [[89, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor tellus,\n            tincidunt eget mauris molestie, ullamcorper facilisis lacus. Vivamus sagittis\n            suscipit libero, et tristique justo consectetur eget.\n        '])),
+        (_l()(), i0.ɵted(1, ['\n    ']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_2 = true;
+        var currVal_3 = i0.ɵnov(_v, 12).hidden;
+        var currVal_4 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 18).hidden;
+        var currVal_8 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_6, currVal_7, currVal_8);
+        var currVal_9 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 24).hidden;
+        var currVal_12 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_10, currVal_11, currVal_12);
+    });
+}
+function View_KSDatagrid_22(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in neque in ante placerat mattis id sed\n                        quam. Proin rhoncus lacus et tempor dignissim. Vivamus sem quam, pellentesque aliquet suscipit eget,\n                        pellentesque sed arcu. Vivamus in dui lectus. Suspendisse cursus est ac nisl imperdiet viverra. Aenean\n                        sagittis nibh lacus, in eleifend urna ultrices et. Mauris porttitor nisi nec velit pharetra porttitor.\n                        Vestibulum vulputate sollicitudin dolor ut tincidunt. Phasellus vitae blandit felis. Nullam posuere\n                        ipsum tincidunt velit pellentesque rhoncus. Morbi faucibus ut ipsum at malesuada. Nam vestibulum felis\n                        sit amet metus finibus hendrerit. Fusce faucibus odio eget ex vulputate rhoncus. Fusce nec aliquam leo,\n                        at suscipit diam.\n                    ']))], null, null);
+}
+function View_KSDatagrid_23(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden', null],
+            [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[110,
+                4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 112, { signpost: 1 }), i0.ɵdid(147456, [[111, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.'])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[110, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 113, { signpost: 1 }), i0.ɵdid(147456, [[111, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['Proin in neque in ante placerat mattis id sed quam.'])), (_l()(),
+            i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[110, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 114, { signpost: 1 }), i0.ɵdid(147456, [[111, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['Proin rhoncus lacus et tempor dignissim.'])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[110, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 115, { signpost: 1 }), i0.ɵdid(147456, [[111, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['Vivamus sem quam, pellentesque aliquet suscipit eget, pellentesque sed arcu.'])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[110, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 116, { signpost: 1 }), i0.ɵdid(147456, [[111, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['Vivamus in dui lectus. Suspendisse cursus est ac nisl imperdiet viverra.'])),
+        (_l()(), i0.ɵted(null, ['\n                    ']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 2).hidden;
+        var currVal_2 = (i0.ɵnov(_v, 2).signpost.length > 0);
+        _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_3 = true;
+        var currVal_4 = i0.ɵnov(_v, 8).hidden;
+        var currVal_5 = (i0.ɵnov(_v, 8).signpost.length > 0);
+        _ck(_v, 7, 0, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 14).hidden;
+        var currVal_8 = (i0.ɵnov(_v, 14).signpost.length > 0);
+        _ck(_v, 13, 0, currVal_6, currVal_7, currVal_8);
+        var currVal_9 = true;
+        var currVal_10 = i0.ɵnov(_v, 20).hidden;
+        var currVal_11 = (i0.ɵnov(_v, 20).signpost.length > 0);
+        _ck(_v, 19, 0, currVal_9, currVal_10, currVal_11);
+        var currVal_12 = true;
+        var currVal_13 = i0.ɵnov(_v, 26).hidden;
+        var currVal_14 = (i0.ɵnov(_v, 26).signpost.length > 0);
+        _ck(_v, 25, 0, currVal_12, currVal_13, currVal_14);
+    });
+}
+function View_KSDatagrid_21(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_22)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n\n                    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_23)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = (_co.detail === 'default');
+        _ck(_v, 2, 0, currVal_0);
+        var currVal_1 = (_co.detail === 'columns');
+        _ck(_v, 5, 0, currVal_1);
+    }, null);
+}
+function View_KSDatagrid_20(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 8, 'clr-dg-row-detail', [], [[2, 'datagrid-row-flex', null], [2, 'datagrid-row-detail',
+                null], [2, 'datagrid-container', null]], null, null, i23.View_DatagridRowDetail_0, i23.RenderType_DatagridRowDetail)), i0.ɵdid(1228800, null, 1, i24.DatagridRowDetail, [i5.Selection, i6.RowActionService, i3.Expand,
+            i8.HideableColumnService], { replace: [0, 'replace'] }, null), i0.ɵqud(603979776, 110, { cells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 111, { cells: 1 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSDatagrid_21)), i0.ɵdid(81920, null, 0, i25.FakeLoader, [i0.TemplateRef,
+            i0.ViewContainerRef, i26.Loading], { fake: [0, 'fake'] }, null), (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_3 = _co.replace;
+        _ck(_v, 1, 0, currVal_3);
+        var currVal_4 = _co.slowLoad;
+        _ck(_v, 7, 0, currVal_4);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = !i0.ɵnov(_v, 1).replace;
+        var currVal_2 = (i0.ɵnov(_v, 1).cells.length === 0);
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2);
+    });
+}
+function View_KSDatagrid_19(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 47, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[96, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], { item: [0, 'item'] }, null),
+        i0.ɵqud(603979776, 103, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 104, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2, i3.Expand, i10.DatagridRenderOrganizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[103, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 105, { signpost: 1 }), i0.ɵdid(147456, [[104, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[103, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 106, { signpost: 1 }), i0.ɵdid(147456, [[104, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[103, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 107, { signpost: 1 }), i0.ɵdid(147456, [[104, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), i0.ɵppd(1), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell',
+                    null], [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                    null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[103, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 108, { signpost: 1 }), i0.ɵdid(147456, [[104, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[103, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 109, { signpost: 1 }), i0.ɵdid(147456, [[104, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(1, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 2, 2, null, View_KSDatagrid_20)), i0.ɵdid(212992, null, 0, i27.IfExpanded, [i0.TemplateRef, i0.ViewContainerRef, i3.Expand], { expanded: [0, 'expanded'] }, null), i0.ɵdid(147456, null, 0, i28.DatagridDetailRegisterer, [[2, i7.ExpandableRowsCount]], null, null), (_l()(), i0.ɵted(1, ['\n        ']))], function (_ck, _v) {
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+        var currVal_23 = null;
+        _ck(_v, 45, 0, currVal_23);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = true;
+        var currVal_4 = i0.ɵnov(_v, 12).hidden;
+        var currVal_5 = (i0.ɵnov(_v, 12).signpost.length > 0);
+        _ck(_v, 11, 0, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = _v.context.$implicit.id;
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = true;
+        var currVal_8 = i0.ɵnov(_v, 18).hidden;
+        var currVal_9 = (i0.ɵnov(_v, 18).signpost.length > 0);
+        _ck(_v, 17, 0, currVal_7, currVal_8, currVal_9);
+        var currVal_10 = _v.context.$implicit.name;
+        _ck(_v, 21, 0, currVal_10);
+        var currVal_11 = true;
+        var currVal_12 = i0.ɵnov(_v, 24).hidden;
+        var currVal_13 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_11, currVal_12, currVal_13);
+        var currVal_14 = i0.ɵunv(_v, 27, 0, _ck(_v, 28, 0, i0.ɵnov(_v.parent, 0), _v.context.$implicit.creation));
+        _ck(_v, 27, 0, currVal_14);
+        var currVal_15 = true;
+        var currVal_16 = i0.ɵnov(_v, 31).hidden;
+        var currVal_17 = (i0.ɵnov(_v, 31).signpost.length > 0);
+        _ck(_v, 30, 0, currVal_15, currVal_16, currVal_17);
+        var currVal_18 = _v.context.$implicit.pokemon.name;
+        _ck(_v, 34, 0, currVal_18);
+        var currVal_19 = true;
+        var currVal_20 = i0.ɵnov(_v, 37).hidden;
+        var currVal_21 = (i0.ɵnov(_v, 37).signpost.length > 0);
+        _ck(_v, 36, 0, currVal_19, currVal_20, currVal_21);
+        var currVal_22 = _v.context.$implicit.color;
+        _ck(_v, 41, 0, currVal_22);
+    });
+}
+function View_KSDatagrid_25(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                User ID\n            ']))], null, null);
+}
+function View_KSDatagrid_24(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 9, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[119, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider,
+            i30.DragDispatcher], null, null), i0.ɵqud(335544320, 122, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[121, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_25)), i0.ɵdid(16384, null, 0, i36.DatagridHideableColumnDirective, [i0.TemplateRef, i0.ViewContainerRef,
+            i31.DatagridColumn], { clrDgHideableColumn: [0, 'clrDgHideableColumn'] }, null), (_l()(), i0.ɵted(1, ['\n        ']))], function (_ck, _v) {
+        var currVal_4 = null;
+        _ck(_v, 8, 0, currVal_4);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 2).hidden;
+        var currVal_2 = i0.ɵnov(_v, 2).asc;
+        var currVal_3 = i0.ɵnov(_v, 2).desc;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+    });
+}
+function View_KSDatagrid_26(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                Name\n            ']))], null, null);
+}
+function View_KSDatagrid_27(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                Creation date\n            ']))], null, null);
+}
+function View_KSDatagrid_28(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                Pokemon\n            ']))], null, null);
+}
+function View_KSDatagrid_29(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                Favorite color\n            ']))], null, null);
+}
+function View_KSDatagrid_31(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[127, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 129, { signpost: 1 }), i0.ɵdid(147456, [[128, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', '']))], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 1).hidden;
+        var currVal_2 = (i0.ɵnov(_v, 1).signpost.length > 0);
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_3 = _v.parent.context.$implicit.id;
+        _ck(_v, 4, 0, currVal_3);
+    });
+}
+function View_KSDatagrid_32(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 5, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[127, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 131, { signpost: 1 }), i0.ɵdid(147456, [[128, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), i0.ɵppd(1)], null, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 1).hidden;
+        var currVal_2 = (i0.ɵnov(_v, 1).signpost.length > 0);
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_3 = i0.ɵunv(_v, 4, 0, _ck(_v, 5, 0, i0.ɵnov(_v.parent.parent, 0), _v.parent.context.$implicit.creation));
+        _ck(_v, 4, 0, currVal_3);
+    });
+}
+function View_KSDatagrid_30(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 36, 'clr-dg-row', [], [[2, 'datagrid-row', null], [2, 'datagrid-selected', null]], null, null, i1.View_DatagridRow_0, i1.RenderType_DatagridRow)),
+        i0.ɵprd(6144, null, i2.LoadingListener, null, [i3.Expand]), i0.ɵprd(512, null, i3.Expand, i3.Expand, []), i0.ɵdid(1228800, [[120, 4]], 1, i4.DatagridRow, [i5.Selection, i6.RowActionService, i7.ExpandableRowsCount,
+            i3.Expand, i8.HideableColumnService], { item: [0, 'item'] }, null),
+        i0.ɵqud(603979776, 127, { dgCells: 1 }), i0.ɵdid(5259264, null, 1, i9.DatagridRowRenderer, [i10.DatagridRenderOrganizer], null, null), i0.ɵqud(603979776, 128, { cells: 1 }), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i7.ExpandableRowsCount], null, null), i0.ɵdid(16384, null, 0, i14.DatagridRowExpandAnimation, [i0.ElementRef, i15.DomAdapter, i0.Renderer2, i3.Expand, i10.DatagridRenderOrganizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_31)), i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[127, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 130, { signpost: 1 }), i0.ɵdid(147456, [[128, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_32)), i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null),
+        (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 4, 'clr-dg-cell', [], [[2, 'datagrid-cell', null], [2, 'datagrid-cell--hidden',
+                null], [2, 'datagrid-signpost-trigger', null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[127, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null),
+        i0.ɵqud(603979776, 132, { signpost: 1 }), i0.ɵdid(147456, [[128, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer], null, null),
+        (_l()(), i0.ɵted(0, ['', ''])), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-cell', [], [[2, 'datagrid-cell', null],
+            [2, 'datagrid-cell--hidden', null], [2, 'datagrid-signpost-trigger',
+                null]], null, null, i16.View_DatagridCell_0, i16.RenderType_DatagridCell)), i0.ɵdid(49152, [[127, 4]], 1, i17.DatagridCell, [i8.HideableColumnService], null, null), i0.ɵqud(603979776, 133, { signpost: 1 }), i0.ɵdid(147456, [[128, 4]], 0, i18.DatagridCellRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer], null, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'span', [['class', 'color-square']], [[4, 'backgroundColor', null]], null, null, null, null)), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(1, ['\n        ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+        var currVal_3 = _co.showId;
+        _ck(_v, 12, 0, currVal_3);
+        var currVal_8 = _co.showDate;
+        _ck(_v, 21, 0, currVal_8);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 3).selected;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_4 = true;
+        var currVal_5 = i0.ɵnov(_v, 15).hidden;
+        var currVal_6 = (i0.ɵnov(_v, 15).signpost.length > 0);
+        _ck(_v, 14, 0, currVal_4, currVal_5, currVal_6);
+        var currVal_7 = _v.context.$implicit.name;
+        _ck(_v, 18, 0, currVal_7);
+        var currVal_9 = true;
+        var currVal_10 = i0.ɵnov(_v, 24).hidden;
+        var currVal_11 = (i0.ɵnov(_v, 24).signpost.length > 0);
+        _ck(_v, 23, 0, currVal_9, currVal_10, currVal_11);
+        var currVal_12 = _v.context.$implicit.pokemon.name;
+        _ck(_v, 27, 0, currVal_12);
+        var currVal_13 = true;
+        var currVal_14 = i0.ɵnov(_v, 30).hidden;
+        var currVal_15 = (i0.ɵnov(_v, 30).signpost.length > 0);
+        _ck(_v, 29, 0, currVal_13, currVal_14, currVal_15);
+        var currVal_16 = _v.context.$implicit.color;
+        _ck(_v, 34, 0, currVal_16);
+    });
+}
 export function View_KSDatagrid_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Datagrids'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+    return i0.ɵvid(0, [i0.ɵpid(0, i20.DatePipe, [i0.LOCALE_ID]), (_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Datagrids'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Basic with Custom Cell Rendering'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn'], ['id', 'btn-toggle']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.toggleItems() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Toggle'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 60, 'clr-datagrid', [['id', 'basic-custom-cell']], [[4, 'height', 'px'], [2, 'datagrid-host',
+                null]], null, null, i38.View_Datagrid_0, i38.RenderType_Datagrid)),
+        i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []), i0.ɵprd(512, null, i39.Page, i39.Page, []),
+        i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []),
+        i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]),
+        i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []),
+        i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider,
+            i10.DatagridRenderOrganizer, i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount,
+            i5.Selection, i6.RowActionService], null, null), i0.ɵqud(335544320, 1, { iterator: 0 }), i0.ɵqud(335544320, 2, { placeholder: 0 }), i0.ɵqud(603979776, 3, { columns: 1 }), i0.ɵqud(603979776, 4, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page, i15.DomAdapter, i0.ElementRef,
+            i0.Renderer2], null, null), i0.ɵqud(603979776, 5, { headers: 1 }),
+        i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka, i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2,
+                'datagrid-column--hidden', null], [2, 'asc', null], [2,
+                'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[3, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null),
+        i0.ɵqud(335544320, 6, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[5, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[3, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 7, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[5, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null],
+            [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[3, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null),
+        i0.ɵqud(335544320, 8, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[5, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Creation date'])), (_l()(),
+            i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[3, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 9, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[5, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(), i0.ɵted(2, ['\n\n    '])), (_l()(),
+            i0.ɵand(16777216, null, 2, 1, null, View_KSDatagrid_1)), i0.ɵdid(802816, null, 0, i20.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(2, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['',
+            ' users'])), (_l()(), i0.ɵted(2, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Single selection'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 75, 'div', [['id', 'single-selection']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 10, 'div', [['class',
+                'card card-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'p', [['class', 'card-text username-list']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            Selected user:\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_2)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_3)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 60, 'clr-datagrid', [], [[2, 'datagrid-host', null]], [[null, 'clrDgSingleSelectedChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrDgSingleSelectedChange' === en)) {
+                var pd_0 = ((_co.singleSelected = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []),
+        i0.ɵprd(512, null, i39.Page, i39.Page, []), i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []), i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]), i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []), i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider, i10.DatagridRenderOrganizer,
+            i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount, i5.Selection, i6.RowActionService], { singleSelected: [0, 'singleSelected'] }, { singleSelectedChanged: 'clrDgSingleSelectedChange' }),
+        i0.ɵqud(335544320, 16, { iterator: 0 }), i0.ɵqud(335544320, 17, { placeholder: 0 }), i0.ɵqud(603979776, 18, { columns: 1 }), i0.ɵqud(603979776, 19, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 20, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[18, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 21, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[20, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null],
+            [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[18, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null),
+        i0.ɵqud(335544320, 22, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[20, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[18, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 23, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[20, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Creation date'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column',
+                    null], [2, 'datagrid-column--hidden', null], [2, 'asc',
+                    null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[18, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 24, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[20, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(), i0.ɵted(2, ['\n\n        '])),
+        (_l()(), i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_4)), i0.ɵdid(802816, [[16, 4]], 0, i45.DatagridItems, [i0.TemplateRef, i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(), i0.ɵted(2, ['\n\n        '])),
+        (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['',
+            ' users'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Multi selection'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 109, 'div', [['id', 'multl-selection']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 37, 'div', [['class', 'card card-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'p', [['class', 'card-text username-list']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Selected users:\n            '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_5)), i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_6)),
+        i0.ɵdid(802816, null, 0, i20.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 7, 'p', [['class', 'card-text username-list']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            Users to be added to group:\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_7)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_8)),
+        i0.ɵdid(802816, null, 0, i20.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 7, 'p', [['class', 'card-text username-list']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            Users to be deleted:\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_9)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_10)),
+        i0.ɵdid(802816, null, 0, i20.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 7, 'p', [['class', 'card-text username-list']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            User to be edited:\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_11)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSDatagrid_12)),
+        i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 67, 'clr-datagrid', [], [[2, 'datagrid-host', null]], [[null, 'clrDgSelectedChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrDgSelectedChange' === en)) {
+                var pd_0 = ((_co.selected = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []),
+        i0.ɵprd(512, null, i39.Page, i39.Page, []), i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []), i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]), i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []), i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider, i10.DatagridRenderOrganizer,
+            i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount, i5.Selection, i6.RowActionService], { selected: [0, 'selected'] }, { selectedChanged: 'clrDgSelectedChange' }), i0.ɵqud(335544320, 31, { iterator: 0 }), i0.ɵqud(335544320, 32, { placeholder: 0 }), i0.ɵqud(603979776, 33, { columns: 1 }), i0.ɵqud(603979776, 34, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 35, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 5, 'clr-dg-action-bar', [], [[2, 'datagrid-action-bar', null]], null, null, i46.View_DatagridActionBar_0, i46.RenderType_DatagridActionBar)), i0.ɵdid(49152, null, 0, i47.DatagridActionBar, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSDatagrid_13)), i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵted(2, ['\n\n        '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column',
+                    null], [2, 'datagrid-column--hidden', null], [2, 'asc',
+                    null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[33, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 36, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[35, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null],
+            [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[33, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null),
+        i0.ɵqud(335544320, 37, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[35, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[33, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 38, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[35, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Creation date'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column',
+                    null], [2, 'datagrid-column--hidden', null], [2, 'asc',
+                    null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[33, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 39, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[35, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(), i0.ɵted(2, ['\n\n        '])),
+        (_l()(), i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_15)), i0.ɵdid(802816, [[31, 4]], 0, i45.DatagridItems, [i0.TemplateRef, i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(), i0.ɵted(2, ['\n\n        '])),
+        (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['',
+            ' users'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Vertical scrolling'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 68, 'clr-datagrid', [['id', 'vertical-scrolling'], ['style', 'height: 325px']], [[2, 'datagrid-host', null]], null, null, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []), i0.ɵprd(512, null, i39.Page, i39.Page, []), i0.ɵprd(512, null, i32.Sort, i32.Sort, []),
+        i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort,
+            i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []), i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items,
+            i33.FiltersProvider]), i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []), i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService,
+            i33.FiltersProvider, i10.DatagridRenderOrganizer, i39.Page, i32.Sort, i40.Items,
+            i7.ExpandableRowsCount, i5.Selection, i6.RowActionService], null, null),
+        i0.ɵqud(335544320, 46, { iterator: 0 }), i0.ɵqud(335544320, 47, { placeholder: 0 }), i0.ɵqud(603979776, 48, { columns: 1 }), i0.ɵqud(603979776, 49, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 50, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[48, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 51, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[50, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null],
+            [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[48, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null),
+        i0.ɵqud(335544320, 52, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[50, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[48, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 53, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[50, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Creation date'])), (_l()(),
+            i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[48, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 54, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[50, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Pokemon'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[48, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 55, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[50, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(),
+            i0.ɵted(2, ['\n\n    '])), (_l()(), i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_16)), i0.ɵdid(802816, [[46, 4]], 0, i45.DatagridItems, [i0.TemplateRef,
+            i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(),
+            i0.ɵted(2, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot', null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)), i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['', ' users'])), (_l()(), i0.ɵted(2, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Horizontal scrolling'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 77, 'div', [['class',
+                'card'], ['id', 'horizontal-scrolling'], ['style', 'width: 400px']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'div', [['class',
+                'card-header']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        For instance when in a narrow card.\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 71, 'div', [['class', 'card-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 68, 'clr-datagrid', [], [[2, 'datagrid-host', null]], null, null, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []), i0.ɵprd(512, null, i39.Page, i39.Page, []), i0.ɵprd(512, null, i32.Sort, i32.Sort, []),
+        i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort,
+            i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []), i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items,
+            i33.FiltersProvider]), i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []), i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService,
+            i33.FiltersProvider, i10.DatagridRenderOrganizer, i39.Page, i32.Sort, i40.Items,
+            i7.ExpandableRowsCount, i5.Selection, i6.RowActionService], null, null),
+        i0.ɵqud(335544320, 63, { iterator: 0 }), i0.ɵqud(335544320, 64, { placeholder: 0 }), i0.ɵqud(603979776, 65, { columns: 1 }), i0.ɵqud(603979776, 66, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 67, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[65, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 68, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[67, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column',
+                    null], [2, 'datagrid-column--hidden', null], [2, 'asc',
+                    null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[65, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 69, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[67, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[65, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 70, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[67, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Pokemon'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[65, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 71, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[67, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [['class', 'lorem-ipsum']], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[65, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 72, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[67, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Filler'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(),
+            i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_17)), i0.ɵdid(802816, [[63, 4]], 0, i45.DatagridItems, [i0.TemplateRef, i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['',
+            ' users'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Smart column sizing'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 52, 'clr-datagrid', [['id', 'smart-column-sizing']], [[2, 'datagrid-host', null]], null, null, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []),
+        i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []),
+        i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []), i0.ɵprd(512, null, i39.Page, i39.Page, []),
+        i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []),
+        i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]),
+        i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []),
+        i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider,
+            i10.DatagridRenderOrganizer, i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount,
+            i5.Selection, i6.RowActionService], null, null), i0.ɵqud(335544320, 80, { iterator: 0 }), i0.ɵqud(335544320, 81, { placeholder: 0 }), i0.ɵqud(603979776, 82, { columns: 1 }), i0.ɵqud(603979776, 83, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 84, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[82, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 85, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[84, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['This column as a long header but short data'])), (_l()(),
+            i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[82, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 86, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[84, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Short header'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(),
+            i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column',
+                    null], [2, 'datagrid-column--hidden', null], [2, 'asc',
+                    null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[82, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 87, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[84, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['Large data'])), (_l()(), i0.ɵted(2, ['\n\n    '])), (_l()(),
+            i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_18)), i0.ɵdid(802816, [[80, 4]], 0, i45.DatagridItems, [i0.TemplateRef, i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(), i0.ɵted(2, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['',
+            ' users'])), (_l()(), i0.ɵted(2, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Expandable rows'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 167, 'div', [['id', 'expandable-rows']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 94, 'form', [['novalidate',
+                '']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
+                'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 485).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 485).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i48.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i48.NgForm, [[8,
+                null], [8, null]], null, null), i0.ɵprd(2048, null, i48.ControlContainer, null, [i48.NgForm]), i0.ɵdid(16384, null, 0, i48.NgControlStatusGroup, [i48.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 32, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Type of detail'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 12, 'div', [['class', 'radio-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 6, 'input', [['id', 'detail-default'],
+                ['name', 'detail'], ['type', 'radio'], ['value', 'default']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+                [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+                [null, 'compositionend'], [null, 'change']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('input' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 497)._handleInput($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 497).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('compositionstart' === en)) {
+                    var pd_2 = (i0.ɵnov(_v, 497)._compositionStart() !== false);
+                    ad = (pd_2 && ad);
+                }
+                if (('compositionend' === en)) {
+                    var pd_3 = (i0.ɵnov(_v, 497)._compositionEnd($event.target.value) !== false);
+                    ad = (pd_3 && ad);
+                }
+                if (('change' === en)) {
+                    var pd_4 = (i0.ɵnov(_v, 498).onChange() !== false);
+                    ad = (pd_4 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_5 = (i0.ɵnov(_v, 498).onTouched() !== false);
+                    ad = (pd_5 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_6 = ((_co.detail = $event) !== false);
+                    ad = (pd_6 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i48.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i48.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(212992, null, 0, i48.RadioControlValueAccessor, [i0.Renderer2, i0.ElementRef, i48.ɵi, i0.Injector], { name: [0, 'name'], value: [1,
+                'value'] }, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i48.DefaultValueAccessor, i48.RadioControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null],
+            [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1,
+                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'detail-default']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Default'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 12, 'div', [['class', 'radio-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 6, 'input', [['id', 'detail-columns'],
+                ['name', 'detail'], ['type', 'radio'], ['value', 'columns']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+                [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+                [null, 'compositionend'], [null, 'change']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('input' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 511)._handleInput($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 511).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('compositionstart' === en)) {
+                    var pd_2 = (i0.ɵnov(_v, 511)._compositionStart() !== false);
+                    ad = (pd_2 && ad);
+                }
+                if (('compositionend' === en)) {
+                    var pd_3 = (i0.ɵnov(_v, 511)._compositionEnd($event.target.value) !== false);
+                    ad = (pd_3 && ad);
+                }
+                if (('change' === en)) {
+                    var pd_4 = (i0.ɵnov(_v, 512).onChange() !== false);
+                    ad = (pd_4 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_5 = (i0.ɵnov(_v, 512).onTouched() !== false);
+                    ad = (pd_5 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_6 = ((_co.detail = $event) !== false);
+                    ad = (pd_6 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i48.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i48.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(212992, null, 0, i48.RadioControlValueAccessor, [i0.Renderer2, i0.ElementRef, i48.ɵi, i0.Injector], { name: [0, 'name'], value: [1,
+                'value'] }, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i48.DefaultValueAccessor, i48.RadioControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null],
+            [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1,
+                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'detail-columns']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Columns'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 53, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'replace'], ['name', 'replace'], ['type', 'checkbox']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'change'], [null, 'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 528).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 528).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.replace = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i48.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i48.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null], [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'replace']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Replace row'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'fixed-height'], ['name', 'fixed-height'], ['type', 'checkbox']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'ngModelChange'], [null, 'change'], [null, 'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 541).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 541).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.fixedHeight = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i48.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i48.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null], [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'fixed-height']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Fixed height'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'selectable'], ['name', 'selectable'], ['type', 'checkbox']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'ngModelChange'], [null, 'change'], [null, 'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 554).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 554).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.selectable = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i48.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i48.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null], [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'selectable']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Selectable'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'checkbox-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'slow-load'], ['name', 'slow-load'], ['type', 'checkbox']], [[2,
+                'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'ngModelChange'], [null, 'change'], [null, 'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 567).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 567).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.slowLoad = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i48.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i48.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i48.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i48.NgModel, [[2, i48.ControlContainer], [8, null], [8, null], [2, i48.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i48.NgControl, null, [i48.NgModel]), i0.ɵdid(16384, null, 0, i48.NgControlStatus, [i48.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'slow-load']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Slow load'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 68, 'clr-datagrid', [], [[4, 'height', 'px'], [2, 'datagrid-host', null]], [[null, 'clrDgSelectedChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrDgSelectedChange' === en)) {
+                var pd_0 = ((_co.selected2 = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []), i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []), i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []),
+        i0.ɵprd(512, null, i39.Page, i39.Page, []), i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []), i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]), i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []), i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider, i10.DatagridRenderOrganizer,
+            i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount, i5.Selection, i6.RowActionService], { selected: [0, 'selected'] }, { selectedChanged: 'clrDgSelectedChange' }), i0.ɵqud(335544320, 93, { iterator: 0 }), i0.ɵqud(335544320, 94, { placeholder: 0 }), i0.ɵqud(603979776, 95, { columns: 1 }), i0.ɵqud(603979776, 96, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 97, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[95, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 98, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[97, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['User ID'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null],
+            [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[95, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null),
+        i0.ɵqud(335544320, 99, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[97, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Name'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[95, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 100, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[97, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Creation date'])), (_l()(),
+            i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[95, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 101, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[97, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Pokemon'])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 6, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden', null],
+            [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[95, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], { field: [0, 'field'] }, null), i0.ɵqud(335544320, 102, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[97, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['Favorite color'])), (_l()(),
+            i0.ɵted(2, ['\n\n        '])), (_l()(), i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_19)), i0.ɵdid(802816, [[93, 4]], 0, i45.DatagridItems, [i0.TemplateRef,
+            i0.IterableDiffers, i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(),
+            i0.ɵted(2, ['\n\n\n        '])), (_l()(), i0.ɵeld(0, null, 4, 2, 'clr-dg-footer', [], [[2, 'datagrid-foot', null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)), i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['', ' users'])), (_l()(), i0.ɵted(2, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Hide-show columns'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 89, 'div', [['id', 'hide-show']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline-primary'],
+            ['id', 'toggle-id']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.toggleId() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n        Toggle ID\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 83, 'clr-datagrid', [], [[2, 'datagrid-host', null]], null, null, i38.View_Datagrid_0, i38.RenderType_Datagrid)), i0.ɵprd(512, null, i8.HideableColumnService, i8.HideableColumnService, []),
+        i0.ɵprd(512, null, i33.FiltersProvider, i33.FiltersProvider, []),
+        i0.ɵprd(512, null, i10.DatagridRenderOrganizer, i10.DatagridRenderOrganizer, []), i0.ɵprd(512, null, i39.Page, i39.Page, []),
+        i0.ɵprd(512, null, i32.Sort, i32.Sort, []), i0.ɵprd(512, null, i40.Items, i40.Items, [i33.FiltersProvider, i32.Sort, i39.Page]), i0.ɵprd(512, null, i7.ExpandableRowsCount, i7.ExpandableRowsCount, []),
+        i0.ɵprd(512, null, i5.Selection, i5.Selection, [i40.Items, i33.FiltersProvider]),
+        i0.ɵprd(512, null, i6.RowActionService, i6.RowActionService, []),
+        i0.ɵdid(5423104, null, 4, i41.Datagrid, [i8.HideableColumnService, i33.FiltersProvider,
+            i10.DatagridRenderOrganizer, i39.Page, i32.Sort, i40.Items, i7.ExpandableRowsCount,
+            i5.Selection, i6.RowActionService], null, null), i0.ɵqud(335544320, 117, { iterator: 0 }), i0.ɵqud(335544320, 118, { placeholder: 0 }), i0.ɵqud(603979776, 119, { columns: 1 }), i0.ɵqud(603979776, 120, { rows: 1 }), i0.ɵprd(512, null, i15.DomAdapter, i15.DomAdapter, []), i0.ɵdid(9584640, null, 1, i42.DatagridMainRenderer, [i10.DatagridRenderOrganizer, i40.Items, i39.Page,
+            i15.DomAdapter, i0.ElementRef, i0.Renderer2], null, null),
+        i0.ɵqud(603979776, 121, { headers: 1 }), i0.ɵdid(8404992, null, 0, i12.DatagridWillyWonka, [], null, null), i0.ɵdid(2113536, null, 0, i11.ActionableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i6.RowActionService], null, null), i0.ɵdid(2113536, null, 0, i13.ExpandableOompaLoompa, [i0.ChangeDetectorRef, i12.DatagridWillyWonka,
+            i7.ExpandableRowsCount], null, null), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_24)), i0.ɵdid(16384, null, 0, i20.NgIf, [i0.ViewContainerRef,
+            i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(2, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, 1, 10, 'clr-dg-column', [], [[2, 'datagrid-column',
+                null], [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[119, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 123, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[121, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_26)),
+        i0.ɵdid(16384, null, 0, i36.DatagridHideableColumnDirective, [i0.TemplateRef,
+            i0.ViewContainerRef, i31.DatagridColumn], { clrDgHideableColumn: [0, 'clrDgHideableColumn'] }, null), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵted(2, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, 1, 9, 'clr-dg-column', [], [[2, 'datagrid-column',
+                null], [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[119, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 124, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[121, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_27)), i0.ɵdid(16384, null, 0, i36.DatagridHideableColumnDirective, [i0.TemplateRef, i0.ViewContainerRef, i31.DatagridColumn], { clrDgHideableColumn: [0,
+                'clrDgHideableColumn'] }, null), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 9, 'clr-dg-column', [], [[2, 'datagrid-column', null], [2, 'datagrid-column--hidden',
+                null], [2, 'asc', null], [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)),
+        i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]),
+        i0.ɵdid(180224, [[119, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider,
+            i30.DragDispatcher], null, null), i0.ɵqud(335544320, 125, { projectedFilter: 0 }),
+        i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2,
+            i10.DatagridRenderOrganizer, i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[121, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef,
+            i0.Renderer2, i10.DatagridRenderOrganizer, i15.DomAdapter, i34.DatagridColumnResizer], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(),
+            i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_28)), i0.ɵdid(16384, null, 0, i36.DatagridHideableColumnDirective, [i0.TemplateRef, i0.ViewContainerRef,
+            i31.DatagridColumn], { clrDgHideableColumn: [0, 'clrDgHideableColumn'] }, null), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵted(2, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, 1, 9, 'clr-dg-column', [], [[2, 'datagrid-column',
+                null], [2, 'datagrid-column--hidden', null], [2, 'asc', null],
+            [2, 'desc', null]], null, null, i29.View_DatagridColumn_0, i29.RenderType_DatagridColumn)), i0.ɵprd(512, null, i30.DragDispatcher, i30.DragDispatcher, [i0.NgZone, i0.Renderer2]), i0.ɵdid(180224, [[119, 4]], 1, i31.DatagridColumn, [i32.Sort, i33.FiltersProvider, i30.DragDispatcher], null, null), i0.ɵqud(335544320, 126, { projectedFilter: 0 }), i0.ɵdid(4341760, null, 0, i34.DatagridColumnResizer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i30.DragDispatcher], null, null), i0.ɵdid(147456, [[121, 4]], 0, i35.DatagridHeaderRenderer, [i0.ElementRef, i0.Renderer2, i10.DatagridRenderOrganizer,
+            i15.DomAdapter, i34.DatagridColumnResizer], null, null),
+        (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 1, 1, null, View_KSDatagrid_29)), i0.ɵdid(16384, null, 0, i36.DatagridHideableColumnDirective, [i0.TemplateRef, i0.ViewContainerRef, i31.DatagridColumn], { clrDgHideableColumn: [0,
+                'clrDgHideableColumn'] }, null), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(2, ['\n\n        '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-dg-placeholder', [], [[2, 'datagrid-placeholder-container', null]], null, null, i49.View_DatagridPlaceholder_0, i49.RenderType_DatagridPlaceholder)),
+        i0.ɵdid(49152, [[118, 4]], 0, i50.DatagridPlaceholder, [i40.Items, i39.Page], null, null), (_l()(), i0.ɵted(0, ['No users found'])), (_l()(), i0.ɵted(2, ['\n\n        '])), (_l()(), i0.ɵand(0, null, 2, 1, null, View_KSDatagrid_30)),
+        i0.ɵdid(802816, [[117, 4]], 0, i45.DatagridItems, [i0.TemplateRef, i0.IterableDiffers,
+            i40.Items], { rawItems: [0, 'rawItems'] }, null), (_l()(), i0.ɵted(2, ['\n\n        '])),
+        (_l()(), i0.ɵeld(0, null, 4, 5, 'clr-dg-footer', [], [[2, 'datagrid-foot',
+                null]], null, null, i43.View_DatagridFooter_0, i43.RenderType_DatagridFooter)),
+        i0.ɵdid(245760, null, 0, i44.DatagridFooter, [i5.Selection, i8.HideableColumnService,
+            i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(0, ['\n            ',
+            ' - ', '\n            of ', ' users\n            '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'clr-dg-pagination', [], null, null, null, i51.View_DatagridPagination_0, i51.RenderType_DatagridPagination)), i0.ɵdid(245760, [['pagination', 4]], 0, i52.DatagridPagination, [i39.Page], { pageSize: [0, 'pageSize'] }, null), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵted(2, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_18 = _co.variableLengthUsers;
+        _ck(_v, 65, 0, currVal_18);
+        _ck(_v, 68, 0);
+        var currVal_21 = !_co.singleSelected;
+        _ck(_v, 82, 0, currVal_21);
+        var currVal_22 = _co.singleSelected;
+        _ck(_v, 85, 0, currVal_22);
+        var currVal_24 = _co.singleSelected;
+        _ck(_v, 99, 0, currVal_24);
+        var currVal_41 = _co.nonPaginatedUsers;
+        _ck(_v, 144, 0, currVal_41);
+        _ck(_v, 147, 0);
+        var currVal_44 = (_co.selected.length == 0);
+        _ck(_v, 162, 0, currVal_44);
+        var currVal_45 = _co.selected;
+        _ck(_v, 165, 0, currVal_45);
+        var currVal_46 = (_co.toAdd.length == 0);
+        _ck(_v, 171, 0, currVal_46);
+        var currVal_47 = _co.toAdd;
+        _ck(_v, 174, 0, currVal_47);
+        var currVal_48 = (_co.toDelete.length == 0);
+        _ck(_v, 180, 0, currVal_48);
+        var currVal_49 = _co.toDelete;
+        _ck(_v, 183, 0, currVal_49);
+        var currVal_50 = !_co.toEdit;
+        _ck(_v, 189, 0, currVal_50);
+        var currVal_51 = _co.toEdit;
+        _ck(_v, 192, 0, currVal_51);
+        var currVal_53 = _co.selected;
+        _ck(_v, 206, 0, currVal_53);
+        var currVal_55 = (_co.selected.length > 0);
+        _ck(_v, 222, 0, currVal_55);
+        var currVal_72 = _co.nonPaginatedUsers;
+        _ck(_v, 258, 0, currVal_72);
+        _ck(_v, 261, 0);
+        var currVal_84 = 'name';
+        _ck(_v, 301, 0, currVal_84);
+        var currVal_89 = 'creation';
+        _ck(_v, 309, 0, currVal_89);
+        var currVal_94 = 'pokemon.name';
+        _ck(_v, 317, 0, currVal_94);
+        var currVal_99 = 'color';
+        _ck(_v, 325, 0, currVal_99);
+        var currVal_100 = _co.users;
+        _ck(_v, 332, 0, currVal_100);
+        _ck(_v, 335, 0);
+        var currVal_112 = 'name';
+        _ck(_v, 381, 0, currVal_112);
+        var currVal_117 = 'pokemon.name';
+        _ck(_v, 389, 0, currVal_117);
+        var currVal_122 = 'color';
+        _ck(_v, 397, 0, currVal_122);
+        var currVal_127 = _co.nonPaginatedUsers;
+        _ck(_v, 412, 0, currVal_127);
+        _ck(_v, 415, 0);
+        var currVal_143 = _co.nonPaginatedUsers;
+        _ck(_v, 471, 0, currVal_143);
+        _ck(_v, 474, 0);
+        var currVal_160 = 'detail';
+        var currVal_161 = 'default';
+        _ck(_v, 498, 0, currVal_160, currVal_161);
+        var currVal_162 = 'detail';
+        var currVal_163 = _co.detail;
+        _ck(_v, 500, 0, currVal_162, currVal_163);
+        var currVal_171 = 'detail';
+        var currVal_172 = 'columns';
+        _ck(_v, 512, 0, currVal_171, currVal_172);
+        var currVal_173 = 'detail';
+        var currVal_174 = _co.detail;
+        _ck(_v, 514, 0, currVal_173, currVal_174);
+        var currVal_182 = 'replace';
+        var currVal_183 = _co.replace;
+        _ck(_v, 530, 0, currVal_182, currVal_183);
+        var currVal_191 = 'fixed-height';
+        var currVal_192 = _co.fixedHeight;
+        _ck(_v, 543, 0, currVal_191, currVal_192);
+        var currVal_200 = 'selectable';
+        var currVal_201 = _co.selectable;
+        _ck(_v, 556, 0, currVal_200, currVal_201);
+        var currVal_209 = 'slow-load';
+        var currVal_210 = _co.slowLoad;
+        _ck(_v, 569, 0, currVal_209, currVal_210);
+        var currVal_213 = _co.selected2;
+        _ck(_v, 589, 0, currVal_213);
+        var currVal_222 = 'name';
+        _ck(_v, 611, 0, currVal_222);
+        var currVal_227 = 'creation';
+        _ck(_v, 619, 0, currVal_227);
+        var currVal_232 = 'pokemon.name';
+        _ck(_v, 627, 0, currVal_232);
+        var currVal_237 = 'color';
+        _ck(_v, 635, 0, currVal_237);
+        var currVal_238 = _co.nonPaginatedUsers;
+        _ck(_v, 642, 0, currVal_238);
+        _ck(_v, 645, 0);
+        var currVal_242 = _co.showId;
+        _ck(_v, 681, 0, currVal_242);
+        var currVal_247 = null;
+        _ck(_v, 692, 0, currVal_247);
+        var currVal_252 = null;
+        _ck(_v, 703, 0, currVal_252);
+        var currVal_257 = null;
+        _ck(_v, 714, 0, currVal_257);
+        var currVal_262 = null;
+        _ck(_v, 725, 0, currVal_262);
+        var currVal_264 = _co.users;
+        _ck(_v, 733, 0, currVal_264);
+        _ck(_v, 736, 0);
+        var currVal_269 = _co.currentPageSize;
+        _ck(_v, 739, 0, currVal_269);
+    }, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = 279;
+        var currVal_1 = true;
+        _ck(_v, 10, 0, currVal_0, currVal_1);
+        var currVal_2 = true;
+        var currVal_3 = i0.ɵnov(_v, 34).hidden;
+        var currVal_4 = i0.ɵnov(_v, 34).asc;
+        var currVal_5 = i0.ɵnov(_v, 34).desc;
+        _ck(_v, 32, 0, currVal_2, currVal_3, currVal_4, currVal_5);
+        var currVal_6 = true;
+        var currVal_7 = i0.ɵnov(_v, 42).hidden;
+        var currVal_8 = i0.ɵnov(_v, 42).asc;
+        var currVal_9 = i0.ɵnov(_v, 42).desc;
+        _ck(_v, 40, 0, currVal_6, currVal_7, currVal_8, currVal_9);
+        var currVal_10 = true;
+        var currVal_11 = i0.ɵnov(_v, 50).hidden;
+        var currVal_12 = i0.ɵnov(_v, 50).asc;
+        var currVal_13 = i0.ɵnov(_v, 50).desc;
+        _ck(_v, 48, 0, currVal_10, currVal_11, currVal_12, currVal_13);
+        var currVal_14 = true;
+        var currVal_15 = i0.ɵnov(_v, 58).hidden;
+        var currVal_16 = i0.ɵnov(_v, 58).asc;
+        var currVal_17 = i0.ɵnov(_v, 58).desc;
+        _ck(_v, 56, 0, currVal_14, currVal_15, currVal_16, currVal_17);
+        var currVal_19 = true;
+        _ck(_v, 67, 0, currVal_19);
+        var currVal_20 = _co.variableLengthUsers.length;
+        _ck(_v, 69, 0, currVal_20);
+        var currVal_23 = true;
+        _ck(_v, 89, 0, currVal_23);
+        var currVal_25 = true;
+        var currVal_26 = i0.ɵnov(_v, 113).hidden;
+        var currVal_27 = i0.ɵnov(_v, 113).asc;
+        var currVal_28 = i0.ɵnov(_v, 113).desc;
+        _ck(_v, 111, 0, currVal_25, currVal_26, currVal_27, currVal_28);
+        var currVal_29 = true;
+        var currVal_30 = i0.ɵnov(_v, 121).hidden;
+        var currVal_31 = i0.ɵnov(_v, 121).asc;
+        var currVal_32 = i0.ɵnov(_v, 121).desc;
+        _ck(_v, 119, 0, currVal_29, currVal_30, currVal_31, currVal_32);
+        var currVal_33 = true;
+        var currVal_34 = i0.ɵnov(_v, 129).hidden;
+        var currVal_35 = i0.ɵnov(_v, 129).asc;
+        var currVal_36 = i0.ɵnov(_v, 129).desc;
+        _ck(_v, 127, 0, currVal_33, currVal_34, currVal_35, currVal_36);
+        var currVal_37 = true;
+        var currVal_38 = i0.ɵnov(_v, 137).hidden;
+        var currVal_39 = i0.ɵnov(_v, 137).asc;
+        var currVal_40 = i0.ɵnov(_v, 137).desc;
+        _ck(_v, 135, 0, currVal_37, currVal_38, currVal_39, currVal_40);
+        var currVal_42 = true;
+        _ck(_v, 146, 0, currVal_42);
+        var currVal_43 = _co.nonPaginatedUsers.length;
+        _ck(_v, 148, 0, currVal_43);
+        var currVal_52 = true;
+        _ck(_v, 196, 0, currVal_52);
+        var currVal_54 = true;
+        _ck(_v, 218, 0, currVal_54);
+        var currVal_56 = true;
+        var currVal_57 = i0.ɵnov(_v, 227).hidden;
+        var currVal_58 = i0.ɵnov(_v, 227).asc;
+        var currVal_59 = i0.ɵnov(_v, 227).desc;
+        _ck(_v, 225, 0, currVal_56, currVal_57, currVal_58, currVal_59);
+        var currVal_60 = true;
+        var currVal_61 = i0.ɵnov(_v, 235).hidden;
+        var currVal_62 = i0.ɵnov(_v, 235).asc;
+        var currVal_63 = i0.ɵnov(_v, 235).desc;
+        _ck(_v, 233, 0, currVal_60, currVal_61, currVal_62, currVal_63);
+        var currVal_64 = true;
+        var currVal_65 = i0.ɵnov(_v, 243).hidden;
+        var currVal_66 = i0.ɵnov(_v, 243).asc;
+        var currVal_67 = i0.ɵnov(_v, 243).desc;
+        _ck(_v, 241, 0, currVal_64, currVal_65, currVal_66, currVal_67);
+        var currVal_68 = true;
+        var currVal_69 = i0.ɵnov(_v, 251).hidden;
+        var currVal_70 = i0.ɵnov(_v, 251).asc;
+        var currVal_71 = i0.ɵnov(_v, 251).desc;
+        _ck(_v, 249, 0, currVal_68, currVal_69, currVal_70, currVal_71);
+        var currVal_73 = true;
+        _ck(_v, 260, 0, currVal_73);
+        var currVal_74 = _co.nonPaginatedUsers.length;
+        _ck(_v, 262, 0, currVal_74);
+        var currVal_75 = true;
+        _ck(_v, 269, 0, currVal_75);
+        var currVal_76 = true;
+        var currVal_77 = i0.ɵnov(_v, 293).hidden;
+        var currVal_78 = i0.ɵnov(_v, 293).asc;
+        var currVal_79 = i0.ɵnov(_v, 293).desc;
+        _ck(_v, 291, 0, currVal_76, currVal_77, currVal_78, currVal_79);
+        var currVal_80 = true;
+        var currVal_81 = i0.ɵnov(_v, 301).hidden;
+        var currVal_82 = i0.ɵnov(_v, 301).asc;
+        var currVal_83 = i0.ɵnov(_v, 301).desc;
+        _ck(_v, 299, 0, currVal_80, currVal_81, currVal_82, currVal_83);
+        var currVal_85 = true;
+        var currVal_86 = i0.ɵnov(_v, 309).hidden;
+        var currVal_87 = i0.ɵnov(_v, 309).asc;
+        var currVal_88 = i0.ɵnov(_v, 309).desc;
+        _ck(_v, 307, 0, currVal_85, currVal_86, currVal_87, currVal_88);
+        var currVal_90 = true;
+        var currVal_91 = i0.ɵnov(_v, 317).hidden;
+        var currVal_92 = i0.ɵnov(_v, 317).asc;
+        var currVal_93 = i0.ɵnov(_v, 317).desc;
+        _ck(_v, 315, 0, currVal_90, currVal_91, currVal_92, currVal_93);
+        var currVal_95 = true;
+        var currVal_96 = i0.ɵnov(_v, 325).hidden;
+        var currVal_97 = i0.ɵnov(_v, 325).asc;
+        var currVal_98 = i0.ɵnov(_v, 325).desc;
+        _ck(_v, 323, 0, currVal_95, currVal_96, currVal_97, currVal_98);
+        var currVal_101 = true;
+        _ck(_v, 334, 0, currVal_101);
+        var currVal_102 = _co.users.length;
+        _ck(_v, 336, 0, currVal_102);
+        var currVal_103 = true;
+        _ck(_v, 349, 0, currVal_103);
+        var currVal_104 = true;
+        var currVal_105 = i0.ɵnov(_v, 373).hidden;
+        var currVal_106 = i0.ɵnov(_v, 373).asc;
+        var currVal_107 = i0.ɵnov(_v, 373).desc;
+        _ck(_v, 371, 0, currVal_104, currVal_105, currVal_106, currVal_107);
+        var currVal_108 = true;
+        var currVal_109 = i0.ɵnov(_v, 381).hidden;
+        var currVal_110 = i0.ɵnov(_v, 381).asc;
+        var currVal_111 = i0.ɵnov(_v, 381).desc;
+        _ck(_v, 379, 0, currVal_108, currVal_109, currVal_110, currVal_111);
+        var currVal_113 = true;
+        var currVal_114 = i0.ɵnov(_v, 389).hidden;
+        var currVal_115 = i0.ɵnov(_v, 389).asc;
+        var currVal_116 = i0.ɵnov(_v, 389).desc;
+        _ck(_v, 387, 0, currVal_113, currVal_114, currVal_115, currVal_116);
+        var currVal_118 = true;
+        var currVal_119 = i0.ɵnov(_v, 397).hidden;
+        var currVal_120 = i0.ɵnov(_v, 397).asc;
+        var currVal_121 = i0.ɵnov(_v, 397).desc;
+        _ck(_v, 395, 0, currVal_118, currVal_119, currVal_120, currVal_121);
+        var currVal_123 = true;
+        var currVal_124 = i0.ɵnov(_v, 405).hidden;
+        var currVal_125 = i0.ɵnov(_v, 405).asc;
+        var currVal_126 = i0.ɵnov(_v, 405).desc;
+        _ck(_v, 403, 0, currVal_123, currVal_124, currVal_125, currVal_126);
+        var currVal_128 = true;
+        _ck(_v, 414, 0, currVal_128);
+        var currVal_129 = _co.nonPaginatedUsers.length;
+        _ck(_v, 416, 0, currVal_129);
+        var currVal_130 = true;
+        _ck(_v, 424, 0, currVal_130);
+        var currVal_131 = true;
+        var currVal_132 = i0.ɵnov(_v, 448).hidden;
+        var currVal_133 = i0.ɵnov(_v, 448).asc;
+        var currVal_134 = i0.ɵnov(_v, 448).desc;
+        _ck(_v, 446, 0, currVal_131, currVal_132, currVal_133, currVal_134);
+        var currVal_135 = true;
+        var currVal_136 = i0.ɵnov(_v, 456).hidden;
+        var currVal_137 = i0.ɵnov(_v, 456).asc;
+        var currVal_138 = i0.ɵnov(_v, 456).desc;
+        _ck(_v, 454, 0, currVal_135, currVal_136, currVal_137, currVal_138);
+        var currVal_139 = true;
+        var currVal_140 = i0.ɵnov(_v, 464).hidden;
+        var currVal_141 = i0.ɵnov(_v, 464).asc;
+        var currVal_142 = i0.ɵnov(_v, 464).desc;
+        _ck(_v, 462, 0, currVal_139, currVal_140, currVal_141, currVal_142);
+        var currVal_144 = true;
+        _ck(_v, 473, 0, currVal_144);
+        var currVal_145 = _co.nonPaginatedUsers.length;
+        _ck(_v, 475, 0, currVal_145);
+        var currVal_146 = i0.ɵnov(_v, 487).ngClassUntouched;
+        var currVal_147 = i0.ɵnov(_v, 487).ngClassTouched;
+        var currVal_148 = i0.ɵnov(_v, 487).ngClassPristine;
+        var currVal_149 = i0.ɵnov(_v, 487).ngClassDirty;
+        var currVal_150 = i0.ɵnov(_v, 487).ngClassValid;
+        var currVal_151 = i0.ɵnov(_v, 487).ngClassInvalid;
+        var currVal_152 = i0.ɵnov(_v, 487).ngClassPending;
+        _ck(_v, 483, 0, currVal_146, currVal_147, currVal_148, currVal_149, currVal_150, currVal_151, currVal_152);
+        var currVal_153 = i0.ɵnov(_v, 502).ngClassUntouched;
+        var currVal_154 = i0.ɵnov(_v, 502).ngClassTouched;
+        var currVal_155 = i0.ɵnov(_v, 502).ngClassPristine;
+        var currVal_156 = i0.ɵnov(_v, 502).ngClassDirty;
+        var currVal_157 = i0.ɵnov(_v, 502).ngClassValid;
+        var currVal_158 = i0.ɵnov(_v, 502).ngClassInvalid;
+        var currVal_159 = i0.ɵnov(_v, 502).ngClassPending;
+        _ck(_v, 496, 0, currVal_153, currVal_154, currVal_155, currVal_156, currVal_157, currVal_158, currVal_159);
+        var currVal_164 = i0.ɵnov(_v, 516).ngClassUntouched;
+        var currVal_165 = i0.ɵnov(_v, 516).ngClassTouched;
+        var currVal_166 = i0.ɵnov(_v, 516).ngClassPristine;
+        var currVal_167 = i0.ɵnov(_v, 516).ngClassDirty;
+        var currVal_168 = i0.ɵnov(_v, 516).ngClassValid;
+        var currVal_169 = i0.ɵnov(_v, 516).ngClassInvalid;
+        var currVal_170 = i0.ɵnov(_v, 516).ngClassPending;
+        _ck(_v, 510, 0, currVal_164, currVal_165, currVal_166, currVal_167, currVal_168, currVal_169, currVal_170);
+        var currVal_175 = i0.ɵnov(_v, 532).ngClassUntouched;
+        var currVal_176 = i0.ɵnov(_v, 532).ngClassTouched;
+        var currVal_177 = i0.ɵnov(_v, 532).ngClassPristine;
+        var currVal_178 = i0.ɵnov(_v, 532).ngClassDirty;
+        var currVal_179 = i0.ɵnov(_v, 532).ngClassValid;
+        var currVal_180 = i0.ɵnov(_v, 532).ngClassInvalid;
+        var currVal_181 = i0.ɵnov(_v, 532).ngClassPending;
+        _ck(_v, 527, 0, currVal_175, currVal_176, currVal_177, currVal_178, currVal_179, currVal_180, currVal_181);
+        var currVal_184 = i0.ɵnov(_v, 545).ngClassUntouched;
+        var currVal_185 = i0.ɵnov(_v, 545).ngClassTouched;
+        var currVal_186 = i0.ɵnov(_v, 545).ngClassPristine;
+        var currVal_187 = i0.ɵnov(_v, 545).ngClassDirty;
+        var currVal_188 = i0.ɵnov(_v, 545).ngClassValid;
+        var currVal_189 = i0.ɵnov(_v, 545).ngClassInvalid;
+        var currVal_190 = i0.ɵnov(_v, 545).ngClassPending;
+        _ck(_v, 540, 0, currVal_184, currVal_185, currVal_186, currVal_187, currVal_188, currVal_189, currVal_190);
+        var currVal_193 = i0.ɵnov(_v, 558).ngClassUntouched;
+        var currVal_194 = i0.ɵnov(_v, 558).ngClassTouched;
+        var currVal_195 = i0.ɵnov(_v, 558).ngClassPristine;
+        var currVal_196 = i0.ɵnov(_v, 558).ngClassDirty;
+        var currVal_197 = i0.ɵnov(_v, 558).ngClassValid;
+        var currVal_198 = i0.ɵnov(_v, 558).ngClassInvalid;
+        var currVal_199 = i0.ɵnov(_v, 558).ngClassPending;
+        _ck(_v, 553, 0, currVal_193, currVal_194, currVal_195, currVal_196, currVal_197, currVal_198, currVal_199);
+        var currVal_202 = i0.ɵnov(_v, 571).ngClassUntouched;
+        var currVal_203 = i0.ɵnov(_v, 571).ngClassTouched;
+        var currVal_204 = i0.ɵnov(_v, 571).ngClassPristine;
+        var currVal_205 = i0.ɵnov(_v, 571).ngClassDirty;
+        var currVal_206 = i0.ɵnov(_v, 571).ngClassValid;
+        var currVal_207 = i0.ɵnov(_v, 571).ngClassInvalid;
+        var currVal_208 = i0.ɵnov(_v, 571).ngClassPending;
+        _ck(_v, 566, 0, currVal_202, currVal_203, currVal_204, currVal_205, currVal_206, currVal_207, currVal_208);
+        var currVal_211 = (_co.fixedHeight ? 458 : null);
+        var currVal_212 = true;
+        _ck(_v, 579, 0, currVal_211, currVal_212);
+        var currVal_214 = true;
+        var currVal_215 = i0.ɵnov(_v, 603).hidden;
+        var currVal_216 = i0.ɵnov(_v, 603).asc;
+        var currVal_217 = i0.ɵnov(_v, 603).desc;
+        _ck(_v, 601, 0, currVal_214, currVal_215, currVal_216, currVal_217);
+        var currVal_218 = true;
+        var currVal_219 = i0.ɵnov(_v, 611).hidden;
+        var currVal_220 = i0.ɵnov(_v, 611).asc;
+        var currVal_221 = i0.ɵnov(_v, 611).desc;
+        _ck(_v, 609, 0, currVal_218, currVal_219, currVal_220, currVal_221);
+        var currVal_223 = true;
+        var currVal_224 = i0.ɵnov(_v, 619).hidden;
+        var currVal_225 = i0.ɵnov(_v, 619).asc;
+        var currVal_226 = i0.ɵnov(_v, 619).desc;
+        _ck(_v, 617, 0, currVal_223, currVal_224, currVal_225, currVal_226);
+        var currVal_228 = true;
+        var currVal_229 = i0.ɵnov(_v, 627).hidden;
+        var currVal_230 = i0.ɵnov(_v, 627).asc;
+        var currVal_231 = i0.ɵnov(_v, 627).desc;
+        _ck(_v, 625, 0, currVal_228, currVal_229, currVal_230, currVal_231);
+        var currVal_233 = true;
+        var currVal_234 = i0.ɵnov(_v, 635).hidden;
+        var currVal_235 = i0.ɵnov(_v, 635).asc;
+        var currVal_236 = i0.ɵnov(_v, 635).desc;
+        _ck(_v, 633, 0, currVal_233, currVal_234, currVal_235, currVal_236);
+        var currVal_239 = true;
+        _ck(_v, 644, 0, currVal_239);
+        var currVal_240 = _co.nonPaginatedUsers.length;
+        _ck(_v, 646, 0, currVal_240);
+        var currVal_241 = true;
+        _ck(_v, 658, 0, currVal_241);
+        var currVal_243 = true;
+        var currVal_244 = i0.ɵnov(_v, 685).hidden;
+        var currVal_245 = i0.ɵnov(_v, 685).asc;
+        var currVal_246 = i0.ɵnov(_v, 685).desc;
+        _ck(_v, 683, 0, currVal_243, currVal_244, currVal_245, currVal_246);
+        var currVal_248 = true;
+        var currVal_249 = i0.ɵnov(_v, 697).hidden;
+        var currVal_250 = i0.ɵnov(_v, 697).asc;
+        var currVal_251 = i0.ɵnov(_v, 697).desc;
+        _ck(_v, 695, 0, currVal_248, currVal_249, currVal_250, currVal_251);
+        var currVal_253 = true;
+        var currVal_254 = i0.ɵnov(_v, 708).hidden;
+        var currVal_255 = i0.ɵnov(_v, 708).asc;
+        var currVal_256 = i0.ɵnov(_v, 708).desc;
+        _ck(_v, 706, 0, currVal_253, currVal_254, currVal_255, currVal_256);
+        var currVal_258 = true;
+        var currVal_259 = i0.ɵnov(_v, 719).hidden;
+        var currVal_260 = i0.ɵnov(_v, 719).asc;
+        var currVal_261 = i0.ɵnov(_v, 719).desc;
+        _ck(_v, 717, 0, currVal_258, currVal_259, currVal_260, currVal_261);
+        var currVal_263 = true;
+        _ck(_v, 728, 0, currVal_263);
+        var currVal_265 = true;
+        _ck(_v, 735, 0, currVal_265);
+        var currVal_266 = (i0.ɵnov(_v, 739).firstItem + 1);
+        var currVal_267 = (i0.ɵnov(_v, 739).lastItem + 1);
+        var currVal_268 = i0.ɵnov(_v, 739).totalItems;
+        _ck(_v, 737, 0, currVal_266, currVal_267, currVal_268);
+    });
 }
 export function View_KSDatagrid_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSDatagrid_0, RenderType_KSDatagrid)),
-        i0.ɵdid(49152, null, 0, i1.KSDatagrid, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i37.KSDatagrid, [], null, null)], null, null);
 }
-export var KSDatagridNgFactory = i0.ɵccf('ng-component', i1.KSDatagrid, View_KSDatagrid_Host_0, {}, {}, []);
+export var KSDatagridNgFactory = i0.ɵccf('ng-component', i37.KSDatagrid, View_KSDatagrid_Host_0, {}, {}, []);
 //# sourceMappingURL=datagrid.component.ngfactory.js.map
