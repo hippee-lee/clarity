@@ -5,17 +5,3408 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/wizard/wizards.component';
+import * as i1 from '../../node_modules/clarity-angular/wizard/wizard-page.ngfactory';
+import * as i2 from 'clarity-angular/wizard/wizard-page';
+import * as i3 from 'clarity-angular/wizard/providers/wizard-navigation';
+import * as i4 from 'clarity-angular/wizard/providers/page-collection';
+import * as i5 from 'clarity-angular/wizard/providers/button-hub';
+import * as i6 from 'clarity-angular/wizard/directives/page-title';
+import * as i7 from 'clarity-angular/wizard/directives/page-navtitle';
+import * as i8 from '@angular/common';
+import * as i9 from '@angular/forms';
+import * as i10 from '../../node_modules/clarity-angular/emphasis/alert/alert.ngfactory';
+import * as i11 from 'clarity-angular/emphasis/alert/providers/icon-and-types-service';
+import * as i12 from 'clarity-angular/emphasis/alert/alert';
+import * as i13 from '../../node_modules/clarity-angular/emphasis/alert/alert-item.ngfactory';
+import * as i14 from 'clarity-angular/emphasis/alert/alert-item';
+import * as i15 from '../../node_modules/clarity-angular/wizard/wizard-button.ngfactory';
+import * as i16 from 'clarity-angular/wizard/wizard-button';
+import * as i17 from '../../node_modules/clarity-angular/wizard/wizard-header-action.ngfactory';
+import * as i18 from 'clarity-angular/wizard/wizard-header-action';
+import * as i19 from 'clarity-angular/icon/icon';
+import * as i20 from '../../../containers/wizard/wizards.component';
+import * as i21 from '../../node_modules/clarity-angular/wizard/wizard.ngfactory';
+import * as i22 from 'clarity-angular/wizard/providers/header-actions';
+import * as i23 from 'clarity-angular/wizard/wizard';
+import * as i24 from 'clarity-angular/wizard/wizard-custom-tags';
+import * as i25 from 'clarity-angular/wizard/directives/page-buttons';
+import * as i26 from 'clarity-angular/wizard/directives/page-header-actions';
 var styles_KSWizards = [];
 export var RenderType_KSWizards = i0.ɵcrt({ encapsulation: 2, styles: styles_KSWizards,
     data: {} });
+function View_KSWizards_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 1']))], null, null);
+}
+function View_KSWizards_2(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 1']))], null, null);
+}
+function View_KSWizards_3(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 2']))], null, null);
+}
+function View_KSWizards_4(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 2']))], null, null);
+}
+function View_KSWizards_5(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 3']))], null, null);
+}
+function View_KSWizards_6(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 3']))], null, null);
+}
+function View_KSWizards_7(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 1']))], null, null);
+}
+function View_KSWizards_8(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 1']))], null, null);
+}
+function View_KSWizards_9(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Show Page 2']))], null, null);
+}
+function View_KSWizards_10(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Hide Page 2']))], null, null);
+}
+function View_KSWizards_12(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 2']))], null, null);
+}
+function View_KSWizards_13(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 2']))], null, null);
+}
+function View_KSWizards_11(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[33, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 39, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 40, { pageNavTitle: 0 }), i0.ɵqud(335544320, 41, { _buttons: 0 }), i0.ɵqud(335544320, 42, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_12)), i0.ɵdid(16384, [[39, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_13)), i0.ɵdid(16384, [[40, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 2'])), (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        _ck(_v, 1, 0);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+    });
+}
+function View_KSWizards_14(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 3']))], null, null);
+}
+function View_KSWizards_15(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 3']))], null, null);
+}
+function View_KSWizards_16(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Page 3 is the last page because we skipped page 2.']))], null, null);
+}
+function View_KSWizards_17(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Now our wizard has three pages/steps.']))], null, null);
+}
+function View_KSWizards_18(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Form with validation']))], null, null);
+}
+function View_KSWizards_19(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['We need a number']))], null, null);
+}
+function View_KSWizards_20(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    Enter a number\n                ']))], null, null);
+}
+function View_KSWizards_21(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 3']))], null, null);
+}
+function View_KSWizards_23(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                Ready to go!\n            ']))], null, null);
+}
+function View_KSWizards_24(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                Not ready yet\n            ']))], null, null);
+}
+function View_KSWizards_22(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSWizards_23)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSWizards_24)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var currVal_0 = (i0.ɵnov(_v.parent, 264).valid && i0.ɵnov(_v.parent, 327).valid);
+        _ck(_v, 2, 0, currVal_0);
+        var currVal_1 = (!i0.ɵnov(_v.parent, 264).valid || !i0.ɵnov(_v.parent, 327).valid);
+        _ck(_v, 5, 0, currVal_1);
+    }, null);
+}
+function View_KSWizards_25(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 44, 'div', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Congratulations! You are done with this wizard.'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 38, 'form', [['class', 'compact'], ['novalidate',
+                '']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 7).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 7).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i9.NgForm, [[8,
+                null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Your information'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 28, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Your name:'])),
+        (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Your favorite food:'])),
+        (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Your lucky number:'])),
+        (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                ']))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = i0.ɵnov(_v, 9).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 9).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 9).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 9).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 9).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 9).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 9).ngClassPending;
+        _ck(_v, 5, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+        var currVal_7 = _co.formModel.name;
+        _ck(_v, 22, 0, currVal_7);
+        var currVal_8 = _co.formModel.favorite;
+        _ck(_v, 31, 0, currVal_8);
+        var currVal_9 = _co.formModel.number;
+        _ck(_v, 40, 0, currVal_9);
+    });
+}
+function View_KSWizards_26(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Not quite there yet.'])),
+        (_l()(), i0.ɵted(null, ['\n                ']))], null, null);
+}
+function View_KSWizards_27(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Form with async validation']))], null, null);
+}
+function View_KSWizards_28(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'div', [['class',
+                'spinner']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    Loading...\n                ']))], null, null);
+}
+function View_KSWizards_29(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'clr-alert', [], null, null, null, i10.View_Alert_0, i10.RenderType_Alert)),
+        i0.ɵprd(512, null, i11.AlertIconAndTypesService, i11.AlertIconAndTypesService, []), i0.ɵdid(49152, null, 0, i12.Alert, [i11.AlertIconAndTypesService], { alertType: [0, 'alertType'] }, null), (_l()(), i0.ɵted(0, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'div', [['class', 'alert-item alert-item']], null, null, null, i13.View_AlertItem_0, i13.RenderType_AlertItem)),
+        i0.ɵdid(49152, null, 0, i14.AlertItem, [i11.AlertIconAndTypesService], null, null), (_l()(), i0.ɵted(0, ['\n                        Your answer is incorrect.\n                    '])),
+        (_l()(), i0.ɵted(0, ['\n                ']))], function (_ck, _v) {
+        var currVal_0 = 'alert-danger';
+        _ck(_v, 2, 0, currVal_0);
+    }, null);
+}
+function View_KSWizards_30(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Wizard complete']))], null, null);
+}
+function View_KSWizards_31(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1']))], null, null);
+}
+function View_KSWizards_32(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2']))], null, null);
+}
+function View_KSWizards_33(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 1']))], null, null);
+}
+function View_KSWizards_34(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 1']))], null, null);
+}
+function View_KSWizards_35(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i9.NgSelectOption, [i0.ElementRef, i0.Renderer2, [2, i9.SelectControlValueAccessor]], { value: [0, 'value'] }, null), i0.ɵdid(147456, null, 0, i9.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], { value: [0, 'value'] }, null), (_l()(), i0.ɵted(null, ['', '']))], function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit;
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_1 = _v.context.$implicit;
+        _ck(_v, 2, 0, currVal_1);
+    }, function (_ck, _v) {
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+    });
+}
+function View_KSWizards_37(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 2']))], null, null);
+}
+function View_KSWizards_38(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 2']))], null, null);
+}
+function View_KSWizards_36(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[81, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 87, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 88, { pageNavTitle: 0 }), i0.ɵqud(335544320, 89, { _buttons: 0 }), i0.ɵqud(335544320, 90, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_37)), i0.ɵdid(16384, [[87, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_38)), i0.ɵdid(16384, [[88, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 2'])), (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        _ck(_v, 1, 0);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+    });
+}
+function View_KSWizards_40(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 3']))], null, null);
+}
+function View_KSWizards_41(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 3']))], null, null);
+}
+function View_KSWizards_42(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i9.NgSelectOption, [i0.ElementRef, i0.Renderer2, [2, i9.SelectControlValueAccessor]], { value: [0, 'value'] }, null), i0.ɵdid(147456, null, 0, i9.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], { value: [0, 'value'] }, null), (_l()(), i0.ɵted(null, ['', '']))], function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit;
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_1 = _v.context.$implicit;
+        _ck(_v, 2, 0, currVal_1);
+    }, function (_ck, _v) {
+        var currVal_2 = _v.context.$implicit;
+        _ck(_v, 3, 0, currVal_2);
+    });
+}
+function View_KSWizards_39(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 52, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[81, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 91, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 92, { pageNavTitle: 0 }), i0.ɵqud(335544320, 93, { _buttons: 0 }), i0.ɵqud(335544320, 94, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_40)), i0.ɵdid(16384, [[91, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_41)), i0.ɵdid(16384, [[92, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 36, 'form', [['class', 'content-for-page-3'],
+            ['novalidate', '']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 17).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 17).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [['pageTypesForm', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Which pages should I show?'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 23, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'typesOfPages']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Page categories'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 17, 'div', [['class', 'select']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(),
+            i0.ɵeld(0, null, null, 14, 'select', [['id', 'typesOfPages'],
+                ['name', 'typesOfPages']], [[2, 'ng-untouched', null], [2, 'ng-touched',
+                    null], [2, 'ng-pristine', null], [2, 'ng-dirty', null],
+                [2, 'ng-valid', null], [2, 'ng-invalid', null], [2, 'ng-pending',
+                    null]], [[null, 'ngModelChange'], [null,
+                    'change'], [null, 'blur']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('change' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 34).onChange($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 34).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_2 = ((_co.ghostModel.typesOfPages = $event) !== false);
+                    ad = (pd_2 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i9.SelectControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.SelectControlValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[2, i9.ControlContainer], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [['value', 'Default']], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i9.NgSelectOption, [i0.ElementRef, i0.Renderer2, [2, i9.SelectControlValueAccessor]], { value: [0, 'value'] }, null), i0.ɵdid(147456, null, 0, i9.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], { value: [0, 'value'] }, null),
+        (_l()(), i0.ɵted(null, ['Select pages you want to show...'])), (_l()(),
+            i0.ɵted(null, ['\n                                    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSWizards_42)),
+        i0.ɵdid(802816, null, 0, i8.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        _ck(_v, 1, 0);
+        var currVal_19 = 'typesOfPages';
+        var currVal_20 = _co.ghostModel.typesOfPages;
+        _ck(_v, 36, 0, currVal_19, currVal_20);
+        var currVal_21 = 'Default';
+        _ck(_v, 41, 0, currVal_21);
+        var currVal_22 = 'Default';
+        _ck(_v, 42, 0, currVal_22);
+        var currVal_23 = _co.typesOfPages;
+        _ck(_v, 46, 0, currVal_23);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = i0.ɵnov(_v, 19).ngClassUntouched;
+        var currVal_6 = i0.ɵnov(_v, 19).ngClassTouched;
+        var currVal_7 = i0.ɵnov(_v, 19).ngClassPristine;
+        var currVal_8 = i0.ɵnov(_v, 19).ngClassDirty;
+        var currVal_9 = i0.ɵnov(_v, 19).ngClassValid;
+        var currVal_10 = i0.ɵnov(_v, 19).ngClassInvalid;
+        var currVal_11 = i0.ɵnov(_v, 19).ngClassPending;
+        _ck(_v, 15, 0, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11);
+        var currVal_12 = i0.ɵnov(_v, 38).ngClassUntouched;
+        var currVal_13 = i0.ɵnov(_v, 38).ngClassTouched;
+        var currVal_14 = i0.ɵnov(_v, 38).ngClassPristine;
+        var currVal_15 = i0.ɵnov(_v, 38).ngClassDirty;
+        var currVal_16 = i0.ɵnov(_v, 38).ngClassValid;
+        var currVal_17 = i0.ɵnov(_v, 38).ngClassInvalid;
+        var currVal_18 = i0.ɵnov(_v, 38).ngClassPending;
+        _ck(_v, 33, 0, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18);
+    });
+}
+function View_KSWizards_44(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 4']))], null, null);
+}
+function View_KSWizards_45(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 4']))], null, null);
+}
+function View_KSWizards_43(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[81, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 95, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 96, { pageNavTitle: 0 }), i0.ɵqud(335544320, 97, { _buttons: 0 }), i0.ɵqud(335544320, 98, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_44)), i0.ɵdid(16384, [[95, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_45)), i0.ɵdid(16384, [[96, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 4'])), (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        _ck(_v, 1, 0);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+    });
+}
+function View_KSWizards_47(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page 5']))], null, null);
+}
+function View_KSWizards_48(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Step 5']))], null, null);
+}
+function View_KSWizards_46(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[81, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 99, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 100, { pageNavTitle: 0 }), i0.ɵqud(335544320, 101, { _buttons: 0 }),
+        i0.ɵqud(335544320, 102, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_47)), i0.ɵdid(16384, [[99, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_48)), i0.ɵdid(16384, [[100, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-5']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 5'])), (_l()(), i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        _ck(_v, 1, 0);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+    });
+}
+function View_KSWizards_49(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1 with default buttons']))], null, null);
+}
+function View_KSWizards_50(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Default buttons']))], null, null);
+}
+function View_KSWizards_51(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2 with custom buttons']))], null, null);
+}
+function View_KSWizards_52(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Custom buttons']))], null, null);
+}
+function View_KSWizards_53(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Page Override'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class',
+                'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0,
+                'type'] }, null), (_l()(), i0.ɵted(0, ['Custom'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Custom'])), (_l()(),
+            i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var currVal_1 = 'cancel';
+        _ck(_v, 2, 0, currVal_1);
+        var currVal_3 = 'custom-previous';
+        _ck(_v, 6, 0, currVal_3);
+        var currVal_5 = 'custom-next';
+        _ck(_v, 10, 0, currVal_5);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 2).isHidden;
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_2 = i0.ɵnov(_v, 6).isHidden;
+        _ck(_v, 5, 0, currVal_2);
+        var currVal_4 = i0.ɵnov(_v, 10).isHidden;
+        _ck(_v, 9, 0, currVal_4);
+    });
+}
+function View_KSWizards_54(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 3 with default buttons']))], null, null);
+}
+function View_KSWizards_55(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Default buttons']))], null, null);
+}
+function View_KSWizards_56(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 4 with custom finish']))], null, null);
+}
+function View_KSWizards_57(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Custom buttons']))], null, null);
+}
+function View_KSWizards_58(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                ']))], null, null);
+}
+function View_KSWizards_59(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 4, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-danger'], ['type', 'submit']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.handleDangerClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                        Click here if you are sure\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                ']))], null, null);
+}
+function View_KSWizards_60(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Page Override'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class',
+                'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0,
+                'type'] }, null), (_l()(), i0.ɵted(0, ['Page Override'])), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Custom'])), (_l()(), i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var currVal_1 = 'cancel';
+        _ck(_v, 2, 0, currVal_1);
+        var currVal_3 = 'previous';
+        _ck(_v, 6, 0, currVal_3);
+        var currVal_5 = 'custom-danger';
+        _ck(_v, 10, 0, currVal_5);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 2).isHidden;
+        _ck(_v, 1, 0, currVal_0);
+        var currVal_2 = i0.ɵnov(_v, 6).isHidden;
+        _ck(_v, 5, 0, currVal_2);
+        var currVal_4 = i0.ɵnov(_v, 10).isHidden;
+        _ck(_v, 9, 0, currVal_4);
+    });
+}
+function View_KSWizards_61(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1']))], null, null);
+}
+function View_KSWizards_62(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2']))], null, null);
+}
+function View_KSWizards_63(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 3']))], null, null);
+}
+function View_KSWizards_64(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 4']))], null, null);
+}
+function View_KSWizards_65(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 5']))], null, null);
+}
+function View_KSWizards_66(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1']))], null, null);
+}
+function View_KSWizards_67(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2']))], null, null);
+}
+function View_KSWizards_68(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 3']))], null, null);
+}
+function View_KSWizards_69(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 4']))], null, null);
+}
+function View_KSWizards_70(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1 with default header actions']))], null, null);
+}
+function View_KSWizards_71(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Default header actions']))], null, null);
+}
+function View_KSWizards_72(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2 with custom header actions']))], null, null);
+}
+function View_KSWizards_73(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Custom header actions']))], null, null);
+}
+function View_KSWizards_74(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 5, 'clr-wizard-header-action', [['class',
+                    'clr-wizard-header-action-wrapper'], ['id', 'user']], null, [[null,
+                    'actionClicked']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('actionClicked' === en)) {
+                    var pd_0 = (_co.headerActionClicked($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, i17.View_WizardHeaderAction_0, i17.RenderType_WizardHeaderAction)), i0.ɵdid(49152, null, 0, i18.WizardHeaderAction, [], { _id: [0, '_id'] }, { headerActionClicked: 'actionClicked' }),
+        (_l()(), i0.ɵted(0, ['\n                        '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'user']], [[2, 'has-badge', null], [2, 'is-solid',
+                null]], null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 5, 'clr-wizard-header-action', [['class', 'clr-wizard-header-action-wrapper'],
+            ['id', 'search'], ['title', 'Search for the meaning of life']], null, [[null, 'actionClicked']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('actionClicked' === en)) {
+                var pd_0 = (_co.headerActionClicked($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i17.View_WizardHeaderAction_0, i17.RenderType_WizardHeaderAction)), i0.ɵdid(49152, null, 0, i18.WizardHeaderAction, [], { title: [0, 'title'],
+            _id: [1, '_id'] }, { headerActionClicked: 'actionClicked' }), (_l()(), i0.ɵted(0, ['\n                        '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'search']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null), (_l()(), i0.ɵted(0, ['\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var currVal_0 = 'user';
+        _ck(_v, 2, 0, currVal_0);
+        var currVal_3 = 'Search for the meaning of life';
+        var currVal_4 = 'search';
+        _ck(_v, 9, 0, currVal_3, currVal_4);
+    }, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_1 = _co.userActive;
+        var currVal_2 = _co.userActive;
+        _ck(_v, 4, 0, currVal_1, currVal_2);
+    });
+}
+function View_KSWizards_75(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 3 with default header actions again']))], null, null);
+}
+function View_KSWizards_76(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Default header actions']))], null, null);
+}
+function View_KSWizards_77(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Wizard level alt-cancel']))], null, null);
+}
+function View_KSWizards_78(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page level alt-cancel']))], null, null);
+}
+function View_KSWizards_79(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Content for step 2']))], null, null);
+}
+function View_KSWizards_80(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 4, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-danger'], ['type', 'submit']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.doPageCancel() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                        Click here if you are sure\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                ']))], null, null);
+}
+function View_KSWizards_81(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Wizard level alt-next']))], null, null);
+}
+function View_KSWizards_82(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page level alt-next']))], null, null);
+}
+function View_KSWizards_83(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Complete this fibonacci sequence']))], null, null);
+}
+function View_KSWizards_84(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Wizard level alt-next and the finish button']))], null, null);
+}
+function View_KSWizards_85(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 7, 'clr-alert', [['clrAlertType',
+                'alert-danger']], null, null, null, i10.View_Alert_0, i10.RenderType_Alert)), i0.ɵprd(512, null, i11.AlertIconAndTypesService, i11.AlertIconAndTypesService, []), i0.ɵdid(49152, null, 0, i12.Alert, [i11.AlertIconAndTypesService], { alertType: [0, 'alertType'] }, null), (_l()(),
+            i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'div', [['class', 'alert-item alert-item']], null, null, null, i13.View_AlertItem_0, i13.RenderType_AlertItem)), i0.ɵdid(49152, null, 0, i14.AlertItem, [i11.AlertIconAndTypesService], null, null),
+        (_l()(), i0.ɵted(0, ['\n                        Your sequence should be 1, 2, 3, 5, 8.\n                    '])),
+        (_l()(), i0.ɵted(0, ['\n                ']))], function (_ck, _v) {
+        var currVal_0 = 'alert-danger';
+        _ck(_v, 2, 0, currVal_0);
+    }, null);
+}
+function View_KSWizards_86(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 10, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Alt-next at the wizard level also affects the finish button!'])), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['So make sure to call through to finish when you use it.'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Click the finish button to test your answers.'])), (_l()(), i0.ɵted(null, ['\n                ']))], null, null);
+}
+function View_KSWizards_87(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Click back to the previous page to change your answers.']))], null, null);
+}
+function View_KSWizards_88(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper'], ['type', 'cancel']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel']))], function (_ck, _v) {
+        var currVal_1 = 'cancel';
+        _ck(_v, 1, 0, currVal_1);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).isHidden;
+        _ck(_v, 0, 0, currVal_0);
+    });
+}
+function View_KSWizards_89(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper'], ['type', 'previous']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back']))], function (_ck, _v) {
+        var currVal_1 = 'previous';
+        _ck(_v, 1, 0, currVal_1);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).isHidden;
+        _ck(_v, 0, 0, currVal_0);
+    });
+}
+function View_KSWizards_90(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Validate']))], null, null);
+}
+function View_KSWizards_91(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Please wait...']))], null, null);
+}
+function View_KSWizards_92(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['OK']))], null, null);
+}
+function View_KSWizards_93(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Form to submit']))], null, null);
+}
+function View_KSWizards_94(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    Validate your information\n                ']))], null, null);
+}
+function View_KSWizards_96(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Validate Info']))], null, null);
+}
+function View_KSWizards_97(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Ready to Go!']))], null, null);
+}
+function View_KSWizards_95(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSWizards_96)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSWizards_97)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = !_co.readyToFinish;
+        _ck(_v, 2, 0, currVal_0);
+        var currVal_1 = _co.readyToFinish;
+        _ck(_v, 5, 0, currVal_1);
+    }, null);
+}
+function View_KSWizards_98(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    Click the Validate button to kick off a timed routine. While the validation is running,\n                    try clicking buttons and stepnav items. Note that they don\'t do anything while the\n                    validation is running. The validation is just an exercise. It will not fail.\n                ']))], null, null);
+}
+function View_KSWizards_99(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 9, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Loading...'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'div', [['class', 'progress']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 0, 'progress', [['max', '100']], [[8, 'value', 0],
+            [1, 'data-displayval', 0]], null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                ']))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.progress;
+        var currVal_1 = (_co.progress + '%');
+        _ck(_v, 7, 0, currVal_0, currVal_1);
+    });
+}
+function View_KSWizards_100(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['\n                    Click on the OK button to close the wizard.\n                ']))], null, null);
+}
+function View_KSWizards_102(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Title for page ', '']))], null, function (_ck, _v) {
+        var currVal_0 = _v.parent.context.$implicit;
+        _ck(_v, 0, 0, currVal_0);
+    });
+}
+function View_KSWizards_103(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'p', [['class',
+                'content-for-page-1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Ohai!']))], null, null);
+}
+function View_KSWizards_101(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 15, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0],
+            [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[209, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 211, { pageTitle: 0 }), i0.ɵqud(335544320, 212, { pageNavTitle: 0 }), i0.ɵqud(335544320, 213, { _buttons: 0 }), i0.ɵqud(335544320, 214, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_102)), i0.ɵdid(16384, [[211, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for page ', '.'])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_103)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        _ck(_v, 1, 0);
+        var currVal_6 = (_v.context.$implicit === 1);
+        _ck(_v, 14, 0, currVal_6);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).id;
+        var currVal_1 = !i0.ɵnov(_v, 1).current;
+        var currVal_2 = i0.ɵnov(_v, 1).stepItemId;
+        var currVal_3 = i0.ɵnov(_v, 1).current;
+        var currVal_4 = true;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4);
+        var currVal_5 = _v.context.$implicit;
+        _ck(_v, 11, 0, currVal_5);
+    });
+}
+function View_KSWizards_104(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 1']))], null, null);
+}
+function View_KSWizards_105(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 2']))], null, null);
+}
+function View_KSWizards_106(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['Page 3']))], null, null);
+}
 export function View_KSWizards_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Wizards'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+    return i0.ɵvid(0, [i0.ɵqud(402653184, 1, { basicWizard: 0 }), i0.ɵqud(402653184, 2, { skipWizard: 0 }),
+        i0.ɵqud(402653184, 3, { formWizard: 0 }), i0.ɵqud(402653184, 4, { asyncWizard: 0 }), i0.ɵqud(402653184, 5, { formData: 0 }), i0.ɵqud(402653184, 6, { notCloseableWizard: 0 }), i0.ɵqud(402653184, 7, { ghostWizard: 0 }), i0.ɵqud(402653184, 8, { customButtonWizard: 0 }), i0.ɵqud(402653184, 9, { jumpWizard: 0 }), i0.ɵqud(402653184, 10, { pageThree: 0 }), i0.ɵqud(402653184, 11, { pageFive: 0 }), i0.ɵqud(402653184, 12, { resetWizardDemo: 0 }), i0.ɵqud(402653184, 13, { headerActionWizard: 0 }), i0.ɵqud(402653184, 14, { altCancelWizard: 0 }), i0.ɵqud(402653184, 15, { altNextWizard: 0 }), i0.ɵqud(402653184, 16, { inlineWizard: 0 }), i0.ɵqud(402653184, 17, { forceWizard: 0 }), i0.ɵqud(402653184, 18, { stopWizard: 0 }), (_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Wizards'])), (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1695, 'div', [['class', 'content-wrapper']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 94, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Basic'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.basicOpen = !_co.basicOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n\n        '])), (_l()(), i0.ɵeld(0, null, null, 85, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.basicOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[1, 4], ['basicWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { _open: [0, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 19, { pages: 1 }), i0.ɵqud(603979776, 20, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard Title'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[19, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 21, { pageTitle: 0 }), i0.ɵqud(335544320, 22, { pageNavTitle: 0 }), i0.ɵqud(335544320, 23, { _buttons: 0 }), i0.ɵqud(335544320, 24, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_1)), i0.ɵdid(16384, [[21, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_2)), i0.ɵdid(16384, [[22, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 1'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[19, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 25, { pageTitle: 0 }), i0.ɵqud(335544320, 26, { pageNavTitle: 0 }), i0.ɵqud(335544320, 27, { _buttons: 0 }), i0.ɵqud(335544320, 28, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_3)), i0.ɵdid(16384, [[25, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_4)), i0.ɵdid(16384, [[26, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 2'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 17, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[19, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 29, { pageTitle: 0 }), i0.ɵqud(335544320, 30, { pageNavTitle: 0 }), i0.ɵqud(335544320, 31, { _buttons: 0 }), i0.ɵqud(335544320, 32, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_5)), i0.ɵdid(16384, [[29, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_6)), i0.ɵdid(16384, [[30, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-3']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 3'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 93, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Skip page'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.skipOpen = !_co.skipOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 84, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.skipOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[2, 4], ['skipWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { _open: [0, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 33, { pages: 1 }), i0.ɵqud(603979776, 34, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Skipping Page Two'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 29, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[33, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 35, { pageTitle: 0 }), i0.ɵqud(335544320, 36, { pageNavTitle: 0 }), i0.ɵqud(335544320, 37, { _buttons: 0 }), i0.ɵqud(335544320, 38, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_7)), i0.ɵdid(16384, [[35, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_8)), i0.ɵdid(16384, [[36, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 1'])), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 10, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'button', [['class', 'btn btn-secondary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.toggleStepTwo() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSWizards_9)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSWizards_10)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 2, 1, null, View_KSWizards_11)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 20, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[33, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 43, { pageTitle: 0 }), i0.ɵqud(335544320, 44, { pageNavTitle: 0 }), i0.ɵqud(335544320, 45, { _buttons: 0 }), i0.ɵqud(335544320, 46, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_14)), i0.ɵdid(16384, [[43, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_15)), i0.ɵdid(16384, [[44, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_16)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_17)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 169, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Form validation'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.formOpen = !_co.formOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 160, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.formOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[3, 4], ['formWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 47, { pages: 1 }), i0.ɵqud(603979776, 48, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard with form validation'])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Close'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Previous'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Done'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 57, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[47, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], { nextStepDisabled: [0, 'nextStepDisabled'] }, null),
+        i0.ɵqud(335544320, 49, { pageTitle: 0 }), i0.ɵqud(335544320, 50, { pageNavTitle: 0 }), i0.ɵqud(335544320, 51, { _buttons: 0 }), i0.ɵqud(335544320, 52, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_18)), i0.ɵdid(16384, [[49, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 45, 'form', [['novalidate', '']], [[2, 'ng-untouched', null], [2, 'ng-touched',
+                null], [2, 'ng-pristine', null], [2, 'ng-dirty', null],
+            [2, 'ng-valid', null], [2, 'ng-invalid', null], [2, 'ng-pending',
+                null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 264).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 264).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [['formPageOne', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 38, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Enter a name and favorite food'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Name'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'label', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-validation tooltip-md tooltip-bottom-right'], ['for',
+                'nameInput'], ['role', 'tooltip']], [[2, 'invalid', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 7, 'input', [['id', 'nameInput14'], ['name', 'name'], ['required',
+                ''], ['type', 'text']], [[1, 'required', 0], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 281)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 281).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 281)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 281)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.formModel.name = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.RequiredValidator, [], { required: [0, 'required'] }, null), i0.ɵprd(1024, null, i9.NG_VALIDATORS, function (p0_0) {
+            return [p0_0];
+        }, [i9.RequiredValidator]), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, [['name', 4]], 0, i9.NgModel, [[2,
+                i9.ControlContainer], [2, i9.NG_VALIDATORS], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['This field cannot be empty!'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'favInput']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Favorite food'])), (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'favInput'], ['name', 'favorite'], ['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 300)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 300).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 300)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 300)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.formModel.favorite = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[2, i9.ControlContainer],
+            [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'],
+            model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 49, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[47, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], { nextStepDisabled: [0, 'nextStepDisabled'] }, null), i0.ɵqud(335544320, 53, { pageTitle: 0 }), i0.ɵqud(335544320, 54, { pageNavTitle: 0 }), i0.ɵqud(335544320, 55, { _buttons: 0 }), i0.ɵqud(335544320, 56, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_19)), i0.ɵdid(16384, [[53, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_20)), i0.ɵdid(16384, [[54, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 33, 'form', [['novalidate', '']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'submit'],
+            [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 327).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 327).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [['formPageTwo', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 26, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Please your lucky number!'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 20, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Your number'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 14, 'label', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-validation tooltip-md tooltip-bottom-right'], ['for',
+                'numberInput'], ['role', 'tooltip']], [[2, 'invalid', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 8, 'input', [['id', 'numberInput'], ['name', 'number'], ['required',
+                ''], ['type', 'number']], [[1, 'required', 0], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend'], [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 344)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 344).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 344)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 344)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 345).onChange($event.target.value) !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('input' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 345).onChange($event.target.value) !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_6 = (i0.ɵnov(_v, 345).onTouched() !== false);
+                ad = (pd_6 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_7 = ((_co.formModel.number = $event) !== false);
+                ad = (pd_7 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.ɵbc, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵdid(16384, null, 0, i9.RequiredValidator, [], { required: [0, 'required'] }, null), i0.ɵprd(1024, null, i9.NG_VALIDATORS, function (p0_0) {
+            return [p0_0];
+        }, [i9.RequiredValidator]), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i9.DefaultValueAccessor, i9.ɵbc]), i0.ɵdid(671744, [['number', 4]], 0, i9.NgModel, [[2, i9.ControlContainer], [2, i9.NG_VALIDATORS], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            This field cannot be empty!\n                        '])),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 20, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[47, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], { nextStepDisabled: [0, 'nextStepDisabled'] }, null), i0.ɵqud(335544320, 57, { pageTitle: 0 }), i0.ɵqud(335544320, 58, { pageNavTitle: 0 }), i0.ɵqud(335544320, 59, { _buttons: 0 }), i0.ɵqud(335544320, 60, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_21)), i0.ɵdid(16384, [[57, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_22)), i0.ɵdid(16384, [[58, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n\n                '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_25)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_26)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 105, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Async'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.asyncOpen = !_co.asyncOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 96, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.asyncOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[4, 4], ['asyncWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 61, { pages: 1 }), i0.ɵqud(603979776, 62, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Async validation'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 51, 'clr-wizard-page', [['clrWizardPagePreventDefault', 'true'], ['role', 'tabpanel']], [[8, 'id', 0],
+            [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], [[null, 'clrWizardPageOnCommit'],
+            [null, 'clrWizardPageOnCancel']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageOnCommit' === en)) {
+                var pd_0 = (_co.onAsyncCommit() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrWizardPageOnCancel' === en)) {
+                var pd_1 = (_co.doAsyncCancel() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[61, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], { preventDefault: [0, 'preventDefault'] }, { onCommit: 'clrWizardPageOnCommit',
+            pageOnCancel: 'clrWizardPageOnCancel' }), i0.ɵqud(335544320, 63, { pageTitle: 0 }),
+        i0.ɵqud(335544320, 64, { pageNavTitle: 0 }), i0.ɵqud(335544320, 65, { _buttons: 0 }), i0.ɵqud(335544320, 66, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_27)), i0.ɵdid(16384, [[63, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_28)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 10, 'clr-alert', [], null, null, null, i10.View_Alert_0, i10.RenderType_Alert)), i0.ɵprd(512, null, i11.AlertIconAndTypesService, i11.AlertIconAndTypesService, []),
+        i0.ɵdid(49152, null, 0, i12.Alert, [i11.AlertIconAndTypesService], { closable: [0,
+                'closable'], alertType: [1, 'alertType'] }, null), (_l()(), i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 5, 'div', [['class',
+                'alert-item alert-item']], null, null, null, i13.View_AlertItem_0, i13.RenderType_AlertItem)), i0.ɵdid(49152, null, 0, i14.AlertItem, [i11.AlertIconAndTypesService], null, null), (_l()(), i0.ɵted(0, ['\n                        This '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'a', [['href', 'https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy'],
+            ['target', '_blank']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['wiki article'])), (_l()(),
+            i0.ɵted(0, [' might help you answer the question.\n                    '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_29)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 21, 'form', [['novalidate', '']], [[2, 'hide', null],
+                [2, 'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                    null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+                [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                    'submit'], [null, 'reset']], function (_v, en, $event) {
+                var ad = true;
+                if (('submit' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 453).onSubmit($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('reset' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 453).onReset() !== false);
+                    ad = (pd_1 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [[5, 4], ['myForm', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 14, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 11, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'fourtyTwoInput']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['The answer to life, the universe and everything'])),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['id', 'fourtyTwoInput'], ['name', 'answer'],
+            ['type', 'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 465)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 465).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 465)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 465)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.answer = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[2, i9.ControlContainer],
+            [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'],
+            model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 2, 13, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[61, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 67, { pageTitle: 0 }), i0.ɵqud(335544320, 68, { pageNavTitle: 0 }), i0.ɵqud(335544320, 69, { _buttons: 0 }), i0.ɵqud(335544320, 70, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_30)), i0.ɵdid(16384, [[67, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Congratulations! Now you know the answer to life, the universe and everything!'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 67, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Not closeable'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.unclosedOpen = !_co.unclosedOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 58, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.unclosedOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[6, 4], ['notCloseableWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], closable: [1, 'closable'], _open: [2, '_open'] }, { _openChanged: 'clrWizardOpenChange' }), i0.ɵqud(603979776, 71, { pages: 1 }), i0.ɵqud(603979776, 72, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Wizard, not closable'])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null),
+        (_l()(), i0.ɵted(0, ['Finish'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(),
+            i0.ɵeld(0, null, 2, 13, 'clr-wizard-page', [['role', 'tabpanel']], [[8,
+                    'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+                [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[71, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 73, { pageTitle: 0 }), i0.ɵqud(335544320, 74, { pageNavTitle: 0 }), i0.ɵqud(335544320, 75, { _buttons: 0 }), i0.ɵqud(335544320, 76, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_31)), i0.ɵdid(16384, [[73, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Notice there\'s no close "X" in the top right'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 13, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[71, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 77, { pageTitle: 0 }), i0.ɵqud(335544320, 78, { pageNavTitle: 0 }), i0.ɵqud(335544320, 79, { _buttons: 0 }), i0.ɵqud(335544320, 80, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_32)), i0.ɵdid(16384, [[77, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Notice there\'s no close "X" in the top right'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 103, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Ghost pages'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.ghostOpen = !_co.ghostOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 94, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.ghostOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[7, 4], ['ghostWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], showGhostPages: [1, 'showGhostPages'],
+            _open: [2, '_open'] }, { _openChanged: 'clrWizardOpenChange' }), i0.ɵqud(603979776, 81, { pages: 1 }), i0.ɵqud(603979776, 82, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Ghost Pages'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 52, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[81, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 83, { pageTitle: 0 }), i0.ɵqud(335544320, 84, { pageNavTitle: 0 }), i0.ɵqud(335544320, 85, { _buttons: 0 }), i0.ɵqud(335544320, 86, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_33)), i0.ɵdid(16384, [[83, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_34)), i0.ɵdid(16384, [[84, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 36, 'form', [['class', 'content-for-page-1'], ['novalidate', '']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'submit'],
+            [null, 'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 615).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 615).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [['pageTypesForm', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Which pages should I show?'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 23, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'typesOfPages']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Page categories'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 17, 'div', [['class', 'select']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(),
+            i0.ɵeld(0, null, null, 14, 'select', [['id', 'typesOfPages11'],
+                ['name', 'typesOfPages']], [[2, 'ng-untouched', null], [2, 'ng-touched',
+                    null], [2, 'ng-pristine', null], [2, 'ng-dirty', null],
+                [2, 'ng-valid', null], [2, 'ng-invalid', null], [2, 'ng-pending',
+                    null]], [[null, 'ngModelChange'], [null,
+                    'change'], [null, 'blur']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('change' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 632).onChange($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 632).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_2 = ((_co.ghostModel.typesOfPages = $event) !== false);
+                    ad = (pd_2 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i9.SelectControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.SelectControlValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[2, i9.ControlContainer], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [['value', 'Default']], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i9.NgSelectOption, [i0.ElementRef, i0.Renderer2, [2, i9.SelectControlValueAccessor]], { value: [0, 'value'] }, null), i0.ɵdid(147456, null, 0, i9.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], { value: [0, 'value'] }, null),
+        (_l()(), i0.ɵted(null, ['Select pages you want to show...'])), (_l()(),
+            i0.ɵted(null, ['\n                                    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSWizards_35)),
+        i0.ɵdid(802816, null, 0, i8.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵand(16777216, null, 2, 1, null, View_KSWizards_36)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(),
+            i0.ɵand(16777216, null, 2, 1, null, View_KSWizards_39)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 2, 1, null, View_KSWizards_43)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 2, 1, null, View_KSWizards_46)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 155, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Custom buttons'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('click' === en)) {
+                    var pd_0 = ((_co.customButtonsOpen = !_co.customButtonsOpen) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 146, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.customButtonsOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[8, 4], ['customButtonWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 103, { pages: 1 }), i0.ɵqud(603979776, 104, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Custom and default buttons'])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Default'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Default'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Default'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Default'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 26, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[103, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 105, { pageTitle: 0 }), i0.ɵqud(335544320, 106, { pageNavTitle: 0 }), i0.ɵqud(335544320, 107, { _buttons: 0 }), i0.ɵqud(335544320, 108, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_49)), i0.ɵdid(16384, [[105, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_50)), i0.ɵdid(16384, [[106, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 32, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], [[null, 'clrWizardPageCustomButton']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageCustomButton' === en)) {
+                var pd_0 = (_co.doCustomClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[103, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], null, { customButtonClicked: 'clrWizardPageCustomButton' }), i0.ɵqud(335544320, 109, { pageTitle: 0 }), i0.ɵqud(335544320, 110, { pageNavTitle: 0 }), i0.ɵqud(335544320, 111, { _buttons: 0 }), i0.ɵqud(335544320, 112, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_51)), i0.ɵdid(16384, [[109, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_52)), i0.ɵdid(16384, [[110, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_53)), i0.ɵdid(16384, [[111, 4]], 0, i25.WizardPageButtonsDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 26, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[103, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 113, { pageTitle: 0 }), i0.ɵqud(335544320, 114, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 115, { _buttons: 0 }), i0.ɵqud(335544320, 116, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_54)), i0.ɵdid(16384, [[113, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_55)), i0.ɵdid(16384, [[114, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-3']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 26, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], [[null, 'clrWizardPageCustomButton']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageCustomButton' === en)) {
+                var pd_0 = (_co.doCustomClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[103, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], null, { customButtonClicked: 'clrWizardPageCustomButton' }), i0.ɵqud(335544320, 117, { pageTitle: 0 }), i0.ɵqud(335544320, 118, { pageNavTitle: 0 }), i0.ɵqud(335544320, 119, { _buttons: 0 }), i0.ɵqud(335544320, 120, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_56)), i0.ɵdid(16384, [[117, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_57)), i0.ɵdid(16384, [[118, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_58)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_59)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_60)), i0.ɵdid(16384, [[119, 4]], 0, i25.WizardPageButtonsDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 119, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Jump-to page'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('click' === en)) {
+                    var pd_0 = ((_co.jumpOpen = !_co.jumpOpen) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.jumpToThree() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open at Step 3 or Step 1'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.jumpToFive() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open at Step 5 or Step 1'])),
+        (_l()(), i0.ɵted(null, ['\n\n        '])), (_l()(), i0.ɵeld(0, null, null, 104, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.jumpOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[9, 4], ['jumpWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 121, { pages: 1 }), i0.ɵqud(603979776, 122, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Jump-To Wizard'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Done'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 18, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[121, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 123, { pageTitle: 0 }), i0.ɵqud(335544320, 124, { pageNavTitle: 0 }), i0.ɵqud(335544320, 125, { _buttons: 0 }), i0.ɵqud(335544320, 126, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_61)), i0.ɵdid(16384, [[123, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    If the wizard can navigate to the pages, you can click on the buttons\n                    above to have it open up at step three or step five. Try clicking through\n                    all the pages, closing the wizard, and clicking on the buttons.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Enabling a page for navigation entails setting the pages before it as\n                    both ready to complete and completed. This can be done programmatically as\n                    well.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    If a page cannot be navigated to, you can either programmatically set the\n                    wizard to open on the first page or tell it to open on the last navigable\n                    page in the workflow.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 12, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[121, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 127, { pageTitle: 0 }), i0.ɵqud(335544320, 128, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 129, { _buttons: 0 }), i0.ɵqud(335544320, 130, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_62)), i0.ɵdid(16384, [[127, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 2'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 12, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[121, 4], [10, 4], ['pageThree', 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 131, { pageTitle: 0 }), i0.ɵqud(335544320, 132, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 133, { _buttons: 0 }), i0.ɵqud(335544320, 134, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_63)), i0.ɵdid(16384, [[131, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 3'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 12, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[121, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 135, { pageTitle: 0 }), i0.ɵqud(335544320, 136, { pageNavTitle: 0 }), i0.ɵqud(335544320, 137, { _buttons: 0 }), i0.ɵqud(335544320, 138, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_64)), i0.ɵdid(16384, [[135, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 4'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 12, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[121, 4], [11, 4], ['pageFive', 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 139, { pageTitle: 0 }), i0.ɵqud(335544320, 140, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 141, { _buttons: 0 }), i0.ɵqud(335544320, 142, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_65)), i0.ɵdid(16384, [[139, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 5'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 141, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Reset on exit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('click' === en)) {
+                    var pd_0 = ((_co.resetOpen = !_co.resetOpen) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 132, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange'], [null,
+                'clrWizardOnFinish'], [null, 'clrWizardOnCancel']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.resetOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrWizardOnFinish' === en)) {
+                var pd_1 = (_co.doResetFinish() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('clrWizardOnCancel' === en)) {
+                var pd_2 = (_co.doResetFinish() !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[12, 4], ['resetWizardDemo', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange',
+            onCancel: 'clrWizardOnCancel', wizardFinished: 'clrWizardOnFinish' }), i0.ɵqud(603979776, 143, { pages: 1 }), i0.ɵqud(603979776, 144, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard that resets'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['OK'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 26, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[143, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 145, { pageTitle: 0 }), i0.ɵqud(335544320, 146, { pageNavTitle: 0 }), i0.ɵqud(335544320, 147, { _buttons: 0 }), i0.ɵqud(335544320, 148, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_66)), i0.ɵdid(16384, [[145, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Check below if you want the wizard to reset when it finishes or closes.'])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 11, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 8, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, [['forceReset', 1]], null, 5, 'input', [['name', 'forceReset'], ['type', 'checkbox']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'change'], [null, 'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1000).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1000).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.resetModel.forceReset = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                        Force reset on close\n                    '])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 23, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[143, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 149, { pageTitle: 0 }), i0.ɵqud(335544320, 150, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 151, { _buttons: 0 }), i0.ɵqud(335544320, 152, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_67)), i0.ɵdid(16384, [[149, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 11, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_1']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['What is your favorite color?'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, [['stepTwoInput', 1]], null, 5, 'input', [['id', 'formFields_11'], ['placeholder', 'Color?'], ['type', 'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
+                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
+            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
+                'ngModelChange'], [null, 'input'], [null, 'blur'], [null,
+                'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1026)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1026).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1026)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1026)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.resetModel.favoriteColor = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null],
+            [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0,
+                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 23, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[143, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 153, { pageTitle: 0 }), i0.ɵqud(335544320, 154, { pageNavTitle: 0 }), i0.ɵqud(335544320, 155, { _buttons: 0 }), i0.ɵqud(335544320, 156, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_68)), i0.ɵdid(16384, [[153, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 11, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_2']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['What is your favorite ice cream?'])), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, [['stepThreeInput',
+                1]], null, 5, 'input', [['id', 'formFields_21'], ['placeholder', 'Flavor?'],
+            ['type', 'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1051)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1051).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1051)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1051)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.resetModel.flavorOfIceCream = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null],
+            [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0,
+                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 24, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[143, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 157, { pageTitle: 0 }), i0.ɵqud(335544320, 158, { pageNavTitle: 0 }), i0.ɵqud(335544320, 159, { _buttons: 0 }), i0.ɵqud(335544320, 160, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_69)), i0.ɵdid(16384, [[157, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 12, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_31']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['What is your lucky number?'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, [['stepFourInput', 1]], null, 6, 'input', [['id', 'formFields_31'], ['placeholder', 'Lucky number?'], ['type',
+                'number']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend'],
+            [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1076)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1076).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1076)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1076)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 1077).onChange($event.target.value) !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('input' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 1077).onChange($event.target.value) !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_6 = (i0.ɵnov(_v, 1077).onTouched() !== false);
+                ad = (pd_6 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_7 = ((_co.resetModel.luckyNumber = $event) !== false);
+                ad = (pd_7 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.ɵbc, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i9.DefaultValueAccessor, i9.ɵbc]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 110, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Header actions'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('click' === en)) {
+                    var pd_0 = ((_co.headerOpen = !_co.headerOpen) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 101, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.headerOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[13, 4], ['headerActionWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'] }, { _openChanged: 'clrWizardOpenChange' }),
+        i0.ɵqud(603979776, 161, { pages: 1 }), i0.ɵqud(603979776, 162, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Header actions'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Close'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Done'])), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 1, 5, 'clr-wizard-header-action', [['class', 'clr-wizard-header-action-wrapper'], ['id', 'info'], ['title', 'Link to Clarity']], null, [[null, 'actionClicked']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('actionClicked' === en)) {
+                var pd_0 = (_co.headerActionClicked($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i17.View_WizardHeaderAction_0, i17.RenderType_WizardHeaderAction)), i0.ɵdid(49152, [[162, 4]], 0, i18.WizardHeaderAction, [], { title: [0, 'title'], _id: [1,
+                '_id'] }, { headerActionClicked: 'actionClicked' }), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'clr-icon', [['shape', 'info']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i19.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 26, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[161, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 163, { pageTitle: 0 }), i0.ɵqud(335544320, 164, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 165, { _buttons: 0 }), i0.ɵqud(335544320, 166, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_70)), i0.ɵdid(16384, [[163, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_71)), i0.ɵdid(16384, [[164, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 20, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[161, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 167, { pageTitle: 0 }), i0.ɵqud(335544320, 168, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 169, { _buttons: 0 }), i0.ɵqud(335544320, 170, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_72)), i0.ɵdid(16384, [[167, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_73)), i0.ɵdid(16384, [[168, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_74)), i0.ɵdid(16384, [[170, 4]], 0, i26.WizardPageHeaderActionsDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n            '])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 14, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0],
+            [1, 'aria-labelledby', 0], [2, 'active', null], [2, 'clr-wizard-page',
+                null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[161, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 171, { pageTitle: 0 }), i0.ɵqud(335544320, 172, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 173, { _buttons: 0 }), i0.ɵqud(335544320, 174, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_75)), i0.ɵdid(16384, [[171, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_76)), i0.ɵdid(16384, [[172, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 69, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Alt cancel'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.altCancelOpen = !_co.altCancelOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 60, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange'], [null,
+                'clrWizardOnCancel']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.altCancelOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrWizardOnCancel' === en)) {
+                var pd_1 = (_co.doAltCancel() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[14, 4], ['altCancelWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'], stopCancel: [2, 'stopCancel'] }, { _openChanged: 'clrWizardOpenChange', onCancel: 'clrWizardOnCancel' }), i0.ɵqud(603979776, 175, { pages: 1 }), i0.ɵqud(603979776, 176, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard with alternate cancel'])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 12, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[175, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 177, { pageTitle: 0 }), i0.ɵqud(335544320, 178, { pageNavTitle: 0 }), i0.ɵqud(335544320, 179, { _buttons: 0 }), i0.ɵqud(335544320, 180, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_77)), i0.ɵdid(16384, [[177, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for step 1'])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 16, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], [[null,
+                'clrWizardPageOnCancel']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageOnCancel' === en)) {
+                var pd_0 = (_co.pageCustomCancel() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[175, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], { stopCancel: [0, 'stopCancel'] }, { pageOnCancel: 'clrWizardPageOnCancel' }), i0.ɵqud(335544320, 181, { pageTitle: 0 }), i0.ɵqud(335544320, 182, { pageNavTitle: 0 }), i0.ɵqud(335544320, 183, { _buttons: 0 }), i0.ɵqud(335544320, 184, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_78)), i0.ɵdid(16384, [[181, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_79)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_80)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 146, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Alt next'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.altNextOpen = !_co.altNextOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 137, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange'], [null,
+                'clrWizardOnNext'], [null, 'clrWizardOnFinish']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.altNextOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrWizardOnNext' === en)) {
+                var pd_1 = (_co.doNext() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('clrWizardOnFinish' === en)) {
+                var pd_2 = (_co.doFinish() !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[15, 4], ['altNextWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'], stopNext: [2, 'stopNext'] }, { _openChanged: 'clrWizardOpenChange', wizardFinished: 'clrWizardOnFinish', onMoveNext: 'clrWizardOnNext' }),
+        i0.ɵqud(603979776, 185, { pages: 1 }), i0.ɵqud(603979776, 186, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard with alternate next flows'])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 24, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[185, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 187, { pageTitle: 0 }), i0.ɵqud(335544320, 188, { pageNavTitle: 0 }), i0.ɵqud(335544320, 189, { _buttons: 0 }), i0.ɵqud(335544320, 190, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_81)), i0.ɵdid(16384, [[187, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], [[2, 'stress', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['Alt-Next means you manually move users to the next page.'])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 0, 'p', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 8, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, [['allowNext', 1]], null, 5, 'input', [['name', 'allowNext'],
+            ['type', 'checkbox']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'change'], [null,
+                'blur']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('change' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1325).onChange($event.target.checked) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1325).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_2 = ((_co.altNextModel.allowNext = $event) !== false);
+                ad = (pd_2 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.CheckboxControlValueAccessor, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.CheckboxControlValueAccessor]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                    Check the box if you want to go to the next page\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 61, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], [[null, 'clrWizardPageNext']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageNext' === en)) {
+                var pd_0 = (_co.pageCustomNext() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[185, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], { stopNext: [0, 'stopNext'] }, { nextButtonClicked: 'clrWizardPageNext' }), i0.ɵqud(335544320, 191, { pageTitle: 0 }), i0.ɵqud(335544320, 192, { pageNavTitle: 0 }), i0.ɵqud(335544320, 193, { _buttons: 0 }), i0.ɵqud(335544320, 194, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_82)), i0.ɵdid(16384, [[191, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_83)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['1, 2...'])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 12, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What comes after 2?'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 6, 'input', [['id', 'formFields_1'], ['placeholder',
+                'Enter a number'], ['type', 'number']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend'], [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1355)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1355).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1355)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1355)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 1356).onChange($event.target.value) !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('input' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 1356).onChange($event.target.value) !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_6 = (i0.ɵnov(_v, 1356).onTouched() !== false);
+                ad = (pd_6 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_7 = ((_co.altNextModel.sequenceOne = $event) !== false);
+                ad = (pd_7 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.ɵbc, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i9.DefaultValueAccessor, i9.ɵbc]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 0, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(0, ['\n\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 12, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What is the next number in the sequence?'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 6, 'input', [['id', 'formFields_2'], ['placeholder',
+                'Enter a number'], ['type', 'number']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend'], [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1371)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1371).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1371)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1371)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 1372).onChange($event.target.value) !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('input' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 1372).onChange($event.target.value) !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_6 = (i0.ɵnov(_v, 1372).onTouched() !== false);
+                ad = (pd_6 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_7 = ((_co.altNextModel.sequenceTwo = $event) !== false);
+                ad = (pd_7 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.ɵbc, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i9.DefaultValueAccessor, i9.ɵbc]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 0, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(0, ['\n\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 12, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'formFields_32']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What is the next number in the sequence?'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 6, 'input', [['id', 'formFields_32'], ['placeholder',
+                'Enter a number'], ['type', 'number']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend'], [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1387)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1387).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1387)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1387)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 1388).onChange($event.target.value) !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('input' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 1388).onChange($event.target.value) !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_6 = (i0.ɵnov(_v, 1388).onTouched() !== false);
+                ad = (pd_6 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_7 = ((_co.altNextModel.sequenceThree = $event) !== false);
+                ad = (pd_7 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.ɵbc, [i0.Renderer2, i0.ElementRef], null, null), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i9.DefaultValueAccessor, i9.ɵbc]), i0.ɵdid(671744, null, 0, i9.NgModel, [[8, null], [8, null], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 18, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[185, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 195, { pageTitle: 0 }), i0.ɵqud(335544320, 196, { pageNavTitle: 0 }), i0.ɵqud(335544320, 197, { _buttons: 0 }), i0.ɵqud(335544320, 198, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_84)), i0.ɵdid(16384, [[195, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_85)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_86)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_87)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 155, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Stop navigation'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.stopOpen = !_co.stopOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 146, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange'], [null,
+                'clrWizardOnCancel']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.stopOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrWizardOnCancel' === en)) {
+                var pd_1 = (_co.doCancel() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[18, 4], ['stopWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], closable: [1, 'closable'], _open: [2, '_open'],
+            stopCancel: [3, 'stopCancel'], stopNavigation: [4, 'stopNavigation'], disableStepnav: [5,
+                'disableStepnav'] }, { _openChanged: 'clrWizardOpenChange', onCancel: 'clrWizardOnCancel' }),
+        i0.ɵqud(603979776, 199, { pages: 1 }), i0.ɵqud(603979776, 200, { headerActions: 1 }), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Wizard stops navigating while validating'])),
+        (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 3, 1, null, View_KSWizards_88)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 3, 1, null, View_KSWizards_89)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper'], ['type', 'next']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 11, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper'], ['type', 'finish']], [[1, 'aria-hidden',
+                0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)),
+        i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_90)),
+        i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_91)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_92)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 86, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[199, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], { nextStepDisabled: [0, 'nextStepDisabled'] }, null), i0.ɵqud(335544320, 201, { pageTitle: 0 }), i0.ɵqud(335544320, 202, { pageNavTitle: 0 }), i0.ɵqud(335544320, 203, { _buttons: 0 }), i0.ɵqud(335544320, 204, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(),
+            i0.ɵand(0, null, 0, 1, null, View_KSWizards_93)), i0.ɵdid(16384, [[201, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null),
+        (_l()(), i0.ɵted(0, [' '])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 74, 'form', [['novalidate', '']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'submit'],
+                [null, 'reset']], function (_v, en, $event) {
+                var ad = true;
+                if (('submit' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 1475).onSubmit($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('reset' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 1475).onReset() !== false);
+                    ad = (pd_1 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i9.ɵbf, [], null, null), i0.ɵdid(16384, [['formPage', 4]], 0, i9.NgForm, [[8, null], [8, null]], null, null), i0.ɵprd(2048, null, i9.ControlContainer, null, [i9.NgForm]), i0.ɵdid(16384, null, 0, i9.NgControlStatusGroup, [i9.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 67, 'section', [['class', 'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['To proceed, you must answer these three questions...'])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What is your name?'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'label', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-validation tooltip-md tooltip-top-left'], ['for',
+                'nameInput'], ['role', 'tooltip']], [[2, 'invalid', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 7, 'input', [['id', 'nameInput'], ['name', 'name'], ['required',
+                ''], ['type', 'text']], [[1, 'required', 0], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1492)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1492).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1492)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1492)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.stopModel.won = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.RequiredValidator, [], { required: [0, 'required'] }, null), i0.ɵprd(1024, null, i9.NG_VALIDATORS, function (p0_0) {
+            return [p0_0];
+        }, [i9.RequiredValidator]), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, [['name', 4]], 0, i9.NgModel, [[2,
+                i9.ControlContainer], [2, i9.NG_VALIDATORS], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['This field cannot be empty!'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What is your quest?'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'label', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-validation tooltip-md tooltip-top-left'], ['for',
+                'questInput'], ['role', 'tooltip']], [[2, 'invalid', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 7, 'input', [['id', 'questInput'], ['name', 'quest'], ['required',
+                ''], ['type', 'text']], [[1, 'required', 0], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1513)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1513).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1513)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1513)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.stopModel.too = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.RequiredValidator, [], { required: [0, 'required'] }, null), i0.ɵprd(1024, null, i9.NG_VALIDATORS, function (p0_0) {
+            return [p0_0];
+        }, [i9.RequiredValidator]), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, [['quest', 4]], 0, i9.NgModel, [[2,
+                i9.ControlContainer], [2, i9.NG_VALIDATORS], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['This field cannot be empty!'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 19, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['What is the air-speed velocity of an unladen swallow?'])), (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 13, 'label', [['aria-haspopup', 'true'], ['class', 'tooltip tooltip-validation tooltip-md tooltip-top-left'],
+            ['for', 'velocityInput'], ['role', 'tooltip']], [[2, 'invalid', null]], null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 7, 'input', [['id', 'velocityInput'], ['name', 'velocity'], ['required',
+                ''], ['type', 'text']], [[1, 'required', 0], [2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 1534)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 1534).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 1534)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 1534)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((_co.stopModel.tree = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i9.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i9.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(16384, null, 0, i9.RequiredValidator, [], { required: [0, 'required'] }, null), i0.ɵprd(1024, null, i9.NG_VALIDATORS, function (p0_0) {
+            return [p0_0];
+        }, [i9.RequiredValidator]), i0.ɵprd(1024, null, i9.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [i9.DefaultValueAccessor]), i0.ɵdid(671744, [['velocity', 4]], 0, i9.NgModel, [[2, i9.ControlContainer], [2, i9.NG_VALIDATORS], [8, null], [2, i9.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i9.NgControl, null, [i9.NgModel]), i0.ɵdid(16384, null, 0, i9.NgControlStatus, [i9.NgControl], null, null), (_l()(),
+            i0.ɵted(null, ['\n                                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['This field cannot be empty!'])), (_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 21, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], [[null, 'clrWizardPageOnCommit']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardPageOnCommit' === en)) {
+                var pd_0 = (_co.onCommit() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[199, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService, i5.ButtonHubService], { stopNext: [0, 'stopNext'] }, { onCommit: 'clrWizardPageOnCommit' }), i0.ɵqud(335544320, 205, { pageTitle: 0 }), i0.ɵqud(335544320, 206, { pageNavTitle: 0 }), i0.ɵqud(335544320, 207, { _buttons: 0 }), i0.ɵqud(335544320, 208, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_94)), i0.ɵdid(16384, [[205, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_95)), i0.ɵdid(16384, [[206, 4]], 0, i7.WizardPageNavTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_98)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_99)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSWizards_100)), i0.ɵdid(16384, null, 0, i8.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 41, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Force forward'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.forceOpen = !_co.forceOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 32, 'clr-wizard', [], [[2, 'clr-wizard', null],
+            [2, 'wizard-md', null], [2, 'wizard-lg', null], [2, 'wizard-xl',
+                null], [2, 'lastPage', null], [2, 'clr-wizard--ghosted',
+                null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.forceOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[17, 4], ['forceWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], forceForward: [1, 'forceForward'], _open: [2,
+                '_open'] }, { _openChanged: 'clrWizardOpenChange' }), i0.ɵqud(603979776, 209, { pages: 1 }),
+        i0.ɵqud(603979776, 210, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Wizard, Only Forward Navigation'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Finish'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵand(16777216, null, 2, 2, null, View_KSWizards_101)), i0.ɵdid(802816, null, 0, i8.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), i0.ɵpad(4), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 97, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Inline'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.inlineOpen = !_co.inlineOpen) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Open Wizard'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 88, 'clr-wizard', [['class', 'clr-wizard--inline clr-wizard--no-shadow clr-wizard--no-title'],
+            ['style', 'height: 500px']], [[2, 'clr-wizard', null], [2, 'wizard-md',
+                null], [2, 'wizard-lg', null], [2, 'wizard-xl', null],
+            [2, 'lastPage', null], [2, 'clr-wizard--ghosted', null]], [[null, 'clrWizardOpenChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrWizardOpenChange' === en)) {
+                var pd_0 = ((_co.inlineOpen = $event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i21.View_Wizard_0, i21.RenderType_Wizard)), i0.ɵprd(512, null, i4.PageCollectionService, i4.PageCollectionService, []), i0.ɵprd(512, null, i5.ButtonHubService, i5.ButtonHubService, []), i0.ɵprd(131584, null, i3.WizardNavigationService, i3.WizardNavigationService, [i4.PageCollectionService, i5.ButtonHubService]),
+        i0.ɵprd(512, null, i22.HeaderActionService, i22.HeaderActionService, [i3.WizardNavigationService]),
+        i0.ɵdid(1556480, [[16, 4], ['inlineWizard', 4]], 2, i23.Wizard, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService, i22.HeaderActionService, i0.ElementRef,
+            i0.IterableDiffers], { size: [0, 'size'], _open: [1, '_open'], _stopModalAnimations: [2,
+                '_stopModalAnimations'] }, { _openChanged: 'clrWizardOpenChange' }), i0.ɵqud(603979776, 215, { pages: 1 }), i0.ɵqud(603979776, 216, { headerActions: 1 }), (_l()(), i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-wizard-title', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i24.WizardCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Inline Wizard'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Cancel'])), (_l()(),
+            i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Back'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Next'])), (_l()(), i0.ɵted(2, ['\n            '])), (_l()(), i0.ɵeld(0, null, 3, 2, 'clr-wizard-button', [['class', 'clr-wizard-btn-wrapper']], [[1, 'aria-hidden', 0]], null, null, i15.View_WizardButton_0, i15.RenderType_WizardButton)), i0.ɵdid(49152, null, 0, i16.WizardButton, [i3.WizardNavigationService, i5.ButtonHubService], { type: [0, 'type'] }, null), (_l()(), i0.ɵted(0, ['Submit'])), (_l()(),
+            i0.ɵted(2, ['\n\n            '])), (_l()(), i0.ɵeld(0, null, 2, 25, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby',
+                0], [2, 'active', null], [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[215, 4]], 4, i2.WizardPage, [i3.WizardNavigationService, i4.PageCollectionService,
+            i5.ButtonHubService], null, null), i0.ɵqud(335544320, 217, { pageTitle: 0 }), i0.ɵqud(335544320, 218, { pageNavTitle: 0 }), i0.ɵqud(335544320, 219, { _buttons: 0 }), i0.ɵqud(335544320, 220, { _headerActions: 0 }), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_104)), i0.ɵdid(16384, [[217, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for page 1'])), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 16, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[215, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 221, { pageTitle: 0 }), i0.ɵqud(335544320, 222, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 223, { _buttons: 0 }), i0.ɵqud(335544320, 224, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_105)), i0.ɵdid(16384, [[221, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for page 2'])), (_l()(),
+            i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae minima inventore quia,\n                    officiis rem id explicabo incidunt, illum deleniti qui doloremque voluptatem, saepe tenetur\n                    quas! Quaerat explicabo expedita placeat vero.\n                '])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n\n            '])),
+        (_l()(), i0.ɵeld(0, null, 2, 13, 'clr-wizard-page', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-hidden', 0], [1, 'aria-labelledby', 0], [2, 'active', null],
+            [2, 'clr-wizard-page', null]], null, null, i1.View_WizardPage_0, i1.RenderType_WizardPage)), i0.ɵdid(114688, [[215, 4]], 4, i2.WizardPage, [i3.WizardNavigationService,
+            i4.PageCollectionService, i5.ButtonHubService], null, null),
+        i0.ɵqud(335544320, 225, { pageTitle: 0 }), i0.ɵqud(335544320, 226, { pageNavTitle: 0 }),
+        i0.ɵqud(335544320, 227, { _buttons: 0 }), i0.ɵqud(335544320, 228, { _headerActions: 0 }),
+        (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵand(0, null, 0, 1, null, View_KSWizards_106)), i0.ɵdid(16384, [[225, 4]], 0, i6.WizardPageTitleDirective, [i0.TemplateRef], null, null), (_l()(), i0.ɵted(0, [' '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [['class', 'content-for-page-3']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for page 3'])),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵted(2, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_6 = _co.basicOpen;
+        _ck(_v, 36, 0, currVal_6);
+        var currVal_8 = 'cancel';
+        _ck(_v, 45, 0, currVal_8);
+        var currVal_10 = 'previous';
+        _ck(_v, 49, 0, currVal_10);
+        var currVal_12 = 'next';
+        _ck(_v, 53, 0, currVal_12);
+        var currVal_14 = 'finish';
+        _ck(_v, 57, 0, currVal_14);
+        _ck(_v, 61, 0);
+        _ck(_v, 80, 0);
+        _ck(_v, 99, 0);
+        var currVal_36 = _co.skipOpen;
+        _ck(_v, 132, 0, currVal_36);
+        var currVal_38 = 'cancel';
+        _ck(_v, 141, 0, currVal_38);
+        var currVal_40 = 'previous';
+        _ck(_v, 145, 0, currVal_40);
+        var currVal_42 = 'next';
+        _ck(_v, 149, 0, currVal_42);
+        var currVal_44 = 'finish';
+        _ck(_v, 153, 0, currVal_44);
+        _ck(_v, 157, 0);
+        var currVal_50 = _co.skipStepTwo;
+        _ck(_v, 179, 0, currVal_50);
+        var currVal_51 = !_co.skipStepTwo;
+        _ck(_v, 182, 0, currVal_51);
+        var currVal_52 = !_co.skipStepTwo;
+        _ck(_v, 188, 0, currVal_52);
+        _ck(_v, 191, 0);
+        var currVal_58 = _co.skipStepTwo;
+        _ck(_v, 206, 0, currVal_58);
+        var currVal_59 = !_co.skipStepTwo;
+        _ck(_v, 209, 0, currVal_59);
+        var currVal_66 = 'lg';
+        var currVal_67 = _co.formOpen;
+        _ck(_v, 227, 0, currVal_66, currVal_67);
+        var currVal_69 = 'cancel';
+        _ck(_v, 236, 0, currVal_69);
+        var currVal_71 = 'previous';
+        _ck(_v, 240, 0, currVal_71);
+        var currVal_73 = 'next';
+        _ck(_v, 244, 0, currVal_73);
+        var currVal_75 = 'finish';
+        _ck(_v, 248, 0, currVal_75);
+        var currVal_81 = (i0.ɵnov(_v, 1496).pristine || !i0.ɵnov(_v, 264).valid);
+        _ck(_v, 252, 0, currVal_81);
+        var currVal_98 = '';
+        _ck(_v, 282, 0, currVal_98);
+        var currVal_99 = 'name';
+        var currVal_100 = _co.formModel.name;
+        _ck(_v, 285, 0, currVal_99, currVal_100);
+        var currVal_108 = 'favorite';
+        var currVal_109 = _co.formModel.favorite;
+        _ck(_v, 302, 0, currVal_108, currVal_109);
+        var currVal_115 = (i0.ɵnov(_v, 349).pristine || !i0.ɵnov(_v, 327).valid);
+        _ck(_v, 311, 0, currVal_115);
+        var currVal_132 = '';
+        _ck(_v, 346, 0, currVal_132);
+        var currVal_133 = 'number';
+        var currVal_134 = _co.formModel.number;
+        _ck(_v, 349, 0, currVal_133, currVal_134);
+        var currVal_140 = (!i0.ɵnov(_v, 264).valid || !i0.ɵnov(_v, 327).valid);
+        _ck(_v, 362, 0, currVal_140);
+        var currVal_141 = (i0.ɵnov(_v, 264).valid && i0.ɵnov(_v, 327).valid);
+        _ck(_v, 377, 0, currVal_141);
+        var currVal_142 = (!i0.ɵnov(_v, 264).valid || !i0.ɵnov(_v, 327).valid);
+        _ck(_v, 380, 0, currVal_142);
+        var currVal_149 = 'lg';
+        var currVal_150 = _co.asyncOpen;
+        _ck(_v, 398, 0, currVal_149, currVal_150);
+        var currVal_152 = 'cancel';
+        _ck(_v, 407, 0, currVal_152);
+        var currVal_154 = 'previous';
+        _ck(_v, 411, 0, currVal_154);
+        var currVal_156 = 'next';
+        _ck(_v, 415, 0, currVal_156);
+        var currVal_158 = 'finish';
+        _ck(_v, 419, 0, currVal_158);
+        var currVal_164 = 'true';
+        _ck(_v, 423, 0, currVal_164);
+        var currVal_165 = _co.loadingFlag;
+        _ck(_v, 434, 0, currVal_165);
+        var currVal_166 = false;
+        var currVal_167 = 'alert-info';
+        _ck(_v, 438, 0, currVal_166, currVal_167);
+        var currVal_168 = _co.errorFlag;
+        _ck(_v, 449, 0, currVal_168);
+        var currVal_184 = 'answer';
+        var currVal_185 = _co.answer;
+        _ck(_v, 467, 0, currVal_184, currVal_185);
+        _ck(_v, 476, 0);
+        var currVal_197 = 'md';
+        var currVal_198 = false;
+        var currVal_199 = _co.unclosedOpen;
+        _ck(_v, 505, 0, currVal_197, currVal_198, currVal_199);
+        var currVal_201 = 'cancel';
+        _ck(_v, 514, 0, currVal_201);
+        var currVal_203 = 'previous';
+        _ck(_v, 518, 0, currVal_203);
+        var currVal_205 = 'next';
+        _ck(_v, 522, 0, currVal_205);
+        var currVal_207 = 'finish';
+        _ck(_v, 526, 0, currVal_207);
+        _ck(_v, 530, 0);
+        _ck(_v, 545, 0);
+        var currVal_224 = 'lg';
+        var currVal_225 = true;
+        var currVal_226 = _co.ghostOpen;
+        _ck(_v, 574, 0, currVal_224, currVal_225, currVal_226);
+        var currVal_228 = 'cancel';
+        _ck(_v, 583, 0, currVal_228);
+        var currVal_230 = 'previous';
+        _ck(_v, 587, 0, currVal_230);
+        var currVal_232 = 'next';
+        _ck(_v, 591, 0, currVal_232);
+        var currVal_234 = 'finish';
+        _ck(_v, 595, 0, currVal_234);
+        _ck(_v, 599, 0);
+        var currVal_254 = 'typesOfPages';
+        var currVal_255 = _co.ghostModel.typesOfPages;
+        _ck(_v, 634, 0, currVal_254, currVal_255);
+        var currVal_256 = 'Default';
+        _ck(_v, 639, 0, currVal_256);
+        var currVal_257 = 'Default';
+        _ck(_v, 640, 0, currVal_257);
+        var currVal_258 = _co.typesOfPages;
+        _ck(_v, 644, 0, currVal_258);
+        var currVal_259 = _co.showEvenPages;
+        _ck(_v, 653, 0, currVal_259);
+        var currVal_260 = _co.showPageThree;
+        _ck(_v, 656, 0, currVal_260);
+        var currVal_261 = _co.showEvenPages;
+        _ck(_v, 659, 0, currVal_261);
+        var currVal_262 = _co.showPageFive;
+        _ck(_v, 662, 0, currVal_262);
+        var currVal_269 = 'lg';
+        var currVal_270 = _co.customButtonsOpen;
+        _ck(_v, 679, 0, currVal_269, currVal_270);
+        var currVal_272 = 'cancel';
+        _ck(_v, 688, 0, currVal_272);
+        var currVal_274 = 'previous';
+        _ck(_v, 692, 0, currVal_274);
+        var currVal_276 = 'next';
+        _ck(_v, 696, 0, currVal_276);
+        var currVal_278 = 'finish';
+        _ck(_v, 700, 0, currVal_278);
+        _ck(_v, 704, 0);
+        _ck(_v, 732, 0);
+        _ck(_v, 766, 0);
+        _ck(_v, 794, 0);
+        var currVal_299 = !_co.showWarning;
+        _ck(_v, 809, 0, currVal_299);
+        var currVal_300 = _co.showWarning;
+        _ck(_v, 812, 0, currVal_300);
+        var currVal_307 = 'md';
+        var currVal_308 = _co.jumpOpen;
+        _ck(_v, 842, 0, currVal_307, currVal_308);
+        var currVal_310 = 'cancel';
+        _ck(_v, 851, 0, currVal_310);
+        var currVal_312 = 'previous';
+        _ck(_v, 855, 0, currVal_312);
+        var currVal_314 = 'next';
+        _ck(_v, 859, 0, currVal_314);
+        var currVal_316 = 'finish';
+        _ck(_v, 863, 0, currVal_316);
+        _ck(_v, 867, 0);
+        _ck(_v, 887, 0);
+        _ck(_v, 901, 0);
+        _ck(_v, 915, 0);
+        _ck(_v, 929, 0);
+        var currVal_348 = 'md';
+        var currVal_349 = _co.resetOpen;
+        _ck(_v, 957, 0, currVal_348, currVal_349);
+        var currVal_351 = 'cancel';
+        _ck(_v, 966, 0, currVal_351);
+        var currVal_353 = 'previous';
+        _ck(_v, 970, 0, currVal_353);
+        var currVal_355 = 'next';
+        _ck(_v, 974, 0, currVal_355);
+        var currVal_357 = 'finish';
+        _ck(_v, 978, 0, currVal_357);
+        _ck(_v, 982, 0);
+        var currVal_370 = 'forceReset';
+        var currVal_371 = _co.resetModel.forceReset;
+        _ck(_v, 1002, 0, currVal_370, currVal_371);
+        _ck(_v, 1010, 0);
+        var currVal_384 = _co.resetModel.favoriteColor;
+        _ck(_v, 1028, 0, currVal_384);
+        _ck(_v, 1035, 0);
+        var currVal_397 = _co.resetModel.flavorOfIceCream;
+        _ck(_v, 1053, 0, currVal_397);
+        _ck(_v, 1060, 0);
+        var currVal_410 = _co.resetModel.luckyNumber;
+        _ck(_v, 1079, 0, currVal_410);
+        var currVal_417 = 'lg';
+        var currVal_418 = _co.headerOpen;
+        _ck(_v, 1100, 0, currVal_417, currVal_418);
+        var currVal_420 = 'cancel';
+        _ck(_v, 1109, 0, currVal_420);
+        var currVal_422 = 'previous';
+        _ck(_v, 1113, 0, currVal_422);
+        var currVal_424 = 'next';
+        _ck(_v, 1117, 0, currVal_424);
+        var currVal_426 = 'finish';
+        _ck(_v, 1121, 0, currVal_426);
+        var currVal_427 = 'Link to Clarity';
+        var currVal_428 = 'info';
+        _ck(_v, 1125, 0, currVal_427, currVal_428);
+        _ck(_v, 1132, 0);
+        _ck(_v, 1160, 0);
+        _ck(_v, 1182, 0);
+        var currVal_450 = 'md';
+        var currVal_451 = _co.altCancelOpen;
+        var currVal_452 = true;
+        _ck(_v, 1212, 0, currVal_450, currVal_451, currVal_452);
+        var currVal_454 = 'cancel';
+        _ck(_v, 1221, 0, currVal_454);
+        var currVal_456 = 'previous';
+        _ck(_v, 1225, 0, currVal_456);
+        var currVal_458 = 'next';
+        _ck(_v, 1229, 0, currVal_458);
+        var currVal_460 = 'finish';
+        _ck(_v, 1233, 0, currVal_460);
+        _ck(_v, 1237, 0);
+        var currVal_471 = true;
+        _ck(_v, 1251, 0, currVal_471);
+        var currVal_472 = !_co.showCancelConfirm;
+        _ck(_v, 1262, 0, currVal_472);
+        var currVal_473 = _co.showCancelConfirm;
+        _ck(_v, 1265, 0, currVal_473);
+        var currVal_480 = 'lg';
+        var currVal_481 = _co.altNextOpen;
+        var currVal_482 = true;
+        _ck(_v, 1283, 0, currVal_480, currVal_481, currVal_482);
+        var currVal_484 = 'cancel';
+        _ck(_v, 1292, 0, currVal_484);
+        var currVal_486 = 'previous';
+        _ck(_v, 1296, 0, currVal_486);
+        var currVal_488 = 'next';
+        _ck(_v, 1300, 0, currVal_488);
+        var currVal_490 = 'finish';
+        _ck(_v, 1304, 0, currVal_490);
+        _ck(_v, 1308, 0);
+        var currVal_504 = 'allowNext';
+        var currVal_505 = _co.altNextModel.allowNext;
+        _ck(_v, 1327, 0, currVal_504, currVal_505);
+        var currVal_511 = true;
+        _ck(_v, 1334, 0, currVal_511);
+        var currVal_512 = _co.showCancelConfirm;
+        _ck(_v, 1344, 0, currVal_512);
+        var currVal_520 = _co.altNextModel.sequenceOne;
+        _ck(_v, 1358, 0, currVal_520);
+        var currVal_528 = _co.altNextModel.sequenceTwo;
+        _ck(_v, 1374, 0, currVal_528);
+        var currVal_536 = _co.altNextModel.sequenceThree;
+        _ck(_v, 1390, 0, currVal_536);
+        _ck(_v, 1397, 0);
+        var currVal_542 = _co.errorFlag;
+        _ck(_v, 1407, 0, currVal_542);
+        var currVal_543 = !_co.errorFlag;
+        _ck(_v, 1410, 0, currVal_543);
+        var currVal_544 = _co.errorFlag;
+        _ck(_v, 1413, 0, currVal_544);
+        var currVal_551 = 'lg';
+        var currVal_552 = !_co.readyToFinish;
+        var currVal_553 = _co.stopOpen;
+        var currVal_554 = true;
+        var currVal_555 = _co.loading;
+        var currVal_556 = _co.readyToFinish;
+        _ck(_v, 1431, 0, currVal_551, currVal_552, currVal_553, currVal_554, currVal_555, currVal_556);
+        var currVal_557 = !_co.readyToFinish;
+        _ck(_v, 1440, 0, currVal_557);
+        var currVal_558 = !_co.readyToFinish;
+        _ck(_v, 1443, 0, currVal_558);
+        var currVal_560 = 'next';
+        _ck(_v, 1446, 0, currVal_560);
+        var currVal_562 = 'finish';
+        _ck(_v, 1450, 0, currVal_562);
+        var currVal_563 = (_co.untouched && !_co.loading);
+        _ck(_v, 1453, 0, currVal_563);
+        var currVal_564 = _co.loading;
+        _ck(_v, 1456, 0, currVal_564);
+        var currVal_565 = _co.readyToFinish;
+        _ck(_v, 1459, 0, currVal_565);
+        var currVal_571 = (((i0.ɵnov(_v, 1496).pristine && i0.ɵnov(_v, 1517).pristine) && i0.ɵnov(_v, 1538).pristine) || !i0.ɵnov(_v, 1475).valid);
+        _ck(_v, 1463, 0, currVal_571);
+        var currVal_588 = '';
+        _ck(_v, 1493, 0, currVal_588);
+        var currVal_589 = 'name';
+        var currVal_590 = _co.stopModel.won;
+        _ck(_v, 1496, 0, currVal_589, currVal_590);
+        var currVal_600 = '';
+        _ck(_v, 1514, 0, currVal_600);
+        var currVal_601 = 'quest';
+        var currVal_602 = _co.stopModel.too;
+        _ck(_v, 1517, 0, currVal_601, currVal_602);
+        var currVal_612 = '';
+        _ck(_v, 1535, 0, currVal_612);
+        var currVal_613 = 'velocity';
+        var currVal_614 = _co.stopModel.tree;
+        _ck(_v, 1538, 0, currVal_613, currVal_614);
+        var currVal_620 = true;
+        _ck(_v, 1551, 0, currVal_620);
+        var currVal_621 = (_co.untouched && !_co.loading);
+        _ck(_v, 1564, 0, currVal_621);
+        var currVal_622 = _co.loading;
+        _ck(_v, 1567, 0, currVal_622);
+        var currVal_623 = _co.readyToFinish;
+        _ck(_v, 1570, 0, currVal_623);
+        var currVal_630 = 'md';
+        var currVal_631 = true;
+        var currVal_632 = _co.forceOpen;
+        _ck(_v, 1588, 0, currVal_630, currVal_631, currVal_632);
+        var currVal_634 = 'cancel';
+        _ck(_v, 1597, 0, currVal_634);
+        var currVal_636 = 'previous';
+        _ck(_v, 1601, 0, currVal_636);
+        var currVal_638 = 'next';
+        _ck(_v, 1605, 0, currVal_638);
+        var currVal_640 = 'finish';
+        _ck(_v, 1609, 0, currVal_640);
+        var currVal_641 = _ck(_v, 1614, 0, 1, 2, 3, 4);
+        _ck(_v, 1613, 0, currVal_641);
+        var currVal_648 = 'lg';
+        var currVal_649 = _co.inlineOpen;
+        var currVal_650 = true;
+        _ck(_v, 1631, 0, currVal_648, currVal_649, currVal_650);
+        var currVal_652 = 'cancel';
+        _ck(_v, 1640, 0, currVal_652);
+        var currVal_654 = 'previous';
+        _ck(_v, 1644, 0, currVal_654);
+        var currVal_656 = 'next';
+        _ck(_v, 1648, 0, currVal_656);
+        var currVal_658 = 'finish';
+        _ck(_v, 1652, 0, currVal_658);
+        _ck(_v, 1656, 0);
+        _ck(_v, 1683, 0);
+        _ck(_v, 1701, 0);
+    }, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = true;
+        var currVal_1 = (i0.ɵnov(_v, 36).size == 'md');
+        var currVal_2 = (i0.ɵnov(_v, 36).size == 'lg');
+        var currVal_3 = (i0.ɵnov(_v, 36).size == 'xl');
+        var currVal_4 = i0.ɵnov(_v, 36).navService.currentPageIsLast;
+        var currVal_5 = i0.ɵnov(_v, 36).showGhostPages;
+        _ck(_v, 31, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5);
+        var currVal_7 = i0.ɵnov(_v, 45).isHidden;
+        _ck(_v, 44, 0, currVal_7);
+        var currVal_9 = i0.ɵnov(_v, 49).isHidden;
+        _ck(_v, 48, 0, currVal_9);
+        var currVal_11 = i0.ɵnov(_v, 53).isHidden;
+        _ck(_v, 52, 0, currVal_11);
+        var currVal_13 = i0.ɵnov(_v, 57).isHidden;
+        _ck(_v, 56, 0, currVal_13);
+        var currVal_15 = i0.ɵnov(_v, 61).id;
+        var currVal_16 = !i0.ɵnov(_v, 61).current;
+        var currVal_17 = i0.ɵnov(_v, 61).stepItemId;
+        var currVal_18 = i0.ɵnov(_v, 61).current;
+        var currVal_19 = true;
+        _ck(_v, 60, 0, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19);
+        var currVal_20 = i0.ɵnov(_v, 80).id;
+        var currVal_21 = !i0.ɵnov(_v, 80).current;
+        var currVal_22 = i0.ɵnov(_v, 80).stepItemId;
+        var currVal_23 = i0.ɵnov(_v, 80).current;
+        var currVal_24 = true;
+        _ck(_v, 79, 0, currVal_20, currVal_21, currVal_22, currVal_23, currVal_24);
+        var currVal_25 = i0.ɵnov(_v, 99).id;
+        var currVal_26 = !i0.ɵnov(_v, 99).current;
+        var currVal_27 = i0.ɵnov(_v, 99).stepItemId;
+        var currVal_28 = i0.ɵnov(_v, 99).current;
+        var currVal_29 = true;
+        _ck(_v, 98, 0, currVal_25, currVal_26, currVal_27, currVal_28, currVal_29);
+        var currVal_30 = true;
+        var currVal_31 = (i0.ɵnov(_v, 132).size == 'md');
+        var currVal_32 = (i0.ɵnov(_v, 132).size == 'lg');
+        var currVal_33 = (i0.ɵnov(_v, 132).size == 'xl');
+        var currVal_34 = i0.ɵnov(_v, 132).navService.currentPageIsLast;
+        var currVal_35 = i0.ɵnov(_v, 132).showGhostPages;
+        _ck(_v, 127, 0, currVal_30, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35);
+        var currVal_37 = i0.ɵnov(_v, 141).isHidden;
+        _ck(_v, 140, 0, currVal_37);
+        var currVal_39 = i0.ɵnov(_v, 145).isHidden;
+        _ck(_v, 144, 0, currVal_39);
+        var currVal_41 = i0.ɵnov(_v, 149).isHidden;
+        _ck(_v, 148, 0, currVal_41);
+        var currVal_43 = i0.ɵnov(_v, 153).isHidden;
+        _ck(_v, 152, 0, currVal_43);
+        var currVal_45 = i0.ɵnov(_v, 157).id;
+        var currVal_46 = !i0.ɵnov(_v, 157).current;
+        var currVal_47 = i0.ɵnov(_v, 157).stepItemId;
+        var currVal_48 = i0.ɵnov(_v, 157).current;
+        var currVal_49 = true;
+        _ck(_v, 156, 0, currVal_45, currVal_46, currVal_47, currVal_48, currVal_49);
+        var currVal_53 = i0.ɵnov(_v, 191).id;
+        var currVal_54 = !i0.ɵnov(_v, 191).current;
+        var currVal_55 = i0.ɵnov(_v, 191).stepItemId;
+        var currVal_56 = i0.ɵnov(_v, 191).current;
+        var currVal_57 = true;
+        _ck(_v, 190, 0, currVal_53, currVal_54, currVal_55, currVal_56, currVal_57);
+        var currVal_60 = true;
+        var currVal_61 = (i0.ɵnov(_v, 227).size == 'md');
+        var currVal_62 = (i0.ɵnov(_v, 227).size == 'lg');
+        var currVal_63 = (i0.ɵnov(_v, 227).size == 'xl');
+        var currVal_64 = i0.ɵnov(_v, 227).navService.currentPageIsLast;
+        var currVal_65 = i0.ɵnov(_v, 227).showGhostPages;
+        _ck(_v, 222, 0, currVal_60, currVal_61, currVal_62, currVal_63, currVal_64, currVal_65);
+        var currVal_68 = i0.ɵnov(_v, 236).isHidden;
+        _ck(_v, 235, 0, currVal_68);
+        var currVal_70 = i0.ɵnov(_v, 240).isHidden;
+        _ck(_v, 239, 0, currVal_70);
+        var currVal_72 = i0.ɵnov(_v, 244).isHidden;
+        _ck(_v, 243, 0, currVal_72);
+        var currVal_74 = i0.ɵnov(_v, 248).isHidden;
+        _ck(_v, 247, 0, currVal_74);
+        var currVal_76 = i0.ɵnov(_v, 252).id;
+        var currVal_77 = !i0.ɵnov(_v, 252).current;
+        var currVal_78 = i0.ɵnov(_v, 252).stepItemId;
+        var currVal_79 = i0.ɵnov(_v, 252).current;
+        var currVal_80 = true;
+        _ck(_v, 251, 0, currVal_76, currVal_77, currVal_78, currVal_79, currVal_80);
+        var currVal_82 = i0.ɵnov(_v, 266).ngClassUntouched;
+        var currVal_83 = i0.ɵnov(_v, 266).ngClassTouched;
+        var currVal_84 = i0.ɵnov(_v, 266).ngClassPristine;
+        var currVal_85 = i0.ɵnov(_v, 266).ngClassDirty;
+        var currVal_86 = i0.ɵnov(_v, 266).ngClassValid;
+        var currVal_87 = i0.ɵnov(_v, 266).ngClassInvalid;
+        var currVal_88 = i0.ɵnov(_v, 266).ngClassPending;
+        _ck(_v, 262, 0, currVal_82, currVal_83, currVal_84, currVal_85, currVal_86, currVal_87, currVal_88);
+        var currVal_89 = (i0.ɵnov(_v, 1496).touched && !i0.ɵnov(_v, 1496).valid);
+        _ck(_v, 278, 0, currVal_89);
+        var currVal_90 = (i0.ɵnov(_v, 282).required ? '' : null);
+        var currVal_91 = i0.ɵnov(_v, 287).ngClassUntouched;
+        var currVal_92 = i0.ɵnov(_v, 287).ngClassTouched;
+        var currVal_93 = i0.ɵnov(_v, 287).ngClassPristine;
+        var currVal_94 = i0.ɵnov(_v, 287).ngClassDirty;
+        var currVal_95 = i0.ɵnov(_v, 287).ngClassValid;
+        var currVal_96 = i0.ɵnov(_v, 287).ngClassInvalid;
+        var currVal_97 = i0.ɵnov(_v, 287).ngClassPending;
+        _ck(_v, 280, 0, currVal_90, currVal_91, currVal_92, currVal_93, currVal_94, currVal_95, currVal_96, currVal_97);
+        var currVal_101 = i0.ɵnov(_v, 304).ngClassUntouched;
+        var currVal_102 = i0.ɵnov(_v, 304).ngClassTouched;
+        var currVal_103 = i0.ɵnov(_v, 304).ngClassPristine;
+        var currVal_104 = i0.ɵnov(_v, 304).ngClassDirty;
+        var currVal_105 = i0.ɵnov(_v, 304).ngClassValid;
+        var currVal_106 = i0.ɵnov(_v, 304).ngClassInvalid;
+        var currVal_107 = i0.ɵnov(_v, 304).ngClassPending;
+        _ck(_v, 299, 0, currVal_101, currVal_102, currVal_103, currVal_104, currVal_105, currVal_106, currVal_107);
+        var currVal_110 = i0.ɵnov(_v, 311).id;
+        var currVal_111 = !i0.ɵnov(_v, 311).current;
+        var currVal_112 = i0.ɵnov(_v, 311).stepItemId;
+        var currVal_113 = i0.ɵnov(_v, 311).current;
+        var currVal_114 = true;
+        _ck(_v, 310, 0, currVal_110, currVal_111, currVal_112, currVal_113, currVal_114);
+        var currVal_116 = i0.ɵnov(_v, 329).ngClassUntouched;
+        var currVal_117 = i0.ɵnov(_v, 329).ngClassTouched;
+        var currVal_118 = i0.ɵnov(_v, 329).ngClassPristine;
+        var currVal_119 = i0.ɵnov(_v, 329).ngClassDirty;
+        var currVal_120 = i0.ɵnov(_v, 329).ngClassValid;
+        var currVal_121 = i0.ɵnov(_v, 329).ngClassInvalid;
+        var currVal_122 = i0.ɵnov(_v, 329).ngClassPending;
+        _ck(_v, 325, 0, currVal_116, currVal_117, currVal_118, currVal_119, currVal_120, currVal_121, currVal_122);
+        var currVal_123 = (i0.ɵnov(_v, 349).touched && !i0.ɵnov(_v, 349).valid);
+        _ck(_v, 341, 0, currVal_123);
+        var currVal_124 = (i0.ɵnov(_v, 346).required ? '' : null);
+        var currVal_125 = i0.ɵnov(_v, 351).ngClassUntouched;
+        var currVal_126 = i0.ɵnov(_v, 351).ngClassTouched;
+        var currVal_127 = i0.ɵnov(_v, 351).ngClassPristine;
+        var currVal_128 = i0.ɵnov(_v, 351).ngClassDirty;
+        var currVal_129 = i0.ɵnov(_v, 351).ngClassValid;
+        var currVal_130 = i0.ɵnov(_v, 351).ngClassInvalid;
+        var currVal_131 = i0.ɵnov(_v, 351).ngClassPending;
+        _ck(_v, 343, 0, currVal_124, currVal_125, currVal_126, currVal_127, currVal_128, currVal_129, currVal_130, currVal_131);
+        var currVal_135 = i0.ɵnov(_v, 362).id;
+        var currVal_136 = !i0.ɵnov(_v, 362).current;
+        var currVal_137 = i0.ɵnov(_v, 362).stepItemId;
+        var currVal_138 = i0.ɵnov(_v, 362).current;
+        var currVal_139 = true;
+        _ck(_v, 361, 0, currVal_135, currVal_136, currVal_137, currVal_138, currVal_139);
+        var currVal_143 = true;
+        var currVal_144 = (i0.ɵnov(_v, 398).size == 'md');
+        var currVal_145 = (i0.ɵnov(_v, 398).size == 'lg');
+        var currVal_146 = (i0.ɵnov(_v, 398).size == 'xl');
+        var currVal_147 = i0.ɵnov(_v, 398).navService.currentPageIsLast;
+        var currVal_148 = i0.ɵnov(_v, 398).showGhostPages;
+        _ck(_v, 393, 0, currVal_143, currVal_144, currVal_145, currVal_146, currVal_147, currVal_148);
+        var currVal_151 = i0.ɵnov(_v, 407).isHidden;
+        _ck(_v, 406, 0, currVal_151);
+        var currVal_153 = i0.ɵnov(_v, 411).isHidden;
+        _ck(_v, 410, 0, currVal_153);
+        var currVal_155 = i0.ɵnov(_v, 415).isHidden;
+        _ck(_v, 414, 0, currVal_155);
+        var currVal_157 = i0.ɵnov(_v, 419).isHidden;
+        _ck(_v, 418, 0, currVal_157);
+        var currVal_159 = i0.ɵnov(_v, 423).id;
+        var currVal_160 = !i0.ɵnov(_v, 423).current;
+        var currVal_161 = i0.ɵnov(_v, 423).stepItemId;
+        var currVal_162 = i0.ɵnov(_v, 423).current;
+        var currVal_163 = true;
+        _ck(_v, 422, 0, currVal_159, currVal_160, currVal_161, currVal_162, currVal_163);
+        var currVal_169 = _co.loadingFlag;
+        var currVal_170 = i0.ɵnov(_v, 455).ngClassUntouched;
+        var currVal_171 = i0.ɵnov(_v, 455).ngClassTouched;
+        var currVal_172 = i0.ɵnov(_v, 455).ngClassPristine;
+        var currVal_173 = i0.ɵnov(_v, 455).ngClassDirty;
+        var currVal_174 = i0.ɵnov(_v, 455).ngClassValid;
+        var currVal_175 = i0.ɵnov(_v, 455).ngClassInvalid;
+        var currVal_176 = i0.ɵnov(_v, 455).ngClassPending;
+        _ck(_v, 451, 0, currVal_169, currVal_170, currVal_171, currVal_172, currVal_173, currVal_174, currVal_175, currVal_176);
+        var currVal_177 = i0.ɵnov(_v, 469).ngClassUntouched;
+        var currVal_178 = i0.ɵnov(_v, 469).ngClassTouched;
+        var currVal_179 = i0.ɵnov(_v, 469).ngClassPristine;
+        var currVal_180 = i0.ɵnov(_v, 469).ngClassDirty;
+        var currVal_181 = i0.ɵnov(_v, 469).ngClassValid;
+        var currVal_182 = i0.ɵnov(_v, 469).ngClassInvalid;
+        var currVal_183 = i0.ɵnov(_v, 469).ngClassPending;
+        _ck(_v, 464, 0, currVal_177, currVal_178, currVal_179, currVal_180, currVal_181, currVal_182, currVal_183);
+        var currVal_186 = i0.ɵnov(_v, 476).id;
+        var currVal_187 = !i0.ɵnov(_v, 476).current;
+        var currVal_188 = i0.ɵnov(_v, 476).stepItemId;
+        var currVal_189 = i0.ɵnov(_v, 476).current;
+        var currVal_190 = true;
+        _ck(_v, 475, 0, currVal_186, currVal_187, currVal_188, currVal_189, currVal_190);
+        var currVal_191 = true;
+        var currVal_192 = (i0.ɵnov(_v, 505).size == 'md');
+        var currVal_193 = (i0.ɵnov(_v, 505).size == 'lg');
+        var currVal_194 = (i0.ɵnov(_v, 505).size == 'xl');
+        var currVal_195 = i0.ɵnov(_v, 505).navService.currentPageIsLast;
+        var currVal_196 = i0.ɵnov(_v, 505).showGhostPages;
+        _ck(_v, 500, 0, currVal_191, currVal_192, currVal_193, currVal_194, currVal_195, currVal_196);
+        var currVal_200 = i0.ɵnov(_v, 514).isHidden;
+        _ck(_v, 513, 0, currVal_200);
+        var currVal_202 = i0.ɵnov(_v, 518).isHidden;
+        _ck(_v, 517, 0, currVal_202);
+        var currVal_204 = i0.ɵnov(_v, 522).isHidden;
+        _ck(_v, 521, 0, currVal_204);
+        var currVal_206 = i0.ɵnov(_v, 526).isHidden;
+        _ck(_v, 525, 0, currVal_206);
+        var currVal_208 = i0.ɵnov(_v, 530).id;
+        var currVal_209 = !i0.ɵnov(_v, 530).current;
+        var currVal_210 = i0.ɵnov(_v, 530).stepItemId;
+        var currVal_211 = i0.ɵnov(_v, 530).current;
+        var currVal_212 = true;
+        _ck(_v, 529, 0, currVal_208, currVal_209, currVal_210, currVal_211, currVal_212);
+        var currVal_213 = i0.ɵnov(_v, 545).id;
+        var currVal_214 = !i0.ɵnov(_v, 545).current;
+        var currVal_215 = i0.ɵnov(_v, 545).stepItemId;
+        var currVal_216 = i0.ɵnov(_v, 545).current;
+        var currVal_217 = true;
+        _ck(_v, 544, 0, currVal_213, currVal_214, currVal_215, currVal_216, currVal_217);
+        var currVal_218 = true;
+        var currVal_219 = (i0.ɵnov(_v, 574).size == 'md');
+        var currVal_220 = (i0.ɵnov(_v, 574).size == 'lg');
+        var currVal_221 = (i0.ɵnov(_v, 574).size == 'xl');
+        var currVal_222 = i0.ɵnov(_v, 574).navService.currentPageIsLast;
+        var currVal_223 = i0.ɵnov(_v, 574).showGhostPages;
+        _ck(_v, 569, 0, currVal_218, currVal_219, currVal_220, currVal_221, currVal_222, currVal_223);
+        var currVal_227 = i0.ɵnov(_v, 583).isHidden;
+        _ck(_v, 582, 0, currVal_227);
+        var currVal_229 = i0.ɵnov(_v, 587).isHidden;
+        _ck(_v, 586, 0, currVal_229);
+        var currVal_231 = i0.ɵnov(_v, 591).isHidden;
+        _ck(_v, 590, 0, currVal_231);
+        var currVal_233 = i0.ɵnov(_v, 595).isHidden;
+        _ck(_v, 594, 0, currVal_233);
+        var currVal_235 = i0.ɵnov(_v, 599).id;
+        var currVal_236 = !i0.ɵnov(_v, 599).current;
+        var currVal_237 = i0.ɵnov(_v, 599).stepItemId;
+        var currVal_238 = i0.ɵnov(_v, 599).current;
+        var currVal_239 = true;
+        _ck(_v, 598, 0, currVal_235, currVal_236, currVal_237, currVal_238, currVal_239);
+        var currVal_240 = i0.ɵnov(_v, 617).ngClassUntouched;
+        var currVal_241 = i0.ɵnov(_v, 617).ngClassTouched;
+        var currVal_242 = i0.ɵnov(_v, 617).ngClassPristine;
+        var currVal_243 = i0.ɵnov(_v, 617).ngClassDirty;
+        var currVal_244 = i0.ɵnov(_v, 617).ngClassValid;
+        var currVal_245 = i0.ɵnov(_v, 617).ngClassInvalid;
+        var currVal_246 = i0.ɵnov(_v, 617).ngClassPending;
+        _ck(_v, 613, 0, currVal_240, currVal_241, currVal_242, currVal_243, currVal_244, currVal_245, currVal_246);
+        var currVal_247 = i0.ɵnov(_v, 636).ngClassUntouched;
+        var currVal_248 = i0.ɵnov(_v, 636).ngClassTouched;
+        var currVal_249 = i0.ɵnov(_v, 636).ngClassPristine;
+        var currVal_250 = i0.ɵnov(_v, 636).ngClassDirty;
+        var currVal_251 = i0.ɵnov(_v, 636).ngClassValid;
+        var currVal_252 = i0.ɵnov(_v, 636).ngClassInvalid;
+        var currVal_253 = i0.ɵnov(_v, 636).ngClassPending;
+        _ck(_v, 631, 0, currVal_247, currVal_248, currVal_249, currVal_250, currVal_251, currVal_252, currVal_253);
+        var currVal_263 = true;
+        var currVal_264 = (i0.ɵnov(_v, 679).size == 'md');
+        var currVal_265 = (i0.ɵnov(_v, 679).size == 'lg');
+        var currVal_266 = (i0.ɵnov(_v, 679).size == 'xl');
+        var currVal_267 = i0.ɵnov(_v, 679).navService.currentPageIsLast;
+        var currVal_268 = i0.ɵnov(_v, 679).showGhostPages;
+        _ck(_v, 674, 0, currVal_263, currVal_264, currVal_265, currVal_266, currVal_267, currVal_268);
+        var currVal_271 = i0.ɵnov(_v, 688).isHidden;
+        _ck(_v, 687, 0, currVal_271);
+        var currVal_273 = i0.ɵnov(_v, 692).isHidden;
+        _ck(_v, 691, 0, currVal_273);
+        var currVal_275 = i0.ɵnov(_v, 696).isHidden;
+        _ck(_v, 695, 0, currVal_275);
+        var currVal_277 = i0.ɵnov(_v, 700).isHidden;
+        _ck(_v, 699, 0, currVal_277);
+        var currVal_279 = i0.ɵnov(_v, 704).id;
+        var currVal_280 = !i0.ɵnov(_v, 704).current;
+        var currVal_281 = i0.ɵnov(_v, 704).stepItemId;
+        var currVal_282 = i0.ɵnov(_v, 704).current;
+        var currVal_283 = true;
+        _ck(_v, 703, 0, currVal_279, currVal_280, currVal_281, currVal_282, currVal_283);
+        var currVal_284 = i0.ɵnov(_v, 732).id;
+        var currVal_285 = !i0.ɵnov(_v, 732).current;
+        var currVal_286 = i0.ɵnov(_v, 732).stepItemId;
+        var currVal_287 = i0.ɵnov(_v, 732).current;
+        var currVal_288 = true;
+        _ck(_v, 731, 0, currVal_284, currVal_285, currVal_286, currVal_287, currVal_288);
+        var currVal_289 = i0.ɵnov(_v, 766).id;
+        var currVal_290 = !i0.ɵnov(_v, 766).current;
+        var currVal_291 = i0.ɵnov(_v, 766).stepItemId;
+        var currVal_292 = i0.ɵnov(_v, 766).current;
+        var currVal_293 = true;
+        _ck(_v, 765, 0, currVal_289, currVal_290, currVal_291, currVal_292, currVal_293);
+        var currVal_294 = i0.ɵnov(_v, 794).id;
+        var currVal_295 = !i0.ɵnov(_v, 794).current;
+        var currVal_296 = i0.ɵnov(_v, 794).stepItemId;
+        var currVal_297 = i0.ɵnov(_v, 794).current;
+        var currVal_298 = true;
+        _ck(_v, 793, 0, currVal_294, currVal_295, currVal_296, currVal_297, currVal_298);
+        var currVal_301 = true;
+        var currVal_302 = (i0.ɵnov(_v, 842).size == 'md');
+        var currVal_303 = (i0.ɵnov(_v, 842).size == 'lg');
+        var currVal_304 = (i0.ɵnov(_v, 842).size == 'xl');
+        var currVal_305 = i0.ɵnov(_v, 842).navService.currentPageIsLast;
+        var currVal_306 = i0.ɵnov(_v, 842).showGhostPages;
+        _ck(_v, 837, 0, currVal_301, currVal_302, currVal_303, currVal_304, currVal_305, currVal_306);
+        var currVal_309 = i0.ɵnov(_v, 851).isHidden;
+        _ck(_v, 850, 0, currVal_309);
+        var currVal_311 = i0.ɵnov(_v, 855).isHidden;
+        _ck(_v, 854, 0, currVal_311);
+        var currVal_313 = i0.ɵnov(_v, 859).isHidden;
+        _ck(_v, 858, 0, currVal_313);
+        var currVal_315 = i0.ɵnov(_v, 863).isHidden;
+        _ck(_v, 862, 0, currVal_315);
+        var currVal_317 = i0.ɵnov(_v, 867).id;
+        var currVal_318 = !i0.ɵnov(_v, 867).current;
+        var currVal_319 = i0.ɵnov(_v, 867).stepItemId;
+        var currVal_320 = i0.ɵnov(_v, 867).current;
+        var currVal_321 = true;
+        _ck(_v, 866, 0, currVal_317, currVal_318, currVal_319, currVal_320, currVal_321);
+        var currVal_322 = i0.ɵnov(_v, 887).id;
+        var currVal_323 = !i0.ɵnov(_v, 887).current;
+        var currVal_324 = i0.ɵnov(_v, 887).stepItemId;
+        var currVal_325 = i0.ɵnov(_v, 887).current;
+        var currVal_326 = true;
+        _ck(_v, 886, 0, currVal_322, currVal_323, currVal_324, currVal_325, currVal_326);
+        var currVal_327 = i0.ɵnov(_v, 901).id;
+        var currVal_328 = !i0.ɵnov(_v, 901).current;
+        var currVal_329 = i0.ɵnov(_v, 901).stepItemId;
+        var currVal_330 = i0.ɵnov(_v, 901).current;
+        var currVal_331 = true;
+        _ck(_v, 900, 0, currVal_327, currVal_328, currVal_329, currVal_330, currVal_331);
+        var currVal_332 = i0.ɵnov(_v, 915).id;
+        var currVal_333 = !i0.ɵnov(_v, 915).current;
+        var currVal_334 = i0.ɵnov(_v, 915).stepItemId;
+        var currVal_335 = i0.ɵnov(_v, 915).current;
+        var currVal_336 = true;
+        _ck(_v, 914, 0, currVal_332, currVal_333, currVal_334, currVal_335, currVal_336);
+        var currVal_337 = i0.ɵnov(_v, 929).id;
+        var currVal_338 = !i0.ɵnov(_v, 929).current;
+        var currVal_339 = i0.ɵnov(_v, 929).stepItemId;
+        var currVal_340 = i0.ɵnov(_v, 929).current;
+        var currVal_341 = true;
+        _ck(_v, 928, 0, currVal_337, currVal_338, currVal_339, currVal_340, currVal_341);
+        var currVal_342 = true;
+        var currVal_343 = (i0.ɵnov(_v, 957).size == 'md');
+        var currVal_344 = (i0.ɵnov(_v, 957).size == 'lg');
+        var currVal_345 = (i0.ɵnov(_v, 957).size == 'xl');
+        var currVal_346 = i0.ɵnov(_v, 957).navService.currentPageIsLast;
+        var currVal_347 = i0.ɵnov(_v, 957).showGhostPages;
+        _ck(_v, 952, 0, currVal_342, currVal_343, currVal_344, currVal_345, currVal_346, currVal_347);
+        var currVal_350 = i0.ɵnov(_v, 966).isHidden;
+        _ck(_v, 965, 0, currVal_350);
+        var currVal_352 = i0.ɵnov(_v, 970).isHidden;
+        _ck(_v, 969, 0, currVal_352);
+        var currVal_354 = i0.ɵnov(_v, 974).isHidden;
+        _ck(_v, 973, 0, currVal_354);
+        var currVal_356 = i0.ɵnov(_v, 978).isHidden;
+        _ck(_v, 977, 0, currVal_356);
+        var currVal_358 = i0.ɵnov(_v, 982).id;
+        var currVal_359 = !i0.ɵnov(_v, 982).current;
+        var currVal_360 = i0.ɵnov(_v, 982).stepItemId;
+        var currVal_361 = i0.ɵnov(_v, 982).current;
+        var currVal_362 = true;
+        _ck(_v, 981, 0, currVal_358, currVal_359, currVal_360, currVal_361, currVal_362);
+        var currVal_363 = i0.ɵnov(_v, 1004).ngClassUntouched;
+        var currVal_364 = i0.ɵnov(_v, 1004).ngClassTouched;
+        var currVal_365 = i0.ɵnov(_v, 1004).ngClassPristine;
+        var currVal_366 = i0.ɵnov(_v, 1004).ngClassDirty;
+        var currVal_367 = i0.ɵnov(_v, 1004).ngClassValid;
+        var currVal_368 = i0.ɵnov(_v, 1004).ngClassInvalid;
+        var currVal_369 = i0.ɵnov(_v, 1004).ngClassPending;
+        _ck(_v, 999, 0, currVal_363, currVal_364, currVal_365, currVal_366, currVal_367, currVal_368, currVal_369);
+        var currVal_372 = i0.ɵnov(_v, 1010).id;
+        var currVal_373 = !i0.ɵnov(_v, 1010).current;
+        var currVal_374 = i0.ɵnov(_v, 1010).stepItemId;
+        var currVal_375 = i0.ɵnov(_v, 1010).current;
+        var currVal_376 = true;
+        _ck(_v, 1009, 0, currVal_372, currVal_373, currVal_374, currVal_375, currVal_376);
+        var currVal_377 = i0.ɵnov(_v, 1030).ngClassUntouched;
+        var currVal_378 = i0.ɵnov(_v, 1030).ngClassTouched;
+        var currVal_379 = i0.ɵnov(_v, 1030).ngClassPristine;
+        var currVal_380 = i0.ɵnov(_v, 1030).ngClassDirty;
+        var currVal_381 = i0.ɵnov(_v, 1030).ngClassValid;
+        var currVal_382 = i0.ɵnov(_v, 1030).ngClassInvalid;
+        var currVal_383 = i0.ɵnov(_v, 1030).ngClassPending;
+        _ck(_v, 1025, 0, currVal_377, currVal_378, currVal_379, currVal_380, currVal_381, currVal_382, currVal_383);
+        var currVal_385 = i0.ɵnov(_v, 1035).id;
+        var currVal_386 = !i0.ɵnov(_v, 1035).current;
+        var currVal_387 = i0.ɵnov(_v, 1035).stepItemId;
+        var currVal_388 = i0.ɵnov(_v, 1035).current;
+        var currVal_389 = true;
+        _ck(_v, 1034, 0, currVal_385, currVal_386, currVal_387, currVal_388, currVal_389);
+        var currVal_390 = i0.ɵnov(_v, 1055).ngClassUntouched;
+        var currVal_391 = i0.ɵnov(_v, 1055).ngClassTouched;
+        var currVal_392 = i0.ɵnov(_v, 1055).ngClassPristine;
+        var currVal_393 = i0.ɵnov(_v, 1055).ngClassDirty;
+        var currVal_394 = i0.ɵnov(_v, 1055).ngClassValid;
+        var currVal_395 = i0.ɵnov(_v, 1055).ngClassInvalid;
+        var currVal_396 = i0.ɵnov(_v, 1055).ngClassPending;
+        _ck(_v, 1050, 0, currVal_390, currVal_391, currVal_392, currVal_393, currVal_394, currVal_395, currVal_396);
+        var currVal_398 = i0.ɵnov(_v, 1060).id;
+        var currVal_399 = !i0.ɵnov(_v, 1060).current;
+        var currVal_400 = i0.ɵnov(_v, 1060).stepItemId;
+        var currVal_401 = i0.ɵnov(_v, 1060).current;
+        var currVal_402 = true;
+        _ck(_v, 1059, 0, currVal_398, currVal_399, currVal_400, currVal_401, currVal_402);
+        var currVal_403 = i0.ɵnov(_v, 1081).ngClassUntouched;
+        var currVal_404 = i0.ɵnov(_v, 1081).ngClassTouched;
+        var currVal_405 = i0.ɵnov(_v, 1081).ngClassPristine;
+        var currVal_406 = i0.ɵnov(_v, 1081).ngClassDirty;
+        var currVal_407 = i0.ɵnov(_v, 1081).ngClassValid;
+        var currVal_408 = i0.ɵnov(_v, 1081).ngClassInvalid;
+        var currVal_409 = i0.ɵnov(_v, 1081).ngClassPending;
+        _ck(_v, 1075, 0, currVal_403, currVal_404, currVal_405, currVal_406, currVal_407, currVal_408, currVal_409);
+        var currVal_411 = true;
+        var currVal_412 = (i0.ɵnov(_v, 1100).size == 'md');
+        var currVal_413 = (i0.ɵnov(_v, 1100).size == 'lg');
+        var currVal_414 = (i0.ɵnov(_v, 1100).size == 'xl');
+        var currVal_415 = i0.ɵnov(_v, 1100).navService.currentPageIsLast;
+        var currVal_416 = i0.ɵnov(_v, 1100).showGhostPages;
+        _ck(_v, 1095, 0, currVal_411, currVal_412, currVal_413, currVal_414, currVal_415, currVal_416);
+        var currVal_419 = i0.ɵnov(_v, 1109).isHidden;
+        _ck(_v, 1108, 0, currVal_419);
+        var currVal_421 = i0.ɵnov(_v, 1113).isHidden;
+        _ck(_v, 1112, 0, currVal_421);
+        var currVal_423 = i0.ɵnov(_v, 1117).isHidden;
+        _ck(_v, 1116, 0, currVal_423);
+        var currVal_425 = i0.ɵnov(_v, 1121).isHidden;
+        _ck(_v, 1120, 0, currVal_425);
+        var currVal_429 = i0.ɵnov(_v, 1132).id;
+        var currVal_430 = !i0.ɵnov(_v, 1132).current;
+        var currVal_431 = i0.ɵnov(_v, 1132).stepItemId;
+        var currVal_432 = i0.ɵnov(_v, 1132).current;
+        var currVal_433 = true;
+        _ck(_v, 1131, 0, currVal_429, currVal_430, currVal_431, currVal_432, currVal_433);
+        var currVal_434 = i0.ɵnov(_v, 1160).id;
+        var currVal_435 = !i0.ɵnov(_v, 1160).current;
+        var currVal_436 = i0.ɵnov(_v, 1160).stepItemId;
+        var currVal_437 = i0.ɵnov(_v, 1160).current;
+        var currVal_438 = true;
+        _ck(_v, 1159, 0, currVal_434, currVal_435, currVal_436, currVal_437, currVal_438);
+        var currVal_439 = i0.ɵnov(_v, 1182).id;
+        var currVal_440 = !i0.ɵnov(_v, 1182).current;
+        var currVal_441 = i0.ɵnov(_v, 1182).stepItemId;
+        var currVal_442 = i0.ɵnov(_v, 1182).current;
+        var currVal_443 = true;
+        _ck(_v, 1181, 0, currVal_439, currVal_440, currVal_441, currVal_442, currVal_443);
+        var currVal_444 = true;
+        var currVal_445 = (i0.ɵnov(_v, 1212).size == 'md');
+        var currVal_446 = (i0.ɵnov(_v, 1212).size == 'lg');
+        var currVal_447 = (i0.ɵnov(_v, 1212).size == 'xl');
+        var currVal_448 = i0.ɵnov(_v, 1212).navService.currentPageIsLast;
+        var currVal_449 = i0.ɵnov(_v, 1212).showGhostPages;
+        _ck(_v, 1207, 0, currVal_444, currVal_445, currVal_446, currVal_447, currVal_448, currVal_449);
+        var currVal_453 = i0.ɵnov(_v, 1221).isHidden;
+        _ck(_v, 1220, 0, currVal_453);
+        var currVal_455 = i0.ɵnov(_v, 1225).isHidden;
+        _ck(_v, 1224, 0, currVal_455);
+        var currVal_457 = i0.ɵnov(_v, 1229).isHidden;
+        _ck(_v, 1228, 0, currVal_457);
+        var currVal_459 = i0.ɵnov(_v, 1233).isHidden;
+        _ck(_v, 1232, 0, currVal_459);
+        var currVal_461 = i0.ɵnov(_v, 1237).id;
+        var currVal_462 = !i0.ɵnov(_v, 1237).current;
+        var currVal_463 = i0.ɵnov(_v, 1237).stepItemId;
+        var currVal_464 = i0.ɵnov(_v, 1237).current;
+        var currVal_465 = true;
+        _ck(_v, 1236, 0, currVal_461, currVal_462, currVal_463, currVal_464, currVal_465);
+        var currVal_466 = i0.ɵnov(_v, 1251).id;
+        var currVal_467 = !i0.ɵnov(_v, 1251).current;
+        var currVal_468 = i0.ɵnov(_v, 1251).stepItemId;
+        var currVal_469 = i0.ɵnov(_v, 1251).current;
+        var currVal_470 = true;
+        _ck(_v, 1250, 0, currVal_466, currVal_467, currVal_468, currVal_469, currVal_470);
+        var currVal_474 = true;
+        var currVal_475 = (i0.ɵnov(_v, 1283).size == 'md');
+        var currVal_476 = (i0.ɵnov(_v, 1283).size == 'lg');
+        var currVal_477 = (i0.ɵnov(_v, 1283).size == 'xl');
+        var currVal_478 = i0.ɵnov(_v, 1283).navService.currentPageIsLast;
+        var currVal_479 = i0.ɵnov(_v, 1283).showGhostPages;
+        _ck(_v, 1278, 0, currVal_474, currVal_475, currVal_476, currVal_477, currVal_478, currVal_479);
+        var currVal_483 = i0.ɵnov(_v, 1292).isHidden;
+        _ck(_v, 1291, 0, currVal_483);
+        var currVal_485 = i0.ɵnov(_v, 1296).isHidden;
+        _ck(_v, 1295, 0, currVal_485);
+        var currVal_487 = i0.ɵnov(_v, 1300).isHidden;
+        _ck(_v, 1299, 0, currVal_487);
+        var currVal_489 = i0.ɵnov(_v, 1304).isHidden;
+        _ck(_v, 1303, 0, currVal_489);
+        var currVal_491 = i0.ɵnov(_v, 1308).id;
+        var currVal_492 = !i0.ɵnov(_v, 1308).current;
+        var currVal_493 = i0.ɵnov(_v, 1308).stepItemId;
+        var currVal_494 = i0.ɵnov(_v, 1308).current;
+        var currVal_495 = true;
+        _ck(_v, 1307, 0, currVal_491, currVal_492, currVal_493, currVal_494, currVal_495);
+        var currVal_496 = _co.stressText;
+        _ck(_v, 1317, 0, currVal_496);
+        var currVal_497 = i0.ɵnov(_v, 1329).ngClassUntouched;
+        var currVal_498 = i0.ɵnov(_v, 1329).ngClassTouched;
+        var currVal_499 = i0.ɵnov(_v, 1329).ngClassPristine;
+        var currVal_500 = i0.ɵnov(_v, 1329).ngClassDirty;
+        var currVal_501 = i0.ɵnov(_v, 1329).ngClassValid;
+        var currVal_502 = i0.ɵnov(_v, 1329).ngClassInvalid;
+        var currVal_503 = i0.ɵnov(_v, 1329).ngClassPending;
+        _ck(_v, 1324, 0, currVal_497, currVal_498, currVal_499, currVal_500, currVal_501, currVal_502, currVal_503);
+        var currVal_506 = i0.ɵnov(_v, 1334).id;
+        var currVal_507 = !i0.ɵnov(_v, 1334).current;
+        var currVal_508 = i0.ɵnov(_v, 1334).stepItemId;
+        var currVal_509 = i0.ɵnov(_v, 1334).current;
+        var currVal_510 = true;
+        _ck(_v, 1333, 0, currVal_506, currVal_507, currVal_508, currVal_509, currVal_510);
+        var currVal_513 = i0.ɵnov(_v, 1360).ngClassUntouched;
+        var currVal_514 = i0.ɵnov(_v, 1360).ngClassTouched;
+        var currVal_515 = i0.ɵnov(_v, 1360).ngClassPristine;
+        var currVal_516 = i0.ɵnov(_v, 1360).ngClassDirty;
+        var currVal_517 = i0.ɵnov(_v, 1360).ngClassValid;
+        var currVal_518 = i0.ɵnov(_v, 1360).ngClassInvalid;
+        var currVal_519 = i0.ɵnov(_v, 1360).ngClassPending;
+        _ck(_v, 1354, 0, currVal_513, currVal_514, currVal_515, currVal_516, currVal_517, currVal_518, currVal_519);
+        var currVal_521 = i0.ɵnov(_v, 1376).ngClassUntouched;
+        var currVal_522 = i0.ɵnov(_v, 1376).ngClassTouched;
+        var currVal_523 = i0.ɵnov(_v, 1376).ngClassPristine;
+        var currVal_524 = i0.ɵnov(_v, 1376).ngClassDirty;
+        var currVal_525 = i0.ɵnov(_v, 1376).ngClassValid;
+        var currVal_526 = i0.ɵnov(_v, 1376).ngClassInvalid;
+        var currVal_527 = i0.ɵnov(_v, 1376).ngClassPending;
+        _ck(_v, 1370, 0, currVal_521, currVal_522, currVal_523, currVal_524, currVal_525, currVal_526, currVal_527);
+        var currVal_529 = i0.ɵnov(_v, 1392).ngClassUntouched;
+        var currVal_530 = i0.ɵnov(_v, 1392).ngClassTouched;
+        var currVal_531 = i0.ɵnov(_v, 1392).ngClassPristine;
+        var currVal_532 = i0.ɵnov(_v, 1392).ngClassDirty;
+        var currVal_533 = i0.ɵnov(_v, 1392).ngClassValid;
+        var currVal_534 = i0.ɵnov(_v, 1392).ngClassInvalid;
+        var currVal_535 = i0.ɵnov(_v, 1392).ngClassPending;
+        _ck(_v, 1386, 0, currVal_529, currVal_530, currVal_531, currVal_532, currVal_533, currVal_534, currVal_535);
+        var currVal_537 = i0.ɵnov(_v, 1397).id;
+        var currVal_538 = !i0.ɵnov(_v, 1397).current;
+        var currVal_539 = i0.ɵnov(_v, 1397).stepItemId;
+        var currVal_540 = i0.ɵnov(_v, 1397).current;
+        var currVal_541 = true;
+        _ck(_v, 1396, 0, currVal_537, currVal_538, currVal_539, currVal_540, currVal_541);
+        var currVal_545 = true;
+        var currVal_546 = (i0.ɵnov(_v, 1431).size == 'md');
+        var currVal_547 = (i0.ɵnov(_v, 1431).size == 'lg');
+        var currVal_548 = (i0.ɵnov(_v, 1431).size == 'xl');
+        var currVal_549 = i0.ɵnov(_v, 1431).navService.currentPageIsLast;
+        var currVal_550 = i0.ɵnov(_v, 1431).showGhostPages;
+        _ck(_v, 1426, 0, currVal_545, currVal_546, currVal_547, currVal_548, currVal_549, currVal_550);
+        var currVal_559 = i0.ɵnov(_v, 1446).isHidden;
+        _ck(_v, 1445, 0, currVal_559);
+        var currVal_561 = i0.ɵnov(_v, 1450).isHidden;
+        _ck(_v, 1449, 0, currVal_561);
+        var currVal_566 = i0.ɵnov(_v, 1463).id;
+        var currVal_567 = !i0.ɵnov(_v, 1463).current;
+        var currVal_568 = i0.ɵnov(_v, 1463).stepItemId;
+        var currVal_569 = i0.ɵnov(_v, 1463).current;
+        var currVal_570 = true;
+        _ck(_v, 1462, 0, currVal_566, currVal_567, currVal_568, currVal_569, currVal_570);
+        var currVal_572 = i0.ɵnov(_v, 1477).ngClassUntouched;
+        var currVal_573 = i0.ɵnov(_v, 1477).ngClassTouched;
+        var currVal_574 = i0.ɵnov(_v, 1477).ngClassPristine;
+        var currVal_575 = i0.ɵnov(_v, 1477).ngClassDirty;
+        var currVal_576 = i0.ɵnov(_v, 1477).ngClassValid;
+        var currVal_577 = i0.ɵnov(_v, 1477).ngClassInvalid;
+        var currVal_578 = i0.ɵnov(_v, 1477).ngClassPending;
+        _ck(_v, 1473, 0, currVal_572, currVal_573, currVal_574, currVal_575, currVal_576, currVal_577, currVal_578);
+        var currVal_579 = (i0.ɵnov(_v, 1496).touched && !i0.ɵnov(_v, 1496).valid);
+        _ck(_v, 1489, 0, currVal_579);
+        var currVal_580 = (i0.ɵnov(_v, 1493).required ? '' : null);
+        var currVal_581 = i0.ɵnov(_v, 1498).ngClassUntouched;
+        var currVal_582 = i0.ɵnov(_v, 1498).ngClassTouched;
+        var currVal_583 = i0.ɵnov(_v, 1498).ngClassPristine;
+        var currVal_584 = i0.ɵnov(_v, 1498).ngClassDirty;
+        var currVal_585 = i0.ɵnov(_v, 1498).ngClassValid;
+        var currVal_586 = i0.ɵnov(_v, 1498).ngClassInvalid;
+        var currVal_587 = i0.ɵnov(_v, 1498).ngClassPending;
+        _ck(_v, 1491, 0, currVal_580, currVal_581, currVal_582, currVal_583, currVal_584, currVal_585, currVal_586, currVal_587);
+        var currVal_591 = (i0.ɵnov(_v, 1517).touched && !i0.ɵnov(_v, 1517).valid);
+        _ck(_v, 1510, 0, currVal_591);
+        var currVal_592 = (i0.ɵnov(_v, 1514).required ? '' : null);
+        var currVal_593 = i0.ɵnov(_v, 1519).ngClassUntouched;
+        var currVal_594 = i0.ɵnov(_v, 1519).ngClassTouched;
+        var currVal_595 = i0.ɵnov(_v, 1519).ngClassPristine;
+        var currVal_596 = i0.ɵnov(_v, 1519).ngClassDirty;
+        var currVal_597 = i0.ɵnov(_v, 1519).ngClassValid;
+        var currVal_598 = i0.ɵnov(_v, 1519).ngClassInvalid;
+        var currVal_599 = i0.ɵnov(_v, 1519).ngClassPending;
+        _ck(_v, 1512, 0, currVal_592, currVal_593, currVal_594, currVal_595, currVal_596, currVal_597, currVal_598, currVal_599);
+        var currVal_603 = (i0.ɵnov(_v, 1538).touched && !i0.ɵnov(_v, 1538).valid);
+        _ck(_v, 1531, 0, currVal_603);
+        var currVal_604 = (i0.ɵnov(_v, 1535).required ? '' : null);
+        var currVal_605 = i0.ɵnov(_v, 1540).ngClassUntouched;
+        var currVal_606 = i0.ɵnov(_v, 1540).ngClassTouched;
+        var currVal_607 = i0.ɵnov(_v, 1540).ngClassPristine;
+        var currVal_608 = i0.ɵnov(_v, 1540).ngClassDirty;
+        var currVal_609 = i0.ɵnov(_v, 1540).ngClassValid;
+        var currVal_610 = i0.ɵnov(_v, 1540).ngClassInvalid;
+        var currVal_611 = i0.ɵnov(_v, 1540).ngClassPending;
+        _ck(_v, 1533, 0, currVal_604, currVal_605, currVal_606, currVal_607, currVal_608, currVal_609, currVal_610, currVal_611);
+        var currVal_615 = i0.ɵnov(_v, 1551).id;
+        var currVal_616 = !i0.ɵnov(_v, 1551).current;
+        var currVal_617 = i0.ɵnov(_v, 1551).stepItemId;
+        var currVal_618 = i0.ɵnov(_v, 1551).current;
+        var currVal_619 = true;
+        _ck(_v, 1550, 0, currVal_615, currVal_616, currVal_617, currVal_618, currVal_619);
+        var currVal_624 = true;
+        var currVal_625 = (i0.ɵnov(_v, 1588).size == 'md');
+        var currVal_626 = (i0.ɵnov(_v, 1588).size == 'lg');
+        var currVal_627 = (i0.ɵnov(_v, 1588).size == 'xl');
+        var currVal_628 = i0.ɵnov(_v, 1588).navService.currentPageIsLast;
+        var currVal_629 = i0.ɵnov(_v, 1588).showGhostPages;
+        _ck(_v, 1583, 0, currVal_624, currVal_625, currVal_626, currVal_627, currVal_628, currVal_629);
+        var currVal_633 = i0.ɵnov(_v, 1597).isHidden;
+        _ck(_v, 1596, 0, currVal_633);
+        var currVal_635 = i0.ɵnov(_v, 1601).isHidden;
+        _ck(_v, 1600, 0, currVal_635);
+        var currVal_637 = i0.ɵnov(_v, 1605).isHidden;
+        _ck(_v, 1604, 0, currVal_637);
+        var currVal_639 = i0.ɵnov(_v, 1609).isHidden;
+        _ck(_v, 1608, 0, currVal_639);
+        var currVal_642 = true;
+        var currVal_643 = (i0.ɵnov(_v, 1631).size == 'md');
+        var currVal_644 = (i0.ɵnov(_v, 1631).size == 'lg');
+        var currVal_645 = (i0.ɵnov(_v, 1631).size == 'xl');
+        var currVal_646 = i0.ɵnov(_v, 1631).navService.currentPageIsLast;
+        var currVal_647 = i0.ɵnov(_v, 1631).showGhostPages;
+        _ck(_v, 1626, 0, currVal_642, currVal_643, currVal_644, currVal_645, currVal_646, currVal_647);
+        var currVal_651 = i0.ɵnov(_v, 1640).isHidden;
+        _ck(_v, 1639, 0, currVal_651);
+        var currVal_653 = i0.ɵnov(_v, 1644).isHidden;
+        _ck(_v, 1643, 0, currVal_653);
+        var currVal_655 = i0.ɵnov(_v, 1648).isHidden;
+        _ck(_v, 1647, 0, currVal_655);
+        var currVal_657 = i0.ɵnov(_v, 1652).isHidden;
+        _ck(_v, 1651, 0, currVal_657);
+        var currVal_659 = i0.ɵnov(_v, 1656).id;
+        var currVal_660 = !i0.ɵnov(_v, 1656).current;
+        var currVal_661 = i0.ɵnov(_v, 1656).stepItemId;
+        var currVal_662 = i0.ɵnov(_v, 1656).current;
+        var currVal_663 = true;
+        _ck(_v, 1655, 0, currVal_659, currVal_660, currVal_661, currVal_662, currVal_663);
+        var currVal_664 = i0.ɵnov(_v, 1683).id;
+        var currVal_665 = !i0.ɵnov(_v, 1683).current;
+        var currVal_666 = i0.ɵnov(_v, 1683).stepItemId;
+        var currVal_667 = i0.ɵnov(_v, 1683).current;
+        var currVal_668 = true;
+        _ck(_v, 1682, 0, currVal_664, currVal_665, currVal_666, currVal_667, currVal_668);
+        var currVal_669 = i0.ɵnov(_v, 1701).id;
+        var currVal_670 = !i0.ɵnov(_v, 1701).current;
+        var currVal_671 = i0.ɵnov(_v, 1701).stepItemId;
+        var currVal_672 = i0.ɵnov(_v, 1701).current;
+        var currVal_673 = true;
+        _ck(_v, 1700, 0, currVal_669, currVal_670, currVal_671, currVal_672, currVal_673);
+    });
 }
 export function View_KSWizards_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSWizards_0, RenderType_KSWizards)),
-        i0.ɵdid(49152, null, 0, i1.KSWizards, [], null, null)], null, null);
+        i0.ɵdid(114688, null, 0, i20.KSWizards, [], null, null)], function (_ck, _v) {
+        _ck(_v, 1, 0);
+    }, null);
 }
-export var KSWizardsNgFactory = i0.ɵccf('ng-component', i1.KSWizards, View_KSWizards_Host_0, {}, {}, []);
+export var KSWizardsNgFactory = i0.ɵccf('ng-component', i20.KSWizards, View_KSWizards_Host_0, {}, {}, []);
 //# sourceMappingURL=wizards.component.ngfactory.js.map

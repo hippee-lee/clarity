@@ -12,13 +12,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component } from "@angular/core";
 var KSTreeView = (function () {
     function KSTreeView() {
+        this.selected1 = false;
+        this.selected1Child = true;
     }
     return KSTreeView;
 }());
 KSTreeView = __decorate([
-    Component({
-        templateUrl: "./tree-view.component.html"
-    })
+    Component({ templateUrl: "./tree-view.component.html" })
 ], KSTreeView);
 export { KSTreeView };
 //# sourceMappingURL=tree-view.component.js.map

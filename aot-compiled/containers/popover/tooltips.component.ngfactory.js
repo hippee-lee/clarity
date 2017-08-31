@@ -5,17 +5,95 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/popover/tooltips.component';
+import * as i1 from 'clarity-angular/icon/icon';
+import * as i2 from '../../../containers/popover/tooltips.component';
 var styles_KSTooltips = [];
 export var RenderType_KSTooltips = i0.ɵcrt({ encapsulation: 2, styles: styles_KSTooltips,
     data: {} });
 export function View_KSTooltips_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Tooltips'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Tooltips'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 151, 'div', [['class', 'content-wrapper']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Extra small'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'], ['class',
+                    'tooltip tooltip-xs'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'house'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Small'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-sm'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Medium'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-md'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Large'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-lg'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Top right'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup',
+                'true'], ['class', 'tooltip tooltip-md tooltip-top-right'], ['href', 'javascript://'],
+            ['role', 'tooltip']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size',
+                    '24']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Top left'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-md tooltip-top-left'], ['href', 'javascript://'],
+            ['role', 'tooltip']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size',
+                    '24']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Bottom left'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup',
+                'true'], ['class', 'tooltip tooltip-md tooltip-bottom-left'], ['href', 'javascript://'],
+            ['role', 'tooltip']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size',
+                    '24']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Bottom right'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup',
+                'true'], ['class', 'tooltip tooltip-md tooltip-bottom-right'], ['href', 'javascript://'],
+            ['role', 'tooltip']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'bell'], ['size',
+                    '24']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum sit'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Right'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-right'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'info-standard'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum dolor sit amet, ipsum'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 13, 'div', [['class', 'col']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Left'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['aria-haspopup', 'true'],
+            ['class', 'tooltip tooltip-left'], ['href', 'javascript://'], ['role', 'tooltip']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'info-standard'], ['size', '24']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i1.IconCustomTag, [], null, null),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'tooltip-content']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Lorem ipsum dolor sit amet, ipsum'])), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], null, null);
 }
 export function View_KSTooltips_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSTooltips_0, RenderType_KSTooltips)),
-        i0.ɵdid(49152, null, 0, i1.KSTooltips, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i2.KSTooltips, [], null, null)], null, null);
 }
-export var KSTooltipsNgFactory = i0.ɵccf('ng-component', i1.KSTooltips, View_KSTooltips_Host_0, {}, {}, []);
+export var KSTooltipsNgFactory = i0.ɵccf('ng-component', i2.KSTooltips, View_KSTooltips_Host_0, {}, {}, []);
 //# sourceMappingURL=tooltips.component.ngfactory.js.map

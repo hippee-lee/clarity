@@ -5,16 +5,755 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/nav/vertical-nav.component';
+import * as i1 from '../../node_modules/clarity-angular/emphasis/alert/alert.ngfactory';
+import * as i2 from 'clarity-angular/emphasis/alert/providers/icon-and-types-service';
+import * as i3 from 'clarity-angular/emphasis/alert/alert';
+import * as i4 from '../../node_modules/clarity-angular/emphasis/alert/alert-item.ngfactory';
+import * as i5 from 'clarity-angular/emphasis/alert/alert-item';
+import * as i6 from '../../node_modules/clarity-angular/layout/vertical-nav/vertical-nav-group-children.ngfactory';
+import * as i7 from 'clarity-angular/layout/vertical-nav/vertical-nav-group-children';
+import * as i8 from '../../node_modules/clarity-angular/layout/vertical-nav/vertical-nav-link.ngfactory';
+import * as i9 from 'clarity-angular/layout/vertical-nav/vertical-nav-link';
+import * as i10 from '@angular/router';
+import * as i11 from '@angular/common';
+import * as i12 from '../../node_modules/clarity-angular/layout/vertical-nav/vertical-nav.ngfactory';
+import * as i13 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav.service';
+import * as i14 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-icon.service';
+import * as i15 from 'clarity-angular/layout/vertical-nav/providers/vertical-nav-group.service';
+import * as i16 from 'clarity-angular/layout/vertical-nav/vertical-nav';
+import * as i17 from '../../node_modules/clarity-angular/layout/vertical-nav/vertical-nav-group.ngfactory';
+import * as i18 from 'clarity-angular/utils/expand/providers/expand';
+import * as i19 from 'clarity-angular/layout/vertical-nav/vertical-nav-group';
+import * as i20 from 'clarity-angular/icon/icon';
+import * as i21 from 'clarity-angular/layout/vertical-nav/vertical-nav-icon.directive';
+import * as i22 from 'clarity-angular/utils/expand/if-expanded';
+import * as i23 from 'clarity-angular/data/datagrid/datagrid-detail-registerer';
+import * as i24 from 'clarity-angular/data/datagrid/providers/global-expandable-rows';
+import * as i25 from '@angular/forms';
+import * as i26 from '../../../containers/nav/vertical-nav.component';
+import * as i27 from '../../../containers/nav/vertical-nav-cases';
 var styles_KSVerticalNav = [];
 export var RenderType_KSVerticalNav = i0.ɵcrt({ encapsulation: 2,
     styles: styles_KSVerticalNav, data: {} });
+function View_KSVerticalNav_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 10, 'clr-alert', [], null, null, null, i1.View_Alert_0, i1.RenderType_Alert)),
+        i0.ɵprd(512, null, i2.AlertIconAndTypesService, i2.AlertIconAndTypesService, []), i0.ɵdid(49152, null, 0, i3.Alert, [i2.AlertIconAndTypesService], { closable: [0, 'closable'], alertType: [1, 'alertType'] }, null), (_l()(),
+            i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 5, 'div', [['class', 'alert-item alert-item']], null, null, null, i4.View_AlertItem_0, i4.RenderType_AlertItem)), i0.ɵdid(49152, null, 0, i5.AlertItem, [i2.AlertIconAndTypesService], null, null), (_l()(), i0.ɵted(0, ['\n                        '])), (_l()(),
+            i0.ɵeld(0, null, 0, 1, 'span', [['class', 'alert-text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            Lazy Loading + Nav Group parent text (instead of parent links)\n                            will not highlight when a child route is active and the nav group is collapsed.\n                            If you don\'t have a nav group parent link we recommend that you do not use lazy loading.\n                        '])),
+        (_l()(), i0.ɵted(0, ['\n                    '])), (_l()(), i0.ɵted(0, ['\n                ']))], function (_ck, _v) {
+        var currVal_0 = false;
+        var currVal_1 = 'alert-danger';
+        _ck(_v, 2, 0, currVal_0, currVal_1);
+    }, null);
+}
+function View_KSVerticalNav_3(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'clr-vertical-nav-group-children', [], null, null, null, i6.View_VerticalNavGroupChildren_0, i6.RenderType_VerticalNavGroupChildren)), i0.ɵdid(49152, null, 0, i7.VerticalNavGroupChildren, [], null, null), (_l()(), i0.ɵted(0, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null), i0.ɵdid(671744, [[6, 4], [2, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute, i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1), i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef, i0.Renderer2,
+            i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null),
+        i0.ɵqud(603979776, 5, { links: 1 }), i0.ɵqud(603979776, 6, { linksWithHrefs: 1 }), (_l()(),
+            i0.ɵted(1, ['\n                                Abbey Road\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[8, 4], [2, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 7, { links: 1 }), i0.ɵqud(603979776, 8, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                Revolver\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 24).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[10, 4], [2, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 9, { links: 1 }), i0.ɵqud(603979776, 10, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                Rubber Soul\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    ']))], function (_ck, _v) {
+        var currVal_2 = _ck(_v, 7, 0, './beatles/abbey-road');
+        _ck(_v, 6, 0, currVal_2);
+        var currVal_3 = 'active';
+        _ck(_v, 8, 0, currVal_3);
+        var currVal_6 = _ck(_v, 16, 0, './beatles/revolver');
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = 'active';
+        _ck(_v, 17, 0, currVal_7);
+        var currVal_10 = _ck(_v, 25, 0, './beatles/rubber-soul');
+        _ck(_v, 24, 0, currVal_10);
+        var currVal_11 = 'active';
+        _ck(_v, 26, 0, currVal_11);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 6).target;
+        var currVal_1 = i0.ɵnov(_v, 6).href;
+        _ck(_v, 4, 0, currVal_0, currVal_1);
+        var currVal_4 = i0.ɵnov(_v, 15).target;
+        var currVal_5 = i0.ɵnov(_v, 15).href;
+        _ck(_v, 13, 0, currVal_4, currVal_5);
+        var currVal_8 = i0.ɵnov(_v, 24).target;
+        var currVal_9 = i0.ɵnov(_v, 24).href;
+        _ck(_v, 22, 0, currVal_8, currVal_9);
+    });
+}
+function View_KSVerticalNav_4(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'clr-vertical-nav-group-children', [], null, null, null, i6.View_VerticalNavGroupChildren_0, i6.RenderType_VerticalNavGroupChildren)), i0.ɵdid(49152, null, 0, i7.VerticalNavGroupChildren, [], null, null), (_l()(), i0.ɵted(0, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null), i0.ɵdid(671744, [[16, 4], [12, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 15, { links: 1 }), i0.ɵqud(603979776, 16, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                Hot Fuss\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[18, 4], [12, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 17, { links: 1 }), i0.ɵqud(603979776, 18, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                Day & Age\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 24).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[20, 4], [12, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 19, { links: 1 }), i0.ɵqud(603979776, 20, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                Sam\'s Town\n                            '])),
+        (_l()(), i0.ɵted(0, ['\n                        '])), (_l()(), i0.ɵted(null, ['\n                    ']))], function (_ck, _v) {
+        var currVal_2 = _ck(_v, 7, 0, './killers/hot-fuss');
+        _ck(_v, 6, 0, currVal_2);
+        var currVal_3 = 'active';
+        _ck(_v, 8, 0, currVal_3);
+        var currVal_6 = _ck(_v, 16, 0, './killers/day-and-age');
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = 'active';
+        _ck(_v, 17, 0, currVal_7);
+        var currVal_10 = _ck(_v, 25, 0, './killers/sams-town');
+        _ck(_v, 24, 0, currVal_10);
+        var currVal_11 = 'active';
+        _ck(_v, 26, 0, currVal_11);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 6).target;
+        var currVal_1 = i0.ɵnov(_v, 6).href;
+        _ck(_v, 4, 0, currVal_0, currVal_1);
+        var currVal_4 = i0.ɵnov(_v, 15).target;
+        var currVal_5 = i0.ɵnov(_v, 15).href;
+        _ck(_v, 13, 0, currVal_4, currVal_5);
+        var currVal_8 = i0.ɵnov(_v, 24).target;
+        var currVal_9 = i0.ɵnov(_v, 24).href;
+        _ck(_v, 22, 0, currVal_8, currVal_9);
+    });
+}
+function View_KSVerticalNav_2(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 70, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2, 'is-collapsed', null], [2, 'has-nav-groups',
+                null], [2, 'has-icons', null]], [[null, 'clrVerticalNavCollapsedChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrVerticalNavCollapsedChange' === en)) {
+                var pd_0 = (_co.updateNavCollapsed($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i12.View_VerticalNav_0, i12.RenderType_VerticalNav)), i0.ɵprd(512, null, i13.VerticalNavService, i13.VerticalNavService, []), i0.ɵprd(512, null, i14.VerticalNavIconService, i14.VerticalNavIconService, []), i0.ɵprd(512, null, i15.VerticalNavGroupService, i15.VerticalNavGroupService, []),
+        i0.ɵdid(180224, null, 0, i16.VerticalNav, [i13.VerticalNavService, i14.VerticalNavIconService,
+            i15.VerticalNavGroupService], { collapsible: [0, 'collapsible'], collapsed: [1,
+                'collapsed'] }, { _collapsedChanged: 'clrVerticalNavCollapsedChange' }), (_l()(),
+            i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 24, 'clr-vertical-nav-group', [['class', 'nav-group'], ['routerLinkActive', 'active']], [[2, 'is-expanded', null]], null, null, i17.View_VerticalNavGroup_0, i17.RenderType_VerticalNavGroup)), i0.ɵprd(512, null, i18.Expand, i18.Expand, []), i0.ɵdid(1228800, null, 0, i19.VerticalNavGroup, [i18.Expand,
+            i15.VerticalNavGroupService, i13.VerticalNavService], null, null),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 1, { links: 1 }), i0.ɵqud(603979776, 2, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(2, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 1, 12, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[4, 4], [2, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActiveOptions: [0, 'routerLinkActiveOptions'],
+            routerLinkActive: [1, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 3, { links: 1 }), i0.ɵqud(603979776, 4, { linksWithHrefs: 1 }), i0.ɵpod({ exact: 0 }),
+        (_l()(), i0.ɵted(1, ['\n                        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon', '']], [[1, 'shape',
+                0]], null, null, null, null)), i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null),
+        i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(1, ['\n                        The Beatles\n                    '])),
+        (_l()(), i0.ɵted(2, ['\n                    '])), (_l()(), i0.ɵand(16777216, null, 3, 2, function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrIfExpandedChange' === en)) {
+                var pd_0 = (_co.updateGroupExpand($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, View_KSVerticalNav_3)), i0.ɵdid(212992, null, 0, i22.IfExpanded, [i0.TemplateRef,
+            i0.ViewContainerRef, i18.Expand], { expanded: [0, 'expanded'] }, { expandedChange: 'clrIfExpandedChange' }),
+        i0.ɵdid(147456, null, 0, i23.DatagridDetailRegisterer, [[2, i24.ExpandableRowsCount]], null, null), (_l()(), i0.ɵted(2, ['\n                '])),
+        (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵeld(0, null, 0, 24, 'clr-vertical-nav-group', [['class', 'nav-group'], ['routerLinkActive',
+                'active']], [[2, 'is-expanded', null]], null, null, i17.View_VerticalNavGroup_0, i17.RenderType_VerticalNavGroup)), i0.ɵprd(512, null, i18.Expand, i18.Expand, []), i0.ɵdid(1228800, null, 0, i19.VerticalNavGroup, [i18.Expand, i15.VerticalNavGroupService, i13.VerticalNavService], null, null), i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef, i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0,
+                'routerLinkActive'] }, null), i0.ɵqud(603979776, 11, { links: 1 }),
+        i0.ɵqud(603979776, 12, { linksWithHrefs: 1 }), (_l()(), i0.ɵted(2, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, 1, 12, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 41).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null), i0.ɵdid(671744, [[14, 4], [12, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActiveOptions: [0, 'routerLinkActiveOptions'],
+            routerLinkActive: [1, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 13, { links: 1 }), i0.ɵqud(603979776, 14, { linksWithHrefs: 1 }), i0.ɵpod({ exact: 0 }),
+        (_l()(), i0.ɵted(1, ['\n                        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon', '']], [[1, 'shape',
+                0]], null, null, null, null)), i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null),
+        i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(1, ['\n                        The Killers\n                    '])),
+        (_l()(), i0.ɵted(2, ['\n                    '])), (_l()(), i0.ɵand(16777216, null, 3, 2, null, View_KSVerticalNav_4)), i0.ɵdid(212992, null, 0, i22.IfExpanded, [i0.TemplateRef, i0.ViewContainerRef, i18.Expand], { expanded: [0,
+                'expanded'] }, null), i0.ɵdid(147456, null, 0, i23.DatagridDetailRegisterer, [[2, i24.ExpandableRowsCount]], null, null), (_l()(), i0.ɵted(2, ['\n                '])), (_l()(), i0.ɵted(0, ['\n\n                '])), (_l()(),
+            i0.ɵeld(0, null, 0, 11, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                    ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                    'click']], function (_v, en, $event) {
+                var ad = true;
+                if (('click' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 60).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[22, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 21, { links: 1 }), i0.ɵqud(603979776, 22, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon', ''], ['shape',
+                'certificate']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(1, ['\n                    Wikipedia\n                '])), (_l()(), i0.ɵted(0, ['\n\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_3 = true;
+        var currVal_4 = _co.navCollapsed;
+        _ck(_v, 4, 0, currVal_3, currVal_4);
+        var currVal_6 = 'active';
+        _ck(_v, 9, 0, currVal_6);
+        var currVal_9 = _ck(_v, 16, 0, './beatles');
+        _ck(_v, 15, 0, currVal_9);
+        var currVal_10 = _ck(_v, 20, 0, true);
+        var currVal_11 = 'active';
+        _ck(_v, 17, 0, currVal_10, currVal_11);
+        var currVal_13 = _co.groupExpand;
+        _ck(_v, 28, 0, currVal_13);
+        var currVal_15 = 'active';
+        _ck(_v, 35, 0, currVal_15);
+        var currVal_18 = _ck(_v, 42, 0, './killers');
+        _ck(_v, 41, 0, currVal_18);
+        var currVal_19 = _ck(_v, 46, 0, true);
+        var currVal_20 = 'active';
+        _ck(_v, 43, 0, currVal_19, currVal_20);
+        var currVal_22 = '';
+        _ck(_v, 54, 0, currVal_22);
+        var currVal_25 = _ck(_v, 61, 0, './wikipedia');
+        _ck(_v, 60, 0, currVal_25);
+        var currVal_26 = 'active';
+        _ck(_v, 62, 0, currVal_26);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 4).collapsed;
+        var currVal_1 = i0.ɵnov(_v, 4).hasNavGroups;
+        var currVal_2 = i0.ɵnov(_v, 4).hasIcons;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_5 = i0.ɵnov(_v, 8).expanded;
+        _ck(_v, 6, 0, currVal_5);
+        var currVal_7 = i0.ɵnov(_v, 15).target;
+        var currVal_8 = i0.ɵnov(_v, 15).href;
+        _ck(_v, 13, 0, currVal_7, currVal_8);
+        var currVal_12 = 'home';
+        _ck(_v, 22, 0, currVal_12);
+        var currVal_14 = i0.ɵnov(_v, 34).expanded;
+        _ck(_v, 32, 0, currVal_14);
+        var currVal_16 = i0.ɵnov(_v, 41).target;
+        var currVal_17 = i0.ɵnov(_v, 41).href;
+        _ck(_v, 39, 0, currVal_16, currVal_17);
+        var currVal_21 = 'home';
+        _ck(_v, 48, 0, currVal_21);
+        var currVal_23 = i0.ɵnov(_v, 60).target;
+        var currVal_24 = i0.ɵnov(_v, 60).href;
+        _ck(_v, 58, 0, currVal_23, currVal_24);
+    });
+}
+function View_KSVerticalNav_6(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'clr-vertical-nav-group-children', [], null, null, null, i6.View_VerticalNavGroupChildren_0, i6.RenderType_VerticalNavGroupChildren)), i0.ɵdid(49152, null, 0, i7.VerticalNavGroupChildren, [], null, null), (_l()(), i0.ɵted(0, ['\n                                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null), i0.ɵdid(671744, [[26, 4], [24, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 25, { links: 1 }), i0.ɵqud(603979776, 26, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Abbey Road\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                                '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[28, 4], [24, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 27, { links: 1 }), i0.ɵqud(603979776, 28, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Revolver\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                                '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 24).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[30, 4], [24, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 29, { links: 1 }), i0.ɵqud(603979776, 30, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Rubber Soul\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵted(null, ['\n                        ']))], function (_ck, _v) {
+        var currVal_2 = _ck(_v, 7, 0, './beatles/abbey-road');
+        _ck(_v, 6, 0, currVal_2);
+        var currVal_3 = 'active';
+        _ck(_v, 8, 0, currVal_3);
+        var currVal_6 = _ck(_v, 16, 0, './beatles/revolver');
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = 'active';
+        _ck(_v, 17, 0, currVal_7);
+        var currVal_10 = _ck(_v, 25, 0, './beatles/rubber-soul');
+        _ck(_v, 24, 0, currVal_10);
+        var currVal_11 = 'active';
+        _ck(_v, 26, 0, currVal_11);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 6).target;
+        var currVal_1 = i0.ɵnov(_v, 6).href;
+        _ck(_v, 4, 0, currVal_0, currVal_1);
+        var currVal_4 = i0.ɵnov(_v, 15).target;
+        var currVal_5 = i0.ɵnov(_v, 15).href;
+        _ck(_v, 13, 0, currVal_4, currVal_5);
+        var currVal_8 = i0.ɵnov(_v, 24).target;
+        var currVal_9 = i0.ɵnov(_v, 24).href;
+        _ck(_v, 22, 0, currVal_8, currVal_9);
+    });
+}
+function View_KSVerticalNav_7(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n                            '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'clr-vertical-nav-group-children', [], null, null, null, i6.View_VerticalNavGroupChildren_0, i6.RenderType_VerticalNavGroupChildren)), i0.ɵdid(49152, null, 0, i7.VerticalNavGroupChildren, [], null, null), (_l()(), i0.ɵted(0, ['\n                                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink',
+                ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null), i0.ɵdid(671744, [[34, 4], [32, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 33, { links: 1 }), i0.ɵqud(603979776, 34, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Hot Fuss\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                                '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[36, 4], [32, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 35, { links: 1 }), i0.ɵqud(603979776, 36, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Day & Age\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                                '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive',
+                'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 24).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[38, 4], [32, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 37, { links: 1 }), i0.ɵqud(603979776, 38, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                                    Sam\'s Town\n                                '])),
+        (_l()(), i0.ɵted(0, ['\n                            '])), (_l()(), i0.ɵted(null, ['\n                        ']))], function (_ck, _v) {
+        var currVal_2 = _ck(_v, 7, 0, './killers/hot-fuss');
+        _ck(_v, 6, 0, currVal_2);
+        var currVal_3 = 'active';
+        _ck(_v, 8, 0, currVal_3);
+        var currVal_6 = _ck(_v, 16, 0, './killers/day-and-age');
+        _ck(_v, 15, 0, currVal_6);
+        var currVal_7 = 'active';
+        _ck(_v, 17, 0, currVal_7);
+        var currVal_10 = _ck(_v, 25, 0, './killers/sams-town');
+        _ck(_v, 24, 0, currVal_10);
+        var currVal_11 = 'active';
+        _ck(_v, 26, 0, currVal_11);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 6).target;
+        var currVal_1 = i0.ɵnov(_v, 6).href;
+        _ck(_v, 4, 0, currVal_0, currVal_1);
+        var currVal_4 = i0.ɵnov(_v, 15).target;
+        var currVal_5 = i0.ɵnov(_v, 15).href;
+        _ck(_v, 13, 0, currVal_4, currVal_5);
+        var currVal_8 = i0.ɵnov(_v, 24).target;
+        var currVal_9 = i0.ɵnov(_v, 24).href;
+        _ck(_v, 22, 0, currVal_8, currVal_9);
+    });
+}
+function View_KSVerticalNav_5(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 53, null, null, null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n\n\n                '])), (_l()(), i0.ɵeld(0, null, null, 50, 'clr-vertical-nav', [['class', 'clr-vertical-nav']], [[2, 'is-collapsed', null], [2, 'has-nav-groups', null], [2,
+                'has-icons', null]], [[null, 'clrVerticalNavCollapsedChange']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrVerticalNavCollapsedChange' === en)) {
+                var pd_0 = (_co.updateNavCollapsed($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i12.View_VerticalNav_0, i12.RenderType_VerticalNav)), i0.ɵprd(512, null, i13.VerticalNavService, i13.VerticalNavService, []), i0.ɵprd(512, null, i14.VerticalNavIconService, i14.VerticalNavIconService, []),
+        i0.ɵprd(512, null, i15.VerticalNavGroupService, i15.VerticalNavGroupService, []), i0.ɵdid(180224, null, 0, i16.VerticalNav, [i13.VerticalNavService,
+            i14.VerticalNavIconService, i15.VerticalNavGroupService], { collapsible: [0,
+                'collapsible'], collapsed: [1, 'collapsed'] }, { _collapsedChanged: 'clrVerticalNavCollapsedChange' }),
+        (_l()(), i0.ɵted(0, ['\n\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 14, 'clr-vertical-nav-group', [['class', 'nav-group'], ['routerLinkActive',
+                'active']], [[2, 'is-expanded', null]], null, null, i17.View_VerticalNavGroup_0, i17.RenderType_VerticalNavGroup)), i0.ɵprd(512, null, i18.Expand, i18.Expand, []), i0.ɵdid(1228800, null, 0, i19.VerticalNavGroup, [i18.Expand, i15.VerticalNavGroupService, i13.VerticalNavService], null, null), i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef, i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0,
+                'routerLinkActive'] }, null), i0.ɵqud(603979776, 23, { links: 1 }),
+        i0.ɵqud(603979776, 24, { linksWithHrefs: 1 }), (_l()(), i0.ɵted(2, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon',
+                '']], [[1, 'shape', 0]], null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(2, ['\n                        The Beatles\n                        '])),
+        (_l()(), i0.ɵand(16777216, null, 3, 2, function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('clrIfExpandedChange' === en)) {
+                var pd_0 = (_co.updateGroupExpand($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, View_KSVerticalNav_6)), i0.ɵdid(212992, null, 0, i22.IfExpanded, [i0.TemplateRef,
+            i0.ViewContainerRef, i18.Expand], { expanded: [0, 'expanded'] }, { expandedChange: 'clrIfExpandedChange' }),
+        i0.ɵdid(147456, null, 0, i23.DatagridDetailRegisterer, [[2, i24.ExpandableRowsCount]], null, null), (_l()(), i0.ɵted(2, ['\n                    '])),
+        (_l()(), i0.ɵted(0, ['\n\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 14, 'clr-vertical-nav-group', [['class', 'nav-group'], ['routerLinkActive',
+                'active']], [[2, 'is-expanded', null]], null, null, i17.View_VerticalNavGroup_0, i17.RenderType_VerticalNavGroup)), i0.ɵprd(512, null, i18.Expand, i18.Expand, []), i0.ɵdid(1228800, null, 0, i19.VerticalNavGroup, [i18.Expand, i15.VerticalNavGroupService, i13.VerticalNavService], null, null), i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef, i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0,
+                'routerLinkActive'] }, null), i0.ɵqud(603979776, 31, { links: 1 }),
+        i0.ɵqud(603979776, 32, { linksWithHrefs: 1 }), (_l()(), i0.ɵted(2, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon',
+                '']], [[1, 'shape', 0]], null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(2, ['\n                        The Killers\n                        '])),
+        (_l()(), i0.ɵand(16777216, null, 3, 2, null, View_KSVerticalNav_7)),
+        i0.ɵdid(212992, null, 0, i22.IfExpanded, [i0.TemplateRef, i0.ViewContainerRef,
+            i18.Expand], { expanded: [0, 'expanded'] }, null), i0.ɵdid(147456, null, 0, i23.DatagridDetailRegisterer, [[2, i24.ExpandableRowsCount]], null, null), (_l()(), i0.ɵted(2, ['\n                    '])), (_l()(), i0.ɵted(0, ['\n\n                    '])), (_l()(), i0.ɵeld(0, null, 0, 11, 'a', [['class', 'nav-link'], ['clrVerticalNavLink', ''], ['routerLinkActive', 'active']], [[1, 'target', 0], [8, 'href', 4]], [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 42).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, i8.View_VerticalNavLink_0, i8.RenderType_VerticalNavLink)), i0.ɵdid(49152, null, 0, i9.VerticalNavLink, [], null, null),
+        i0.ɵdid(671744, [[40, 4]], 0, i10.RouterLinkWithHref, [i10.Router, i10.ActivatedRoute,
+            i11.LocationStrategy], { routerLink: [0, 'routerLink'] }, null), i0.ɵpad(1),
+        i0.ɵdid(1720320, null, 2, i10.RouterLinkActive, [i10.Router, i0.ElementRef,
+            i0.Renderer2, i0.ChangeDetectorRef], { routerLinkActive: [0, 'routerLinkActive'] }, null), i0.ɵqud(603979776, 39, { links: 1 }), i0.ɵqud(603979776, 40, { linksWithHrefs: 1 }),
+        (_l()(), i0.ɵted(1, ['\n                        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-icon', [['class', 'nav-icon'], ['clrVerticalNavIcon', ''], ['shape',
+                'certificate']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), i0.ɵdid(147456, null, 0, i21.VerticalNavIcon, [i14.VerticalNavIconService], null, null), (_l()(), i0.ɵted(1, ['\n                        Wikipedia\n                    '])), (_l()(),
+            i0.ɵted(0, ['\n\n                '])), (_l()(), i0.ɵted(null, ['\n            ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_3 = true;
+        var currVal_4 = _co.navCollapsed;
+        _ck(_v, 6, 0, currVal_3, currVal_4);
+        var currVal_6 = 'active';
+        _ck(_v, 11, 0, currVal_6);
+        var currVal_8 = _co.groupExpand;
+        _ck(_v, 20, 0, currVal_8);
+        var currVal_10 = 'active';
+        _ck(_v, 27, 0, currVal_10);
+        var currVal_12 = '';
+        _ck(_v, 36, 0, currVal_12);
+        var currVal_15 = _ck(_v, 43, 0, './wikipedia');
+        _ck(_v, 42, 0, currVal_15);
+        var currVal_16 = 'active';
+        _ck(_v, 44, 0, currVal_16);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 6).collapsed;
+        var currVal_1 = i0.ɵnov(_v, 6).hasNavGroups;
+        var currVal_2 = i0.ɵnov(_v, 6).hasIcons;
+        _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_5 = i0.ɵnov(_v, 10).expanded;
+        _ck(_v, 8, 0, currVal_5);
+        var currVal_7 = 'home';
+        _ck(_v, 15, 0, currVal_7);
+        var currVal_9 = i0.ɵnov(_v, 26).expanded;
+        _ck(_v, 24, 0, currVal_9);
+        var currVal_11 = 'home';
+        _ck(_v, 31, 0, currVal_11);
+        var currVal_13 = i0.ɵnov(_v, 42).target;
+        var currVal_14 = i0.ɵnov(_v, 42).href;
+        _ck(_v, 40, 0, currVal_13, currVal_14);
+    });
+}
 export function View_KSVerticalNav_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['vertical nav'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Vertical Nav'])), (_l()(), i0.ɵted(null, ['\n\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 107, 'div', [['class', 'content-wrapper']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 104, 'div', [['class', 'main-container']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 34, 'header', [['class', 'header header-6']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 10, 'div', [['class', 'branding']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['href', '#']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'vm-bug']], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'span', [['class', 'title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Project Clarity'])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 10, 'form', [['class', 'search'], ['novalidate', '']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'submit'], [null,
+                'reset']], function (_v, en, $event) {
+            var ad = true;
+            if (('submit' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 23).onSubmit($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('reset' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 23).onReset() !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i25.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i25.NgForm, [[8,
+                null], [8, null]], null, null), i0.ɵprd(2048, null, i25.ControlContainer, null, [i25.NgForm]), i0.ɵdid(16384, null, 0, i25.NgControlStatusGroup, [i25.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'label', [['for', 'search_input']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'search_input'], ['placeholder',
+                'Search for keywords...'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [['class', 'settings']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 4, 'a', [['class', 'nav-link nav-icon'], ['href', 'javascript://']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [['shape', 'cog']], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i20.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 65, 'div', [['class', 'content-container']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 56, 'div', [['class', 'content-area']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 35, 'div', [['class', 'example-options']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h6', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Options'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'btn-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵeld(0, null, null, 12, 'div', [['class', 'radio btn']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'input', [['id', 'rad1'], ['name', 'vertNavRadios'],
+            ['type', 'radio'], ['value', 'link']], [[2, 'ng-untouched', null],
+            [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
+                null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
+            [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null,
+                'input'], [null, 'blur'], [null, 'compositionstart'], [null,
+                'compositionend'], [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 57)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 57).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 57)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 57)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 58).onChange() !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 58).onTouched() !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_6 = ((_co.option = $event) !== false);
+                ad = (pd_6 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i25.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i25.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(212992, null, 0, i25.RadioControlValueAccessor, [i0.Renderer2, i0.ElementRef, i25.ɵi, i0.Injector], { name: [0, 'name'], value: [1,
+                'value'] }, null), i0.ɵprd(1024, null, i25.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i25.DefaultValueAccessor, i25.RadioControlValueAccessor]), i0.ɵdid(671744, null, 0, i25.NgModel, [[8, null], [8, null], [8, null],
+            [2, i25.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }),
+        i0.ɵprd(2048, null, i25.NgControl, null, [i25.NgModel]), i0.ɵdid(16384, null, 0, i25.NgControlStatus, [i25.NgControl], null, null),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'rad1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Nav Group Link'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵted(null, ['\n                        '])), (_l()(), i0.ɵeld(0, null, null, 12, 'div', [['class', 'radio btn']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'input', [['id', 'rad2'], ['name', 'vertNavRadios'], ['type', 'radio'], ['value',
+                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend'],
+            [null, 'change']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('input' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 71)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (i0.ɵnov(_v, 71).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (i0.ɵnov(_v, 71)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (i0.ɵnov(_v, 71)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('change' === en)) {
+                var pd_4 = (i0.ɵnov(_v, 72).onChange() !== false);
+                ad = (pd_4 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_5 = (i0.ɵnov(_v, 72).onTouched() !== false);
+                ad = (pd_5 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_6 = ((_co.option = $event) !== false);
+                ad = (pd_6 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, null, 0, i25.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i25.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵdid(212992, null, 0, i25.RadioControlValueAccessor, [i0.Renderer2, i0.ElementRef, i25.ɵi, i0.Injector], { name: [0, 'name'], value: [1,
+                'value'] }, null), i0.ɵprd(1024, null, i25.NG_VALUE_ACCESSOR, function (p0_0, p1_0) {
+            return [p0_0, p1_0];
+        }, [i25.DefaultValueAccessor, i25.RadioControlValueAccessor]), i0.ɵdid(671744, null, 0, i25.NgModel, [[8, null], [8, null], [8, null],
+            [2, i25.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }),
+        i0.ɵprd(2048, null, i25.NgControl, null, [i25.NgModel]), i0.ɵdid(16384, null, 0, i25.NgControlStatus, [i25.NgControl], null, null),
+        (_l()(), i0.ɵted(null, ['\n                            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'rad2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Nav Group Text'])), (_l()(), i0.ɵted(null, ['\n                        '])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 10, 'div', [['class', 'controls']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h6', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Controls'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.toggleNav() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Toggle Nav'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = (_co.toggleGroup() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Toggle Group'])),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n\n                '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSVerticalNav_1)), i0.ɵdid(16384, null, 0, i11.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(),
+            i0.ɵted(null, ['\n\n                '])), (_l()(), i0.ɵeld(16777216, null, null, 1, 'router-outlet', [], null, null, null, null, null)), i0.ɵdid(212992, null, 0, i10.RouterOutlet, [i10.ChildrenOutletContexts, i0.ViewContainerRef,
+            i0.ComponentFactoryResolver, [8, null], i0.ChangeDetectorRef], null, null), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSVerticalNav_2)), i0.ɵdid(16384, null, 0, i11.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n\n            '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_KSVerticalNav_5)),
+        i0.ɵdid(16384, null, 0, i11.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_14 = 'vertNavRadios';
+        var currVal_15 = 'link';
+        _ck(_v, 58, 0, currVal_14, currVal_15);
+        var currVal_16 = 'vertNavRadios';
+        var currVal_17 = _co.option;
+        _ck(_v, 60, 0, currVal_16, currVal_17);
+        var currVal_25 = 'vertNavRadios';
+        var currVal_26 = 'text';
+        _ck(_v, 72, 0, currVal_25, currVal_26);
+        var currVal_27 = 'vertNavRadios';
+        var currVal_28 = _co.option;
+        _ck(_v, 74, 0, currVal_27, currVal_28);
+        var currVal_29 = (_co.option === 'text');
+        _ck(_v, 97, 0, currVal_29);
+        _ck(_v, 100, 0);
+        var currVal_30 = (_co.option === 'link');
+        _ck(_v, 104, 0, currVal_30);
+        var currVal_31 = (_co.option === 'text');
+        _ck(_v, 107, 0, currVal_31);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 25).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 25).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 25).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 25).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 25).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 25).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 25).ngClassPending;
+        _ck(_v, 21, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+        var currVal_7 = i0.ɵnov(_v, 62).ngClassUntouched;
+        var currVal_8 = i0.ɵnov(_v, 62).ngClassTouched;
+        var currVal_9 = i0.ɵnov(_v, 62).ngClassPristine;
+        var currVal_10 = i0.ɵnov(_v, 62).ngClassDirty;
+        var currVal_11 = i0.ɵnov(_v, 62).ngClassValid;
+        var currVal_12 = i0.ɵnov(_v, 62).ngClassInvalid;
+        var currVal_13 = i0.ɵnov(_v, 62).ngClassPending;
+        _ck(_v, 56, 0, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13);
+        var currVal_18 = i0.ɵnov(_v, 76).ngClassUntouched;
+        var currVal_19 = i0.ɵnov(_v, 76).ngClassTouched;
+        var currVal_20 = i0.ɵnov(_v, 76).ngClassPristine;
+        var currVal_21 = i0.ɵnov(_v, 76).ngClassDirty;
+        var currVal_22 = i0.ɵnov(_v, 76).ngClassValid;
+        var currVal_23 = i0.ɵnov(_v, 76).ngClassInvalid;
+        var currVal_24 = i0.ɵnov(_v, 76).ngClassPending;
+        _ck(_v, 70, 0, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22, currVal_23, currVal_24);
+    });
 }
 export function View_KSVerticalNav_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSVerticalNav_0, RenderType_KSVerticalNav)), i0.ɵdid(49152, null, 0, i1.KSVerticalNav, [], null, null)], null, null);
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 2, 'ng-component', [], null, null, null, View_KSVerticalNav_0, RenderType_KSVerticalNav)), i0.ɵprd(512, null, i27.VerticalNavCases, i27.VerticalNavCases, []), i0.ɵdid(49152, null, 0, i26.KSVerticalNav, [i27.VerticalNavCases], null, null)], null, null);
 }
-export var KSVerticalNavNgFactory = i0.ɵccf('ng-component', i1.KSVerticalNav, View_KSVerticalNav_Host_0, {}, {}, []);
+export var KSVerticalNavNgFactory = i0.ɵccf('ng-component', i26.KSVerticalNav, View_KSVerticalNav_Host_0, {}, {}, []);
 //# sourceMappingURL=vertical-nav.component.ngfactory.js.map

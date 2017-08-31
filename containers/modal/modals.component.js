@@ -12,13 +12,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component } from "@angular/core";
 var KSModals = (function () {
     function KSModals() {
+        this.opened1 = false;
+        this.opened2 = false;
+        this.small = false;
+        this.large = false;
+        this.extraLarge = false;
     }
     return KSModals;
 }());
 KSModals = __decorate([
-    Component({
-        templateUrl: "./modals.component.html"
-    })
+    Component({ templateUrl: "./modals.component.html" })
 ], KSModals);
 export { KSModals };
 //# sourceMappingURL=modals.component.js.map

@@ -12,13 +12,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component } from "@angular/core";
 var KSTabs = (function () {
     function KSTabs() {
+        this.inOverflow = false;
     }
     return KSTabs;
 }());
 KSTabs = __decorate([
-    Component({
-        templateUrl: "./tabs.component.html"
-    })
+    Component({ templateUrl: "./tabs.component.html" })
 ], KSTabs);
 export { KSTabs };
 //# sourceMappingURL=tabs.component.js.map

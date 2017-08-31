@@ -12,6 +12,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component } from "@angular/core";
 var KSSignposts = (function () {
     function KSSignposts() {
+        this.openState = false;
+        this.positions = [
+            { icon: "help-info", description: "Right bottom", position: "right-bottom", id: "rightBottomTrigger" },
+            { icon: "phone-handset", description: "Bottom middle", position: "bottom-middle", id: "bottomMiddleTrigger" },
+            { icon: "install", description: "Left bottom", position: "left-bottom", id: "leftBottomTrigger" },
+            { icon: "rack-server", description: "Right middle", position: "right-middle", id: "rightMiddleTrigger" },
+            { icon: "play", description: "Left middle", position: "left-middle", id: "leftMiddleTrigger" },
+            { icon: "balance", description: "Left top", position: "left-top", id: "leftTopTrigger" },
+            { icon: "world", description: "Right top", position: "right-top", id: "rightTopTrigger" },
+            { icon: "lightbulb", description: "Bottom right", position: "bottom-right", id: "bottomRightTrigger" },
+            { icon: "bug", description: "Bottom left", position: "bottom-left", id: "bottomLeftTrigger" },
+            { icon: "search", description: "Top right", position: "top-right", id: "topRightTrigger" },
+            { icon: "info-circle", description: "Top middle", position: "top-middle", id: "topMiddleTrigger" },
+            { icon: "info-standard", description: "Top left", position: "top-left", id: "topLeftTrigger" }
+        ];
     }
     return KSSignposts;
 }());

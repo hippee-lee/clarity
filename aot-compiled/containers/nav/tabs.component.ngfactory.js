@@ -5,17 +5,217 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/nav/tabs.component';
+import * as i1 from '../../node_modules/clarity-angular/layout/tabs/tab-content.ngfactory';
+import * as i2 from 'clarity-angular/layout/tabs/tab-content';
+import * as i3 from 'clarity-angular/utils/conditional/if-active.service';
+import * as i4 from 'clarity-angular/layout/tabs/aria-service';
+import * as i5 from '../../../containers/nav/tabs.component';
+import * as i6 from '../../node_modules/clarity-angular/layout/tabs/tabs.ngfactory';
+import * as i7 from 'clarity-angular/utils/conditional/if-open.service';
+import * as i8 from 'clarity-angular/layout/tabs/tabs-service';
+import * as i9 from 'clarity-angular/layout/tabs/tabs';
+import * as i10 from '../../node_modules/clarity-angular/layout/tabs/tab.ngfactory';
+import * as i11 from 'clarity-angular/layout/tabs/tab';
+import * as i12 from 'clarity-angular/layout/tabs/tab-link.directive';
+import * as i13 from 'clarity-angular/utils/conditional/if-active.directive';
 var styles_KSTabs = [];
 export var RenderType_KSTabs = i0.ɵcrt({ encapsulation: 2, styles: styles_KSTabs,
     data: {} });
+function View_KSTabs_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 8, 'clr-tab-content', [['clrTabContentId', 'content1'], ['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-labelledby',
+                0], [1, 'aria-hidden', 0], [1, 'data-hidden', 0]], null, null, i1.View_TabContent_0, i1.RenderType_TabContent)), i0.ɵdid(49152, [[3, 4]], 0, i2.TabContent, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService], null, null),
+        (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 4, 'p', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Content for Dashboard tab. Here is a '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'a', [['href', 'javascript://']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['link'])), (_l()(), i0.ɵted(null, [' that can be accessed via clicking\n               or through keyboard via tabbing.'])),
+        (_l()(), i0.ɵted(0, ['\n        ']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).tabContentId;
+        var currVal_1 = i0.ɵnov(_v, 1).ariaLabelledBy;
+        var currVal_2 = !i0.ɵnov(_v, 1).active;
+        var currVal_3 = !i0.ɵnov(_v, 1).active;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+    });
+}
+function View_KSTabs_2(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 5, 'clr-tab-content', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-labelledby', 0], [1, 'aria-hidden', 0],
+            [1, 'data-hidden', 0]], null, null, i1.View_TabContent_0, i1.RenderType_TabContent)),
+        i0.ɵdid(49152, [[5, 4]], 0, i2.TabContent, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService], null, null), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for Management tab.'])), (_l()(), i0.ɵted(0, ['\n        ']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).tabContentId;
+        var currVal_1 = i0.ɵnov(_v, 1).ariaLabelledBy;
+        var currVal_2 = !i0.ɵnov(_v, 1).active;
+        var currVal_3 = !i0.ɵnov(_v, 1).active;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+    });
+}
+function View_KSTabs_3(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 5, 'clr-tab-content', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-labelledby', 0], [1, 'aria-hidden', 0],
+            [1, 'data-hidden', 0]], null, null, i1.View_TabContent_0, i1.RenderType_TabContent)),
+        i0.ɵdid(49152, [[7, 4]], 0, i2.TabContent, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService], null, null), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for Cloud tab.'])), (_l()(), i0.ɵted(0, ['\n        ']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).tabContentId;
+        var currVal_1 = i0.ɵnov(_v, 1).ariaLabelledBy;
+        var currVal_2 = !i0.ɵnov(_v, 1).active;
+        var currVal_3 = !i0.ɵnov(_v, 1).active;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+    });
+}
+function View_KSTabs_4(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 5, 'clr-tab-content', [['role', 'tabpanel']], [[8, 'id', 0], [1, 'aria-labelledby', 0], [1, 'aria-hidden', 0],
+            [1, 'data-hidden', 0]], null, null, i1.View_TabContent_0, i1.RenderType_TabContent)),
+        i0.ɵdid(49152, [[9, 4]], 0, i2.TabContent, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService], null, null), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Content for Infrastructure tab.'])), (_l()(), i0.ɵted(0, ['\n        ']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 1).tabContentId;
+        var currVal_1 = i0.ɵnov(_v, 1).ariaLabelledBy;
+        var currVal_2 = !i0.ɵnov(_v, 1).active;
+        var currVal_3 = !i0.ɵnov(_v, 1).active;
+        _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+    });
+}
 export function View_KSTabs_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['tabs'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Tabs'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Standard'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Tabs can optionally be configured to have overflow tabs in an additional menu.'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 7, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.inOverflow = !_co.inOverflow) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], [[8, 'hidden',
+                0]], null, null, null, null)), (_l()(), i0.ɵted(null, ['Show Tabs Overflow'])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'span', [], [[8, 'hidden',
+                    0]], null, null, null, null)), (_l()(),
+            i0.ɵted(null, ['Hide Tabs Overflow'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 66, 'clr-tabs', [], null, null, null, i6.View_Tabs_0, i6.RenderType_Tabs)), i0.ɵprd(512, null, i3.IfActiveService, i3.IfActiveService, []), i0.ɵprd(512, null, i7.IfOpenService, i7.IfOpenService, []), i0.ɵprd(512, null, i8.TabsService, i8.TabsService, []), i0.ɵdid(49152, null, 1, i9.Tabs, [i3.IfActiveService,
+            i7.IfOpenService, i8.TabsService], null, null), i0.ɵqud(603979776, 1, { tabLinkDirectives: 1 }), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵeld(0, null, 0, 13, 'clr-tab', [], null, null, null, i10.View_Tab_0, i10.RenderType_Tab)), i0.ɵprd(1024, null, i3.IF_ACTIVE_ID, i3.tokenFactory, []), i0.ɵdid(180224, null, 2, i11.Tab, [i3.IfActiveService,
+            i3.IF_ACTIVE_ID, i8.TabsService], null, null), i0.ɵqud(335544320, 2, { tabLink: 0 }), i0.ɵqud(603979776, 3, { tabContent: 0 }), i0.ɵprd(512, null, i4.AriaService, i4.AriaService, []), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(16777216, null, 0, 2, 'button', [['clrTabLink', ''], ['role',
+                'presentation']], [[8, 'id', 0], [1, 'aria-selected', 0], [1, 'aria-controls', 0],
+            [2, 'btn', null], [2, 'btn-link', null], [2, 'nav-link', null],
+            [2, 'nav-item', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 33).activate() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, [[2, 4], [1, 4]], 0, i12.TabLinkDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService, i0.ElementRef, i0.ComponentFactoryResolver,
+            i0.ViewContainerRef], null, null), (_l()(), i0.ɵted(null, ['Dashboard'])), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSTabs_1)), i0.ɵdid(147456, null, 0, i13.IfActiveDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i0.TemplateRef,
+            i0.ViewContainerRef], { active: [0, 'active'] }, null), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵted(0, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 0, 13, 'clr-tab', [], null, null, null, i10.View_Tab_0, i10.RenderType_Tab)), i0.ɵprd(1024, null, i3.IF_ACTIVE_ID, i3.tokenFactory, []), i0.ɵdid(180224, null, 2, i11.Tab, [i3.IfActiveService,
+            i3.IF_ACTIVE_ID, i8.TabsService], null, null), i0.ɵqud(335544320, 4, { tabLink: 0 }), i0.ɵqud(603979776, 5, { tabContent: 0 }), i0.ɵprd(512, null, i4.AriaService, i4.AriaService, []), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(16777216, null, 0, 2, 'button', [['clrTabLink', ''], ['role',
+                'presentation']], [[8, 'id', 0], [1, 'aria-selected', 0], [1, 'aria-controls', 0],
+            [2, 'btn', null], [2, 'btn-link', null], [2, 'nav-link', null],
+            [2, 'nav-item', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 48).activate() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, [[4, 4], [1, 4]], 0, i12.TabLinkDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService, i0.ElementRef, i0.ComponentFactoryResolver,
+            i0.ViewContainerRef], null, null), (_l()(), i0.ɵted(null, ['Management'])), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSTabs_2)), i0.ɵdid(147456, null, 0, i13.IfActiveDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i0.TemplateRef,
+            i0.ViewContainerRef], { active: [0, 'active'] }, null), (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵted(0, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 0, 13, 'clr-tab', [], null, null, null, i10.View_Tab_0, i10.RenderType_Tab)), i0.ɵprd(1024, null, i3.IF_ACTIVE_ID, i3.tokenFactory, []), i0.ɵdid(180224, null, 2, i11.Tab, [i3.IfActiveService,
+            i3.IF_ACTIVE_ID, i8.TabsService], null, null), i0.ɵqud(335544320, 6, { tabLink: 0 }), i0.ɵqud(603979776, 7, { tabContent: 0 }), i0.ɵprd(512, null, i4.AriaService, i4.AriaService, []), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(16777216, null, 0, 2, 'button', [['clrTabLink', ''], ['role',
+                'presentation']], [[8, 'id', 0], [1, 'aria-selected', 0], [1, 'aria-controls', 0],
+            [2, 'btn', null], [2, 'btn-link', null], [2, 'nav-link', null],
+            [2, 'nav-item', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 63).activate() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, [[6, 4], [1, 4]], 0, i12.TabLinkDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService, i0.ElementRef, i0.ComponentFactoryResolver,
+            i0.ViewContainerRef], { inOverflow: [0, 'inOverflow'] }, null), (_l()(),
+            i0.ɵted(null, ['Cloud'])), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(),
+            i0.ɵand(16777216, null, 0, 1, null, View_KSTabs_3)), i0.ɵdid(147456, null, 0, i13.IfActiveDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID,
+            i0.TemplateRef, i0.ViewContainerRef], { active: [0, 'active'] }, null),
+        (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵted(0, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 0, 13, 'clr-tab', [], null, null, null, i10.View_Tab_0, i10.RenderType_Tab)), i0.ɵprd(1024, null, i3.IF_ACTIVE_ID, i3.tokenFactory, []), i0.ɵdid(180224, null, 2, i11.Tab, [i3.IfActiveService,
+            i3.IF_ACTIVE_ID, i8.TabsService], null, null), i0.ɵqud(335544320, 8, { tabLink: 0 }), i0.ɵqud(603979776, 9, { tabContent: 0 }), i0.ɵprd(512, null, i4.AriaService, i4.AriaService, []), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵeld(16777216, null, 0, 2, 'button', [['clrTabLink', ''], ['role',
+                'presentation']], [[8, 'id', 0], [1, 'aria-selected', 0], [1, 'aria-controls', 0],
+            [2, 'btn', null], [2, 'btn-link', null], [2, 'nav-link', null],
+            [2, 'nav-item', null], [2, 'active', null]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 78).activate() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(16384, [[8, 4], [1, 4]], 0, i12.TabLinkDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID, i4.AriaService, i0.ElementRef, i0.ComponentFactoryResolver,
+            i0.ViewContainerRef], { inOverflow: [0, 'inOverflow'] }, null), (_l()(),
+            i0.ɵted(null, ['Infrastructure'])), (_l()(), i0.ɵted(0, ['\n        '])),
+        (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSTabs_4)), i0.ɵdid(147456, null, 0, i13.IfActiveDirective, [i3.IfActiveService, i3.IF_ACTIVE_ID,
+            i0.TemplateRef, i0.ViewContainerRef], { active: [0, 'active'] }, null),
+        (_l()(), i0.ɵted(0, ['\n    '])), (_l()(), i0.ɵted(0, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_10 = null;
+        _ck(_v, 37, 0, currVal_10);
+        var currVal_19 = true;
+        _ck(_v, 52, 0, currVal_19);
+        var currVal_28 = _co.inOverflow;
+        _ck(_v, 63, 0, currVal_28);
+        var currVal_29 = null;
+        _ck(_v, 67, 0, currVal_29);
+        var currVal_38 = _co.inOverflow;
+        _ck(_v, 78, 0, currVal_38);
+        var currVal_39 = null;
+        _ck(_v, 82, 0, currVal_39);
+    }, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.inOverflow;
+        _ck(_v, 11, 0, currVal_0);
+        var currVal_1 = !_co.inOverflow;
+        _ck(_v, 14, 0, currVal_1);
+        var currVal_2 = i0.ɵnov(_v, 33).tabLinkId;
+        var currVal_3 = i0.ɵnov(_v, 33).active;
+        var currVal_4 = i0.ɵnov(_v, 33).ariaControls;
+        var currVal_5 = true;
+        var currVal_6 = !i0.ɵnov(_v, 33).inOverflow;
+        var currVal_7 = !i0.ɵnov(_v, 33).inOverflow;
+        var currVal_8 = !i0.ɵnov(_v, 33).inOverflow;
+        var currVal_9 = i0.ɵnov(_v, 33).active;
+        _ck(_v, 32, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9);
+        var currVal_11 = i0.ɵnov(_v, 48).tabLinkId;
+        var currVal_12 = i0.ɵnov(_v, 48).active;
+        var currVal_13 = i0.ɵnov(_v, 48).ariaControls;
+        var currVal_14 = true;
+        var currVal_15 = !i0.ɵnov(_v, 48).inOverflow;
+        var currVal_16 = !i0.ɵnov(_v, 48).inOverflow;
+        var currVal_17 = !i0.ɵnov(_v, 48).inOverflow;
+        var currVal_18 = i0.ɵnov(_v, 48).active;
+        _ck(_v, 47, 0, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18);
+        var currVal_20 = i0.ɵnov(_v, 63).tabLinkId;
+        var currVal_21 = i0.ɵnov(_v, 63).active;
+        var currVal_22 = i0.ɵnov(_v, 63).ariaControls;
+        var currVal_23 = true;
+        var currVal_24 = !i0.ɵnov(_v, 63).inOverflow;
+        var currVal_25 = !i0.ɵnov(_v, 63).inOverflow;
+        var currVal_26 = !i0.ɵnov(_v, 63).inOverflow;
+        var currVal_27 = i0.ɵnov(_v, 63).active;
+        _ck(_v, 62, 0, currVal_20, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26, currVal_27);
+        var currVal_30 = i0.ɵnov(_v, 78).tabLinkId;
+        var currVal_31 = i0.ɵnov(_v, 78).active;
+        var currVal_32 = i0.ɵnov(_v, 78).ariaControls;
+        var currVal_33 = true;
+        var currVal_34 = !i0.ɵnov(_v, 78).inOverflow;
+        var currVal_35 = !i0.ɵnov(_v, 78).inOverflow;
+        var currVal_36 = !i0.ɵnov(_v, 78).inOverflow;
+        var currVal_37 = i0.ɵnov(_v, 78).active;
+        _ck(_v, 77, 0, currVal_30, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37);
+    });
 }
 export function View_KSTabs_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSTabs_0, RenderType_KSTabs)),
-        i0.ɵdid(49152, null, 0, i1.KSTabs, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i5.KSTabs, [], null, null)], null, null);
 }
-export var KSTabsNgFactory = i0.ɵccf('ng-component', i1.KSTabs, View_KSTabs_Host_0, {}, {}, []);
+export var KSTabsNgFactory = i0.ɵccf('ng-component', i5.KSTabs, View_KSTabs_Host_0, {}, {}, []);
 //# sourceMappingURL=tabs.component.ngfactory.js.map

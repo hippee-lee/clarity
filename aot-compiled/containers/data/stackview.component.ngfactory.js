@@ -5,17 +5,127 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/data/stackview.component';
+import * as i1 from '../../node_modules/clarity-angular/data/stack-view/stack-view.ngfactory';
+import * as i2 from 'clarity-angular/data/stack-view/stack-view';
+import * as i3 from '../../node_modules/clarity-angular/data/stack-view/stack-header.ngfactory';
+import * as i4 from 'clarity-angular/data/stack-view/stack-header';
+import * as i5 from '../../node_modules/clarity-angular/data/stack-view/stack-block.ngfactory';
+import * as i6 from 'clarity-angular/data/stack-view/stack-block';
+import * as i7 from '../../../containers/data/stackview.component';
 var styles_KSStackView = [];
 export var RenderType_KSStackView = i0.ɵcrt({ encapsulation: 2, styles: styles_KSStackView,
     data: {} });
 export function View_KSStackView_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Stack Views'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Stack View'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 102, 'clr-stack-view', [], null, null, null, i1.View_StackView_0, i1.RenderType_StackView)),
+        i0.ɵdid(49152, null, 0, i2.StackView, [], null, null),
+        (_l()(), i0.ɵted(1, ['\n    '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-header', [], null, null, null, i3.View_StackHeader_0, i3.RenderType_StackHeader)), i0.ɵdid(49152, null, 0, i4.StackHeader, [i2.StackView], null, null), (_l()(), i0.ɵted(0, ['Angular stack view'])),
+        (_l()(), i0.ɵted(1, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 1, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Label 1'])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Content 1'])), (_l()(), i0.ɵted(1, ['\n    '])), (_l()(), i0.ɵted(1, ['\n\n    '])),
+        (_l()(), i0.ɵeld(0, null, 1, 46, 'clr-stack-block', [], [[2, 'stack-block',
+                null], [2, 'stack-block-expanded', null], [2, 'stack-block-expandable',
+                null], [2, 'stack-block-changed', null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)), i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], { expanded: [0, 'expanded'] }, null),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Label 2'])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Content 2'])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 2, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Sub-label 1'])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Sub-content 1'])), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 2, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Sub-label 2'])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Sub-content 2'])), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 2, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Sub-label 3'])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Sub-content 3'])), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n    '])), (_l()(), i0.ɵted(1, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, 1, 34, 'clr-stack-block', [], [[2, 'stack-block', null],
+            [2, 'stack-block-expanded', null], [2, 'stack-block-expandable',
+                null], [2, 'stack-block-changed', null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)), i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Label 3'])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)),
+        i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(), i0.ɵted(null, ['Content 3'])), (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 2, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Sub-label 4'])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Sub-content 4'])), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n        '])), (_l()(), i0.ɵeld(0, null, 2, 10, 'clr-stack-block', [], [[2, 'stack-block', null], [2, 'stack-block-expanded',
+                null], [2, 'stack-block-expandable', null], [2, 'stack-block-changed',
+                null]], null, null, i5.View_StackBlock_0, i5.RenderType_StackBlock)),
+        i0.ɵdid(114688, null, 0, i6.StackBlock, [[3, i6.StackBlock]], null, null), (_l()(), i0.ɵted(1, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 2, 'clr-stack-label', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null), (_l()(),
+            i0.ɵted(null, ['Sub-label 5'])), (_l()(), i0.ɵted(1, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, 1, 2, 'clr-stack-content', [], null, null, null, null, null)), i0.ɵdid(16384, null, 0, i2.StackViewCustomTags, [], null, null),
+        (_l()(), i0.ɵted(null, ['Sub-content 5'])), (_l()(), i0.ɵted(1, ['\n        '])),
+        (_l()(), i0.ɵted(1, ['\n    '])), (_l()(), i0.ɵted(1, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        _ck(_v, 11, 0);
+        var currVal_8 = true;
+        _ck(_v, 23, 0, currVal_8);
+        _ck(_v, 34, 0);
+        _ck(_v, 46, 0);
+        _ck(_v, 58, 0);
+        _ck(_v, 71, 0);
+        _ck(_v, 82, 0);
+        _ck(_v, 94, 0);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 11).expanded;
+        var currVal_2 = i0.ɵnov(_v, 11).expandable;
+        var currVal_3 = i0.ɵnov(_v, 11).getChangedValue;
+        _ck(_v, 10, 0, currVal_0, currVal_1, currVal_2, currVal_3);
+        var currVal_4 = true;
+        var currVal_5 = i0.ɵnov(_v, 23).expanded;
+        var currVal_6 = i0.ɵnov(_v, 23).expandable;
+        var currVal_7 = i0.ɵnov(_v, 23).getChangedValue;
+        _ck(_v, 22, 0, currVal_4, currVal_5, currVal_6, currVal_7);
+        var currVal_9 = true;
+        var currVal_10 = i0.ɵnov(_v, 34).expanded;
+        var currVal_11 = i0.ɵnov(_v, 34).expandable;
+        var currVal_12 = i0.ɵnov(_v, 34).getChangedValue;
+        _ck(_v, 33, 0, currVal_9, currVal_10, currVal_11, currVal_12);
+        var currVal_13 = true;
+        var currVal_14 = i0.ɵnov(_v, 46).expanded;
+        var currVal_15 = i0.ɵnov(_v, 46).expandable;
+        var currVal_16 = i0.ɵnov(_v, 46).getChangedValue;
+        _ck(_v, 45, 0, currVal_13, currVal_14, currVal_15, currVal_16);
+        var currVal_17 = true;
+        var currVal_18 = i0.ɵnov(_v, 58).expanded;
+        var currVal_19 = i0.ɵnov(_v, 58).expandable;
+        var currVal_20 = i0.ɵnov(_v, 58).getChangedValue;
+        _ck(_v, 57, 0, currVal_17, currVal_18, currVal_19, currVal_20);
+        var currVal_21 = true;
+        var currVal_22 = i0.ɵnov(_v, 71).expanded;
+        var currVal_23 = i0.ɵnov(_v, 71).expandable;
+        var currVal_24 = i0.ɵnov(_v, 71).getChangedValue;
+        _ck(_v, 70, 0, currVal_21, currVal_22, currVal_23, currVal_24);
+        var currVal_25 = true;
+        var currVal_26 = i0.ɵnov(_v, 82).expanded;
+        var currVal_27 = i0.ɵnov(_v, 82).expandable;
+        var currVal_28 = i0.ɵnov(_v, 82).getChangedValue;
+        _ck(_v, 81, 0, currVal_25, currVal_26, currVal_27, currVal_28);
+        var currVal_29 = true;
+        var currVal_30 = i0.ɵnov(_v, 94).expanded;
+        var currVal_31 = i0.ɵnov(_v, 94).expandable;
+        var currVal_32 = i0.ɵnov(_v, 94).getChangedValue;
+        _ck(_v, 93, 0, currVal_29, currVal_30, currVal_31, currVal_32);
+    });
 }
 export function View_KSStackView_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSStackView_0, RenderType_KSStackView)),
-        i0.ɵdid(49152, null, 0, i1.KSStackView, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i7.KSStackView, [], null, null)], null, null);
 }
-export var KSStackViewNgFactory = i0.ɵccf('ng-component', i1.KSStackView, View_KSStackView_Host_0, {}, {}, []);
+export var KSStackViewNgFactory = i0.ɵccf('ng-component', i7.KSStackView, View_KSStackView_Host_0, {}, {}, []);
 //# sourceMappingURL=stackview.component.ngfactory.js.map

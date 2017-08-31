@@ -16,9 +16,7 @@ var KSTooltips = (function () {
     return KSTooltips;
 }());
 KSTooltips = __decorate([
-    Component({
-        templateUrl: "./tooltips.component.html"
-    })
+    Component({ templateUrl: "./tooltips.component.html" })
 ], KSTooltips);
 export { KSTooltips };
 //# sourceMappingURL=tooltips.component.js.map

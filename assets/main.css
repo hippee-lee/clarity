@@ -49,5 +49,7 @@ clr-alert {
     flex: 1 0 auto;
 }
 
-
-/* Color port */
+/* For the /vertical-nav/wikipedia route */
+.main-container {
+    width: 100%;
+}

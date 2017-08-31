@@ -6,12 +6,268 @@
 /* tslint:disable */
 import * as i0 from '@angular/core';
 import * as i1 from '../../../containers/modal/modals.component';
+import * as i2 from '../../node_modules/clarity-angular/modal/modal.ngfactory';
+import * as i3 from 'clarity-angular/utils/scrolling/scrolling-service';
+import * as i4 from '@angular/platform-browser';
+import * as i5 from 'clarity-angular/modal/modal';
 var styles_KSModals = [];
 export var RenderType_KSModals = i0.ɵcrt({ encapsulation: 2, styles: styles_KSModals,
     data: {} });
 export function View_KSModals_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['modals'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Modals'])), (_l()(), i0.ɵted(null, ['\n\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Default'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened1 = true) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Show modal'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 21, 'clr-modal', [], null, [[null, 'clrModalOpenChange'],
+            ['body', 'keyup.escape']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('body:keyup.escape' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 11).close() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrModalOpenChange' === en)) {
+                var pd_1 = ((_co.opened1 = $event) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i2.View_Modal_0, i2.RenderType_Modal)), i0.ɵprd(8704, null, i3.ScrollingService, i3.ScrollingService, [i4.DOCUMENT]), i0.ɵdid(704512, null, 0, i5.Modal, [i3.ScrollingService], { _open: [0, '_open'] }, { _openChanged: 'clrModalOpenChange' }),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'h3', [['class', 'modal-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Modal Title'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 2, 4, 'div', [['class', 'modal-body']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Modal Body'])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 3, 7, 'div', [['class', 'modal-footer']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened1 = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Cancel'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened1 = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Ok'])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['With Overflow'])), (_l()(),
+            i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened2 = true) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Show modal'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 57, 'clr-modal', [], null, [[null, 'clrModalOpenChange'],
+            ['body', 'keyup.escape']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('body:keyup.escape' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 40).close() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrModalOpenChange' === en)) {
+                var pd_1 = ((_co.opened2 = $event) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i2.View_Modal_0, i2.RenderType_Modal)), i0.ɵprd(8704, null, i3.ScrollingService, i3.ScrollingService, [i4.DOCUMENT]), i0.ɵdid(704512, null, 0, i5.Modal, [i3.ScrollingService], { _open: [0, '_open'] }, { _openChanged: 'clrModalOpenChange' }),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'h3', [['class', 'modal-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Modal Title'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 2, 40, 'div', [['class', 'modal-body']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Modal Body'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n            Commodi consequuntur cumque eligendi non officiis quae reiciendis?\n            Asperiores, assumenda commodi eaque et, facere fuga\n            nulla obcaecati officia, sapiente sed soluta velit?\n        '])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n    '])),
+        (_l()(), i0.ɵeld(0, null, 3, 7, 'div', [['class', 'modal-footer']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline'], ['type', 'button']], null, [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened2 = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Cancel'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.opened2 = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Ok'])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Sizes'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class',
+                'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.small = true) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Small modal'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.large = true) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Large modal'])),
+        (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.extraLarge = true) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Extra large modal'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 15, 'clr-modal', [], null, [[null, 'clrModalOpenChange'],
+            ['body', 'keyup.escape']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('body:keyup.escape' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 111).close() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrModalOpenChange' === en)) {
+                var pd_1 = ((_co.small = $event) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i2.View_Modal_0, i2.RenderType_Modal)), i0.ɵprd(8704, null, i3.ScrollingService, i3.ScrollingService, [i4.DOCUMENT]), i0.ɵdid(704512, null, 0, i5.Modal, [i3.ScrollingService], { _open: [0, '_open'], size: [1, 'size'] }, { _openChanged: 'clrModalOpenChange' }),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'h3', [['class', 'modal-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Small modal'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 2, 1, 'div', [['class', 'modal-body']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['I am a small modal.'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 3, 4, 'div', [['class', 'modal-footer']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'],
+            ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.small = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Ok'])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 18, 'clr-modal', [], null, [[null, 'clrModalOpenChange'],
+            ['body', 'keyup.escape']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('body:keyup.escape' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 128).close() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrModalOpenChange' === en)) {
+                var pd_1 = ((_co.large = $event) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i2.View_Modal_0, i2.RenderType_Modal)), i0.ɵprd(8704, null, i3.ScrollingService, i3.ScrollingService, [i4.DOCUMENT]), i0.ɵdid(704512, null, 0, i5.Modal, [i3.ScrollingService], { _open: [0, '_open'], size: [1, 'size'] }, { _openChanged: 'clrModalOpenChange' }),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'h3', [['class', 'modal-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Large modal'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 2, 1, 'div', [['class', 'modal-body']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['I am a large modal.'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 3, 7, 'div', [['class', 'modal-footer']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline'],
+            ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.large = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Cancel'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.large = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Ok'])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n\n'])), (_l()(), i0.ɵeld(0, null, null, 18, 'clr-modal', [], null, [[null, 'clrModalOpenChange'],
+            ['body', 'keyup.escape']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('body:keyup.escape' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 148).close() !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('clrModalOpenChange' === en)) {
+                var pd_1 = ((_co.extraLarge = $event) !== false);
+                ad = (pd_1 && ad);
+            }
+            return ad;
+        }, i2.View_Modal_0, i2.RenderType_Modal)), i0.ɵprd(8704, null, i3.ScrollingService, i3.ScrollingService, [i4.DOCUMENT]), i0.ɵdid(704512, null, 0, i5.Modal, [i3.ScrollingService], { _open: [0, '_open'], size: [1, 'size'] }, { _openChanged: 'clrModalOpenChange' }),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 1, 1, 'h3', [['class', 'modal-title']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Extra large modal'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 2, 1, 'div', [['class', 'modal-body']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['I am an extra large modal.'])),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, 3, 7, 'div', [['class', 'modal-footer']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-outline'],
+            ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.extraLarge = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Cancel'])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['type', 'button']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            var _co = _v.component;
+            if (('click' === en)) {
+                var pd_0 = ((_co.extraLarge = false) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Ok'])), (_l()(),
+            i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.opened1;
+        _ck(_v, 11, 0, currVal_0);
+        var currVal_1 = _co.opened2;
+        _ck(_v, 40, 0, currVal_1);
+        var currVal_2 = _co.small;
+        var currVal_3 = 'sm';
+        _ck(_v, 111, 0, currVal_2, currVal_3);
+        var currVal_4 = _co.large;
+        var currVal_5 = 'lg';
+        _ck(_v, 128, 0, currVal_4, currVal_5);
+        var currVal_6 = _co.extraLarge;
+        var currVal_7 = 'xl';
+        _ck(_v, 148, 0, currVal_6, currVal_7);
+    }, null);
 }
 export function View_KSModals_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSModals_0, RenderType_KSModals)),

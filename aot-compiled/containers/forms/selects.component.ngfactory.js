@@ -5,17 +5,111 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/forms/selects.component';
+import * as i1 from '@angular/forms';
+import * as i2 from '../../../containers/forms/selects.component';
 var styles_KSSelects = [];
 export var RenderType_KSSelects = i0.ɵcrt({ encapsulation: 2, styles: styles_KSSelects,
     data: {} });
 export function View_KSSelects_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Selects'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Selects'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 204, 'form', [['class', 'test-select'], ['novalidate',
+                    '']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
+                    'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                    null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'submit'], [null, 'reset']], function (_v, en, $event) {
+                var ad = true;
+                if (('submit' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 5).onSubmit($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('reset' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 5).onReset() !== false);
+                    ad = (pd_1 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i1.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i1.NgForm, [[8, null],
+            [8, null]], null, null), i0.ɵprd(2048, null, i1.ControlContainer, null, [i1.NgForm]), i0.ɵdid(16384, null, 0, i1.NgControlStatusGroup, [i1.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 117, 'section', [['class',
+                'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Select Boxes'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 35, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'selects_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['This is a select box'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'select']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 26, 'select', [['id', 'selects_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['50000000'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 37, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'selects_2']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Text field paired with a select'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'selects_2'],
+            ['placeholder', 'Test'], ['type', 'text']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'select']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 26, 'select', [['id', 'selects_3']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['New York'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['San Francisco'])), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null),
+        i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Austin'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2,
+            [8, null]], null, null), (_l()(), i0.ɵted(null, ['Paris'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Seattle'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 35, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'selects_4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled select'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'select disabled']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 26, 'select', [['disabled', ''], ['id', 'selects_4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['New York'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['San Francisco'])), (_l()(),
+            i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null),
+        i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Austin'])),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2,
+            [8, null]], null, null), (_l()(), i0.ɵted(null, ['Paris'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Seattle'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, null, 78, 'section', [['class', 'form-block']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Multi Select'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(),
+            i0.ɵeld(0, null, null, 35, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'selects_1']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Multi Select'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 29, 'div', [['class', 'select multiple']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 26, 'select', [['id', 'selects_5'], ['multiple', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['1'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['2'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['3'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['4'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['50000000'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 35, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [['for', 'selects_4']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Disabled select'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 29, 'div', [['class', 'select multiple disabled']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 26, 'select', [['disabled', ''], ['id', 'selects_6'], ['multiple',
+                '']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef, i0.Renderer2,
+            [8, null]], null, null), (_l()(), i0.ɵted(null, ['New York'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['San Francisco'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Austin'])), (_l()(), i0.ɵted(null, ['\n                    '])),
+        (_l()(), i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Paris'])), (_l()(), i0.ɵted(null, ['\n                    '])), (_l()(),
+            i0.ɵeld(0, null, null, 3, 'option', [], null, null, null, null, null)), i0.ɵdid(147456, null, 0, i1.NgSelectOption, [i0.ElementRef, i0.Renderer2, [8, null]], null, null), i0.ɵdid(147456, null, 0, i1.ɵq, [i0.ElementRef,
+            i0.Renderer2, [8, null]], null, null), (_l()(), i0.ɵted(null, ['Seattle'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 7).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 7).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 7).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 7).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 7).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 7).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 7).ngClassPending;
+        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+    });
 }
 export function View_KSSelects_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSSelects_0, RenderType_KSSelects)),
-        i0.ɵdid(49152, null, 0, i1.KSSelects, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i2.KSSelects, [], null, null)], null, null);
 }
-export var KSSelectsNgFactory = i0.ɵccf('ng-component', i1.KSSelects, View_KSSelects_Host_0, {}, {}, []);
+export var KSSelectsNgFactory = i0.ɵccf('ng-component', i2.KSSelects, View_KSSelects_Host_0, {}, {}, []);
 //# sourceMappingURL=selects.component.ngfactory.js.map

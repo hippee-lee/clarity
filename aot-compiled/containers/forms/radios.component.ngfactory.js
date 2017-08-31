@@ -5,17 +5,76 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/forms/radios.component';
+import * as i1 from '@angular/forms';
+import * as i2 from '../../../containers/forms/radios.component';
 var styles_KSRadios = [];
 export var RenderType_KSRadios = i0.ɵcrt({ encapsulation: 2, styles: styles_KSRadios,
     data: {} });
 export function View_KSRadios_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['radios'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Radios'])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵeld(0, null, null, 77, 'form', [['novalidate', '']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'submit'],
+                [null, 'reset']], function (_v, en, $event) {
+                var ad = true;
+                if (('submit' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 5).onSubmit($event) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('reset' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 5).onReset() !== false);
+                    ad = (pd_1 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(16384, null, 0, i1.ɵbf, [], null, null), i0.ɵdid(16384, null, 0, i1.NgForm, [[8, null],
+            [8, null]], null, null), i0.ɵprd(2048, null, i1.ControlContainer, null, [i1.NgForm]), i0.ɵdid(16384, null, 0, i1.NgControlStatusGroup, [i1.ControlContainer], null, null), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 70, 'section', [['class',
+                'form-block']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Radio Buttons'])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 20, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Default/Stacked radio button group'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'checkrads_9'],
+            ['name', 'gridRadios'], ['type', 'radio']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_9']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Radio option 1'])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['id', 'checkrads_10'], ['name', 'gridRadios'], ['type',
+                'radio']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_10']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Radio option 2 (checked)'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 20, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Inline radio button group'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio-inline']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['id', 'checkrads_11'], ['name', 'gridRadios1'], ['type',
+                'radio']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_11']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Radio option 1'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio-inline']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['id', 'checkrads_12'], ['name', 'gridRadios1'], ['type',
+                'radio']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_12']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Radio option 2 (checked)'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 20, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['These are disabled radio buttons'])), (_l()(), i0.ɵted(null, ['\n            '])),
+        (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio disabled']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 0, 'input', [['disabled', ''], ['id', 'checkrads_13'], ['name', 'gridRadios2'],
+            ['type', 'radio']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_13']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['Radio option disabled and unchecked'])), (_l()(),
+            i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵeld(0, null, null, 6, 'div', [['class', 'radio disabled']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵeld(0, null, null, 0, 'input', [['checked', ''], ['disabled',
+                    ''], ['id', 'checkrads_14'], ['name', 'gridRadios2'], ['type', 'radio']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [['for', 'checkrads_14']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Radio option disabled and checked'])),
+        (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n'])), (_l()(), i0.ɵted(null, ['\n']))], null, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 7).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 7).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 7).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 7).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 7).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 7).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 7).ngClassPending;
+        _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+    });
 }
 export function View_KSRadios_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSRadios_0, RenderType_KSRadios)),
-        i0.ɵdid(49152, null, 0, i1.KSRadios, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i2.KSRadios, [], null, null)], null, null);
 }
-export var KSRadiosNgFactory = i0.ɵccf('ng-component', i1.KSRadios, View_KSRadios_Host_0, {}, {}, []);
+export var KSRadiosNgFactory = i0.ɵccf('ng-component', i2.KSRadios, View_KSRadios_Host_0, {}, {}, []);
 //# sourceMappingURL=radios.component.ngfactory.js.map

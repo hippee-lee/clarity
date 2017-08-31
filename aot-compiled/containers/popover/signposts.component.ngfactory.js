@@ -5,17 +5,84 @@
  */
 /* tslint:disable */
 import * as i0 from '@angular/core';
-import * as i1 from '../../../containers/popover/signposts.component';
+import * as i1 from '../../node_modules/clarity-angular/popover/signpost/signpost-content.ngfactory';
+import * as i2 from 'clarity-angular/popover/signpost/signpost-content';
+import * as i3 from '../../node_modules/clarity-angular/popover/signpost/signpost.ngfactory';
+import * as i4 from 'clarity-angular/popover/signpost/signpost';
+import * as i5 from 'clarity-angular/utils/conditional/if-open.service';
+import * as i6 from '@angular/common';
+import * as i7 from 'clarity-angular/popover/signpost/signpost-trigger.directive';
+import * as i8 from 'clarity-angular/icon/icon';
+import * as i9 from 'clarity-angular/utils/conditional/if-open.directive';
+import * as i10 from '../../../containers/popover/signposts.component';
 var styles_KSSignposts = [];
 export var RenderType_KSSignposts = i0.ɵcrt({ encapsulation: 2, styles: styles_KSSignposts,
     data: {} });
+function View_KSSignposts_2(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 11, 'clr-signpost-content', [], [[2, 'signpost-content', null], [4, 'visibility', null]], null, null, i1.View_SignpostContent_0, i1.RenderType_SignpostContent)),
+        i0.ɵdid(8568832, null, 0, i2.SignpostContent, [i0.Injector, [1, i0.ElementRef]], { position: [0, 'position'] }, null), (_l()(), i0.ɵted(0, ['\n                '])),
+        (_l()(), i0.ɵeld(0, null, 0, 1, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(0, ['\n                '])), (_l()(), i0.ɵeld(0, null, 0, 4, 'p', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n                    Lorem Ipsum versions of Lorem Ipsum '])),
+        (_l()(), i0.ɵeld(0, null, null, 1, 'a', [['href', '']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Link'])), (_l()(), i0.ɵted(null, ['\n                '])), (_l()(),
+            i0.ɵted(0, ['\n            ']))], function (_ck, _v) {
+        var currVal_2 = _v.parent.context.$implicit.position;
+        _ck(_v, 1, 0, currVal_2);
+    }, function (_ck, _v) {
+        var currVal_0 = true;
+        var currVal_1 = i0.ɵnov(_v, 1).hidden;
+        _ck(_v, 0, 0, currVal_0, currVal_1);
+        var currVal_3 = _v.parent.context.$implicit.position;
+        _ck(_v, 4, 0, currVal_3);
+    });
+}
+function View_KSSignposts_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 22, 'div', [['class',
+                'col']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h4', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(),
+            i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 16, 'clr-signpost', [], [[2, 'signpost', null]], null, null, i3.View_Signpost_0, i3.RenderType_Signpost)), i0.ɵdid(49152, null, 1, i4.Signpost, [], null, null), i0.ɵqud(335544320, 1, { customTrigger: 0 }), i0.ɵprd(512, null, i5.IfOpenService, i5.IfOpenService, []), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵeld(0, null, 0, 7, 'button', [['class', 'signpost-action btn btn-small btn-link'],
+            ['clrSignpostTrigger', ''], ['type', 'button']], [[8, 'id', 0]], [[null,
+                'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i0.ɵnov(_v, 13).onSignpostTriggerClick($event) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i0.ɵdid(278528, null, 0, i6.NgClass, [i0.IterableDiffers, i0.KeyValueDiffers, i0.ElementRef, i0.Renderer], { klass: [0,
+                'klass'], ngClass: [1, 'ngClass'] }, null), i0.ɵpod({ active: 0 }), i0.ɵdid(16384, [[1, 4]], 0, i7.SignpostTriggerDirective, [i5.IfOpenService], null, null),
+        (_l()(), i0.ɵted(null, ['\n                '])), (_l()(), i0.ɵeld(0, null, null, 1, 'clr-icon', [], [[1, 'shape', 0]], null, null, null, null)), i0.ɵdid(16384, null, 0, i8.IconCustomTag, [], null, null), (_l()(), i0.ɵted(null, ['\n            '])), (_l()(), i0.ɵted(0, ['\n            '])), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_KSSignposts_2)), i0.ɵdid(147456, null, 0, i9.IfOpenDirective, [i5.IfOpenService, i0.TemplateRef, i0.ViewContainerRef], { open: [0, 'open'] }, null), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(),
+            i0.ɵted(null, ['\n    ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_3 = 'signpost-action btn btn-small btn-link';
+        var currVal_4 = _ck(_v, 12, 0, _co.open);
+        _ck(_v, 11, 0, currVal_3, currVal_4);
+        var currVal_6 = null;
+        _ck(_v, 20, 0, currVal_6);
+    }, function (_ck, _v) {
+        var currVal_0 = _v.context.$implicit.description;
+        _ck(_v, 3, 0, currVal_0);
+        var currVal_1 = true;
+        _ck(_v, 5, 0, currVal_1);
+        var currVal_2 = i0.ɵinlineInterpolate(1, '', _v.context.$implicit.id, '');
+        _ck(_v, 10, 0, currVal_2);
+        var currVal_5 = _v.context.$implicit.icon;
+        _ck(_v, 15, 0, currVal_5);
+    });
+}
 export function View_KSSignposts_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['Signposts'])), (_l()(), i0.ɵted(null, ['\n']))], null, null);
+            i0.ɵted(null, ['Signposts'])), (_l()(), i0.ɵted(null, ['\n'])),
+        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [['class', 'content-wrapper']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_KSSignposts_1)), i0.ɵdid(802816, null, 0, i6.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0,
+                'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n'])), (_l()(),
+            i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.positions;
+        _ck(_v, 6, 0, currVal_0);
+    }, null);
 }
 export function View_KSSignposts_Host_0(_l) {
     return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'ng-component', [], null, null, null, View_KSSignposts_0, RenderType_KSSignposts)),
-        i0.ɵdid(49152, null, 0, i1.KSSignposts, [], null, null)], null, null);
+        i0.ɵdid(49152, null, 0, i10.KSSignposts, [], null, null)], null, null);
 }
-export var KSSignpostsNgFactory = i0.ɵccf('ng-component', i1.KSSignposts, View_KSSignposts_Host_0, {}, {}, []);
+export var KSSignpostsNgFactory = i0.ɵccf('ng-component', i10.KSSignposts, View_KSSignposts_Host_0, {}, {}, []);
 //# sourceMappingURL=signposts.component.ngfactory.js.map
