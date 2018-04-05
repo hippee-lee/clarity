@@ -33,7 +33,7 @@ let nbRow: number = 0;
     selector: "clr-dg-row",
     template: `
         <div class="datagrid-row-master datagrid-row-flex">
-            <ng-container #stickyContainer>
+            <div class="datagrid-row-sticky" #stickyContainer>>
                 <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Multi"
                              class="datagrid-select datagrid-fixed-column">
                     <clr-checkbox [clrChecked]="selected" (clrCheckedChange)="toggle($event)"></clr-checkbox>
@@ -60,34 +60,18 @@ let nbRow: number = 0;
                     </ng-container>
                 </clr-dg-cell>
                 <ng-container #stickyCells><div></div></ng-container>
-            </ng-container>
-            <ng-container>
-                <ng-container>
-                    <div #scrollableCells></div>
-                </ng-container>
-            </ng-container>
-        </div>
-
-        <!-- projected Template -->
-        <ng-template #projectedCells>
-            <ng-content *ngIf="!expand.replace || !expand.expanded || expand.loading"></ng-content>
-
-            <ng-template *ngIf="expand.replace && expand.expanded && !expand.loading"
-                         [ngTemplateOutlet]="detail"></ng-template>
-        </ng-template>
-        <!-- details template -->
-        <ng-template *ngIf="!expand.replace && expand.expanded && !expand.loading"
-                     [ngTemplateOutlet]="detail"></ng-template>
-
-        <!-- 
-            We need the "project into template" hack because we need this in 2 different places
-            depending on whether the details replace the row or not.
-        -->
-        <ng-template #detail>
-            <div class="datagrid-row-detail-wrapper">
-                <ng-content select="clr-dg-row-detail"></ng-content>
             </div>
-        </ng-template>
+            <div class="datagrid-row-scrollable" #scrollableCells>
+                <div class="datagrid-scrolling-cells" *ngIf="!expand.replace || !expand.expanded || expand.loading">
+                    <div #scrollableCells></div>
+                </div>
+                <div class="datagrid-row-detail-wrapper" *ngIf="expand.expanded && !expand.loading">
+                    <ng-content select="clr-dg-row-detail"></ng-content>
+                    <!-- replaced-->
+                    <!-- <ng-template *ngIf="!expand.replace && expand.expanded && !expand.loading"
+                     [ngTemplateOutlet]="detail"></ng-template>-->
+                </div>
+            </div>
     `,
     host: {
         "[class.datagrid-row]": "true",
@@ -223,7 +207,6 @@ export class ClrDatagridRow implements AfterContentInit {
             if (cellList.length === columnList.length) {
                 this.updateCellsForColumns(columnList);
             }
-
         });
 
         // Used to set things up the first time but only after all the columns are ready.

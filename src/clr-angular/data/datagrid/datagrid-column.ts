@@ -49,7 +49,11 @@ let nbCount: number = 0;
             </div>
         </div>
     `,
-    host: {"[class.datagrid-column]": "true", "[class.datagrid-column--hidden]": "hidden"}
+    host: {
+        "[class.datagrid-column]": "true",
+        "[class.datagrid-column--hidden]": "hidden",
+        "[class.datagrid-column--sticky]": "sticky"
+    }
 })
 
 export class ClrDatagridColumn extends DatagridFilterRegistrar<DatagridStringFilterImpl> {

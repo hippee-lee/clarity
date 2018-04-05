@@ -6,8 +6,6 @@
 import {Component, ElementRef, OnDestroy, Renderer2, TemplateRef, ViewChild, ViewContainerRef} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
-import {TableHeightService} from "../providers/table-height.service";
-
 import {COMPUTE_WIDTH_CLASS, NO_LAYOUT_CLASS} from "./constants";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
@@ -23,8 +21,7 @@ import {DatagridRenderOrganizer} from "./render-organizer";
     `
 })
 export class DatagridTableRenderer implements OnDestroy {
-    constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer,
-                private table: TableHeightService) {
+    constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer) {
         this.subscriptions.push(organizer.tableMode.subscribe(on => this.tableMode(on)));
         this.subscriptions.push(organizer.noLayout.subscribe(on => this.noLayout(on)));
     }
@@ -40,7 +37,6 @@ export class DatagridTableRenderer implements OnDestroy {
 
     ngAfterViewInit() {
         this.outsideContainer.createEmbeddedView(this.projected);
-        this.table.tableRef = this.el;
     }
 
     private tableMode(on: boolean) {

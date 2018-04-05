@@ -8,7 +8,7 @@ import {AfterViewInit, Directive, ElementRef, EventEmitter, OnDestroy, Output, R
 import {Subscription} from "rxjs/Subscription";
 
 import {DragDispatcher} from "../providers/drag-dispatcher";
-import {TableHeightService} from "../providers/table-height.service";
+import {TableSizeService} from "../providers/table-size.service";
 
 import {DomAdapter} from "./dom-adapter";
 import {DatagridRenderOrganizer} from "./render-organizer";
@@ -17,7 +17,7 @@ import {DatagridRenderOrganizer} from "./render-organizer";
 export class DatagridColumnResizer implements AfterViewInit, OnDestroy {
     constructor(el: ElementRef, private renderer: Renderer2, private organizer: DatagridRenderOrganizer,
                 private domAdapter: DomAdapter, private dragDispatcher: DragDispatcher,
-                private table: TableHeightService) {
+                private table: TableSizeService) {
         this.columnEl = el.nativeElement;
     }
 
@@ -57,7 +57,7 @@ export class DatagridColumnResizer implements AfterViewInit, OnDestroy {
             this.columnMinWidth = this.domAdapter.minWidth(this.columnEl);
         }
         this.renderer.setStyle(this.handleTrackerEl, "display", "block");
-        this.renderer.setStyle(this.handleTrackerEl, "height", this.table.getHeight());
+        this.renderer.setStyle(this.handleTrackerEl, "height", this.table.getColumnDragHeight());
         this.renderer.setStyle(document.body, "cursor", "col-resize");
         this.dragDistancePositionX = 0;
         this.columnRectWidth = this.domAdapter.clientRectWidth(this.columnEl);
@@ -79,7 +79,6 @@ export class DatagridColumnResizer implements AfterViewInit, OnDestroy {
             this.columnResizeBy = this.dragDistancePositionX;
 
             this.resizeEmitter.emit(this.columnRectWidth + this.columnResizeBy);
-
             this.organizer.resize();
         }
     }

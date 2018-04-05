@@ -7,6 +7,7 @@ import {isPlatformBrowser} from "@angular/common";
 import {
     AfterContentInit,
     AfterViewChecked,
+    AfterViewInit,
     ContentChildren,
     Directive,
     ElementRef,
@@ -19,6 +20,7 @@ import {Subscription} from "rxjs/Subscription";
 
 import {Items} from "../providers/items";
 import {Page} from "../providers/page";
+import {TableSizeService} from "../providers/table-size.service";
 
 import {DomAdapter} from "./dom-adapter";
 import {DatagridHeaderRenderer} from "./header-renderer";
@@ -39,9 +41,10 @@ export const domAdapterFactory = (platformId: Object) => {
 // @dynamic (https://github.com/angular/angular/issues/19698#issuecomment-338340211)
 @Directive(
     {selector: "clr-datagrid", providers: [{provide: DomAdapter, useFactory: domAdapterFactory, deps: [PLATFORM_ID]}]})
-export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked, OnDestroy {
+export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {
     constructor(private organizer: DatagridRenderOrganizer, private items: Items, private page: Page,
-                private domAdapter: DomAdapter, private el: ElementRef, private renderer: Renderer2) {
+                private domAdapter: DomAdapter, private el: ElementRef, private renderer: Renderer2,
+                private tableSizeService: TableSizeService) {
         this._subscriptions.push(organizer.computeWidths.subscribe(() => this.computeHeadersWidth()));
         this._subscriptions.push(this.page.sizeChange.subscribe(() => {
             if (this._heightSet) {
@@ -61,6 +64,13 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
         }));
     }
 
+    // Initialize and set Table width for horizontal scrolling here.
+    ngAfterViewInit() {
+        this.tableSizeService.table = this.el;
+        // this.tableSizeService.updateRowWidth();
+    }
+
+    // Try putting in ngAfterViewInit
     ngAfterViewChecked() {
         if (this.shouldStabilizeColumns) {
             this.stabilizeColumns();

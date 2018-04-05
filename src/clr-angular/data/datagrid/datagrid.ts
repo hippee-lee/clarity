@@ -33,7 +33,7 @@ import {Selection, SelectionType} from "./providers/selection";
 import {Sort} from "./providers/sort";
 import {StateDebouncer} from "./providers/state-debouncer.provider";
 import {StateProvider} from "./providers/state.provider";
-import {TableHeightService} from "./providers/table-height.service";
+import {TableSizeService} from "./providers/table-size.service";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
 
 @Component({
@@ -52,7 +52,7 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateDebouncer,
         StateProvider,
         ColumnToggleButtonsService,
-        TableHeightService,
+        TableSizeService,
     ],
     host: {"[class.datagrid-host]": "true"}
 })
@@ -92,6 +92,28 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      * We grab the smart iterator from projected content
      */
     @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems<RowContext<any>>; // TODO - correct type
+
+    /**
+     * Set the state of the pinned first column
+     * default is false.
+     */
+
+    public _pinnedColumn: boolean = false;
+    @Input("clrDgPinnedColumn")
+    set pinned(value: boolean) {
+        // Does this wording set us up to take a list of column's to be pinned later on?
+        this._pinnedColumn = value;
+        this.pinnedColumnChange.emit(value);
+    }
+
+    /**
+     * @description
+     *
+     * Listen to changes to the pinned first column state.
+     * EventEmitter<boolean>
+     */
+    @Output("clrDgPinnedColumnChange")
+    pinnedColumnChange: EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     /**
      * Set the state of the pinned first column
