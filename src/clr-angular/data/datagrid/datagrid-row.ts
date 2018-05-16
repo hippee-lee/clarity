@@ -21,9 +21,11 @@ import {LoadingListener} from "../../utils/loading/loading-listener";
 
 import {ClrDatagridCell} from "./datagrid-cell";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
+import {ClrDatagridTemplatesService} from "./providers/datagrid-templates.service";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
 import {RowActionService} from "./providers/row-action-service";
+import {ClrDatagridRowTemplatesService} from "./providers/row-templates.service";
 import {Selection, SelectionType} from "./providers/selection";
 
 
@@ -82,7 +84,7 @@ let nbRow: number = 0;
         "[class.datagrid-selected]": "selected",
         "[attr.tabindex]": "selection.rowSelectionMode ? 0 : null"
     },
-    providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
+    providers: [Expand, {provide: LoadingListener, useExisting: Expand}, ClrDatagridRowTemplatesService]
 })
 export class ClrDatagridRow implements AfterContentInit {
     public id: string;
@@ -102,7 +104,9 @@ export class ClrDatagridRow implements AfterContentInit {
 
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,
-                public hideableColumnService: HideableColumnService) {
+                public hideableColumnService: HideableColumnService,
+                private rowTemplateService: ClrDatagridRowTemplatesService,
+                private datagridTemplatesServices: ClrDatagridTemplatesService) {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
     }
@@ -222,6 +226,9 @@ export class ClrDatagridRow implements AfterContentInit {
         });
     }
 
+    ngAfterViewInit() {
+        this.datagridTemplatesServices.addTemplateService(this.rowTemplateService.cells);
+    }
     /**********
      *
      * @description

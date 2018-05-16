@@ -3,10 +3,23 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {Component, ContentChildren, ElementRef, QueryList, Renderer2} from "@angular/core";
+import {
+    Component,
+    ContentChildren,
+    ElementRef,
+    Injector,
+    OnInit,
+    QueryList,
+    Renderer2,
+    ViewContainerRef
+} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
+
 import {ClrSignpost} from "../../popover/signpost/signpost";
+import {HostWrapper} from "../../utils/host-wrapping";
+
 import {HideableColumnService} from "./providers/hideable-column.service";
+import {ClrWrappedCell} from "./wrapped-cell";
 
 @Component({
     selector: "clr-dg-cell",
@@ -15,7 +28,7 @@ import {HideableColumnService} from "./providers/hideable-column.service";
     `,
     host: {"[class.datagrid-cell]": "true", "[class.datagrid-signpost-trigger]": "signpost.length > 0"}
 })
-export class ClrDatagridCell {
+export class ClrDatagridCell implements OnInit {
     /*********
      * @property signpost
      *
@@ -43,8 +56,7 @@ export class ClrDatagridCell {
     private hiddenStateSubscription: Subscription;
 
     constructor(public hideableColumnService: HideableColumnService, private _el: ElementRef,
-                private _renderer: Renderer2) {}
-
+                private _renderer: Renderer2, private vcr: ViewContainerRef, el: ElementRef) {}
 
     private mapHideableColumn(columnId: string) {
         if (!columnId) {
@@ -65,6 +77,12 @@ export class ClrDatagridCell {
         } else {
             this._renderer.removeClass(this._el.nativeElement, "datagrid-cell--hidden");
         }
+    }
+
+    private cellInjector: Injector;
+
+    ngOnInit() {
+        this.cellInjector = new HostWrapper(ClrWrappedCell, this.vcr);
     }
 
     ngOnDestroy() {

@@ -50,13 +50,14 @@ import {DatagridHeaderRenderer} from "./render/header-renderer";
 import {DatagridMainRenderer} from "./render/main-renderer";
 import {DatagridRowRenderer} from "./render/row-renderer";
 import {DatagridTableRenderer} from "./render/table-renderer";
+import {ClrWrappedCell} from "./wrapped-cell";
 
 export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     // Core
     ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridColumn, ClrDatagridColumnToggle,
     ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy, ClrDatagridRow,
     ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter, ClrDatagridPagination,
-    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle,
+    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle, ClrWrappedCell,
 
     // Renderers
     DatagridMainRenderer, DatagridTableRenderer, DatagridHeadRenderer, DatagridHeaderRenderer, DatagridBodyRenderer,
@@ -80,7 +81,8 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     declarations: [
         CLR_DATAGRID_DIRECTIVES,
     ],
-    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule]
+    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule],
+    entryComponents: [ClrWrappedCell]
 })
 export class ClrDatagridModule {}
 

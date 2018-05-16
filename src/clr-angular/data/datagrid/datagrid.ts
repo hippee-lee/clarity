@@ -13,7 +13,7 @@ import {
     Input,
     OnDestroy,
     Output,
-    QueryList
+    QueryList, TemplateRef
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
@@ -23,6 +23,7 @@ import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ColumnToggleButtonsService} from "./providers/column-toggle-buttons.service";
+import {ClrDatagridTemplatesService} from "./providers/datagrid-templates.service";
 import {FiltersProvider} from "./providers/filters";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
@@ -53,13 +54,15 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateProvider,
         ColumnToggleButtonsService,
         TableHeightService,
+        ClrDatagridTemplatesService,
     ],
     host: {"[class.datagrid-host]": "true"}
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
-                public rowActionService: RowActionService, private stateProvider: StateProvider) {}
+                public rowActionService: RowActionService, private stateProvider: StateProvider,
+                private dataridTemplatesService: ClrDatagridTemplatesService) {}
 
     /* reference to the enum so that template can access */
     public SELECTION_TYPE = SelectionType;
@@ -92,6 +95,28 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      * We grab the smart iterator from projected content
      */
     @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems;
+
+    /**
+     * Set the state of the pinned first column
+     * default is false.
+     */
+
+    public _pinnedColumn: boolean = false;
+    @Input("clrDgPinnedColumn")
+    set pinned(value: boolean) {
+        // Does this wording set us up to take a list of column's to be pinned later on?
+        this._pinnedColumn = value;
+        this.pinnedColumnChange.emit(value);
+    }
+
+    /**
+     * @description
+     *
+     * Listen to changes to the pinned first column state.
+     * EventEmitter<boolean>
+     */
+    @Output("clrDgPinnedColumnChange")
+    pinnedColumnChange: EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     /**
      * Array of all selected items
@@ -201,8 +226,11 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.selectedChanged.emit(s);
             }
         }));
+        this.rowTemplateArrays = this.dataridTemplatesService.rowTemplates;
     }
 
+    public display = true;
+    public rowTemplateArrays: TemplateRef<void>[][];
     /**
      * Subscriptions to all the services and queries changes
      */
