@@ -39,19 +39,21 @@
                     <span>column template refs here</span>
                 </div>
             </div>
-            <span>*ngFor and *clrDgItems iterator go here</span>
             <!--<ng-template *ngIf="iterator"-->
-                         <!--ngFor [ngForOf]="items.displayed" [ngForTrackBy]="items.trackBy"-->
-                         <!--[ngForTemplate]="iterator.template"></ng-template>-->
+            <!--ngFor [ngForOf]="items.displayed" [ngForTrackBy]="items.trackBy"-->
+            <!--[ngForTemplate]="iterator.template"></ng-template>-->
             <!--<ng-content *ngIf="!iterator"></ng-content>-->
-            <!-- Custom placeholder overrides the default empty one -->
             <ng-container *ngIf="iterator">
-                TODO: handle iterator rows/cells
+                handle clrDgItems
             </ng-container>
 
             <ng-container *ngIf="!iterator">
                 <ng-container *ngFor="let row of rowTemplateArrays">
-                    <ng-content></ng-content>
+                    <div class="datagrid-row datagrid-row-flex">
+                        <ng-template ngFor [ngForOf]="row" let-cell>
+                            <ng-container [ngTemplateOutlet]="cell"></ng-container>
+                        </ng-template>
+                    </div>
                 </ng-container>
             </ng-container>
             <ng-content select="clr-dg-placeholder"></ng-content>
