@@ -9,7 +9,7 @@ import {By} from "@angular/platform-browser";
 import {ClrDatagrid} from "../datagrid";
 import {TestContext} from "../helpers.spec";
 import {DragDispatcher} from "../providers/drag-dispatcher";
-import {TableHeightService} from "../providers/table-height.service";
+import {TableSizeService} from "../providers/table-size.service";
 
 import {DatagridColumnResizer} from "./column-resizer";
 import {DomAdapter} from "./dom-adapter";
@@ -42,7 +42,7 @@ export default function(): void {
             columnResizerDirective.dragEndHandler();
         };
         beforeEach(function() {
-            context = this.create(ClrDatagrid, ColumnResizerTest, [TableHeightService]);
+            context = this.create(ClrDatagrid, ColumnResizerTest, [TableSizeService]);
             context.detectChanges();
             domAdapter = context.getClarityProvider(DomAdapter);
 

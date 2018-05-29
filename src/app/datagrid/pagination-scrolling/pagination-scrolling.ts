@@ -20,8 +20,6 @@ export class DatagridPaginationScrollingDemo {
     constructor(inventory: Inventory) {
         inventory.size = 100;
         inventory.reset();
-        // setTimeout(()=> {
-            this.users = inventory.all;
-        // });
+        this.users = inventory.all;
     }
 }

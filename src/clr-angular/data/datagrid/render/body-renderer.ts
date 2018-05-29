@@ -8,11 +8,18 @@ import {Subscription} from "rxjs/Subscription";
 
 import {DomAdapter} from "./dom-adapter";
 import {DatagridRenderOrganizer} from "./render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
+// TODO - can this directive be simplified with the new templates?
 @Directive({selector: "[clrDgBody]"})
 export class DatagridBodyRenderer implements OnDestroy {
     constructor(private el: ElementRef, private organizer: DatagridRenderOrganizer, private domAdapter: DomAdapter) {
-        this.subscription = organizer.scrollbar.subscribe(() => this.computeScrollbarWidth());
+        // TODO remove comments and clean code.
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.UPDATE_SCROLL_BAR) {
+                this.computeScrollbarWidth();
+            }
+        });
     }
 
     private subscription: Subscription;
@@ -21,6 +28,8 @@ export class DatagridBodyRenderer implements OnDestroy {
     }
 
     private computeScrollbarWidth() {
-        this.organizer.scrollbarWidth.next(this.domAdapter.scrollBarWidth(this.el.nativeElement));
+        // TODO revisit scrollbar adjustments
+        // TODO clean up code and fix or remove this.
+        // this.organizer.scrollbarWidth.next(this.domAdapter.scrollBarWidth(this.el.nativeElement));
     }
 }

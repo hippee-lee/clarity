@@ -7,11 +7,17 @@ import {Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
 import {DatagridRenderOrganizer} from "./render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 @Directive({selector: "[clrDgHead]"})
 export class DatagridHeadRenderer implements OnDestroy {
     constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer) {
-        this.subscription = organizer.scrollbarWidth.subscribe(width => this.accountForScrollbar(width));
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.UPDATE_SCROLL_BAR) {
+                // TODO: fix or remove accounting for scrollbars.
+                // this.accountForScrollbar(/*Need a width from the previous subscription*/);
+            }
+        });
     }
 
     private subscription: Subscription;

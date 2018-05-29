@@ -15,23 +15,16 @@
     }
 
     .datagrid {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 1 auto;
-        width: 100%;
-        margin-top: 0.5rem;
-        overflow-x: auto; // Enables x scrolling when columns are wider than the datagrid.
-        // IE & Firefox needs this
-        min-height: 1px;
+        overflow: auto;
 
         // Overrides the table defaults so the new structure has correct corners
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 
     .datagrid-container {
+        width: auto;
         font-size: $clr-table-fontsize;
         padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
     }
@@ -65,26 +58,44 @@
         }
     }
 
-    .datagrid-head, .datagrid-body, .datagrid-row, .datagrid-column, .datagrid-cell, .datagrid-fixed-column {
+    .datagrid-header, .datagrid-body, .datagrid-row, .datagrid-column, .datagrid-cell, .datagrid-fixed-column {
         display: block;
     }
 
     .datagrid-row {
         display: block;
-        border-top: $clr-table-borderwidth solid $clr-table-border-color;
+        width: auto;
 
         &:first-child {
             border-top: 0;
         }
 
         &:hover {
-            background-color: $clr-datagrid-row-hover;
+            .datagrid-cell, clr-dg-row-detail {
+                background-color: $clr-datagrid-row-hover;
+            }
+            .datagrid-row-sticky {
+                background-color: $clr-datagrid-row-hover
+            }
         }
 
         &.datagrid-selected {
             color: $clr-black;
             background-color: $clr-global-selection-color;
+
+            .datagrid-row-sticky {
+                background-color: $clr-global-selection-color;
+            }
         }
+
+      &.datagrid-row-replaced {
+        .datagrid-scrolling-cells {
+          display: none;
+        }
+        .datagrid-row-detail {
+          padding-top: 11px; // Added this in as a visual fix for expandable refactor changes.
+        }
+      }
 
         .datagrid-action-overflow {
             position: absolute;
@@ -179,16 +190,19 @@
         }
 
         .datagrid-row-detail-wrapper {
-            flex-basis: 100%;
+            flex: 1 1 auto;
+            display: flex;
         }
 
         .datagrid-row-detail {
-            &.datagrid-container {
-                padding-top: 0;
-            }
+            width: auto;
 
             .datagrid-cell {
                 padding-top: 0;
+            }
+
+            clr-dg-cell {
+                border: none;
             }
         }
 
@@ -217,20 +231,35 @@
         }
     }
 
+    .datagrid-row-sticky {
+        background-color: $clr-table-bgcolor;
+        display: flex;
+        flex-wrap: nowrap;
+        position: sticky;
+        left: 0;
+        z-index: map-get($clr-layers, select-box); // layer it under the sticky container so it slides under
+    }
+
+    .datagrid-row-scrollable {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
     .datagrid-row-flex {
         flex: 1 1 auto;
         display: flex;
         flex-flow: row nowrap;
 
         .datagrid-row-detail {
-            &.datagrid-container {
-                padding-top: 0;
-            }
-
             .datagrid-cell {
                 padding-top: 0;
             }
         }
+    }
+
+    .datagrid-scrolling-cells, .datagrid-scrolling-details {
+        display: flex;
     }
 
     .datagrid-action-bar {
@@ -245,51 +274,53 @@
     }
 
     .datagrid-header {
-        background-color: $clr-thead-bgcolor;
         position: sticky;
         top: 0;
-        display: flex;
-        flex: 0 0 auto;
-        border-bottom: $clr-table-borderstyle;
-        border-bottom-width: 2px;
         z-index: map-get($clr-layers, datagrid-header);
+        min-height: 1.5rem;
+        width: auto;
 
         .datagrid-row {
+
+            .datagrid-row-sticky {
+                background-color: $clr-thead-bgcolor;;
+            }
             &:hover {
                 background-color: $clr-thead-bgcolor;
+
+                .datagrid-row-sticky {
+                    background-color: $clr-thead-bgcolor;
+                }
             }
+        }
+
+        .datagrid-row-scrollable {
+            flex-direction: row;
         }
     }
 
     .datagrid-table {
+        //flex: 1 1;
         display: flex;
-        flex-basis: 100%;
-        flex-flow: column nowrap;
-        /**
-            Important - the flex setting here allows headers/body rows to expand to full width of their container
-            Its needed to enable both full row hover and the details content when expand id declared.
-         */
-        flex: 1 1 auto;
+        flex-direction: column;
+        align-content: flex-start;
+        width: auto;
 
         .datagrid-body {
-            display: flex;
-            flex-flow: column nowrap;
-            flex: 1 1 auto;
-            min-height: 3rem;
-            height: 100%;
-            overflow-y: auto;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-
+            width: auto;
+            min-height: 3rem; // Preserves original design but could this be updated to 1.5 rem for single row / null data states?
+                              // Was an issue that users complained about for the spinner size.
         }
 
         .datagrid-column {
+            background-color: $clr-thead-bgcolor;
+            border-bottom: $clr-table-borderstyle;
+            border-bottom-width: 2px;
             text-align: left;
             min-width: 4rem;
             display: flex;
             flex: 1 1 auto;
             vertical-align: top;
-            background: none;
-            border: 0;
 
             &:last-child {
                 .datagrid-column-separator {
@@ -476,7 +507,7 @@
             flex: 1 1 auto;
             text-align: left;
             min-width: 4rem;
-            border-top: 0;
+            border-color: $clr-table-border-color;
 
             &.datagrid-fixed-column {
                 flex: 0 0 $clr-datagrid-fixed-column-size;
@@ -531,6 +562,7 @@
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
+                justify-content: center;
                 justify-content: center;
                 font-size: clr-getTypePropertyValueForDomElement(datagrid_placeholder, font-size);
                 color: $clr-dark-midtone-gray;
@@ -782,8 +814,8 @@
         flex: 1 1 auto;
         flex-wrap: nowrap;
         white-space: nowrap;
-        display: flex;
-        justify-content: flex-end;
+        display: block;
+        text-align: right;
     }
 
     // Yes, this is not .datagrid-pagination on purpose.
@@ -840,7 +872,7 @@
         The following classes are used by the renderer when performing internal operations.
         Using the browser calculations improves rendering performance.
     */
-    // A class used by the dom-renderer.ts when testing cell for a user defined width.
+    // This class is used by the dom-renderer.ts when testing cell for a user defined width.
     .datagrid-cell-width-zero {
         // Much zero. Such !important. Wow.
         border: 0 !important;
@@ -861,7 +893,7 @@
 
         .datagrid-table, .datagrid-header, .datagrid-header .datagrid-row, .datagrid-column {
             display: block;
-            flex: 1;
+            //flex: 1;
         }
     }
 
@@ -869,31 +901,64 @@
         These classes are used in table-renderer.ts when it puts the datagrid into in tableMode and computes column
         widths. NOTE: they are only applied during calculation and then removed.
      */
-    .datagrid-computing-columns-width {
-        display: block;
 
-        .datagrid-body {
-            display: table;
-            table-layout: auto;
-        }
-        .datagrid-header {
-            display: table-header-group;
-        }
-        .datagrid-row {
-            display: table-row-group;
-        }
-        .datagrid-header .datagrid-row {
-            display: table-row;
-        }
-        .datagrid-row-master {
-            display: table-row;
-        }
-        .datagrid-row-detail {
+    /**
+     * When in calculate mode
+     * - Hide the display elements for datagrid
+     * - Switch display mode for elements with projected content to calcualte sizes.
+     */
+    .datagrid-host.datagrid-calculate-mode {
+        // Hide parts of the display table not used for calculation.
+        .datagrid, .datagrid-footer, .datagrid-row-master {
             display: none;
         }
-        .datagrid-column, .datagrid-cell {
-            display: table-cell;
+
+        .datagrid-calculation-table {
+            display: table;
+
+            .datagrid-calculation-header {
+                display: table-header-group;
+
+                clr-dg-column {
+                    display: table-cell;
+                }
+
+                .datagrid-column {
+                    // This is a hack b/c styles were not applied out of the box when moving columns into the
+                    // calculation container element
+                    font-size: $clr-table-fontsize;
+                    line-height: $clr-table-lineheight;
+                    border-top: $clr-table-borderwidth solid $clr-tablerow-bordercolor;
+                    padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
+                    vertical-align: top;
+                    color: $clr-p6-color;
+                    font-weight: $clr-typography-boldfont;
+                    font-size: $clr-typography-xxsmalltext;
+                    letter-spacing: $clr-kerning-tinytext;
+                    line-height: 0.5rem;
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+            clr-dg-row {
+                display: table-row;
+
+                clr-dg-cell {
+                    display: table-cell;
+                }
+                .datagrid-cell {
+                    // This is a hack b/c styles were not applied out of the box when moving columns into the
+                    // calculation container element
+                    font-size: $clr-table-fontsize;
+                    line-height: $clr-table-lineheight;
+                    border-top: $clr-table-borderwidth solid $clr-tablerow-bordercolor;
+                    padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
+                    vertical-align: top;
+                }
+            }
         }
+
+        // Hide other elements that come along for the ride
         .datagrid-column-separator {
             display: none;
         }
@@ -903,10 +968,6 @@
         .datagrid-fixed-column {
             display: none;
         }
-    }
-
-    .datagrid-computing-row-height {
-        overflow-y: hidden;
     }
     // END Calculation classes.
 }

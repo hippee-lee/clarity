@@ -1,18 +1,18 @@
 /*
  * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
- * The full license information can be found in LICENSE in the root directory of this project.
+ * The full license information can be found in LICENSE in the root directory of this project`.
  */
 import {
-    AfterContentInit,
+    AfterViewChecked,
     Component,
-    ContentChildren,
+    ContentChildren, ElementRef,
     EventEmitter,
     HostBinding,
-    HostListener,
+    HostListener, Injector,
     Input,
     Output,
-    QueryList, TemplateRef, ViewChild, ViewContainerRef
+    QueryList, Renderer2, TemplateRef, ViewChild, ViewContainerRef
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
@@ -25,70 +25,20 @@ import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
 import {RowActionService} from "./providers/row-action-service";
 import {Selection, SelectionType} from "./providers/selection";
+import {DisplayModeService} from "./providers/display-mode.service";
+import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
+import {HostWrapper} from "../../utils/host-wrapping";
+import {ClrWrappedRow} from "./wrapped-row";
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/operator/combineLatest";
+import {combineLatest} from "rxjs/observable/combineLatest";
 
 
 let nbRow: number = 0;
 
 @Component({
     selector: "clr-dg-row",
-    template: `
-        <div class="datagrid-row-master datagrid-row-flex">
-            <ng-container #stickyContainer>
-                <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Multi"
-                             class="datagrid-select datagrid-fixed-column">
-                    <clr-checkbox [clrChecked]="selected" (clrCheckedChange)="toggle($event)"></clr-checkbox>
-                </clr-dg-cell>
-                <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Single"
-                             class="datagrid-select datagrid-fixed-column">
-                    <div class="radio">
-                        <input type="radio" [id]="id" [name]="selection.id + '-radio'" [value]="item"
-                               [(ngModel)]="selection.currentSingle" [checked]="selection.currentSingle === item">
-                        <label for="{{id}}"></label>
-                    </div>
-                </clr-dg-cell>
-                <clr-dg-cell *ngIf="rowActionService.hasActionableRow"
-                             class="datagrid-row-actions datagrid-fixed-column">
-                    <ng-content select="clr-dg-action-overflow"></ng-content>
-                </clr-dg-cell>
-                <clr-dg-cell *ngIf="globalExpandable.hasExpandableRow"
-                             class="datagrid-expandable-caret datagrid-fixed-column">
-                    <ng-container *ngIf="expand.expandable">
-                        <button (click)="toggleExpand()" *ngIf="!expand.loading" type="button" class="datagrid-expandable-caret-button">
-                            <clr-icon shape="caret" [attr.dir]="expand.expanded?'down':'right'" class="datagrid-expandable-caret-icon"></clr-icon>
-                        </button>
-                        <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
-                    </ng-container>
-                </clr-dg-cell>
-                <ng-container #stickyCells><div></div></ng-container>
-            </ng-container>
-            <ng-container>
-                <ng-container>
-                    <div #scrollableCells></div>
-                </ng-container>
-            </ng-container>
-        </div>
-
-        <!-- projected Template -->
-        <ng-template #projectedCells>
-            <ng-content *ngIf="!expand.replace || !expand.expanded || expand.loading"></ng-content>
-
-            <ng-template *ngIf="expand.replace && expand.expanded && !expand.loading"
-                         [ngTemplateOutlet]="detail"></ng-template>
-        </ng-template>
-        <!-- details template -->
-        <ng-template *ngIf="!expand.replace && expand.expanded && !expand.loading"
-                     [ngTemplateOutlet]="detail"></ng-template>
-
-        <!-- 
-            We need the "project into template" hack because we need this in 2 different places
-            depending on whether the details replace the row or not.
-        -->
-        <ng-template #detail>
-            <div class="datagrid-row-detail-wrapper">
-                <ng-content select="clr-dg-row-detail"></ng-content>
-            </div>
-        </ng-template>
-    `,
+    templateUrl: "./datagrid-row.html",
     host: {
         "[class.datagrid-row]": "true",
         "[class.datagrid-selected]": "selected",
@@ -96,7 +46,7 @@ let nbRow: number = 0;
     },
     providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
 })
-export class ClrDatagridRow implements AfterContentInit {
+export class ClrDatagridRow {
     public id: string;
 
     /* reference to the enum so that template can access */
@@ -112,11 +62,38 @@ export class ClrDatagridRow implements AfterContentInit {
 
     @HostBinding("attr.role") role: string;
 
+    private combinedLatestExpand: Observable<any>;
+    private latestExpandSubsc;
+    private latestExpandSubscribe: Subscription;
+    ribe: Subscription;
+
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,
-                public hideableColumnService: HideableColumnService) {
+                public hideableColumnService: HideableColumnService,
+                private displayMode: DisplayModeService, private vcr: ViewContainerRef,
+                private renderer: Renderer2, private el: ElementRef) {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
+
+        this.combinedLatestExpand = combineLatest(
+            this.expand.replace,
+            this.expand.expandChange
+        );
+
+        // TODO Unsubscribe OnDestroy
+        this.latestExpandSubscribe = this.combinedLatestExpand.subscribe(latestValues => {
+            const [expandReplaceValue, expandChangeValue] = latestValues;
+
+            if (expandReplaceValue && expandChangeValue) { // replaced and expanding
+                this.renderer.addClass(this.el.nativeElement, "datagrid-row-replaced");
+            } else if (!expandReplaceValue && !expandChangeValue) { // not replaced and collapsing
+                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
+            } else if (expandReplaceValue && !expandChangeValue) { // replaced and collapsing
+                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
+            } else if (!expandReplaceValue && expandChangeValue) { // not replaced and expanding
+                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
+            }
+        });
     }
 
     private _selected = false;
@@ -246,6 +223,31 @@ export class ClrDatagridRow implements AfterContentInit {
         // then insert it into the correct container at the end of the list.
     }
 
+    ngAfterViewInit() {
+        // TODO Unsubscribe OnDestroy
+        // Subscription to displayType mode: so we know when to move cells around for smart sizing and other displayType states
+        this.displayMode.view.subscribe(viewChange => {
+            while (this.scrollableCells.detach()) {} // remove cells containers
+            while (this.calculatedCells.detach()) {} // remove cells containers
+            if (viewChange === DatagridDisplayMode.CALCULATE) {
+                this.dgCells.forEach(cell => {
+                    this.calculatedCells.insert(cell.view);
+                });
+                this.displayCells = false;
+            } else {
+                this.dgCells.forEach(cell => {
+                    this.scrollableCells.insert(cell.view);
+                });
+                this.displayCells = true;
+            }
+        });
+        // Insert views the first time? Fixed the pagination issue after discussing w/ Eude.
+        this.dgCells.forEach(cell => {
+            this.scrollableCells.insert(cell.view);
+        });
+        this.displayCells = true;
+    }
+
     /**********
      *
      * @description
@@ -270,13 +272,18 @@ export class ClrDatagridRow implements AfterContentInit {
         }
     }
 
-    ngOnInit() {
-        setTimeout(() => {
-            this.stickyCells.createEmbeddedView(this.projectedCells);
-        });
-    }
-
-    @ViewChild("projectedCells") projectedCells: TemplateRef<void>;
+    public displayCells = false;
     @ViewChild("stickyCells", {read: ViewContainerRef}) stickyCells: ViewContainerRef;
     @ViewChild("scrollableCells", {read: ViewContainerRef}) scrollableCells: ViewContainerRef;
+    @ViewChild("calculatedCells", {read: ViewContainerRef}) calculatedCells: ViewContainerRef;
+
+    private wrappedInjector: Injector;
+
+    ngOnInit() {
+        this.wrappedInjector = new HostWrapper(ClrWrappedRow, this.vcr);
+    }
+
+    public get view() {
+        return this.wrappedInjector.get(ClrWrappedRow, this.vcr).rowView;
+    }
 }

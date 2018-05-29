@@ -8,11 +8,17 @@ import {Subscription} from "rxjs/Subscription";
 
 import {STRICT_WIDTH_CLASS} from "./constants";
 import {DatagridRenderOrganizer} from "./render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 @Directive({selector: "clr-dg-cell"})
 export class DatagridCellRenderer implements OnDestroy {
     constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer) {
-        this.subscription = organizer.clearWidths.subscribe(() => this.clearWidth());
+        // TODO: clean up comments.
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.CLEAR_WIDTHS) {
+                this.clearWidth();
+            }
+        });
     }
 
     private subscription: Subscription;

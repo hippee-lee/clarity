@@ -6,7 +6,7 @@
 import {Component} from "@angular/core";
 
 import {TestContext} from "../helpers.spec";
-import {TableHeightService} from "../providers/table-height.service";
+import {TableSizeService} from "../providers/table-size.service";
 
 import {MOCK_DOM_ADAPTER_PROVIDER} from "./dom-adapter.mock";
 import {DatagridRenderOrganizer} from "./render-organizer";
@@ -20,7 +20,7 @@ export default function(): void {
 
         beforeEach(function() {
             context = this.create(DatagridTableRenderer, SimpleTest,
-                                  [MOCK_ORGANIZER_PROVIDER, MOCK_DOM_ADAPTER_PROVIDER, TableHeightService]);
+                                  [MOCK_ORGANIZER_PROVIDER, MOCK_DOM_ADAPTER_PROVIDER, TableSizeService]);
             organizer = <MockDatagridRenderOrganizer>context.getClarityProvider(DatagridRenderOrganizer);
         });
 
