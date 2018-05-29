@@ -63,7 +63,7 @@ export default function(): void {
             /********
              * This test assumes that if
              */
-            it("does not display the default trigger", function() {
+            it("does not displayType the default trigger", function() {
                 const triggerIcon: HTMLElement = context.testElement.querySelector("clr-icon");
 
                 /**********

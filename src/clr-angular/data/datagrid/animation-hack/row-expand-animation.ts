@@ -14,6 +14,7 @@ import {Directive, ElementRef, Renderer2} from "@angular/core";
 import {Expand} from "../../../utils/expand/providers/expand";
 import {DomAdapter} from "../render/dom-adapter";
 import {DatagridRenderOrganizer} from "../render/render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 @Directive({selector: "clr-dg-row"})
 export class DatagridRowExpandAnimation {
@@ -65,7 +66,8 @@ export class DatagridRowExpandAnimation {
         this.renderer.setStyle(this.el.nativeElement, "height", null);
         // I don't like realigning the columns before the animation, since the scrollbar could appear or disappear
         // halfway, but that's a compromise we have to make for now. We can look into a smarter fix later.
-        this.renderOrganizer.scrollbar.next();
+        // this.renderOrganizer.scrollbar.next();
+        // TODO removed this when I added DatagridRenderSteps. Do we still need scrollbar manipulations?
         const newHeight = this.domAdapter.computedHeight(this.el.nativeElement);
         this.running = this.el.nativeElement.animate(
             {height: [this.oldHeight + "px", newHeight + "px"], easing: "ease-in-out"}, {duration: 200});

@@ -15,11 +15,11 @@ import {Page} from "./providers/page";
 import {Selection, SelectionType} from "./providers/selection";
 import {Sort} from "./providers/sort";
 import {StateDebouncer} from "./providers/state-debouncer.provider";
-import {TableHeightService} from "./providers/table-height.service";
+import {TableSizeService} from "./providers/table-size.service";
 
 const PROVIDERS_NEEDED = [
     Selection, Items, FiltersProvider, Sort, Page, HideableColumnService, StateDebouncer, ColumnToggleButtonsService,
-    TableHeightService
+    TableSizeService
 ];
 
 export default function(): void {

@@ -48,7 +48,7 @@ describe("Popover directive (old)", () => {
         fixture.componentInstance.open3 = true;
         fixture.detectChanges();
 
-        // should only display the first popover
+        // should only displayType the first popover
         expect(compiled.textContent).toMatch(/popover1/);
         expect(compiled.textContent).not.toMatch(/popover2/);
         expect(compiled.textContent).not.toMatch(/popover3/);
@@ -56,7 +56,7 @@ describe("Popover directive (old)", () => {
         fixture.componentInstance.open1 = false;
         fixture.detectChanges();
 
-        // should display the second popover, now that first one is closed
+        // should displayType the second popover, now that first one is closed
         expect(compiled.textContent).not.toMatch(/popover1/);
         expect(compiled.textContent).toMatch(/popover2/);
         expect(compiled.textContent).not.toMatch(/popover3/);
@@ -64,7 +64,7 @@ describe("Popover directive (old)", () => {
         fixture.componentInstance.open2 = false;
         fixture.detectChanges();
 
-        // should display the third popover, now that second one is closed
+        // should displayType the third popover, now that second one is closed
         expect(compiled.textContent).not.toMatch(/popover1/);
         expect(compiled.textContent).not.toMatch(/popover2/);
         expect(compiled.textContent).toMatch(/popover3/);

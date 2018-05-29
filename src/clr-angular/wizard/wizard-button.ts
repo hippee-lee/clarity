@@ -46,7 +46,7 @@ export const CUSTOM_BUTTON_TYPES: any = {
         </button>
     `,
     host: {"class": "clr-wizard-btn-wrapper", "[attr.aria-hidden]": "isHidden"},
-    styles: ["[aria-hidden=\"true\"] { display: none; }"]
+    styles: ["[aria-hidden=\"true\"] { displayType: none; }"]
 })
 export class ClrWizardButton {
     @Input("type") public type: string = "";

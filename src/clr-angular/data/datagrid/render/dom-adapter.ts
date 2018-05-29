@@ -15,9 +15,9 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class DomAdapter {
     userDefinedWidth(element: any): number {
-        element.classList.add("datagrid-cell-width-zero");
-        const userDefinedWidth = parseInt(getComputedStyle(element).getPropertyValue("width"), 10);
-        element.classList.remove("datagrid-cell-width-zero");
+        element.nativeElement.classList.add("datagrid-cell-width-zero");
+        const userDefinedWidth = parseInt(getComputedStyle(element.nativeElement).getPropertyValue("width"), 10);
+        element.nativeElement.classList.remove("datagrid-cell-width-zero");
         return userDefinedWidth;
     }
 

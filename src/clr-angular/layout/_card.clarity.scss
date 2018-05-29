@@ -270,7 +270,7 @@
     }
 
     @include fixForMsEdge {
-        // Edge did NOT like using display inline-table for button-groups inside of cards...
+        // Edge did NOT like using displayType inline-table for button-groups inside of cards...
         .card {
             .checkbox,
             .checkbox-inline,

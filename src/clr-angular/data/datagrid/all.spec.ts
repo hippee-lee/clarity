@@ -44,7 +44,7 @@ import DatagridBodyRendererSpecs from "./render/body-renderer.spec";
 import DatagridCellRendererSpecs from "./render/cell-renderer.spec";
 import DatagridColumnResizerSpecs from "./render/column-resizer.spec";
 import DomAdapterSpecs from "./render/dom-adapter.spec";
-import DatagridHeadRendererSpecs from "./render/head-renderer.spec";
+import DatagridHeadRendererSpecs from "./render/header-renderer.directive.spec";
 import DatagridHeaderRendererSpecs from "./render/header-renderer.spec";
 import DatagridMainRendererSpecs from "./render/main-renderer.spec";
 import NoopDomAdapterSpecs from "./render/noop-dom-adapter.spec";

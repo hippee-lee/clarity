@@ -45,18 +45,21 @@ import {ClrDatagridStringFilterInterface} from "./interfaces/string-filter.inter
 import {DatagridBodyRenderer} from "./render/body-renderer";
 import {DatagridCellRenderer} from "./render/cell-renderer";
 import {DatagridColumnResizer} from "./render/column-resizer";
-import {DatagridHeadRenderer} from "./render/head-renderer";
+import {DatagridHeadRenderer} from "./render/header-renderer.directive";
 import {DatagridHeaderRenderer} from "./render/header-renderer";
 import {DatagridMainRenderer} from "./render/main-renderer";
 import {DatagridRowRenderer} from "./render/row-renderer";
 import {DatagridTableRenderer} from "./render/table-renderer";
+import {ClrWrappedCell} from "./wrapped-cell";
+import {ClrWrappedColumn} from "./wrapped-column";
 
 export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     // Core
     ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridColumn, ClrDatagridColumnToggle,
     ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy, ClrDatagridRow,
     ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter, ClrDatagridPagination,
-    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle,
+    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle, ClrWrappedCell,
+    ClrWrappedColumn,
 
     // Renderers
     DatagridMainRenderer, DatagridTableRenderer, DatagridHeadRenderer, DatagridHeaderRenderer, DatagridBodyRenderer,
@@ -80,7 +83,8 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     declarations: [
         CLR_DATAGRID_DIRECTIVES,
     ],
-    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule]
+    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule],
+    entryComponents: [ClrWrappedCell, ClrWrappedColumn]
 })
 export class ClrDatagridModule {}
 
@@ -114,7 +118,7 @@ export interface DatagridFilter extends ClrDatagridFilter {}
 /** @deprecated since 0.11 */
 export const DatagridFilter = ClrDatagridFilter;
 /** @deprecated since 0.11 */
-export interface DatagridItems extends ClrDatagridItems {}
+export interface DatagridItems<T> extends ClrDatagridItems<T> {}
 /** @deprecated since 0.11 */
 export const DatagridItems = ClrDatagridItems;
 /** @deprecated since 0.11 */

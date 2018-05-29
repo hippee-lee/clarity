@@ -10,16 +10,24 @@ import {DatagridColumnResizer} from "./column-resizer";
 import {STRICT_WIDTH_CLASS} from "./constants";
 import {DomAdapter} from "./dom-adapter";
 import {DatagridRenderOrganizer} from "./render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 @Directive({selector: "clr-dg-column"})
 export class DatagridHeaderRenderer implements OnDestroy {
     constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer,
                 private domAdapter: DomAdapter, private columnResizer: DatagridColumnResizer) {
-        this.subscriptions.push(organizer.clearWidths.subscribe(() => this.clearWidth()));
-        this.subscriptions.push(organizer.detectStrictWidths.subscribe(() => this.detectStrictWidth()));
+        // TODO clean up code and remove comments.
+        // this.subscriptions.push(organizer.clearWidths.subscribe(() => this.clearWidth()));
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.CLEAR_WIDTHS) {
+                this.clearWidth();
+            } else if (step === DatagridRenderStep.DETECT_STRICT_WIDTHS) {
+                this.detectStrictWidth();
+            }
+        });
     }
 
-    private subscriptions: Subscription[] = [];
+    private subscription: Subscription;
 
     /**
      * Indicates if the column has a strict width, so it doesn't shrink or expand based on the content.
@@ -29,7 +37,7 @@ export class DatagridHeaderRenderer implements OnDestroy {
 
 
     ngOnDestroy() {
-        this.subscriptions.forEach(sub => sub.unsubscribe());
+        this.subscription.unsubscribe();
     }
 
     private clearWidth() {
@@ -40,10 +48,16 @@ export class DatagridHeaderRenderer implements OnDestroy {
     }
 
     private detectStrictWidth() {
-        if (this.columnResizer.columnResizeBy) {
+        // It seems like this.strictWidth is always going to be set ref: main-renderer line #145
+        // but first time through its not set at all. This causes an issue when this.computeWidth is called.
+
+        if (this.columnResizer.columnResizeBy) { // DatagridColumnResizer.columnResizeBy inits to 0 and it is always false.
+            console.log("header-render detectStrictWidths");
             this.strictWidth = this.columnResizer.columnRectWidth + this.columnResizer.columnResizeBy;
         } else {
-            this.strictWidth = this.domAdapter.userDefinedWidth(this.el.nativeElement);
+            // First time through rendering always ends up here.
+            console.log("header-render userDefinedWidths");
+            this.strictWidth = this.domAdapter.userDefinedWidth(this.el);
         }
     }
 
