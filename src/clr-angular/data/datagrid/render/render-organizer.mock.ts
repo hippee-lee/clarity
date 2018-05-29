@@ -6,6 +6,9 @@
 
 import {Injectable} from "@angular/core";
 import {Subject} from "rxjs/Subject";
+
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
+
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 /**
@@ -13,28 +16,8 @@ import {DatagridRenderOrganizer} from "./render-organizer";
  */
 @Injectable()
 export class MockDatagridRenderOrganizer extends DatagridRenderOrganizer {
-    public get noLayout(): Subject<boolean> {
-        return this._noLayout;
-    }
-
-    public get clearWidths(): Subject<any> {
-        return this._clearWidths;
-    }
-
-    public get detectStrictWidths(): Subject<any> {
-        return this._detectStrictWidths;
-    }
-
-    public get tableMode(): Subject<boolean> {
-        return this._tableMode;
-    }
-
-    public get computeWidths(): Subject<any> {
-        return this._computeWidths;
-    }
-
-    public get alignColumns(): Subject<any> {
-        return this._alignColumns;
+    public get renderStep(): Subject<DatagridRenderStep> {
+        return this._renderStep;
     }
 }
 

@@ -6,13 +6,19 @@
 import {Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
+
 import {STRICT_WIDTH_CLASS} from "./constants";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 @Directive({selector: "clr-dg-cell"})
 export class DatagridCellRenderer implements OnDestroy {
     constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer) {
-        this.subscription = organizer.clearWidths.subscribe(() => this.clearWidth());
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.CLEAR_WIDTHS) {
+                this.clearWidth();
+            }
+        });
     }
 
     private subscription: Subscription;

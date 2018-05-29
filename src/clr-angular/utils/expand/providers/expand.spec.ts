@@ -11,7 +11,7 @@ export default function(): void {
             this.expand = new Expand();
         });
 
-        it("starts with the correct default settings", function() {
+        fit("starts with the correct default settings", function() {
             expect(this.expand.expandable).toBe(0, "not expandable");
             expect(this.expand.replace).toBe(false, "not replacing the row");
             expect(this.expand.loading).toBe(false, "already loaded");

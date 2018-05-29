@@ -5,8 +5,8 @@
  */
 import {Subject} from "rxjs/Subject";
 
-import {Comparator} from "../interfaces/comparator";
-import {Filter} from "../interfaces/filter";
+import {ClrDatagridComparatorInterface} from "../interfaces/comparator.interface";
+import {ClrDatagridFilterInterface} from "../interfaces/filter.interface";
 
 import {FiltersProvider} from "./filters";
 import {Items} from "./items";
@@ -175,7 +175,7 @@ export default function(): void {
     });
 }
 
-class EvenFilter implements Filter<number> {
+class EvenFilter implements ClrDatagridFilterInterface<number> {
     private active = false;
 
     toggle() {
@@ -194,13 +194,13 @@ class EvenFilter implements Filter<number> {
     }
 }
 
-class TestComparator implements Comparator<number> {
+class TestComparator implements ClrDatagridComparatorInterface<number> {
     compare(a: number, b: number): number {
         return a - b;
     }
 }
 
-class NameFilter implements Filter<any> {
+class NameFilter implements ClrDatagridFilterInterface<any> {
     private _search = "";
     public search(value: string) {
         this._search = value;
@@ -218,7 +218,7 @@ class NameFilter implements Filter<any> {
     }
 }
 
-class NameComparator implements Comparator<any> {
+class NameComparator implements ClrDatagridComparatorInterface<any> {
     compare(a: any, b: any): number {
         return (a.name < b.name) ? -1 : 1;
     }

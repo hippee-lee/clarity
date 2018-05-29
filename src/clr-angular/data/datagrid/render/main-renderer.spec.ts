@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";  /
 
 import {ClrDatagridModule} from "../datagrid.module";
 import {TestContext} from "../helpers.spec";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {Page} from "../providers/page";
 
 import {DatagridHeaderRenderer} from "./header-renderer";
@@ -60,14 +61,15 @@ export default function(): void {
             it("computes the widths of the columns when notified", function() {
                 expect(computeWidthSpy.calls.count()).toBe(0);
                 // Too lazy to do something other than casting right now.
-                (<any>organizer)._computeWidths.next();
+                organizer._renderStep.next(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS);
                 expect(computeWidthSpy.calls.count()).toBe(context.clarityDirective.headers.length);
             });
 
             it("sets the widths of the columns for the other components", function() {
                 expect(organizer.widths.length).toBe(0);
                 // Too lazy to do something other than casting right now.
-                (<any>organizer)._computeWidths.next();
+                organizer._renderStep.next(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS);
+                // (<any>organizer)._computeWidths.next();
                 expect(organizer.widths.length).toBe(context.clarityDirective.headers.length);
             });
         });
@@ -182,74 +184,6 @@ export default function(): void {
                 context.detectChanges();
                 expect(organizer.widths[0].strict).toBe(true);
                 expect(organizer.widths[1].strict).toBe(false);
-            });
-        });
-
-        describe("scrollbar spy on page change", () => {
-            let context: TestContext<DatagridMainRenderer, DatagridHeightTest>;
-            let page: Page;
-            let organizer: DatagridRenderOrganizer;
-
-            beforeEach(function() {
-                context = this.create(DatagridMainRenderer, DatagridHeightTest);
-                page = context.getClarityProvider(Page);
-                organizer = context.getClarityProvider(DatagridRenderOrganizer);
-            });
-
-            it("scrollbar spy when the page has changed", () => {
-                let scrollSpyFlag: boolean = false;
-                organizer.scrollbar.subscribe(() => {
-                    scrollSpyFlag = true;
-                });
-
-                context.detectChanges();
-                organizer.resize();
-
-                context.fixture.whenStable().then(() => {
-                    expect(scrollSpyFlag).toBe(true);
-                });
-
-                scrollSpyFlag = false;
-
-                page.next();
-                context.detectChanges();
-
-                context.fixture.whenStable().then(() => {
-                    expect(scrollSpyFlag).toBe(true);
-                });
-            });
-        });
-
-        describe("scrollbar spy on expandable rows", () => {
-            let context: TestContext<DatagridMainRenderer, DatagridScrollbarTest>;
-            let organizer: DatagridRenderOrganizer;
-
-            beforeEach(function() {
-                context = this.create(DatagridMainRenderer, DatagridScrollbarTest);
-                organizer = context.getClarityProvider(DatagridRenderOrganizer);
-            });
-
-            it("adds scrollbar when the rows are expanded", () => {
-                let scrollSpyFlag: boolean = false;
-                organizer.scrollbar.subscribe(() => {
-                    scrollSpyFlag = true;
-                });
-
-                context.detectChanges();
-                organizer.resize();
-
-                context.fixture.whenStable().then(() => {
-                    expect(scrollSpyFlag).toBe(true);
-                });
-
-                scrollSpyFlag = false;
-
-                context.testComponent.expand = true;
-                context.detectChanges();
-
-                context.fixture.whenStable().then(() => {
-                    expect(scrollSpyFlag).toBe(true);
-                });
             });
         });
     });

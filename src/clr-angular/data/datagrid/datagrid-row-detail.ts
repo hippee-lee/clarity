@@ -10,6 +10,7 @@ import {Expand} from "../../utils/expand/providers/expand";
 
 import {ClrDatagridCell} from "./datagrid-cell";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
+import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
 import {RowActionService} from "./providers/row-action-service";
 import {Selection, SelectionType} from "./providers/selection";
@@ -21,18 +22,30 @@ import {Selection, SelectionType} from "./providers/selection";
 @Component({
     selector: "clr-dg-row-detail",
     template: `
-        <ng-container *ngIf="!replace">
-            <clr-dg-cell class="datagrid-fixed-column"
-                *ngIf="selection.selectionType === SELECTION_TYPE.Multi 
-                    || selection.selectionType === SELECTION_TYPE.Single"></clr-dg-cell>
-            <clr-dg-cell *ngIf="rowActionService.hasActionableRow" class="datagrid-fixed-column"></clr-dg-cell>
-            <clr-dg-cell class="datagrid-fixed-column"></clr-dg-cell>
-        </ng-container>
+        <!-- space for multiselection state -->
+        <div class="datagrid-cell datagrid-select datagrid-fixed-column"
+            *ngIf="selection.selectionType === SELECTION_TYPE.Multi">
+            <span class="datagrid-column-title"></span>
+            <div class="datagrid-column-separator"></div>
+        </div>
+        <!-- space for single selection state -->
+        <div class="datagrid-cell datagrid-select datagrid-fixed-column"
+            *ngIf="selection.selectionType === SELECTION_TYPE.Single">
+            <div class="datagrid-column-separator"></div>
+        </div>
+        <!-- space for single row action; only displayType if we have at least one actionable row in datagrid -->
+        <div class="datagrid-cell datagrid-row-actions datagrid-fixed-column"
+            *ngIf="rowActionService.hasActionableRow">
+            <div class="datagrid-column-separator"></div>
+        </div>
+        <!-- space for expandable caret action; only displayType if we have at least one expandable row in datagrid -->
+        <div *ngIf="expandableRows.hasExpandableRow"
+             class="datagrid-expandable-caret datagrid-fixed-column datagrid-cell"></div>
         <ng-content></ng-content>
     `,
     host: {
         "[class.datagrid-row-flex]": "true",
-        "[class.datagrid-row-detail]": "!replace",
+        "[class.datagrid-row-detail]": "true",
         "[class.datagrid-container]": "cells.length === 0",
     }
 })
@@ -41,17 +54,13 @@ export class ClrDatagridRowDetail implements AfterContentInit, OnDestroy {
     public SELECTION_TYPE = SelectionType;
 
     constructor(public selection: Selection, public rowActionService: RowActionService, public expand: Expand,
-                public hideableColumnService: HideableColumnService) {}
+                public hideableColumnService: HideableColumnService, public expandableRows: ExpandableRowsCount) {}
 
     @ContentChildren(ClrDatagridCell) cells: QueryList<ClrDatagridCell>;
 
-    get replace() {
-        return this.expand.replace;
-    }
-
     @Input("clrDgReplace")
     set replace(value: boolean) {
-        this.expand.replace = !!value;
+        this.expand.setReplace(!!value);
     }
 
     private subscription: Subscription;

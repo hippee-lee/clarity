@@ -1,0 +1,57 @@
+<!--
+  ~ Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
+  ~ This software is released under MIT license.
+  ~ The full license information can be found in LICENSE in the root directory of this project.
+  -->
+
+<h3>Pinned Columns</h3>
+<clr-datagrid class="pinned-columns" [(clrDgSelected)]="selected">
+    <clr-dg-action-bar>
+        <div class="btn-group" role="group" aria-label="Available Actions">
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()"><clr-icon shape="plus"></clr-icon> Add
+                to
+                group</button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onDelete()" ><clr-icon shape="close"></clr-icon> Delete</button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="onEdit()"><clr-icon shape="pencil"></clr-icon> Edit</button>
+        </div>
+    </clr-dg-action-bar>
+
+    <clr-dg-column>
+        <ng-container *clrDgHideableColumn>
+            User ID
+        </ng-container>
+    </clr-dg-column>
+    <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+    <clr-dg-column>Creation date</clr-dg-column>
+    <clr-dg-column>
+        <ng-container *clrDgHideableColumn>
+            Favorite color
+        </ng-container>
+    </clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onEdit(user)">
+                <clr-icon shape="note"></clr-icon>
+                Edit
+            </button>
+            <button class="action-item" (click)="onDelete(user)">
+                <clr-icon shape="trash"></clr-icon>
+                Delete
+            </button>
+        </clr-dg-action-overflow>
+
+        <clr-dg-cell>{{user.id}}</clr-dg-cell>
+        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+        <clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+        <clr-dg-cell>
+            {{user.color}}
+        </clr-dg-cell>
+
+        <clr-dg-row-detail *clrIfExpanded>
+            Lorem ipsum...
+        </clr-dg-row-detail>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{users.length}} users</clr-dg-footer>
+</clr-datagrid>

@@ -6,13 +6,19 @@
 import {AfterContentInit, ContentChildren, Directive, OnDestroy, QueryList} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
+
 import {DatagridCellRenderer} from "./cell-renderer";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 @Directive({selector: "clr-dg-row, clr-dg-row-detail"})
 export class DatagridRowRenderer implements AfterContentInit, OnDestroy {
     constructor(private organizer: DatagridRenderOrganizer) {
-        this.subscription = organizer.alignColumns.subscribe(() => this.setWidths());
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.ALIGN_COLUMNS) {
+                this.setWidths();
+            }
+        });
     }
 
     private subscription: Subscription;

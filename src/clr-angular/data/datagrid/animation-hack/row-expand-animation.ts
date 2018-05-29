@@ -20,14 +20,14 @@ export class DatagridRowExpandAnimation {
     constructor(private el: ElementRef, private domAdapter: DomAdapter, private renderer: Renderer2,
                 private expand: Expand, private renderOrganizer: DatagridRenderOrganizer) {
         if (expand && expand.animate) {
-            expand.animate.subscribe(() => {
-                // We already had an animation waiting, so we just have to run in, not prepare again
-                if (this.oldHeight) {
-                    setTimeout(() => this.run());
-                } else {
-                    this.animate();
-                }
-            });
+            // expand.animate.subscribe(() => {
+            //     // We already had an animation waiting, so we just have to run in, not prepare again
+            //     if (this.oldHeight) {
+            //         setTimeout(() => this.run());
+            //     } else {
+            //         this.animate();
+            //     }
+            // });
         }
     }
 
@@ -63,9 +63,6 @@ export class DatagridRowExpandAnimation {
 
     private run() {
         this.renderer.setStyle(this.el.nativeElement, "height", null);
-        // I don't like realigning the columns before the animation, since the scrollbar could appear or disappear
-        // halfway, but that's a compromise we have to make for now. We can look into a smarter fix later.
-        this.renderOrganizer.scrollbar.next();
         const newHeight = this.domAdapter.computedHeight(this.el.nativeElement);
         this.running = this.el.nativeElement.animate(
             {height: [this.oldHeight + "px", newHeight + "px"], easing: "ease-in-out"}, {duration: 200});

@@ -4,6 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
+import {ElementRef} from "@angular/core";
 import {DomAdapter} from "./dom-adapter";
 
 /**
@@ -12,6 +13,7 @@ import {DomAdapter} from "./dom-adapter";
 interface UserContext {
     domAdapter: DomAdapter;
     element: HTMLElement;
+    elementRef: ElementRef;
 }
 
 export default function(): void {
@@ -19,6 +21,7 @@ export default function(): void {
         beforeEach(function(this: UserContext) {
             this.domAdapter = new DomAdapter();
             this.element = document.createElement("div");
+            this.elementRef = new ElementRef(this.element);
             this.element.appendChild(document.createTextNode("Hello"));
             document.body.appendChild(this.element);
         });
@@ -55,25 +58,25 @@ export default function(): void {
 
         describe("user-defined width", function() {
             it("recognizes a width defined on the element", function(this: UserContext) {
-                expect(this.domAdapter.userDefinedWidth(this.element)).toBe(0);
+                expect(this.domAdapter.userDefinedWidth(this.elementRef)).toBe(0);
                 this.element.style.width = "42px";
-                expect(this.domAdapter.userDefinedWidth(this.element)).toBe(42);
+                expect(this.domAdapter.userDefinedWidth(this.elementRef)).toBe(42);
             });
 
             it("recognizes a width defined in a CSS stylesheet", function(this: UserContext) {
-                expect(this.domAdapter.userDefinedWidth(this.element)).toBe(0);
+                expect(this.domAdapter.userDefinedWidth(this.elementRef)).toBe(0);
                 const style = document.createElement("style");
                 style.appendChild(document.createTextNode(".my-test { width: 42px; }"));
                 document.body.appendChild(style);
                 this.element.classList.add("my-test");
-                expect(this.domAdapter.userDefinedWidth(this.element)).toBe(42);
+                expect(this.domAdapter.userDefinedWidth(this.elementRef)).toBe(42);
                 document.body.removeChild(style);
             });
 
             it("ignores padding and border", function(this: UserContext) {
                 this.element.style.padding = "10px";
                 this.element.style.border = "5px solid black";
-                expect(this.domAdapter.userDefinedWidth(this.element)).toBe(0);
+                expect(this.domAdapter.userDefinedWidth(this.elementRef)).toBe(0);
             });
         });
     });

@@ -7,7 +7,9 @@
 $clr-layers: (
     content: 0,
     select-box: 2,
-    datagrid-header: 500,
+    datagrid-header: 350, // keps svgs in rows below header
+    datagrid-host: 390,
+    datagrid-popover: 395,
     dropdown-menu: 1000,
     alert: 1033,
     sidepanel-bg: 1038,
@@ -16,3 +18,75 @@ $clr-layers: (
     modal: 1050,
     tooltips: 1070
 ) !default;
+
+/*
+Elements with z-index
+- .datagrid-action-overflow - done
+- .datagrid-header - done
+- .datagrid-row-sticky (header row) - done
+- .datgrid-filter - done
+- .datagrid-column-handle - done
+- .datagrid-row-sticky (regular row)
+- .column-switch
+- .datagrid-spinner
+ */
+
+/*
+Ideation for Datagrid Layers
+- dg-container
+- dg-header
+- dg-header-container
+- dg-header-element
+- dg-row-container
+- dg-row-child-container
+- dg-row-child-element
+- dg-footer-container
+- dg-footer-child-container
+- dg-footer-child-element
+ */
+
+/*  Datagrid layers
+ .datagrid-action-overflow (1000)
+ .datagrid-header
+     .datagrid-filter
+     .datagrid-column-handle
+
+ .datagrid-row-sticky
+
+ .column-switch
+
+ .datagrid-spinner
+ */
+
+/*
+Datagrid structure
+Top level (container) elements (current z-index):
+- .datagrid-action-overflow => z-index: map-get($clr-layers, dropdown-menu); 1000
+- .datagrid
+    -.datagrid-table
+        - datagrid-header => z-index: map-get($clr-layers, datagrid-header); 500
+            - datagrid-row
+                - datagrid-row-master
+                    - datagrid-row-sticky => z-index: map-get($clr-layers, select-box); 2
+                    - datagrid-row-scrollable
+                      - datagrid-column
+                        - datagrid-column-flex
+                          - clr-dg-string-filter (element)
+                            - .datagrid-filter-toggle
+                            - .datgrid-filter => z-index: 999999999999; ???
+                          - .datagrid-column-title
+                          - .datagrid-column-separator
+                            - .datagrid-column-handle => z-index: map-get($clr-layers, dropdown-menu); 1000
+        - datagrid-row (needs a z-index to be at the same level as all other rows
+          - datagrid-row-master
+            - datagrid-row-sticky => z-index: map-get($clr-layers, select-box); 2 // so that scrollable slides underneath
+                - .datagrid-action-overflow // needs to be on top of allother row elements. (and maybe the header ones too)
+            - datagrid-row-scrollable
+- .datagrid-footer
+  - datagrid-footer-select
+  - .column-switch-wrapper
+    - .column-switch => z-index: 9999;
+  - .datagrid-footer-description
+  - .pagination
+- .datagrid-spinner => z-index: map-get($clr-layers, modal-bg); 1040
+ */

@@ -7,6 +7,7 @@ import {isPlatformBrowser} from "@angular/common";
 import {
     AfterContentInit,
     AfterViewChecked,
+    AfterViewInit,
     ContentChildren,
     Directive,
     ElementRef,
@@ -17,8 +18,12 @@ import {
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
+import {ClrDatagridColumn} from "../datagrid-column";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {Items} from "../providers/items";
 import {Page} from "../providers/page";
+import {TableSizeService} from "../providers/table-size.service";
+import {ClrWrappedColumn} from "../wrapped-column";
 
 import {DomAdapter} from "./dom-adapter";
 import {DatagridHeaderRenderer} from "./header-renderer";
@@ -39,28 +44,41 @@ export const domAdapterFactory = (platformId: Object) => {
 // @dynamic (https://github.com/angular/angular/issues/19698#issuecomment-338340211)
 @Directive(
     {selector: "clr-datagrid", providers: [{provide: DomAdapter, useFactory: domAdapterFactory, deps: [PLATFORM_ID]}]})
-export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked, OnDestroy {
+export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, AfterViewChecked, OnDestroy {
     constructor(private organizer: DatagridRenderOrganizer, private items: Items, private page: Page,
-                private domAdapter: DomAdapter, private el: ElementRef, private renderer: Renderer2) {
-        this._subscriptions.push(organizer.computeWidths.subscribe(() => this.computeHeadersWidth()));
-        this._subscriptions.push(this.page.sizeChange.subscribe(() => {
+                private domAdapter: DomAdapter, private el: ElementRef, private renderer: Renderer2,
+                private tableSizeService: TableSizeService) {
+        this.subscriptions.push(this.organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.COMPUTE_COLUMN_WIDTHS) {
+                this.computeHeadersWidth();
+            }
+        }));
+        this.subscriptions.push(this.page.sizeChange.subscribe(() => {
             if (this._heightSet) {
                 this.resetDatagridHeight();
             }
         }));
-        this._subscriptions.push(this.items.change.subscribe(() => this.shouldStabilizeColumns = true));
+        this.subscriptions.push(this.items.change.subscribe(() => this.shouldStabilizeColumns = true));
     }
 
     @ContentChildren(DatagridHeaderRenderer) public headers: QueryList<DatagridHeaderRenderer>;
+    @ContentChildren(ClrDatagridColumn) public columns: QueryList<ClrDatagridColumn>;
 
     ngAfterContentInit() {
-        this._subscriptions.push(this.headers.changes.subscribe(() => {
+        this.subscriptions.push(this.headers.changes.subscribe(() => {
             // TODO: only re-stabilize if a column was added or removed. Reordering is fine.
             this.columnsSizesStable = false;
             this.stabilizeColumns();
         }));
     }
 
+    // Initialize and set Table width for horizontal scrolling here.
+    ngAfterViewInit() {
+        this.tableSizeService.table = this.el;
+        // this.tableSizeService.updateRowWidth();
+    }
+
+    // Try putting in ngAfterViewInit
     ngAfterViewChecked() {
         if (this.shouldStabilizeColumns) {
             this.stabilizeColumns();
@@ -104,10 +122,10 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
         this._heightSet = false;
     }
 
-    private _subscriptions: Subscription[] = [];
+    private subscriptions: Subscription[] = [];
 
     ngOnDestroy() {
-        this._subscriptions.forEach(sub => sub.unsubscribe());
+        this.subscriptions.forEach(sub => sub.unsubscribe());
     }
 
     /**
@@ -116,7 +134,6 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
     private computeHeadersWidth() {
         const nbColumns: number = this.headers.length;
         let allStrict = true;
-
         this.headers.forEach((header, index) => {
             // On the last header column check whether all columns have strict widths.
             // If all columns have strict widths, remove the strict width from the last column and make it the column's
@@ -130,10 +147,8 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
             if (nbColumns === index + 1 && allStrict) {
                 delete header.strictWidth;
             }
-
             this.organizer.widths[index] = {px: header.computeWidth(), strict: !!header.strictWidth};
         });
-
         this.headers.forEach((header, index) => header.setWidth(this.organizer.widths[index].px));
     }
 
@@ -143,7 +158,6 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
      * 2) When rows are lazily loaded for the first time
      */
     private columnsSizesStable = false;
-
     private shouldStabilizeColumns = true;
 
     /**
@@ -152,28 +166,10 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewChecked,
     private stabilizeColumns() {
         this.shouldStabilizeColumns = false;
         if (this.columnsSizesStable) {
-            // change in items might have introduced/taken away the scrollbar
-
-            // FIXME: setTimeout is needed here because:
-            // When the user changes the page the following things happen:
-            // 1. The array which contains the items displayed is updated to contain the items on the new page.
-            // 2. An event is emitted which is subscribed to by the main renderer (this file) and this marks the
-            // shouldStabilizeColumns flag to true
-            // 3. While this is happening the datagrid is in the process of cleaning up the view. The view first
-            // renders the new displayed items and then cleans up the old items. But there is a point where the view
-            // contains the old items as well as the new items. So if the page size is 10 the view contains 20 items.
-            // This causes the datagrid body to overflow.
-            // Now since shouldStabilizeColumns was set to true, the scrollbar width is calculated
-            // and added to the datagrid header. Adding the setTimeout gives Angular time to clean up the view so that
-            // the scrollbar disappears.
-            // See this: https://github.com/angular/angular/issues/19094
-            // When the above issue is resolve, remove the setTimeout
-            setTimeout(() => {
-                this.organizer.scrollbar.next();
-            });
+            // Nothing to do.
             return;
         }
-        // No point resizing if there are no rows, we wait until they are actually loaded.
+        // Resize when the rows are loaded.
         if (this.items.displayed.length > 0) {
             this.organizer.resize();
             this.columnsSizesStable = true;

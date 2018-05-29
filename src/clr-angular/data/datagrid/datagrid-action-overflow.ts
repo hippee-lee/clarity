@@ -21,9 +21,8 @@ import {RowActionService} from "./providers/row-action-service";
                 <ng-content></ng-content>
             </div>
         </ng-template>
-    `
+    `,
 })
-
 export class ClrDatagridActionOverflow implements OnDestroy {
     public anchorPoint: Point = Point.RIGHT_CENTER;
     public popoverPoint: Point = Point.LEFT_CENTER;

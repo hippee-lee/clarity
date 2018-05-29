@@ -16,6 +16,7 @@ import {User} from "../inventory/user";
 })
 export class DatagridColumnSizingDemo {
     users: User[];
+    selected = [];
 
     constructor(inventory: Inventory) {
         inventory.size = 10;

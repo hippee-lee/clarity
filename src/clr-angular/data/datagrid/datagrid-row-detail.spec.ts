@@ -11,6 +11,7 @@ import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
 import {ClrDatagridRowDetail} from "./datagrid-row-detail";
 import {TestContext} from "./helpers.spec";
 import {FiltersProvider} from "./providers/filters";
+import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
 import {Items} from "./providers/items";
 import {Page} from "./providers/page";
@@ -27,7 +28,7 @@ export default function(): void {
         beforeEach(function() {
             context = this.create(ClrDatagridRowDetail, FullTest, [
                 Selection, Items, FiltersProvider, Sort, Page, RowActionService, Expand, DatagridRenderOrganizer,
-                HideableColumnService, StateDebouncer
+                HideableColumnService, StateDebouncer, ExpandableRowsCount
             ]);
         });
 
@@ -39,11 +40,8 @@ export default function(): void {
             expect(context.clarityElement.classList.contains("datagrid-row-flex")).toBe(true);
         });
 
-        it("adds the .datagrid-row-detail class to the host if not replacing the row itself", function() {
+        it("adds the .datagrid-row-detail class to the host", function() {
             expect(context.clarityElement.classList.contains("datagrid-row-detail")).toBe(true);
-            context.testComponent.replace = true;
-            context.detectChanges();
-            expect(context.clarityElement.classList.contains("datagrid-row-detail")).toBe(false);
         });
 
         it("adds the .datagrid-container class to the host if it doesn't contain cells", function() {
@@ -55,13 +53,19 @@ export default function(): void {
 
         it("updates the Expand provider with the [clrDgReplace] input", function() {
             const expand: Expand = context.getClarityProvider(Expand);
-            expect(expand.replace).toBe(false);
+            let expandState = false;
+            expand.replace.subscribe(state => {
+                expandState = state;
+            });
+            expect(expandState).toBe(false);
             context.testComponent.replace = true;
             context.detectChanges();
-            expect(expand.replace).toBe(true);
+            expect(expandState).toBe(true);
         });
 
         it("displays an empty cell in place of the caret", function() {
+            context.getClarityProvider(ExpandableRowsCount).register();
+            context.detectChanges();
             expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(1);
         });
 
@@ -69,16 +73,16 @@ export default function(): void {
             const selection: Selection = context.getClarityProvider(Selection);
             selection.selectionType = SelectionType.Multi;
             context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(2);
+            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(1);
             selection.selectionType = SelectionType.Single;
             context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(2);
+            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(1);
         });
 
         it("displays an extra empty cell when the datagrid has an actionable row", function() {
             context.getClarityProvider(RowActionService).register();
             context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(2);
+            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(1);
         });
 
         it("displays as many extra empty cells as needed", function() {
@@ -86,18 +90,7 @@ export default function(): void {
             selection.selectionType = SelectionType.Multi;
             context.getClarityProvider(RowActionService).register();
             context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(3);
-        });
-
-        it("doesn't display any empty cell when replacing", function() {
-            context.testComponent.replace = true;
-            context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(0);
-            const selection: Selection = context.getClarityProvider(Selection);
-            selection.selectionType = SelectionType.Multi;
-            context.getClarityProvider(RowActionService).register();
-            context.detectChanges();
-            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(0);
+            expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(2);
         });
     });
 
@@ -108,7 +101,7 @@ export default function(): void {
         beforeEach(function() {
             context = this.create(ClrDatagridRowDetail, HiddenTest, [
                 Selection, Items, FiltersProvider, Sort, Page, RowActionService, Expand, DatagridRenderOrganizer,
-                HideableColumnService, StateDebouncer
+                HideableColumnService, StateDebouncer, ExpandableRowsCount
             ]);
             hideableColumnService = context.getClarityProvider(HideableColumnService);
         });

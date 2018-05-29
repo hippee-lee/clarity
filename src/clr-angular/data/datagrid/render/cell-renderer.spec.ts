@@ -6,6 +6,7 @@
 import {Component} from "@angular/core";
 
 import {TestContext} from "../helpers.spec";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {HideableColumnService} from "../providers/hideable-column.service";
 
 import {DatagridCellRenderer} from "./cell-renderer";
@@ -40,7 +41,7 @@ export default function(): void {
             context.clarityDirective.setWidth(true, 42);
             expect(context.clarityElement.style.width).toBe("42px");
             expect(context.clarityElement.classList).toContain("datagrid-fixed-width");
-            organizer.clearWidths.next();
+            organizer._renderStep.next(DatagridRenderStep.CLEAR_WIDTHS);
             expect(context.clarityElement.style.width).toBeFalsy();
             expect(context.clarityElement.classList).not.toContain("datagrid-fixed-width");
         });

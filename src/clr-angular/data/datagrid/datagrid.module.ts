@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {ClrFormsModule} from "../../forms-deprecated/forms.module";
 import {ClrIconModule} from "../../icon/icon.module";
 import {ClrCommonPopoverModule} from "../../popover/common/popover.module";
+import {ClrPopoverModule} from "../../popover/popover.module";
 import {ClrIfExpandModule} from "../../utils/expand/if-expand.module";
 import {ClrLoadingModule} from "../../utils/loading/loading.module";
 import {ClrOutsideClickModule} from "../../utils/outside-click/outside-click.module";
@@ -23,6 +24,7 @@ import {ExpandableOompaLoompa} from "./chocolate/expandable-oompa-loompa";
 import {ClrDatagrid} from "./datagrid";
 import {ClrDatagridActionBar} from "./datagrid-action-bar";
 import {ClrDatagridActionOverflow} from "./datagrid-action-overflow";
+import {ClrDatagridActionPopover} from "./datagrid-action-popover";
 import {ClrDatagridCell} from "./datagrid-cell";
 import {ClrDatagridColumn} from "./datagrid-column";
 import {ClrDatagridColumnToggle} from "./datagrid-column-toggle";
@@ -42,25 +44,25 @@ import {ClrDatagridComparatorInterface} from "./interfaces/comparator.interface"
 import {ClrDatagridFilterInterface} from "./interfaces/filter.interface";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ClrDatagridStringFilterInterface} from "./interfaces/string-filter.interface";
-import {DatagridBodyRenderer} from "./render/body-renderer";
 import {DatagridCellRenderer} from "./render/cell-renderer";
 import {DatagridColumnResizer} from "./render/column-resizer";
-import {DatagridHeadRenderer} from "./render/head-renderer";
 import {DatagridHeaderRenderer} from "./render/header-renderer";
 import {DatagridMainRenderer} from "./render/main-renderer";
 import {DatagridRowRenderer} from "./render/row-renderer";
-import {DatagridTableRenderer} from "./render/table-renderer";
+import {ClrWrappedCell} from "./wrapped-cell";
+import {ClrWrappedColumn} from "./wrapped-column";
+import {ClrWrappedRow} from "./wrapped-row";
 
 export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     // Core
-    ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridColumn, ClrDatagridColumnToggle,
-    ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy, ClrDatagridRow,
-    ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter, ClrDatagridPagination,
-    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle,
+    ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridActionPopover, ClrDatagridColumn,
+    ClrDatagridColumnToggle, ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy,
+    ClrDatagridRow, ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter,
+    ClrDatagridPagination, ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle,
+    ClrWrappedCell, ClrWrappedColumn, ClrWrappedRow,
 
     // Renderers
-    DatagridMainRenderer, DatagridTableRenderer, DatagridHeadRenderer, DatagridHeaderRenderer, DatagridBodyRenderer,
-    DatagridColumnResizer, DatagridRowRenderer, DatagridCellRenderer,
+    DatagridMainRenderer, DatagridHeaderRenderer, DatagridColumnResizer, DatagridRowRenderer, DatagridCellRenderer,
 
     // Chocolate
     DatagridWillyWonka, ActionableOompaLoompa, ExpandableOompaLoompa,
@@ -75,12 +77,13 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
 @NgModule({
     imports: [
         CommonModule, ClrIconModule, ClrFormsModule, FormsModule, ClrCommonPopoverModule, ClrLoadingModule,
-        ClrOutsideClickModule
+        ClrOutsideClickModule, ClrPopoverModule
     ],
     declarations: [
         CLR_DATAGRID_DIRECTIVES,
     ],
-    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule]
+    exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule],
+    entryComponents: [ClrWrappedCell, ClrWrappedColumn, ClrWrappedRow]
 })
 export class ClrDatagridModule {}
 
@@ -114,7 +117,7 @@ export interface DatagridFilter extends ClrDatagridFilter {}
 /** @deprecated since 0.11 */
 export const DatagridFilter = ClrDatagridFilter;
 /** @deprecated since 0.11 */
-export interface DatagridItems extends ClrDatagridItems {}
+export interface DatagridItems<T> extends ClrDatagridItems<T> {}
 /** @deprecated since 0.11 */
 export const DatagridItems = ClrDatagridItems;
 /** @deprecated since 0.11 */

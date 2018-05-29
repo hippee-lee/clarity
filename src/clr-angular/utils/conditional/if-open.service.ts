@@ -19,6 +19,7 @@ import {Subject} from "rxjs/Subject";
  *
  */
 export class IfOpenService {
+    constructor() {}
     /********
      * @property _openChange
      *

@@ -9,10 +9,36 @@ import {By} from "@angular/platform-browser";
 import {ClrDatagrid} from "../datagrid";
 import {TestContext} from "../helpers.spec";
 import {DragDispatcher} from "../providers/drag-dispatcher";
-import {TableHeightService} from "../providers/table-height.service";
+import {TableSizeService} from "../providers/table-size.service";
 
 import {DatagridColumnResizer} from "./column-resizer";
 import {DomAdapter} from "./dom-adapter";
+
+@Component({
+    template: `
+    <div class="container" style="width: 1100px;">
+        <clr-datagrid>
+            <clr-dg-column>First</clr-dg-column>
+            <clr-dg-column [style.min-width.px]="120">Second</clr-dg-column>
+            <clr-dg-column [style.width.px]="column3WidthStrict" 
+            (clrDgColumnResize)="newWidth = $event">Three</clr-dg-column>
+            <clr-dg-column>Four</clr-dg-column>
+            <clr-dg-row *clrDgItems="let item of items">
+                <clr-dg-cell>{{item}}</clr-dg-cell>
+                <clr-dg-cell>{{item * 2}}</clr-dg-cell>
+                <clr-dg-cell>{{item * 3}}</clr-dg-cell>
+                <clr-dg-cell>{{item * 4}}</clr-dg-cell>
+            </clr-dg-row>
+            <clr-dg-footer>{{items.length}} items</clr-dg-footer>
+        </clr-datagrid>
+    </div>
+`
+})
+class ColumnResizerTest {
+    items = [1, 2, 3];
+    column3WidthStrict: number = 200;
+    newWidth: number;
+}
 
 export default function(): void {
     describe("DatagridColumnResizer directive", function() {
@@ -40,9 +66,10 @@ export default function(): void {
             columnResizerDirective.dragStartHandler();
             columnResizerDirective.dragMoveHandler({pageX: columnResizerDirective.pageStartPositionX + amount});
             columnResizerDirective.dragEndHandler();
+            console.log("column resized,", column3ResizerDirective);
         };
         beforeEach(function() {
-            context = this.create(ClrDatagrid, ColumnResizerTest, [TableHeightService]);
+            context = this.create(ClrDatagrid, ColumnResizerTest, [TableSizeService]);
             context.detectChanges();
             domAdapter = context.getClarityProvider(DomAdapter);
 
@@ -81,15 +108,17 @@ export default function(): void {
             column4ResizerDirective.dragStartHandler();
             expect(column4ResizerDirective.columnMinWidth).toEqual(96);
         });
-        it("if a column expands by large size, other flexible columns shouldn't shrink below their minimum width",
-           function() {
-               const column1InitialWidth = domAdapter.clientRectWidth(column1ResizerDirective.columnEl);
-               emulateResize(column1ResizerDirective, 1000);
-               expect(domAdapter.clientRectWidth(column1ResizerDirective.columnEl)).toBe(column1InitialWidth + 1000);
-               expect(domAdapter.clientRectWidth(column2ResizerDirective.columnEl)).toBe(120);
-               expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(200);
-               expect(domAdapter.clientRectWidth(column4ResizerDirective.columnEl)).toBe(96);
-           });
+        it("shouldn't shrink below its min-width if column expands by large size", function() {
+            const column1InitialWidth = domAdapter.clientRectWidth(column1ResizerDirective.columnEl);
+            console.log(column1InitialWidth);
+            emulateResize(column1ResizerDirective, 1000);
+            context.detectChanges();
+            console.log("after resize", domAdapter.clientRectWidth(column1ResizerDirective.columnEl));
+            expect(domAdapter.clientRectWidth(column1ResizerDirective.columnEl)).toBe(column1InitialWidth + 1000);
+            expect(domAdapter.clientRectWidth(column2ResizerDirective.columnEl)).toBe(120);
+            expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(200);
+            expect(domAdapter.clientRectWidth(column4ResizerDirective.columnEl)).toBe(96);
+        });
         it("initial column width should be greater than minumum widths or equal to user defined width", function() {
             expect(domAdapter.clientRectWidth(column1ResizerDirective.columnEl)).toBeGreaterThanOrEqual(96);
             expect(domAdapter.clientRectWidth(column2ResizerDirective.columnEl)).toBeGreaterThanOrEqual(120);
@@ -209,11 +238,12 @@ export default function(): void {
             expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(150);
             expect(domAdapter.clientRectWidth(column4ResizerDirective.columnEl)).toBeGreaterThan(column4InitialWidth);
         });
-        it("if a column expands, other flexible columns should shrink.", function() {
+        fit("if a column expands, other flexible columns should shrink.", function() {
             const column1InitialWidth = domAdapter.clientRectWidth(column1ResizerDirective.columnEl);
             const column2InitialWidth = domAdapter.clientRectWidth(column2ResizerDirective.columnEl);
             const column4InitialWidth = domAdapter.clientRectWidth(column4ResizerDirective.columnEl);
             emulateResize(column3ResizerDirective, 50);
+            context.detectChanges();
             expect(domAdapter.clientRectWidth(column1ResizerDirective.columnEl)).toBeLessThan(column1InitialWidth);
             expect(domAdapter.clientRectWidth(column2ResizerDirective.columnEl)).toBeLessThan(column2InitialWidth);
             expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(250);
@@ -254,30 +284,4 @@ export default function(): void {
             expect(column4ResizerDirective.columnEl.classList.contains("datagrid-fixed-width")).toBe(false);
         });
     });
-}
-
-@Component({
-    template: `
-    <div class="container" style="width: 1100px;">
-        <clr-datagrid>
-            <clr-dg-column>First</clr-dg-column>
-            <clr-dg-column [style.min-width.px]="120">Second</clr-dg-column>
-            <clr-dg-column [style.width.px]="column3WidthStrict" 
-            (clrDgColumnResize)="newWidth = $event">Three</clr-dg-column>
-            <clr-dg-column>Four</clr-dg-column>
-            <clr-dg-row *clrDgItems="let item of items">
-                <clr-dg-cell>{{item}}</clr-dg-cell>
-                <clr-dg-cell>{{item * 2}}</clr-dg-cell>
-                <clr-dg-cell>{{item * 3}}</clr-dg-cell>
-                <clr-dg-cell>{{item * 4}}</clr-dg-cell>
-            </clr-dg-row>
-            <clr-dg-footer>{{items.length}} items</clr-dg-footer>
-        </clr-datagrid>
-    </div>
-`
-})
-class ColumnResizerTest {
-    items = [1, 2, 3];
-    column3WidthStrict: number = 200;
-    newWidth: number;
 }

@@ -14,6 +14,7 @@ import {DatagridWillyWonka} from "./chocolate/datagrid-willy-wonka";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
 import {ClrDatagridRow} from "./datagrid-row";
 import {TestContext} from "./helpers.spec";
+import {DisplayModeService} from "./providers/display-mode.service";
 import {FiltersProvider} from "./providers/filters";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
@@ -26,9 +27,10 @@ import {StateDebouncer} from "./providers/state-debouncer.provider";
 import {DomAdapter} from "./render/dom-adapter";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
 
+
 const PROVIDERS = [
     Selection, Items, FiltersProvider, Sort, Page, RowActionService, ExpandableRowsCount, DatagridRenderOrganizer,
-    DomAdapter, HideableColumnService, DatagridWillyWonka, StateDebouncer
+    DomAdapter, HideableColumnService, DatagridWillyWonka, StateDebouncer, DisplayModeService
 ];
 
 export default function(): void {
@@ -36,13 +38,13 @@ export default function(): void {
         describe("View", function() {
             // Until we can properly type "this"
             let context: TestContext<ClrDatagridRow, FullTest>;
+            let renderer: DatagridRenderOrganizer;
 
             beforeEach(function() {
                 context = this.create(ClrDatagridRow, FullTest, PROVIDERS);
-            });
-
-            it("projects content", function() {
-                expect(context.clarityElement.textContent.trim()).toMatch("Hello world");
+                renderer = context.getClarityProvider(DatagridRenderOrganizer);
+                context.detectChanges();
+                renderer.resize();
             });
 
             it("adds the .datagrid-row class to the host", function() {
@@ -246,12 +248,10 @@ export default function(): void {
                 expect(context.clarityElement.querySelector(".spinner")).not.toBeNull();
             });
 
-            it("doesn't display the details when collapsed", function() {
-                expect(context.clarityElement.textContent).toMatch("Hello world");
+            it("doesn't display the details when collapsed and replacing cells", function() {
                 expect(context.clarityElement.textContent).not.toMatch("Detail");
-                expand.replace = true;
+                expand.setReplace(true);
                 context.detectChanges();
-                expect(context.clarityElement.textContent).toMatch("Hello world");
                 expect(context.clarityElement.textContent).not.toMatch("Detail");
             });
 
@@ -259,12 +259,11 @@ export default function(): void {
                    expand.expanded = true;
                    tick();
                    context.detectChanges();
-                   expect(context.clarityElement.textContent).toMatch("Hello world");
                    expect(context.clarityElement.textContent).toMatch("Detail");
                }));
 
             it("displays only the details when expanded and replacing", fakeAsync(function() {
-                   expand.replace = true;
+                   expand.setReplace(true);
                    expand.expanded = true;
                    tick();
                    context.detectChanges();
@@ -277,7 +276,7 @@ export default function(): void {
                    expand.loading = true;
                    tick();
                    context.detectChanges();
-                   expect(context.clarityElement.textContent).not.toMatch("Detail");
+                   expect(context.clarityElement.textContent.trim()).not.toMatch("Detail");
                }));
 
             it("expands and collapses when the caret is clicked", fakeAsync(function() {
@@ -316,7 +315,7 @@ export default function(): void {
             });
 
             it("should update cells for columns", function() {
-                // TODO: ffigure out how to test for cell changes and make sure updateCellsForColumns is called
+                // TODO: figure out how to test for cell changes and make sure updateCellsForColumns is called
                 spyOn(context.clarityDirective, "updateCellsForColumns");
                 hideableColumnService = context.getClarityProvider(HideableColumnService);
 
