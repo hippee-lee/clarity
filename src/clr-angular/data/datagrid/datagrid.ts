@@ -13,7 +13,7 @@ import {
     Input,
     OnDestroy,
     Output,
-    QueryList, TemplateRef
+    QueryList, TemplateRef, ViewChild, ViewContainerRef
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
@@ -227,7 +227,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
             }
         }));
         this.rowTemplateArrays = this.dataridTemplatesService.rowTemplates;
-        console.log(this.rowTemplateArrays);
+        console.log("rows", this.rowTemplateArrays);
     }
 
     public display = true;
@@ -244,4 +244,25 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     resize(): void {
         this.organizer.resize();
     }
+
+    ngOnInit() {
+        setTimeout(() => {
+            this.rowDisplay.createEmbeddedView(this.projectedRows);
+        });
+    }
+
+    toggleDisplay() {
+        if (this.display) {
+            const view = this.rowDisplay.detach();
+            this.calculation.insert(view);
+        } else {
+            const view = this.calculation.detach();
+            this.rowDisplay.insert(view);
+        }
+        this.display = !this.display;
+    }
+
+    @ViewChild("projectedRows") projectedRows: TemplateRef<void>;
+    @ViewChild("rowDisplay", {read: ViewContainerRef}) rowDisplay: ViewContainerRef;
+    @ViewChild("calculation", {read: ViewContainerRef}) calculation: ViewContainerRef;
 }
