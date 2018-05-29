@@ -4,7 +4,8 @@
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
 
-<ng-container *ngIf="display">
+<button class="btn btn-primary" (click)="toggleDisplay()">Switch Table View</button>
+<ng-container>
     <h1>TemplateRef Table</h1>
     <ng-content select="clr-dg-action-bar"></ng-content>
 
@@ -35,27 +36,28 @@
                          *ngIf="expandableRows.hasExpandableRow">
                         <div class="datagrid-column-separator"></div>
                     </div>
-                    <!--<ng-content select="clr-dg-column"></ng-content>-->
-                    <span>column template refs here</span>
+                    <ng-content select="clr-dg-column"></ng-content>
                 </div>
             </div>
-            <!--<ng-template *ngIf="iterator"-->
-            <!--ngFor [ngForOf]="items.displayed" [ngForTrackBy]="items.trackBy"-->
-            <!--[ngForTemplate]="iterator.template"></ng-template>-->
-            <!--<ng-content *ngIf="!iterator"></ng-content>-->
-            <ng-container *ngIf="iterator">
-                handle clrDgItems
-            </ng-container>
-
-            <ng-container *ngIf="!iterator">
-                <ng-container *ngFor="let row of rowTemplateArrays">
-                    <div class="datagrid-row datagrid-row-flex">
-                        <ng-template ngFor [ngForOf]="row" let-cell>
-                            <ng-container [ngTemplateOutlet]="cell"></ng-container>
-                        </ng-template>
-                    </div>
+            <ng-template #projectedRows>
+                <ng-container *ngIf="iterator">
+                    <ng-template ngFor [ngForOf]="items.displayed" [ngForTrackBy]="items.trackBy"
+                                 [ngForTemplate]="iterator.template"></ng-template>
                 </ng-container>
-            </ng-container>
+
+                <ng-container *ngIf="!iterator">
+                    <ng-container *ngFor="let row of rowTemplateArrays">
+                        <div class="datagrid-row datagrid-row-flex">
+                            <ng-template ngFor [ngForOf]="row" let-cell>
+                                <ng-container [ngTemplateOutlet]="cell"></ng-container>
+                            </ng-template>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </ng-template>
+
+            <ng-container #rowDisplay></ng-container>
+
             <ng-content select="clr-dg-placeholder"></ng-content>
             <clr-dg-placeholder *ngIf="!placeholder"></clr-dg-placeholder>
         </clr-dg-table-wrapper>
@@ -66,16 +68,7 @@
         <div class="spinner">Loading...</div>
     </div>
 </ng-container>
-<h4>{{display ? 'Standard display' : 'calculation'}} table</h4>
-
-<ng-container *ngIf="!display">
+<ng-container>
     <h1>Calculation View</h1>
-    <div class="datagrid-sizing datagrid-table">
-        <ng-container>
-            <div *ngFor="let row of rowTemplateArrays" class="datagrid-row datagrid-row-flex">
-                <ng-container *ngFor="let cell of row" [ngTemplateOutlet]="cell"></ng-container>
-            </div>
-        </ng-container>
-    </div>
+    <ng-container #calculation></ng-container>
 </ng-container>
-<button class="btn btn-primary" (click)="display = !display">Switch Table View</button>
