@@ -46,7 +46,9 @@
                 </ng-container>
 
                 <ng-container *ngIf="!iterator">
-                    <ng-container *ngFor="let row of rowTemplateArrays">
+                     <ng-container *ngFor="let row of rowTemplateArrays">
+                        <!-- flatten this so there isn't a nested for -->
+                        <!-- how do I pass the cells to the row so they can be instantiated and projected into the correct vcr?  -->
                         <div class="datagrid-row datagrid-row-flex">
                             <ng-template ngFor [ngForOf]="row" let-cell>
                                 <ng-container [ngTemplateOutlet]="cell"></ng-container>

@@ -12,7 +12,7 @@ import {
     HostListener,
     Input,
     Output,
-    QueryList
+    QueryList, TemplateRef, ViewChild, ViewContainerRef
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
@@ -35,37 +35,45 @@ let nbRow: number = 0;
     selector: "clr-dg-row",
     template: `
         <div class="datagrid-row-master datagrid-row-flex">
-            <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Multi"
-                         class="datagrid-select datagrid-fixed-column">
-                <clr-checkbox [clrChecked]="selected" (clrCheckedChange)="toggle($event)"></clr-checkbox>
-            </clr-dg-cell>
-            <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Single"
-                         class="datagrid-select datagrid-fixed-column">
-                <div class="radio">
-                    <input type="radio" [id]="id" [name]="selection.id + '-radio'" [value]="item"
-                           [(ngModel)]="selection.currentSingle" [checked]="selection.currentSingle === item">
-                    <label for="{{id}}"></label>
-                </div>
-            </clr-dg-cell>
-            <clr-dg-cell *ngIf="rowActionService.hasActionableRow"
-                         class="datagrid-row-actions datagrid-fixed-column">
-                <ng-content select="clr-dg-action-overflow"></ng-content>
-            </clr-dg-cell>
-            <clr-dg-cell *ngIf="globalExpandable.hasExpandableRow"
-                         class="datagrid-expandable-caret datagrid-fixed-column">
-                <ng-container *ngIf="expand.expandable">
-                    <button (click)="toggleExpand()" *ngIf="!expand.loading" type="button" class="datagrid-expandable-caret-button">
-                        <clr-icon shape="caret" [attr.dir]="expand.expanded?'down':'right'" class="datagrid-expandable-caret-icon"></clr-icon>
-                    </button>
-                    <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
-                </ng-container>
-            </clr-dg-cell>
+            <ng-container #stickyContainer>
+                <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Multi"
+                             class="datagrid-select datagrid-fixed-column">
+                    <clr-checkbox [clrChecked]="selected" (clrCheckedChange)="toggle($event)"></clr-checkbox>
+                </clr-dg-cell>
+                <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Single"
+                             class="datagrid-select datagrid-fixed-column">
+                    <div class="radio">
+                        <input type="radio" [id]="id" [name]="selection.id + '-radio'" [value]="item"
+                               [(ngModel)]="selection.currentSingle" [checked]="selection.currentSingle === item">
+                        <label for="{{id}}"></label>
+                    </div>
+                </clr-dg-cell>
+                <clr-dg-cell *ngIf="rowActionService.hasActionableRow"
+                             class="datagrid-row-actions datagrid-fixed-column">
+                    <ng-content select="clr-dg-action-overflow"></ng-content>
+                </clr-dg-cell>
+                <clr-dg-cell *ngIf="globalExpandable.hasExpandableRow"
+                             class="datagrid-expandable-caret datagrid-fixed-column">
+                    <ng-container *ngIf="expand.expandable">
+                        <button (click)="toggleExpand()" *ngIf="!expand.loading" type="button" class="datagrid-expandable-caret-button">
+                            <clr-icon shape="caret" [attr.dir]="expand.expanded?'down':'right'" class="datagrid-expandable-caret-icon"></clr-icon>
+                        </button>
+                        <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
+                    </ng-container>
+                </clr-dg-cell>
+                <ng-container #stickyCells><div>sticky cells here</div></ng-container>
+            </ng-container>
+            <ng-container #scrollableContainer></ng-container>
+        </div>
+
+        <!-- projected Template -->
+        <ng-template #projectedCells>
             <ng-content *ngIf="!expand.replace || !expand.expanded || expand.loading"></ng-content>
 
             <ng-template *ngIf="expand.replace && expand.expanded && !expand.loading"
                          [ngTemplateOutlet]="detail"></ng-template>
-        </div>
-
+        </ng-template>
+        <!-- details template -->
         <ng-template *ngIf="!expand.replace && expand.expanded && !expand.loading"
                      [ngTemplateOutlet]="detail"></ng-template>
 
@@ -250,4 +258,14 @@ export class ClrDatagridRow implements AfterContentInit {
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }
+
+    ngOnInit() {
+        setTimeout(() => {
+            this.stickyCells.createEmbeddedView(this.projectedCells);
+        });
+    }
+
+    @ViewChild("projectedCells") projectedCells: TemplateRef<void>;
+    @ViewChild("stickyCells", {read: ViewContainerRef}) stickyCells: ViewContainerRef;
+    @ViewChild("scrollableContainer", {read: ViewContainerRef}) scrollableContainer: ViewContainerRef;
 }

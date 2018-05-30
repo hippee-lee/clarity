@@ -227,7 +227,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
             }
         }));
         this.rowTemplateArrays = this.dataridTemplatesService.rowTemplates;
-        console.log("rows", this.rowTemplateArrays);
     }
 
     public display = true;
