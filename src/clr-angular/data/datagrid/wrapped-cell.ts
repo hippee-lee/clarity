@@ -3,10 +3,9 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {AfterViewInit, Component, TemplateRef, ViewChild} from "@angular/core";
+import {AfterViewInit, Component, EmbeddedViewRef, TemplateRef, ViewChild} from "@angular/core";
 
 import {DynamicWrapper} from "../../utils/host-wrapping/dynamic-wrapper";
-import {ClrDatagridRowTemplatesService} from "./providers/row-templates.service";
 
 @Component({
     selector: "clr-wrapped-cell",
@@ -18,11 +17,11 @@ import {ClrDatagridRowTemplatesService} from "./providers/row-templates.service"
 })
 export class ClrWrappedCell implements DynamicWrapper, AfterViewInit {
     _dynamic = false;
-    @ViewChild("cellPortal") templateRef: TemplateRef<any>;
-
-    constructor(private rowTemplatesService: ClrDatagridRowTemplatesService) {}
+    @ViewChild("cellPortal") templateRef: TemplateRef<void>;
+    cellView: EmbeddedViewRef<void>; // the cells projected view
 
     ngAfterViewInit() {
-        this.rowTemplatesService.addTemplate(this.templateRef);
+        // Create the cells view in memory, not the DOM.
+        this.cellView = this.templateRef.createEmbeddedView(null);
     }
 }

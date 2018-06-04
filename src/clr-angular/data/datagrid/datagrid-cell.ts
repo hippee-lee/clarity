@@ -79,15 +79,20 @@ export class ClrDatagridCell implements OnInit {
         }
     }
 
-    private cellInjector: Injector;
+    private wrappedInjector: Injector;
 
     ngOnInit() {
-        this.cellInjector = new HostWrapper(ClrWrappedCell, this.vcr);
+        this.wrappedInjector = new HostWrapper(ClrWrappedCell, this.vcr);
     }
 
     ngOnDestroy() {
         if (this.hiddenStateSubscription) {
             this.hiddenStateSubscription.unsubscribe();
         }
+    }
+
+    public get view() {
+        return this.wrappedInjector.get(ClrWrappedCell, this.vcr).cellView;
+        // TODO why is this get depreccated?
     }
 }

@@ -23,7 +23,6 @@ import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ColumnToggleButtonsService} from "./providers/column-toggle-buttons.service";
-import {ClrDatagridTemplatesService} from "./providers/datagrid-templates.service";
 import {FiltersProvider} from "./providers/filters";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
@@ -54,15 +53,13 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateProvider,
         ColumnToggleButtonsService,
         TableHeightService,
-        ClrDatagridTemplatesService,
     ],
     host: {"[class.datagrid-host]": "true"}
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
-                public rowActionService: RowActionService, private stateProvider: StateProvider,
-                private dataridTemplatesService: ClrDatagridTemplatesService) {}
+                public rowActionService: RowActionService, private stateProvider: StateProvider) {}
 
     /* reference to the enum so that template can access */
     public SELECTION_TYPE = SelectionType;
@@ -226,7 +223,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.selectedChanged.emit(s);
             }
         }));
-        this.rowTemplateArrays = this.dataridTemplatesService.rowTemplates;
     }
 
     public display = true;
@@ -245,23 +241,21 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     }
 
     ngOnInit() {
-        setTimeout(() => {
-            this.rowDisplay.createEmbeddedView(this.projectedRows);
-        });
+        // setTimeout(() => {
+        //         //     this.rowDisplay.createEmbeddedView(this.projectedRows);
+        //         // });
     }
 
-    toggleDisplay() {
-        if (this.display) {
-            const view = this.rowDisplay.detach();
-            this.calculation.insert(view);
-        } else {
-            const view = this.calculation.detach();
-            this.rowDisplay.insert(view);
-        }
-        this.display = !this.display;
-    }
+    // toggleDisplay() {
+    //     if (this.display) {
+    //         const view = this.rowDisplay.detach();
+    //         this.calculation.insert(view);
+    //     } else {
+    //         const view = this.calculation.detach();
+    //         this.rowDisplay.insert(view);
+    //     }
+    //     this.display = !this.display;
+    // }
 
     @ViewChild("projectedRows") projectedRows: TemplateRef<void>;
-    @ViewChild("rowDisplay", {read: ViewContainerRef}) rowDisplay: ViewContainerRef;
-    @ViewChild("calculation", {read: ViewContainerRef}) calculation: ViewContainerRef;
 }

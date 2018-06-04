@@ -21,11 +21,9 @@ import {LoadingListener} from "../../utils/loading/loading-listener";
 
 import {ClrDatagridCell} from "./datagrid-cell";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
-import {ClrDatagridTemplatesService} from "./providers/datagrid-templates.service";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
 import {RowActionService} from "./providers/row-action-service";
-import {ClrDatagridRowTemplatesService} from "./providers/row-templates.service";
 import {Selection, SelectionType} from "./providers/selection";
 
 
@@ -61,9 +59,13 @@ let nbRow: number = 0;
                         <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
                     </ng-container>
                 </clr-dg-cell>
-                <ng-container #stickyCells><div>sticky cells here</div></ng-container>
+                <ng-container #stickyCells><div></div></ng-container>
             </ng-container>
-            <ng-container #scrollableContainer></ng-container>
+            <ng-container>
+                <ng-container>
+                    <div #scrollableCells></div>
+                </ng-container>
+            </ng-container>
         </div>
 
         <!-- projected Template -->
@@ -92,7 +94,7 @@ let nbRow: number = 0;
         "[class.datagrid-selected]": "selected",
         "[attr.tabindex]": "selection.rowSelectionMode ? 0 : null"
     },
-    providers: [Expand, {provide: LoadingListener, useExisting: Expand}, ClrDatagridRowTemplatesService]
+    providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
 })
 export class ClrDatagridRow implements AfterContentInit {
     public id: string;
@@ -112,9 +114,7 @@ export class ClrDatagridRow implements AfterContentInit {
 
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,
-                public hideableColumnService: HideableColumnService,
-                private rowTemplateService: ClrDatagridRowTemplatesService,
-                private datagridTemplatesServices: ClrDatagridTemplatesService) {
+                public hideableColumnService: HideableColumnService) {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
     }
@@ -223,6 +223,7 @@ export class ClrDatagridRow implements AfterContentInit {
             if (cellList.length === columnList.length) {
                 this.updateCellsForColumns(columnList);
             }
+
         });
 
         // Used to set things up the first time but only after all the columns are ready.
@@ -232,11 +233,19 @@ export class ClrDatagridRow implements AfterContentInit {
                 this.updateCellsForColumns(columnList);
             }
         });
+
+        this.dgCells.filter((cell, index) => index > 0)
+            .forEach((cell) => this.scrollableCells.insert(cell.view));
+        console.log("scrollable container: ", this.scrollableCells);
+        // this.dgCells.forEach(cell => {
+        //     console.log(cell.view);
+        //     this.scrollableContainer.insert(cell.view);
+        // });
+        // Note to self - what I prolly want to do here is to subscribe to the QueryList and
+        // iterate over each list to check the cell and see if its pinned or scrollable
+        // then insert it into the correct container at the end of the list.
     }
 
-    ngAfterViewInit() {
-        this.datagridTemplatesServices.addTemplateService(this.rowTemplateService.cells);
-    }
     /**********
      *
      * @description
@@ -267,5 +276,5 @@ export class ClrDatagridRow implements AfterContentInit {
 
     @ViewChild("projectedCells") projectedCells: TemplateRef<void>;
     @ViewChild("stickyCells", {read: ViewContainerRef}) stickyCells: ViewContainerRef;
-    @ViewChild("scrollableContainer", {read: ViewContainerRef}) scrollableContainer: ViewContainerRef;
+    @ViewChild("scrollableCells", {read: ViewContainerRef}) scrollableCells: ViewContainerRef;
 }
