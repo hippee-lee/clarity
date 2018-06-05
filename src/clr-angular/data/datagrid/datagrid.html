@@ -40,28 +40,6 @@
                 </div>
             </div>
             <ng-container *ngIf="display" [ngTemplateOutlet]="projectedRows"></ng-container>
-            <ng-template #projectedRows>
-                <ng-content></ng-content>
-                <!--<ng-container *ngIf="iterator">-->
-                    <!--<ng-template ngFor [ngForOf]="items.displayed" [ngForTrackBy]="items.trackBy"-->
-                                 <!--[ngForTemplate]="iterator.template"></ng-template>-->
-                <!--</ng-container>-->
-
-                <!--<ng-container *ngIf="!iterator">-->
-                     <!--<ng-container *ngFor="let row of rowTemplateArrays">-->
-                        <!--&lt;!&ndash; flatten this so there isn't a nested for &ndash;&gt;-->
-                        <!--&lt;!&ndash; how do I pass the cells to the row so they can be instantiated and projected into the correct vcr?  &ndash;&gt;-->
-                        <!--<div class="datagrid-row datagrid-row-flex">-->
-                            <!--<ng-template ngFor [ngForOf]="row" let-cell>-->
-                                <!--<ng-container [ngTemplateOutlet]="cell"></ng-container>-->
-                            <!--</ng-template>-->
-                        <!--</div>-->
-                    <!--</ng-container>-->
-                <!--</ng-container>-->
-            </ng-template>
-
-            <ng-container #rowDisplay></ng-container>
-
             <ng-content select="clr-dg-placeholder"></ng-content>
             <clr-dg-placeholder *ngIf="!placeholder"></clr-dg-placeholder>
         </clr-dg-table-wrapper>
@@ -72,6 +50,11 @@
         <div class="spinner">Loading...</div>
     </div>
 </ng-container>
+
+<ng-template #projectedRows>
+    <ng-content></ng-content>
+</ng-template>
+
 <ng-container>
     <h1>Calculation View</h1>
     <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedRows"></ng-container>

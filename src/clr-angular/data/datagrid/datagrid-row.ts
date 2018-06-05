@@ -236,7 +236,7 @@ export class ClrDatagridRow implements AfterContentInit {
 
         this.dgCells.filter((cell, index) => index > 0)
             .forEach((cell) => this.scrollableCells.insert(cell.view));
-        console.log("scrollable container: ", this.scrollableCells);
+        // console.log("scrollable container: ", this.scrollableCells);
         // this.dgCells.forEach(cell => {
         //     console.log(cell.view);
         //     this.scrollableContainer.insert(cell.view);
