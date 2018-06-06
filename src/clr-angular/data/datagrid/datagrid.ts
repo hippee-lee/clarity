@@ -18,7 +18,7 @@ import {
 import {Subscription} from "rxjs/Subscription";
 
 import {ClrDatagridColumn} from "./datagrid-column";
-import {ClrDatagridItems} from "./datagrid-items";
+import {ClrDatagridItems, RowContext} from "./datagrid-items";
 import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
@@ -91,7 +91,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     /**
      * We grab the smart iterator from projected content
      */
-    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems;
+    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems<RowContext<any>>; // TODO - correct type
 
     /**
      * Set the state of the pinned first column

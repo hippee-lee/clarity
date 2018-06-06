@@ -265,7 +265,9 @@ export class ClrDatagridRow implements AfterContentInit {
     }
 
     ngOnDestroy() {
-        this.subscription.unsubscribe();
+        if (this.subscription) { // fixes pagination-scrolling.html demo error
+            this.subscription.unsubscribe();
+        }
     }
 
     ngOnInit() {
