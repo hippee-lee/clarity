@@ -13,17 +13,16 @@ import {
     Input,
     OnDestroy,
     Output,
-    QueryList, TemplateRef
+    QueryList, TemplateRef, ViewChild, ViewContainerRef
 } from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
 import {ClrDatagridColumn} from "./datagrid-column";
-import {ClrDatagridItems} from "./datagrid-items";
+import {ClrDatagridItems, RowContext} from "./datagrid-items";
 import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ColumnToggleButtonsService} from "./providers/column-toggle-buttons.service";
-import {ClrDatagridTemplatesService} from "./providers/datagrid-templates.service";
 import {FiltersProvider} from "./providers/filters";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
@@ -54,15 +53,13 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateProvider,
         ColumnToggleButtonsService,
         TableHeightService,
-        ClrDatagridTemplatesService,
     ],
     host: {"[class.datagrid-host]": "true"}
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
-                public rowActionService: RowActionService, private stateProvider: StateProvider,
-                private dataridTemplatesService: ClrDatagridTemplatesService) {}
+                public rowActionService: RowActionService, private stateProvider: StateProvider) {}
 
     /* reference to the enum so that template can access */
     public SELECTION_TYPE = SelectionType;
@@ -94,7 +91,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     /**
      * We grab the smart iterator from projected content
      */
-    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems;
+    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems<RowContext<any>>; // TODO - correct type
 
     /**
      * Set the state of the pinned first column
@@ -226,8 +223,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.selectedChanged.emit(s);
             }
         }));
-        this.rowTemplateArrays = this.dataridTemplatesService.rowTemplates;
-        console.log(this.rowTemplateArrays);
     }
 
     public display = true;
@@ -244,4 +239,23 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     resize(): void {
         this.organizer.resize();
     }
+
+    ngOnInit() {
+        // setTimeout(() => {
+        //         //     this.rowDisplay.createEmbeddedView(this.projectedRows);
+        //         // });
+    }
+
+    // toggleDisplay() {
+    //     if (this.display) {
+    //         const view = this.rowDisplay.detach();
+    //         this.calculation.insert(view);
+    //     } else {
+    //         const view = this.calculation.detach();
+    //         this.rowDisplay.insert(view);
+    //     }
+    //     this.display = !this.display;
+    // }
+
+    @ViewChild("projectedRows") projectedRows: TemplateRef<void>;
 }

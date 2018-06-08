@@ -116,7 +116,7 @@ export interface DatagridFilter extends ClrDatagridFilter {}
 /** @deprecated since 0.11 */
 export const DatagridFilter = ClrDatagridFilter;
 /** @deprecated since 0.11 */
-export interface DatagridItems extends ClrDatagridItems {}
+export interface DatagridItems<T> extends ClrDatagridItems<T> {}
 /** @deprecated since 0.11 */
 export const DatagridItems = ClrDatagridItems;
 /** @deprecated since 0.11 */
