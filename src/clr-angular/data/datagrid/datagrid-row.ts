@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
- * The full license information can be found in LICENSE in the root directory of this project.
+ * The full license information can be found in LICENSE in the root directory of this project`.
  */
 import {
     AfterContentInit, AfterViewInit,
@@ -53,13 +53,15 @@ let nbRow: number = 0;
                 <clr-dg-cell *ngIf="globalExpandable.hasExpandableRow"
                              class="datagrid-expandable-caret datagrid-fixed-column">
                     <ng-container *ngIf="expand.expandable">
-                        <button (click)="toggleExpand()" *ngIf="!expand.loading" type="button" class="datagrid-expandable-caret-button">
-                            <clr-icon shape="caret" [attr.dir]="expand.expanded?'down':'right'" class="datagrid-expandable-caret-icon"></clr-icon>
+                        <button (click)="toggleExpand()" *ngIf="!expand.loading" type="button"
+                                class="datagrid-expandable-caret-button">
+                            <clr-icon shape="caret" [attr.dir]="expand.expanded?'down':'right'"
+                                      class="datagrid-expandable-caret-icon"></clr-icon>
                         </button>
                         <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
                     </ng-container>
                 </clr-dg-cell>
-                <div #stickyCells></div>
+                <div #stickyCells></div> <!-- placeholder for projecting other sticky cells as pinned-->
             </div>
             <div class="datagrid-row-scrollable">
                 <!-- TODO - fix this for replaced cells -->
@@ -67,13 +69,13 @@ let nbRow: number = 0;
                 <div class="datagrid-scrolling-cells">
                     <div #scrollableCells></div>
                 </div>
-                <div class="datagrid-row-detail-wrapper" *ngIf="expand.expanded && !expand.loading">
-                    <ng-content select="clr-dg-row-detail"></ng-content>
-                    <!-- replaced-->
-                    <!-- <ng-template *ngIf="!expand.replace && expand.expanded && !expand.loading"
-                     [ngTemplateOutlet]="detail"></ng-template>-->
+                <div class="datagrid-row-detail-wrapper" [ngTemplateOutlet]="detail" *ngIf="expand.expanded && !expand.loading">
                 </div>
             </div>
+            <ng-template #detail>
+                <ng-content select="clr-dg-row-detail"></ng-content>
+            </ng-template>
+        </div>
     `,
     host: {
         "[class.datagrid-row]": "true",
@@ -82,7 +84,7 @@ let nbRow: number = 0;
     },
     providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
 })
-export class ClrDatagridRow implements AfterContentInit, AfterViewInit {
+export class ClrDatagridRow implements AfterContentInit {
     public id: string;
 
     /* reference to the enum so that template can access */
@@ -222,11 +224,11 @@ export class ClrDatagridRow implements AfterContentInit, AfterViewInit {
                 this.updateCellsForColumns(columnList);
             }
         });
-    }
 
-    ngAfterViewInit() {
-        this.dgCells.filter((cell, index) => index > 0)
-            .forEach((cell) => this.scrollableCells.insert(cell.view));
+        // TODO - fix replaced use case in expandable rows and fix auto sizing columns (for renderer)
+        this.dgCells.forEach(cell => {
+            this.scrollableCells.insert(cell.view);
+        });
     }
 
     /**********
