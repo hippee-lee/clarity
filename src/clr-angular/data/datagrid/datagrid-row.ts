@@ -33,7 +33,7 @@ let nbRow: number = 0;
     selector: "clr-dg-row",
     template: `
         <div class="datagrid-row-master datagrid-row-flex">
-            <div class="datagrid-row-sticky" #stickyContainer>>
+            <div class="datagrid-row-sticky">
                 <clr-dg-cell *ngIf="selection.selectionType === SELECTION_TYPE.Multi"
                              class="datagrid-select datagrid-fixed-column">
                     <clr-checkbox [clrChecked]="selected" (clrCheckedChange)="toggle($event)"></clr-checkbox>
@@ -59,9 +59,9 @@ let nbRow: number = 0;
                         <div class="spinner spinner-sm" *ngIf="expand.loading"></div>
                     </ng-container>
                 </clr-dg-cell>
-                <ng-container #stickyCells><div></div></ng-container>
+                <div #stickyCells></div>
             </div>
-            <div class="datagrid-row-scrollable" #scrollableCells>
+            <div class="datagrid-row-scrollable">
                 <div class="datagrid-scrolling-cells" *ngIf="!expand.replace || !expand.expanded || expand.loading">
                     <div #scrollableCells></div>
                 </div>
@@ -216,17 +216,13 @@ export class ClrDatagridRow implements AfterContentInit {
                 this.updateCellsForColumns(columnList);
             }
         });
+    }
+
+    ngAfterViewInit() {
 
         this.dgCells.filter((cell, index) => index > 0)
             .forEach((cell) => this.scrollableCells.insert(cell.view));
-        // console.log("scrollable container: ", this.scrollableCells);
-        // this.dgCells.forEach(cell => {
-        //     console.log(cell.view);
-        //     this.scrollableContainer.insert(cell.view);
-        // });
-        // Note to self - what I prolly want to do here is to subscribe to the QueryList and
-        // iterate over each list to check the cell and see if its pinned or scrollable
-        // then insert it into the correct container at the end of the list.
+        console.log(this);
     }
 
     /**********
@@ -253,13 +249,6 @@ export class ClrDatagridRow implements AfterContentInit {
         }
     }
 
-    ngOnInit() {
-        setTimeout(() => {
-            this.stickyCells.createEmbeddedView(this.projectedCells);
-        });
-    }
-
-    @ViewChild("projectedCells") projectedCells: TemplateRef<void>;
     @ViewChild("stickyCells", {read: ViewContainerRef}) stickyCells: ViewContainerRef;
     @ViewChild("scrollableCells", {read: ViewContainerRef}) scrollableCells: ViewContainerRef;
 }

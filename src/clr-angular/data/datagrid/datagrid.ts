@@ -116,28 +116,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     pinnedColumnChange: EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     /**
-     * Set the state of the pinned first column
-     * default is false.
-     */
-
-    public _pinnedColumn: boolean = false;
-    @Input("clrDgPinnedColumn")
-    set pinned(value: boolean) {
-        // Does this wording set us up to take a list of column's to be pinned later on?
-        this._pinnedColumn = value;
-        this.pinnedColumnChange.emit(value);
-    }
-
-    /**
-     * @description
-     *
-     * Listen to changes to the pinned first column state.
-     * EventEmitter<boolean>
-     */
-    @Output("clrDgPinnedColumnChange")
-    pinnedColumnChange: EventEmitter<boolean> = new EventEmitter<boolean>(false);
-
-    /**
      * Array of all selected items
      */
     @Input("clrDgSelected")
