@@ -11,9 +11,9 @@
     <clr-dg-table-wrapper class="datagrid-table">
         <ng-container *ngIf="display" [ngTemplateOutlet]="projectedColumns"></ng-container>
         <ng-container *ngIf="display" [ngTemplateOutlet]="projectedRows"></ng-container>
-        <ng-content select="clr-dg-placeholder"></ng-content>
     </clr-dg-table-wrapper>
 </div>
+<ng-content select="clr-dg-footer"></ng-content>
 
 <ng-template #projectedColumns>
     <div clrDgHead class="datagrid-header" [ngClass]="{'datagrid-pinned-column': _pinnedColumn}">
@@ -54,6 +54,7 @@
 
 <ng-template #projectedRows>
     <ng-content></ng-content>
+    <ng-content select="clr-dg-placeholder"></ng-content>
 </ng-template>
 
 <ng-container>
