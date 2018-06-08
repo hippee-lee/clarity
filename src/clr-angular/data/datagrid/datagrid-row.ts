@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 import {
-    AfterContentInit,
+    AfterContentInit, AfterViewInit,
     Component,
     ContentChildren,
     EventEmitter,
@@ -62,7 +62,9 @@ let nbRow: number = 0;
                 <div #stickyCells></div>
             </div>
             <div class="datagrid-row-scrollable">
-                <div class="datagrid-scrolling-cells" *ngIf="!expand.replace || !expand.expanded || expand.loading">
+                <!-- TODO - fix this for replaced cells -->
+                <!--<div class="datagrid-scrolling-cells" *ngIf="(!expand.expanded) || (expand.expanded && !expand.replace)">-->
+                <div class="datagrid-scrolling-cells">
                     <div #scrollableCells></div>
                 </div>
                 <div class="datagrid-row-detail-wrapper" *ngIf="expand.expanded && !expand.loading">
@@ -80,7 +82,7 @@ let nbRow: number = 0;
     },
     providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
 })
-export class ClrDatagridRow implements AfterContentInit {
+export class ClrDatagridRow implements AfterContentInit, AfterViewInit {
     public id: string;
 
     /* reference to the enum so that template can access */
@@ -101,6 +103,10 @@ export class ClrDatagridRow implements AfterContentInit {
                 public hideableColumnService: HideableColumnService) {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
+
+        this.expandedChange.subscribe((expandChange => {
+            console.log("expand change: ", expandChange, this.scrollableCells);
+        }));
     }
 
     private _selected = false;
@@ -219,10 +225,8 @@ export class ClrDatagridRow implements AfterContentInit {
     }
 
     ngAfterViewInit() {
-
         this.dgCells.filter((cell, index) => index > 0)
             .forEach((cell) => this.scrollableCells.insert(cell.view));
-        console.log(this);
     }
 
     /**********
