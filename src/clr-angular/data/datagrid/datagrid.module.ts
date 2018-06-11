@@ -45,7 +45,7 @@ import {ClrDatagridStringFilterInterface} from "./interfaces/string-filter.inter
 import {DatagridBodyRenderer} from "./render/body-renderer";
 import {DatagridCellRenderer} from "./render/cell-renderer";
 import {DatagridColumnResizer} from "./render/column-resizer";
-import {DatagridHeadRenderer} from "./render/head-renderer";
+import {DatagridHeadRenderer} from "./render/header-renderer.directive";
 import {DatagridHeaderRenderer} from "./render/header-renderer";
 import {DatagridMainRenderer} from "./render/main-renderer";
 import {DatagridRowRenderer} from "./render/row-renderer";
