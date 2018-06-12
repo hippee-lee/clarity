@@ -4,7 +4,7 @@
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
 
-<button class="btn btn-primary" (click)="display = !display">Switch Table View</button>
+<button class="btn btn-primary" (click)="toggleDisplay()">Switch Table View</button>
 
 <ng-content select="clr-dg-action-bar"></ng-content>
 <div class="datagrid" #datagrid>
@@ -15,13 +15,19 @@
 </div>
 <ng-content select="clr-dg-footer"></ng-content>
 
+
+<ng-container>
+    <h1>Calculation View</h1>
+    <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedColumns"></ng-container>
+    <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedRows"></ng-container>
+</ng-container>
+
 <ng-template #projectedColumns>
-    <!-- <clr-dg-header clrDgHeader> and them use column wrappers to create column views that I can move around.  -->
-    <div clrDgHead class="datagrid-header" [ngClass]="{'datagrid-pinned-column': _pinnedColumn}">
+    <div clrDgHeader class="datagrid-header" [ngClass]="{'datagrid-pinned-column': _pinnedColumn}">
         <div class="datagrid-row">
             <div class="datagrid-row-master datagrid-row-flex">
                 <div class="datagrid-row-sticky">
-                    <!-- header for datagrid where you can select multiple rows -->
+                    <!--header for datagrid where you can select multiple rows -->
                     <div class="datagrid-column datagrid-select datagrid-fixed-column"
                          *ngIf="selection.selectionType === SELECTION_TYPE.Multi">
                         <span class="datagrid-column-title">
@@ -46,7 +52,7 @@
                     </div>
                 </div>
                 <div class="datagrid-row-scrollable">
-                    <ng-content select="clr-dg-column"></ng-content>
+                    <ng-container #scrollableColumns></ng-container>
                 </div>
             </div>
         </div>
@@ -54,12 +60,6 @@
 </ng-template>
 
 <ng-template #projectedRows>
-    <ng-content></ng-content>
+    <ng-content select="clr-dg-row"></ng-content>
     <ng-content select="clr-dg-placeholder"></ng-content>
 </ng-template>
-
-<ng-container>
-    <h1>Calculation View</h1>
-    <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedColumns"></ng-container>
-    <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedRows"></ng-container>
-</ng-container>

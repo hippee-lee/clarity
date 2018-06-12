@@ -190,6 +190,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      */
 
     @ContentChildren(ClrDatagridRow) rows: QueryList<ClrDatagridRow>;
+    @ViewChild("scrollableColumns", {read: ViewContainerRef}) scrollableColumns: ViewContainerRef;
 
     ngAfterContentInit() {
         this._subscriptions.push(this.rows.changes.subscribe(() => {
@@ -223,6 +224,11 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.selectedChanged.emit(s);
             }
         }));
+
+        this.columns.forEach(column => {
+            console.log("AfterViewInit insertion: ", column.view);
+            this.scrollableColumns.insert(column.view);
+        });
     }
 
     public display = true;
@@ -240,22 +246,11 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         this.organizer.resize();
     }
 
-    ngOnInit() {
-        // setTimeout(() => {
-        //         //     this.rowDisplay.createEmbeddedView(this.projectedRows);
-        //         // });
+    toggleDisplay() {
+        this.scrollableColumns.clear();
+        this.display = !this.display;
+        this.columns.forEach(column => {
+            console.log("After toggle display: ", column.view);
+        });
     }
-
-    // toggleDisplay() {
-    //     if (this.display) {
-    //         const view = this.rowDisplay.detach();
-    //         this.calculation.insert(view);
-    //     } else {
-    //         const view = this.calculation.detach();
-    //         this.rowDisplay.insert(view);
-    //     }
-    //     this.display = !this.display;
-    // }
-
-    @ViewChild("projectedRows") projectedRows: TemplateRef<void>;
 }
