@@ -226,13 +226,12 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         }));
 
         this.columns.forEach(column => {
-            console.log("AfterViewInit insertion: ", column.view);
-            this.scrollableColumns.insert(column.view);
+            console.log('VIEW_INIT before inserted', column.view);
+            this.projectedDisplayColumns.insert(column.view);
+            console.log('VIEW_INIT after inserted', column.view);
         });
     }
 
-    public display = true;
-    public rowTemplateArrays: TemplateRef<void>[][];
     /**
      * Subscriptions to all the services and queries changes
      */
@@ -246,11 +245,35 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         this.organizer.resize();
     }
 
+    @ViewChild("projectedDisplayColumns", {read: ViewContainerRef}) projectedDisplayColumns: ViewContainerRef;
+    @ViewChild("projectedCalculationColumns", {read: ViewContainerRef}) projectedCalculationColumns: ViewContainerRef;
+
+    private detachColumnViews() {
+        const displayedColumnCount = this.projectedDisplayColumns.length;
+        const calculatedColumnCount = this.projectedCalculationColumns.length;
+
+        while (this.projectedDisplayColumns.detach()) {
+
+        }
+    }
+
+    public display = true;
+
     toggleDisplay() {
-        this.scrollableColumns.clear();
+        // Clear out the vcr's
+        while (this.projectedDisplayColumns.detach()) {}
+        while (this.projectedCalculationColumns.detach()) {}
+
+        // Figure out where to put each column
+        if(this.display) {
+            this.columns.forEach(column => {
+                this.projectedCalculationColumns.insert(column.view);
+            });
+        } else {
+            this.columns.forEach(column => {
+                this.projectedDisplayColumns.insert(column.view);
+            });
+        }
         this.display = !this.display;
-        this.columns.forEach(column => {
-            console.log("After toggle display: ", column.view);
-        });
     }
 }
