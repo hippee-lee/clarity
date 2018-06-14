@@ -14,13 +14,6 @@
                 <div class="datagrid-row-master datagrid-row-flex">
                     <div class="datagrid-row-sticky">
                         <!--header for datagrid where you can select multiple rows -->
-                        <div class="datagrid-column datagrid-select datagrid-fixed-column"
-                             *ngIf="selection.selectionType === SELECTION_TYPE.Multi">
-                        <span class="datagrid-column-title">
-                            <clr-checkbox [(ngModel)]="allSelected"></clr-checkbox>
-                        </span>
-                            <div class="datagrid-column-separator"></div>
-                        </div>
                         <!-- header for datagrid where you can select one row only -->
                         <div class="datagrid-column datagrid-select datagrid-fixed-column"
                              *ngIf="selection.selectionType === SELECTION_TYPE.Single">
@@ -53,14 +46,18 @@
     <!--<ng-container #scrollableColumns></ng-container>-->
 <!--</ng-template>-->
 
-<ng-container>
-    <h1>Calculation View</h1>
-    <ng-container #projectedCalculationColumns></ng-container>
-    <!--<ng-container *ngIf="!display" [ngTemplateOutlet]="projectedColumns"></ng-container>-->
-    <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedRows"></ng-container>
-</ng-container>
+<h1>Calculation View</h1>
+<table class="datagrid-calculation-table">
+    <div class="datagrid-computed-columns">
+        <ng-container #projectedCalculationColumns></ng-container>
+    </div>
+    <div class="datagrid-computed-row">
+        <ng-container *ngIf="!display" [ngTemplateOutlet]="projectedRows"></ng-container>
+    </div>
+</table>
 
 <ng-template #projectedRows>
+
     <ng-content select="clr-dg-row"></ng-content>
     <ng-content select="clr-dg-placeholder"></ng-content>
 </ng-template>

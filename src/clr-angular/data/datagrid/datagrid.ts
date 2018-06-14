@@ -9,7 +9,7 @@ import {
     Component,
     ContentChild,
     ContentChildren,
-    EventEmitter,
+    EventEmitter, Inject,
     Input,
     OnDestroy,
     Output,
@@ -35,6 +35,8 @@ import {StateDebouncer} from "./providers/state-debouncer.provider";
 import {StateProvider} from "./providers/state.provider";
 import {TableSizeService} from "./providers/table-size.service";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {DATAGRID_DISPLAY_STATE, DatagridDisplayMode} from "./providers/display-mode.service";
 
 @Component({
     selector: "clr-datagrid",
@@ -53,13 +55,15 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateProvider,
         ColumnToggleButtonsService,
         TableSizeService,
+        {provide: DATAGRID_DISPLAY_STATE, useFactory: () => new BehaviorSubject(DatagridDisplayMode.DISPLAY)}
     ],
     host: {"[class.datagrid-host]": "true"}
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
-                public rowActionService: RowActionService, private stateProvider: StateProvider) {}
+                public rowActionService: RowActionService, private stateProvider: StateProvider,
+                @Inject(DATAGRID_DISPLAY_STATE) public displayState: BehaviorSubject<DatagridDisplayMode>) {}
 
     /* reference to the enum so that template can access */
     public SELECTION_TYPE = SelectionType;
@@ -226,9 +230,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         }));
 
         this.columns.forEach(column => {
-            console.log('VIEW_INIT before inserted', column.view);
             this.projectedDisplayColumns.insert(column.view);
-            console.log('VIEW_INIT after inserted', column.view);
         });
     }
 
@@ -266,10 +268,12 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
 
         // Figure out where to put each column
         if(this.display) {
+            this.displayState.next(DatagridDisplayMode.CALCULATE);
             this.columns.forEach(column => {
                 this.projectedCalculationColumns.insert(column.view);
             });
         } else {
+            this.displayState.next(DatagridDisplayMode.DISPLAY);
             this.columns.forEach(column => {
                 this.projectedDisplayColumns.insert(column.view);
             });

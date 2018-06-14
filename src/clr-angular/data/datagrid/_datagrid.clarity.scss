@@ -930,6 +930,25 @@
         These classes are used in table-renderer.ts when it puts the datagrid into in tableMode and computes column
         widths. NOTE: they are only applied during calculation and then removed.
      */
+
+    .datagrid-calculation-table {
+        .datagrid-computed-columns {
+            display: table-row;
+
+            clr-dg-column {
+                display: table-cell;
+            }
+        }
+
+        .datagrid-computed-row {
+            display: table-row;
+
+            clr-dg-cell {
+                display: table-cell;
+                border: 1px solid deeppink;
+            }
+        }
+    }
     .datagrid-computing-columns-width {
         display: block;
 
