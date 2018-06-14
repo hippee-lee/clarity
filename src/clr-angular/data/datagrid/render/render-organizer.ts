@@ -7,6 +7,7 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import {Subject} from "rxjs/Subject";
+import {TableSizeService} from "../providers/table-size.service";
 
 @Injectable()
 export class DatagridRenderOrganizer {
@@ -52,6 +53,8 @@ export class DatagridRenderOrganizer {
         return this._done.asObservable();
     }
 
+    constructor(private tableSizeService: TableSizeService) {}
+
     public resize() {
         this.widths.length = 0;
         this._noLayout.next(true);
@@ -60,10 +63,12 @@ export class DatagridRenderOrganizer {
         }
         this._detectStrictWidths.next();
         this._tableMode.next(true);
-        this._computeWidths.next();
-        this._tableMode.next(false);
-        this._alignColumns.next();
+        this._computeWidths.next();   // Gets / SETS WIDTHS ON COLUMNS, NOT ON CELLS YET
+        this._tableMode.next(false);  // back to no layout mode
+        this._alignColumns.next();    // go over the cells and update the correct width for columns/cells
         this._noLayout.next(false);
+        // TODO update header
+        this.tableSizeService.updateRowWidth();  // ok here
         this.scrollbar.next();
         this.alreadySized = true;
         this._done.next();
