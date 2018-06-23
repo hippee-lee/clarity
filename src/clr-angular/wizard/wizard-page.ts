@@ -49,7 +49,7 @@ export class ClrWizardPage implements OnInit {
 
     /**
      * Contains a reference to the page title which is used for a number
-     * of different tasks for display in the wizard.
+     * of different tasks for displayType in the wizard.
      *
      * @memberof WizardPage
      *

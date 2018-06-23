@@ -26,6 +26,7 @@ import {DatagridKitchenSinkDemo} from "./kitchen-sink/kitchen-sink";
 import {DatagridConditionalPaginationDemo} from "./pagination-conditional/pagination-conditional";
 import {DatagridPaginationScrollingDemo} from "./pagination-scrolling/pagination-scrolling";
 import {DatagridPaginationDemo} from "./pagination/pagination";
+import {DatagridPinnedColumnDemo} from "./pinned-columns/pinned-columns";
 import {DatagridPlaceholderDemo} from "./placeholder/placeholder";
 import {DatagridPreserveSelectionDemo} from "./preserve-selection/preserve-selection";
 import {DatagridScrollingDemo} from "./scrolling/scrolling";
@@ -70,6 +71,7 @@ import {Example} from "./utils/example";
         DatagridTestCasesDemo,
         DatagridTestCasesAsyncDemo,
         DatagridKitchenSinkDemo,
+        DatagridPinnedColumnDemo,
         ColorFilter,
         Example,
         DetailWrapper

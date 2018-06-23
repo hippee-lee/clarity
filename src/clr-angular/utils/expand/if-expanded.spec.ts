@@ -32,7 +32,7 @@ export default function(): void {
                 this.fixture.destroy();
             });
 
-            it("doesn't display anything by default", function() {
+            it("doesn't displayType anything by default", function() {
                 expect(this.testElement.textContent.trim()).toBe("");
             });
 

@@ -12,7 +12,7 @@ describe("ks-app App", () => {
         page = new KsAppPage();
     });
 
-    it("should display welcome message", () => {
+    it("should displayType welcome message", () => {
         page.navigateTo();
         expect(page.getParagraphText()).toEqual("Welcome to KS!");
     });

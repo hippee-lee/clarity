@@ -64,7 +64,7 @@ export default function(): void {
                 expect(compiled.querySelector(".nav-trigger")).not.toBeNull();
             });
 
-            it("should display the .nav-btn button when the nav is collapsed", () => {
+            it("should displayType the .nav-btn button when the nav is collapsed", () => {
                 expect(vertNavService.collapsible).toBe(false);
 
                 expect(compiled.querySelector(".nav-btn")).toBeNull();

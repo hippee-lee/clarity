@@ -999,7 +999,7 @@ export default function(): void {
             });
 
             describe("content", () => {
-                it("should display projected content", () => {
+                it("should displayType projected content", () => {
                     expect(pageTwo).toBeTruthy("test page should be in wizard");
                     expect(pageTwo.nativeElement.textContent.trim())
                         .toBe(viewTestComponent.projector, "projected content should match content in host component");

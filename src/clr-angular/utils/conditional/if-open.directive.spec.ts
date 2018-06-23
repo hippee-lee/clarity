@@ -84,7 +84,7 @@ export default function(): void {
             });
 
             // More for view tests.
-            it("should not display anything when false", function() {
+            it("should not displayType anything when false", function() {
                 expect(this.testElement.textContent.trim()).toBe("");
             });
 

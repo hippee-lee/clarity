@@ -121,7 +121,7 @@ export default function(): void {
                 context = this.create(ClrDatagridPagination, FullTest, [Page, StateDebouncer]);
             });
 
-            it("doesn't display anything if there is only one page", function() {
+            it("doesn't displayType anything if there is only one page", function() {
                 context.testComponent.size = 10;
                 context.testComponent.total = 10;
                 context.detectChanges();
@@ -140,7 +140,7 @@ export default function(): void {
                 expect(context.testComponent.current).toBe(2);
             });
 
-            it("doesn't display the next button on the last page", function() {
+            it("doesn't displayType the next button on the last page", function() {
                 context.testComponent.size = 10;
                 context.testComponent.total = 100;
                 context.testComponent.current = 10;
@@ -160,7 +160,7 @@ export default function(): void {
                 expect(context.testComponent.current).toBe(9);
             });
 
-            it("doesn't display the previous button on the first page", function() {
+            it("doesn't displayType the previous button on the first page", function() {
                 context.testComponent.size = 10;
                 context.testComponent.total = 100;
                 context.testComponent.current = 1;

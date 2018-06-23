@@ -310,7 +310,7 @@ export class ClrWizard implements OnInit, OnDestroy, AfterContentInit, DoCheck {
      *
      * Note that stopNavigation is meant to freeze the wizard in place, typically
      * during a long validation or background action where you want the wizard to
-     * display loading content but not allow the user to execute navigation in
+     * displayType loading content but not allow the user to execute navigation in
      * the stepnav, close X, or the  back, finish, or next buttons.
      *
      * @memberof Wizard
@@ -348,7 +348,7 @@ export class ClrWizard implements OnInit, OnDestroy, AfterContentInit, DoCheck {
 
     /**
      * Used only to communicate to the underlying modal that animations are not
-     * wanted. Primary use is for the display of static/inline wizards.
+     * wanted. Primary use is for the displayType of static/inline wizards.
      *
      * Set using clrWizardPreventModalAnimation input. But you should never set it.
      *

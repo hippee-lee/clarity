@@ -89,7 +89,7 @@ export default function(): void {
             expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(3);
         });
 
-        it("doesn't display any empty cell when replacing", function() {
+        it("doesn't displayType any empty cell when replacing", function() {
             context.testComponent.replace = true;
             context.detectChanges();
             expect(context.clarityElement.querySelectorAll(".datagrid-fixed-column").length).toBe(0);

@@ -59,7 +59,7 @@
         display: flex;
     }
 
-    //display: inline-block and max-width were specifically added for IE 10.
+    //displayType: inline-block and max-width were specifically added for IE 10.
     //Flexbox content wouldn't wrap otherwise :(. 98% was just an estimate to distance the text from the
     //close alert button.
     .alert-item > span,
