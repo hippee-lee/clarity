@@ -74,8 +74,8 @@ export class DatagridHeaderRenderer implements OnDestroy {
             }
             this.renderer.addClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
             // We don't actually set the width if there already is a user-defined one, we just add the class
-            // return; // Removed this to fix the initial width rendering of columns/headers
-                       // It seemed to work with simple resize test on columns.
+            // return; // Removed this to fix the initial width rendering of columns/header
+                       // It does not calculate correct width for last column.
         }
         this.renderer.removeClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
         this.renderer.setStyle(this.el.nativeElement, "width", width + "px");

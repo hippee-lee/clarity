@@ -67,7 +67,7 @@
         }
     }
 
-    .datagrid-head, .datagrid-body, .datagrid-row, .datagrid-column, .datagrid-cell, .datagrid-fixed-column {
+    .datagrid-header, .datagrid-body, .datagrid-row, .datagrid-column, .datagrid-cell, .datagrid-fixed-column {
         display: block;
     }
 
@@ -347,8 +347,6 @@
             display: flex;
             flex: 1 1 auto;
             vertical-align: top;
-            //background: none;
-            //border: 0;
 
             &:last-child {
                 .datagrid-column-separator {
@@ -937,7 +935,7 @@
      * - switch display mode for elements with projected content to calcualte sizes.
      */
     .datagrid-host.datagrid-calculate-mode {
-        border: 1px solid deepskyblue;
+        // Hide other parts of the display table not used for calculation.
         .datagrid, .datagrid-footer, .datagrid-row-master {
             display: none;
         }
@@ -951,6 +949,23 @@
                 clr-dg-column {
                     display: table-cell;
                 }
+
+                .datagrid-column {
+                    // This is a hack b/c styles were not applied out of the box when moving columns into the
+                    // calculation container element
+                    font-size: $clr-table-fontsize;
+                    line-height: $clr-table-lineheight;
+                    border-top: $clr-table-borderwidth solid $clr-tablerow-bordercolor;
+                    padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
+                    vertical-align: top;
+                    color: $clr-p6-color;
+                    font-weight: $clr-typography-boldfont;
+                    font-size: $clr-typography-xxsmalltext;
+                    letter-spacing: $clr-kerning-tinytext;
+                    line-height: 0.5rem;
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                }
             }
             clr-dg-row {
                 display: table-row;
@@ -958,36 +973,19 @@
                 clr-dg-cell {
                     display: table-cell;
                 }
+                .datagrid-cell {
+                    // This is a hack b/c styles were not applied out of the box when moving columns into the
+                    // calculation container element
+                    font-size: $clr-table-fontsize;
+                    line-height: $clr-table-lineheight;
+                    border-top: $clr-table-borderwidth solid $clr-tablerow-bordercolor;
+                    padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
+                    vertical-align: top;
+                }
             }
         }
-    }
 
-
-    .datagrid-computing-columns-width {
-        display: block;
-
-        .datagrid-body {
-            display: table;
-            table-layout: auto;
-        }
-        .datagrid-header {
-            display: table-header-group;
-        }
-        .datagrid-row {
-            display: table-row;
-        }
-        .datagrid-header .datagrid-row {
-            display: table-row;
-        }
-        .datagrid-row-master {
-            display: table-row;
-        }
-        .datagrid-row-detail {
-            display: none;
-        }
-        .datagrid-column, .datagrid-cell {
-            display: table-cell;
-        }
+        // Hide other elements that come along for the ride
         .datagrid-column-separator {
             display: none;
         }
@@ -997,17 +995,54 @@
         .datagrid-fixed-column {
             display: none;
         }
-        .datagrid-body .datagrid-row-sticky {
-            display: none;
-        }
-        .datagrid-table .datagrid-row-scrollable {
-            display: table-header-group;
-        }
     }
 
-    .datagrid-computing-row-height {
-        overflow-y: hidden;
-    }
+
+    //.datagrid-computing-columns-width {
+    //    display: block;
+    //
+    //    .datagrid-body {
+    //        display: table;
+    //        table-layout: auto;
+    //    }
+    //    .datagrid-header {
+    //        display: table-header-group;
+    //    }
+    //    .datagrid-row {
+    //        display: table-row;
+    //    }
+    //    .datagrid-header .datagrid-row {
+    //        display: table-row;
+    //    }
+    //    .datagrid-row-master {
+    //        display: table-row;
+    //    }
+    //    .datagrid-row-detail {
+    //        display: none;
+    //    }
+    //    .datagrid-column, .datagrid-cell {
+    //        display: table-cell;
+    //    }
+    //    .datagrid-column-separator {
+    //        display: none;
+    //    }
+    //    .datagrid-placeholder-container {
+    //        display: none;
+    //    }
+    //    .datagrid-fixed-column {
+    //        display: none;
+    //    }
+    //    .datagrid-body .datagrid-row-sticky {
+    //        display: none;
+    //    }
+    //    .datagrid-table .datagrid-row-scrollable {
+    //        display: table-header-group;
+    //    }
+    //}
+    //
+    //.datagrid-computing-row-height {
+    //    overflow-y: hidden;
+    //}
     // END Calculation classes.
 }
 
