@@ -8,11 +8,18 @@ import {Subscription} from "rxjs/Subscription";
 
 import {DatagridCellRenderer} from "./cell-renderer";
 import {DatagridRenderOrganizer} from "./render-organizer";
+import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 @Directive({selector: "clr-dg-row, clr-dg-row-detail"})
 export class DatagridRowRenderer implements AfterContentInit, OnDestroy {
     constructor(private organizer: DatagridRenderOrganizer) {
-        this.subscription = organizer.alignColumns.subscribe(() => this.setWidths());
+        // TODO: remove comments and clean up.
+        // this.subscription = organizer.alignColumns.subscribe(() => this.setWidths());
+        this.subscription = organizer.renderStep.subscribe(step => {
+            if (step === DatagridRenderStep.ALIGN_COLUMNS) {
+                this.setWidths();
+            }
+        });
     }
 
     private subscription: Subscription;

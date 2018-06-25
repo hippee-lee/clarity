@@ -9,7 +9,7 @@ import {
     Component,
     ContentChild,
     ContentChildren,
-    EventEmitter,
+    EventEmitter, Inject,
     Input,
     OnDestroy,
     Output,
@@ -33,8 +33,11 @@ import {Selection, SelectionType} from "./providers/selection";
 import {Sort} from "./providers/sort";
 import {StateDebouncer} from "./providers/state-debouncer.provider";
 import {StateProvider} from "./providers/state.provider";
-import {TableHeightService} from "./providers/table-height.service";
+import {TableSizeService} from "./providers/table-size.service";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {DisplayModeService} from "./providers/display-mode.service";
+import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
 
 @Component({
     selector: "clr-datagrid",
@@ -52,14 +55,20 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
         StateDebouncer,
         StateProvider,
         ColumnToggleButtonsService,
-        TableHeightService,
+        TableSizeService,
+        DisplayModeService,
     ],
-    host: {"[class.datagrid-host]": "true"}
+    host: {
+        "[class.datagrid-host]": "true",
+        "[class.datagrid-calculate-mode]": "!showDisplayTable"
+    }
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
-                public rowActionService: RowActionService, private stateProvider: StateProvider) {}
+                public rowActionService: RowActionService, private stateProvider: StateProvider,
+                public displayMode: DisplayModeService) {
+    }
 
     /* reference to the enum so that template can access */
     public SELECTION_TYPE = SelectionType;
@@ -190,6 +199,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      */
 
     @ContentChildren(ClrDatagridRow) rows: QueryList<ClrDatagridRow>;
+    @ViewChild("scrollableColumns", {read: ViewContainerRef}) scrollableColumns: ViewContainerRef;
 
     ngAfterContentInit() {
         this._subscriptions.push(this.rows.changes.subscribe(() => {
@@ -223,6 +233,31 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.selectedChanged.emit(s);
             }
         }));
+        this.displayMode.view.subscribe(viewChange => {
+            while (this.projectedDisplayColumns.detach()) {}
+            while (this.projectedCalculationColumns.detach()) {}
+            while (this.calculationRows.detach()) {}
+            while (this.displayedRows.detach()) {}
+            if(viewChange === DatagridDisplayMode.DISPLAY) {
+                console.log("moving rows to display table");
+                this.showDisplayTable = true;
+                this.columns.forEach(column => {
+                    this.projectedDisplayColumns.insert(column.view);
+                });
+                this.rows.forEach(row => {
+                    this.displayedRows.insert(row.view);
+                });
+            } else if (viewChange === DatagridDisplayMode.CALCULATE) {
+                console.log("moving rows to calculate table");
+                this.showDisplayTable = false;
+                this.columns.forEach(column => {
+                    this.projectedCalculationColumns.insert(column.view);
+                });
+                this.rows.forEach(row => {
+                    this.calculationRows.insert(row.view);
+                });
+            }
+        });
     }
 
     public display = true;
@@ -240,22 +275,10 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         this.organizer.resize();
     }
 
-    ngOnInit() {
-        // setTimeout(() => {
-        //         //     this.rowDisplay.createEmbeddedView(this.projectedRows);
-        //         // });
-    }
+    @ViewChild("projectedDisplayColumns", {read: ViewContainerRef}) projectedDisplayColumns: ViewContainerRef;
+    @ViewChild("projectedCalculationColumns", {read: ViewContainerRef}) projectedCalculationColumns: ViewContainerRef;
+    @ViewChild("displayedRows", {read: ViewContainerRef}) displayedRows: ViewContainerRef;
+    @ViewChild("calculationRows", {read: ViewContainerRef}) calculationRows: ViewContainerRef;
 
-    // toggleDisplay() {
-    //     if (this.display) {
-    //         const view = this.rowDisplay.detach();
-    //         this.calculation.insert(view);
-    //     } else {
-    //         const view = this.calculation.detach();
-    //         this.rowDisplay.insert(view);
-    //     }
-    //     this.display = !this.display;
-    // }
-
-    @ViewChild("projectedRows") projectedRows: TemplateRef<void>;
+    public showDisplayTable = false; // Init to calculate for first run experience
 }

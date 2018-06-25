@@ -89,7 +89,7 @@ export default function(): void {
                     expect(content.textContent).toMatch(/A1/);
                 });
 
-                it("does not display a checkbox when selectable is false", () => {
+                it("does not displayType a checkbox when selectable is false", () => {
                     const checkbox: HTMLElement = compiled.querySelector("clr-checkbox");
                     expect(checkbox).toBeNull();
                 });

@@ -74,7 +74,7 @@
                     line-height: 0.75rem;
 
                     &:before {
-                        display: inline-block; //needed for IE. display: none to display:flex on parent doesnt work
+                        display: inline-block; //needed for IE. displayType: none to displayType:flex on parent doesnt work
                         content: '';
                         background: generateErrorIcon($clr-login-background-color);
                         margin: $clr-rem-1px 0.25rem 0 0;

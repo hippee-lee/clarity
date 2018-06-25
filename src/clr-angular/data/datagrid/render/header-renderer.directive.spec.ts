@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
 
 import {TestContext} from "../helpers.spec";
 
-import {DatagridHeadRenderer} from "./head-renderer";
+import {DatagridHeadRenderer} from "./header-renderer.directive";
 import {DatagridRenderOrganizer} from "./render-organizer";
 import {MOCK_ORGANIZER_PROVIDER, MockDatagridRenderOrganizer} from "./render-organizer.mock";
 

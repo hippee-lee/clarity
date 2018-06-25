@@ -1131,7 +1131,7 @@ export default function(): void {
             });
 
             describe("Buttons project as expected", () => {
-                it("projected content should display", () => {
+                it("projected content should displayType", () => {
                     expect(buttonElement.textContent.trim().toLowerCase()).toBe("hello mundo");
                 });
 

@@ -10,7 +10,7 @@ import {WizardNavigationService} from "./wizard-navigation.service";
 
 @Injectable()
 export class HeaderActionService {
-    // this service communicates information about the presence/display of header actions
+    // this service communicates information about the presence/displayType of header actions
     // across the wizard
 
     constructor(public navService: WizardNavigationService) {}

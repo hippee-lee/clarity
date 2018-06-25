@@ -74,7 +74,7 @@ export default function(): void {
                 TestBed.get(Items).all = [{id: 1}, {id: 2}];
             });
 
-            it("doesn't display a checkbox unless selection type is multi", function() {
+            it("doesn't displayType a checkbox unless selection type is multi", function() {
                 selectionProvider.selectionType = SelectionType.None;
                 context.detectChanges();
                 expect(context.clarityElement.querySelector("input[type='checkbox']")).toBeNull();
@@ -84,7 +84,7 @@ export default function(): void {
                 expect(context.clarityElement.querySelector("input[type='checkbox']")).toBeNull();
             });
 
-            it("doesn't display a radio button unless selection type is single", function() {
+            it("doesn't displayType a radio button unless selection type is single", function() {
                 selectionProvider.selectionType = SelectionType.None;
                 context.detectChanges();
                 expect(context.clarityElement.querySelector("input[type='radio']")).toBeNull();
@@ -246,7 +246,7 @@ export default function(): void {
                 expect(context.clarityElement.querySelector(".spinner")).not.toBeNull();
             });
 
-            it("doesn't display the details when collapsed", function() {
+            it("doesn't displayType the details when collapsed", function() {
                 expect(context.clarityElement.textContent).toMatch("Hello world");
                 expect(context.clarityElement.textContent).not.toMatch("Detail");
                 expand.replace = true;
@@ -272,7 +272,7 @@ export default function(): void {
                    expect(context.clarityElement.textContent).toMatch("Detail");
                }));
 
-            it("doesn't display the details while loading", fakeAsync(function() {
+            it("doesn't displayType the details while loading", fakeAsync(function() {
                    expand.expanded = true;
                    expand.loading = true;
                    tick();

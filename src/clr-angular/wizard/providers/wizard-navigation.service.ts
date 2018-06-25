@@ -243,7 +243,7 @@ export class WizardNavigationService implements OnDestroy {
      * last page in the Wizard.
      *
      * This is used to determine the animation state of ghost pages as well as
-     * which buttons should display in the wizard footer.
+     * which buttons should displayType in the wizard footer.
      *
      * @memberof WizardNavigationService
      */

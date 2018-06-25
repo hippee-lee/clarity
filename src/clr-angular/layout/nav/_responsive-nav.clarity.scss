@@ -170,7 +170,7 @@
                 height: $clr-header-height;
                 width: $clr-header-height;
                 padding: 0 0 0.166667rem 0;
-                //4px to vertically align the trigger lines. display flex was not working on all browsers.
+                //4px to vertically align the trigger lines. displayType flex was not working on all browsers.
                 text-align: center;
                 white-space: nowrap;
 
