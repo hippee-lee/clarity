@@ -6,7 +6,7 @@
 
 <h2>Smart column sizing</h2>
 
-<clr-datagrid [(clrDgSelected)]="selected">
+<clr-datagrid>
     <clr-dg-column>This column as a long header but short data</clr-dg-column>
     <clr-dg-column>Short header</clr-dg-column>
     <clr-dg-column>Large data</clr-dg-column>
@@ -19,10 +19,6 @@
             tincidunt eget mauris molestie, ullamcorper facilisis lacus. Vivamus sagittis
             suscipit libero, et tristique justo consectetur eget.
         </clr-dg-cell>
-
-        <clr-dg-row-detail *clrIfExpanded>
-            Lorem ipsum...
-        </clr-dg-row-detail>
     </clr-dg-row>
 
     <clr-dg-footer>{{users.length}} users</clr-dg-footer>

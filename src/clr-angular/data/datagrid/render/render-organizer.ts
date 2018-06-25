@@ -69,22 +69,25 @@ export class DatagridRenderOrganizer {
         this.widths.length = 0;
         this._renderStep.next(DatagridRenderStep.CALCULATE_MODE_ON);
         // this._renderStep.next(DatagridRenderStep.NO_LAYOUT_ON);
-        // if (this.alreadySized) {
-        //     this._renderStep.next(DatagridRenderStep.CLEAR_WIDTHS);
-        // }
-        // this._renderStep.next(DatagridRenderStep.DETECT_STRICT_WIDTHS);
+        if (this.alreadySized) {
+            this._renderStep.next(DatagridRenderStep.CLEAR_WIDTHS);
+        }
+        this._renderStep.next(DatagridRenderStep.DETECT_STRICT_WIDTHS);
         // this._renderStep.next(DatagridRenderStep.TABLE_MODE_ON); // Nonone listens to this b/c it used to flip
         // content in clr-dg-table-wrapper component. TODO: eliminate that component???
-        // this._renderStep.next(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS);c
+        this._renderStep.next(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS);
         // this._renderStep.next(DatagridRenderStep.TABLE_MODE_OFF);
-        // this._renderStep.next(DatagridRenderStep.ALIGN_COLUMNS);
+        this._renderStep.next(DatagridRenderStep.ALIGN_COLUMNS);
         // this._renderStep.next(DatagridRenderStep.NO_LAYOUT_OFF); // Nonone listens to this b/c it used to flip
         // content in clr-dg-table-wrapper component. TODO: eliminate that component???
-        // TODO update header
+        // TODO update row widths on table container for sticky scrolling
         // this._renderStep.next(DatagridRenderStep.UPDATE_ROW_WIDTH);
         // this._renderStep.next(DatagridRenderStep.UPDATE_SCROLL_BAR);
         // this.alreadySized = true;
-        // this._renderStep.next(DatagridRenderStep.CALCULATE_MODE_OFF);
+        // TODO fix chocolate error.
+        // setTimeout(() => {
+            this._renderStep.next(DatagridRenderStep.CALCULATE_MODE_OFF);
+        // }, 0);
         // this._renderStep.next(DatagridRenderStep.DONE);
 
         // TODO remove original steps

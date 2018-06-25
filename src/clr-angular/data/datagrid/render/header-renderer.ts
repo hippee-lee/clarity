@@ -35,7 +35,6 @@ export class DatagridHeaderRenderer implements OnDestroy {
     public strictWidth: number;
     private widthSet: boolean = false;
 
-
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }
@@ -48,16 +47,13 @@ export class DatagridHeaderRenderer implements OnDestroy {
     }
 
     private detectStrictWidth() {
-        // It seems like this.strictWidth is always going to be set ref: main-renderer line #145
-        // but first time through its not set at all. This causes an issue when this.computeWidth is called.
-
-        if (this.columnResizer.columnResizeBy) { // DatagridColumnResizer.columnResizeBy inits to 0 and it is always false.
-            console.log("header-render detectStrictWidths");
+        // this.columnResizer.columnRessizeBy is always false until user resizes a column
+        if (this.columnResizer.columnResizeBy) {
             this.strictWidth = this.columnResizer.columnRectWidth + this.columnResizer.columnResizeBy;
         } else {
-            // First time through rendering always ends up here.
-            console.log("header-render userDefinedWidths");
             this.strictWidth = this.domAdapter.userDefinedWidth(this.el);
+            // first time through rendering, this always runs.
+            console.log("userDefined Width: ", this.strictWidth);
         }
     }
 
@@ -71,14 +67,15 @@ export class DatagridHeaderRenderer implements OnDestroy {
 
     public setWidth(width: number) {
         if (this.strictWidth) {
-            if (this.columnResizer.columnResizeBy) {
+            if (this.columnResizer.columnResizeBy) { // inits to zero evaluates to false.
                 this.renderer.setStyle(this.el.nativeElement, "width", width + "px");
                 this.columnResizer.columnResizeBy = 0;
                 this.widthSet = false;
             }
             this.renderer.addClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
             // We don't actually set the width if there already is a user-defined one, we just add the class
-            return;
+            // return; // Removed this to fix the initial width rendering of columns/headers
+                       // It seemed to work with simple resize test on columns.
         }
         this.renderer.removeClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
         this.renderer.setStyle(this.el.nativeElement, "width", width + "px");

@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <ng-container [ngTemplateOutlet]="projectedRows"></ng-container>
+        <ng-container #displayedRows></ng-container>
     </clr-dg-table-wrapper>
 </div>
 <ng-content select="clr-dg-footer"></ng-content>
@@ -42,7 +42,7 @@
     <div class="datagrid-calculation-header">
         <ng-container #projectedCalculationColumns></ng-container>
     </div>
-    <ng-container [ngTemplateOutlet]="projectedRows"></ng-container>
+    <ng-container #calculationRows></ng-container>
 </div>
 
 

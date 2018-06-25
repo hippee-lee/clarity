@@ -931,24 +931,38 @@
         widths. NOTE: they are only applied during calculation and then removed.
      */
 
-    .datagrid-calculation-table {
-        display: table;
-
-        .datagrid-calculation-header {
-            display: table-header-group;
-
-            clr-dg-column {
-                display: table-cell;
-            }
+    /**
+     * When in calculate mode
+     * - Hide the display elements for datagrid
+     * - switch display mode for elements with projected content to calcualte sizes.
+     */
+    .datagrid-host.datagrid-calculate-mode {
+        border: 1px solid deepskyblue;
+        .datagrid, .datagrid-footer, .datagrid-row-master {
+            display: none;
         }
-        clr-dg-row {
-            display: table-row;
 
-            clr-dg-cell {
-                display: table-cell;
+        .datagrid-calculation-table {
+            display: table;
+
+            .datagrid-calculation-header {
+                display: table-header-group;
+
+                clr-dg-column {
+                    display: table-cell;
+                }
+            }
+            clr-dg-row {
+                display: table-row;
+
+                clr-dg-cell {
+                    display: table-cell;
+                }
             }
         }
     }
+
+
     .datagrid-computing-columns-width {
         display: block;
 

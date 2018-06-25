@@ -52,6 +52,7 @@ import {DatagridRowRenderer} from "./render/row-renderer";
 import {DatagridTableRenderer} from "./render/table-renderer";
 import {ClrWrappedCell} from "./wrapped-cell";
 import {ClrWrappedColumn} from "./wrapped-column";
+import {ClrWrappedRow} from "./wrapped-row";
 
 export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     // Core
@@ -59,7 +60,7 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy, ClrDatagridRow,
     ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter, ClrDatagridPagination,
     ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle, ClrWrappedCell,
-    ClrWrappedColumn,
+    ClrWrappedColumn, ClrWrappedRow,
 
     // Renderers
     DatagridMainRenderer, DatagridTableRenderer, DatagridHeadRenderer, DatagridHeaderRenderer, DatagridBodyRenderer,
@@ -84,7 +85,7 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
         CLR_DATAGRID_DIRECTIVES,
     ],
     exports: [CLR_DATAGRID_DIRECTIVES, ClrIfExpandModule],
-    entryComponents: [ClrWrappedCell, ClrWrappedColumn]
+    entryComponents: [ClrWrappedCell, ClrWrappedColumn, ClrWrappedRow]
 })
 export class ClrDatagridModule {}
 

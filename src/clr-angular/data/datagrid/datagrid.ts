@@ -60,7 +60,7 @@ import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
     ],
     host: {
         "[class.datagrid-host]": "true",
-        "[class.datagrid-calculate-mode]": "showDisplayTable"
+        "[class.datagrid-calculate-mode]": "!showDisplayTable"
     }
 })
 export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
@@ -217,14 +217,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
 
         // Get ColumnService ready for HideableColumns.
         this.columnService.updateColumnList(this.columns.map(col => col.hideable));
-
-        // Start in calculation mode to get initial column widths set up
-        // this.displayMode.update(DatagridDisplayMode.DISPLAY);
-        // this.displayType = false;
-        // this.columns.forEach(column => {
-        //     this.projectedCalculationColumns.insert(column.view);
-        // });
-
     }
 
     /**
@@ -244,17 +236,25 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         this.displayMode.view.subscribe(viewChange => {
             while (this.projectedDisplayColumns.detach()) {}
             while (this.projectedCalculationColumns.detach()) {}
+            while (this.calculationRows.detach()) {}
+            while (this.displayedRows.detach()) {}
             if(viewChange === DatagridDisplayMode.DISPLAY) {
-                console.log("DatagridDisplayMode.DISPLAY");
+                console.log("moving rows to display table");
                 this.showDisplayTable = true;
                 this.columns.forEach(column => {
                     this.projectedDisplayColumns.insert(column.view);
                 });
+                this.rows.forEach(row => {
+                    this.displayedRows.insert(row.view);
+                });
             } else if (viewChange === DatagridDisplayMode.CALCULATE) {
-                console.log("DatagridDisplayMode.CALCULATE");
+                console.log("moving rows to calculate table");
                 this.showDisplayTable = false;
                 this.columns.forEach(column => {
                     this.projectedCalculationColumns.insert(column.view);
+                });
+                this.rows.forEach(row => {
+                    this.calculationRows.insert(row.view);
                 });
             }
         });
@@ -277,44 +277,8 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
 
     @ViewChild("projectedDisplayColumns", {read: ViewContainerRef}) projectedDisplayColumns: ViewContainerRef;
     @ViewChild("projectedCalculationColumns", {read: ViewContainerRef}) projectedCalculationColumns: ViewContainerRef;
+    @ViewChild("displayedRows", {read: ViewContainerRef}) displayedRows: ViewContainerRef;
+    @ViewChild("calculationRows", {read: ViewContainerRef}) calculationRows: ViewContainerRef;
 
     public showDisplayTable = false; // Init to calculate for first run experience
-
-    toggleDisplay() {
-        // TODO: Figure out how to make this reactive to displayMode changes
-        // Clear out the vcr's
-        console.log("toggleDisplay" );
-        if (this.projectedDisplayColumns && !this.showDisplayTable) {
-            // console.log("this.projectedDisplayColumns && this.showDisplayTable", this.columns);
-            while (this.projectedDisplayColumns.detach()) {}
-            while (this.projectedCalculationColumns.detach()) {}
-            this.columns.forEach(column => {
-                // console.log("column", column);
-                this.projectedCalculationColumns.insert(column.view);
-            });
-        }
-        if (this.projectedCalculationColumns && this.showDisplayTable) {
-            // console.log("this.projectedCalculationColumns && this.showDisplayTable", this.columns);
-            while (this.projectedCalculationColumns.detach()) {}
-            while (this.projectedDisplayColumns.detach()) {}
-            this.columns.forEach(column => {
-                // console.log("column", column);
-                this.projectedDisplayColumns.insert(column.view);
-            });
-        }
-
-        // // Figure out where to put each column
-        // if(this.showDisplayTable) {
-        //     this.displayMode.update(DatagridDisplayMode.CALCULATE);
-        //     this.columns.forEach(column => {
-        //         this.projectedCalculationColumns.insert(column.view);
-        //     });
-        // } else {
-        //     this.displayMode.update(DatagridDisplayMode.DISPLAY);
-        //     this.columns.forEach(column => {
-        //         this.projectedDisplayColumns.insert(column.view);
-        //     });
-        // }
-        // this.showDisplayTable = !this.showDisplayTable;
-    }
 }

@@ -33,10 +33,10 @@ export class DatagridRowRenderer implements AfterContentInit, OnDestroy {
         if (this.organizer.widths.length !== this.cells.length) {
             return;
         }
-        // this.cells.forEach((cell, index) => {
-        //     const width = this.organizer.widths[index];
-        //     cell.setWidth(width.strict, width.px);
-        // });
+        this.cells.forEach((cell, index) => {
+            const width = this.organizer.widths[index];
+            cell.setWidth(width.strict, width.px);
+        });
     }
 
     ngAfterContentInit() {

@@ -9,7 +9,7 @@ import {
     ContentChildren,
     EventEmitter,
     HostBinding,
-    HostListener,
+    HostListener, Injector,
     Input,
     Output,
     QueryList, ViewChild, ViewContainerRef
@@ -27,6 +27,8 @@ import {RowActionService} from "./providers/row-action-service";
 import {Selection, SelectionType} from "./providers/selection";
 import {DisplayModeService} from "./providers/display-mode.service";
 import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
+import {HostWrapper} from "../../utils/host-wrapping";
+import {ClrWrappedRow} from "./wrapped-row";
 
 
 let nbRow: number = 0;
@@ -60,10 +62,11 @@ export class ClrDatagridRow implements AfterViewChecked {
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,
                 public hideableColumnService: HideableColumnService,
-                private displayMode: DisplayModeService) {
+                private displayMode: DisplayModeService, private vcr: ViewContainerRef) {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
 
+        // TODO Fix replace use case for expandable rows in templates.
         this.expandedChange.subscribe((expandChange => {
             console.log("expand change: ", expandChange, this.scrollableCells);
         }));
@@ -192,13 +195,13 @@ export class ClrDatagridRow implements AfterViewChecked {
             while (this.scrollableCells.detach()) {} //remove cells from other container first
             while (this.calculatedCells.detach()) {} // remove cells from other container first
             if(viewChange === DatagridDisplayMode.CALCULATE) {
-                console.log("Calculate position for row cells");
+                console.log("inserting row cells into calculate element");
                 this.dgCells.forEach(cell => {
                     this.calculatedCells.insert(cell.view);
                 });
                 this.displayCells = false;
             } else  {
-                console.log("Display position for row cells");
+                console.log("inserting row cells into display element");
                 this.dgCells.forEach(cell => {
                     this.scrollableCells.insert(cell.view);
                 });
@@ -249,4 +252,14 @@ export class ClrDatagridRow implements AfterViewChecked {
     @ViewChild("stickyCells", {read: ViewContainerRef}) stickyCells: ViewContainerRef;
     @ViewChild("scrollableCells", {read: ViewContainerRef}) scrollableCells: ViewContainerRef;
     @ViewChild("calculatedCells", {read: ViewContainerRef}) calculatedCells: ViewContainerRef;
+
+    private wrappedInjector: Injector;
+
+    ngOnInit() {
+        this.wrappedInjector = new HostWrapper(ClrWrappedRow, this.vcr);
+    }
+
+    public get view() {
+        return this.wrappedInjector.get(ClrWrappedRow, this.vcr).rowView;
+    }
 }

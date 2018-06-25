@@ -134,8 +134,6 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, Af
      * Makes each header compute its width.
      */
     private computeHeadersWidth() {
-        console.log("computeHeadersWidth for columns: ", this.columns);
-
         const nbColumns: number = this.headers.length;
         let allStrict = true;
         this.headers.forEach((header, index) => {
@@ -144,19 +142,18 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, Af
             // minimum width so that when all previous columns shrink, it will get a flexible width and cover the empty
             // gap in the Datagrid.
 
-            if (!header.strictWidth) { // Where does this come from, what is it for? is it if user sets fixed widths on all columns?
+            if (!header.strictWidth) {
                 allStrict = false;
             }
 
             if (nbColumns === index + 1 && allStrict) {
-                delete header.strictWidth; // Obviously we are keeping the last column flexible so it expands to full width of scrollable container.
+                delete header.strictWidth;
             }
             //
             this.organizer.widths[index] = {px: header.computeWidth(), strict: !!header.strictWidth};
         });
 
         this.headers.forEach((header, index) => header.setWidth(this.organizer.widths[index].px));
-
     }
 
     /**
