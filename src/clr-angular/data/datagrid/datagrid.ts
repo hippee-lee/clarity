@@ -241,5 +241,5 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
         this.organizer.resize();
     }
 
-    @ViewChild("dummyContainer") dummyContainer: TemplateRef<any>;
+    @ViewChild("dummyContainer2345") dummyContainer: TemplateRef<any>;
 }
