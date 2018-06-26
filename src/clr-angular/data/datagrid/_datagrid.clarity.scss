@@ -834,6 +834,10 @@
         margin-top: -0.125rem;
         margin-bottom: -1px;
       }
+      .test {
+        // Test class added to simulate a pr change request in scss
+        border: 24px solid deeppink;
+      }
     }
     .datagrid-expandable-caret {
       .spinner {
