@@ -54,6 +54,7 @@ export default function(): void {
         });
 
         it("updates the Expand provider with the [clrDgReplace] input", function() {
+            // TODO - update the test for new observable property
             const expand: Expand = context.getClarityProvider(Expand);
             expect(expand.replace).toBe(false);
             context.testComponent.replace = true;

@@ -20,19 +20,12 @@ import {Selection, SelectionType} from "./providers/selection";
  */
 @Component({
     selector: "clr-dg-row-detail",
-    template: `
-        <ng-container *ngIf="!replace">
-            <clr-dg-cell class="datagrid-fixed-column"
-                *ngIf="selection.selectionType === SELECTION_TYPE.Multi 
-                    || selection.selectionType === SELECTION_TYPE.Single"></clr-dg-cell>
-            <clr-dg-cell *ngIf="rowActionService.hasActionableRow" class="datagrid-fixed-column"></clr-dg-cell>
-            <clr-dg-cell class="datagrid-fixed-column"></clr-dg-cell>
-        </ng-container>
+    template: `        
         <ng-content></ng-content>
     `,
     host: {
         "[class.datagrid-row-flex]": "true",
-        "[class.datagrid-row-detail]": "!replace",
+        "[class.datagrid-row-detail]": "true",
         "[class.datagrid-container]": "cells.length === 0",
     }
 })
@@ -45,13 +38,9 @@ export class ClrDatagridRowDetail implements AfterContentInit, OnDestroy {
 
     @ContentChildren(ClrDatagridCell) cells: QueryList<ClrDatagridCell>;
 
-    get replace() {
-        return this.expand.replace;
-    }
-
     @Input("clrDgReplace")
     set replace(value: boolean) {
-        this.expand.replace = !!value;
+        this.expand.setReplace(!!value);
     }
 
     private subscription: Subscription;

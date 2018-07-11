@@ -22,12 +22,12 @@ import {FiltersProvider} from "./providers/filters";
 import {Page} from "./providers/page";
 import {Sort} from "./providers/sort";
 import {StateDebouncer} from "./providers/state-debouncer.provider";
-import {TableHeightService} from "./providers/table-height.service";
+import {TableSizeService} from "./providers/table-size.service";
 import {DomAdapter} from "./render/dom-adapter";
 import {DatagridRenderOrganizer} from "./render/render-organizer";
 
 const PROVIDERS_NEEDED = [
-    Sort, FiltersProvider, DatagridRenderOrganizer, DomAdapter, DragDispatcher, Page, StateDebouncer, TableHeightService
+    Sort, FiltersProvider, DatagridRenderOrganizer, DomAdapter, DragDispatcher, Page, StateDebouncer, TableSizeService
 ];
 
 export default function(): void {
@@ -328,7 +328,7 @@ export default function(): void {
         });
 
         describe("View filters", function() {
-            it("doesn't display any filter by default", function() {
+            it("doesn't displayType any filter by default", function() {
                 this.context = this.create(ClrDatagridColumn, SimpleTest, PROVIDERS_NEEDED);
                 expect(this.context.clarityElement.querySelector("clr-dg-filter")).toBeNull();
             });

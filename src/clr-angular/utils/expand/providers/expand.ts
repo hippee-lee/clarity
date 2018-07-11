@@ -5,13 +5,22 @@
  */
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {Subject} from "rxjs/Subject";
 import {LoadingListener} from "../../../utils/loading/loading-listener";
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {Subject} from "rxjs/Subject";
 
 @Injectable()
 export class Expand implements LoadingListener {
     public expandable: number = 0;
-    public replace: boolean = false;
+
+    // private _replace: boolean = false;
+    private _replace: BehaviorSubject<boolean> = new BehaviorSubject(false);
+    public get replace(): Observable<boolean> {
+        return this._replace.asObservable();
+    }
+    setReplace(replaceValue: boolean) {
+        this._replace.next(replaceValue);
+    }
 
     private _loading: boolean = false;
     get loading(): boolean {
@@ -42,7 +51,7 @@ export class Expand implements LoadingListener {
     // TODO: Move this to the datagrid RowExpand.
     // I spent some time doing this but ran into a couple of issues
     // Will take care of this later.
-    private _animate: Subject<any> = new Subject<any>();
+    private _animate: Subject<boolean> = new Subject<boolean>();
     public get animate(): Observable<boolean> {
         return this._animate.asObservable();
     }

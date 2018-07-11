@@ -6,7 +6,7 @@
 import {Component, ElementRef} from "@angular/core";
 import {ComponentFixture, TestBed} from "@angular/core/testing";
 
-import {TableHeightService} from "./table-height.service";
+import {TableSizeService} from "./table-size.service";
 
 @Component({
     template: `
@@ -17,7 +17,8 @@ class TestComponent {
     constructor(public elementRef: ElementRef) {}
 }
 
-describe("TableHeightService", function() {
+// TODO - rename this properly, add better coverage.
+describe("TableSizeService", function() {
     let fixture: ComponentFixture<any>;
 
     beforeEach(() => {
@@ -27,7 +28,7 @@ describe("TableHeightService", function() {
     });
 
     it("sets a tableRef property with an elementReference", function() {
-        const table: TableHeightService = new TableHeightService();
+        const table: TableSizeService = new TableSizeService();
         table.tableRef = fixture.debugElement.componentInstance.elementRef;
         expect(table.tableRef).toBe(fixture.debugElement.componentInstance.elementRef);
     });

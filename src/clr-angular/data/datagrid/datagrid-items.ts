@@ -30,11 +30,16 @@ export class ClrDatagridItems<T> implements OnChanges, DoCheck {
     }
     private _differ: IterableDiffer<any>;
     displayed: Array<any> = [];
-    constructor(public template: TemplateRef<RowContext<T>>, private _differs: IterableDiffers, private _items: Items, private vcr: ViewContainerRef) {
+    constructor(public template: TemplateRef<RowContext<T>>,
+                private _differs: IterableDiffers,
+                private _items: Items,
+                private vcr: ViewContainerRef) {
         _items.smartenUp();
         _items.change.subscribe(items => {
             this.displayed = items;
             this.vcr.clear(); // It is additive if I don't clear the datagrids vcr
+            // Will need to use IterableDiff to properly account for trackBy
+            // TODO revisit not from session with Eude.
             for (const item of this.displayed) {
                 this.vcr.createEmbeddedView(this.template, {$implicit: item});
             }
