@@ -1,10 +1,9 @@
-import {Renderer2} from "@angular/core";
 /*
  * Copyright (c) 2016-2018 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {Component, ViewChild} from "@angular/core";
+import {Component, Renderer2, ViewChild} from "@angular/core";
 import {TestBed} from "@angular/core/testing";
 import {Subject} from "rxjs/Subject";
 

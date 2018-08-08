@@ -25,7 +25,7 @@ import {DomAdapter} from "./dom-adapter";
             <clr-dg-column>Four</clr-dg-column>
             <clr-dg-row *clrDgItems="let item of items">
                 <clr-dg-cell>{{item}}</clr-dg-cell>
-                <clr-dg-cell>{{item * 2}}</clr-dg-cell>
+                <clr-dg-cell [style.min-width.px]="120">{{item * 2}}</clr-dg-cell>
                 <clr-dg-cell>{{item * 3}}</clr-dg-cell>
                 <clr-dg-cell>{{item * 4}}</clr-dg-cell>
             </clr-dg-row>
@@ -66,7 +66,6 @@ export default function(): void {
             columnResizerDirective.dragStartHandler();
             columnResizerDirective.dragMoveHandler({pageX: columnResizerDirective.pageStartPositionX + amount});
             columnResizerDirective.dragEndHandler();
-            console.log("column resized,", column3ResizerDirective);
         };
         beforeEach(function() {
             context = this.create(ClrDatagrid, ColumnResizerTest, [TableSizeService]);
@@ -110,10 +109,8 @@ export default function(): void {
         });
         it("shouldn't shrink below its min-width if column expands by large size", function() {
             const column1InitialWidth = domAdapter.clientRectWidth(column1ResizerDirective.columnEl);
-            console.log(column1InitialWidth);
             emulateResize(column1ResizerDirective, 1000);
             context.detectChanges();
-            console.log("after resize", domAdapter.clientRectWidth(column1ResizerDirective.columnEl));
             expect(domAdapter.clientRectWidth(column1ResizerDirective.columnEl)).toBe(column1InitialWidth + 1000);
             expect(domAdapter.clientRectWidth(column2ResizerDirective.columnEl)).toBe(120);
             expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(200);
@@ -238,7 +235,7 @@ export default function(): void {
             expect(domAdapter.clientRectWidth(column3ResizerDirective.columnEl)).toBe(150);
             expect(domAdapter.clientRectWidth(column4ResizerDirective.columnEl)).toBeGreaterThan(column4InitialWidth);
         });
-        fit("if a column expands, other flexible columns should shrink.", function() {
+        it("if a column expands, other flexible columns should shrink.", function() {
             const column1InitialWidth = domAdapter.clientRectWidth(column1ResizerDirective.columnEl);
             const column2InitialWidth = domAdapter.clientRectWidth(column2ResizerDirective.columnEl);
             const column4InitialWidth = domAdapter.clientRectWidth(column4ResizerDirective.columnEl);

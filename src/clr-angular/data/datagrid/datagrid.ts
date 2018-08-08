@@ -11,13 +11,11 @@ import {
     ContentChildren,
     ElementRef,
     EventEmitter,
-    Inject,
     Input,
     OnDestroy,
     Output,
     QueryList,
     Renderer2,
-    TemplateRef,
     ViewChild,
     ViewContainerRef
 } from "@angular/core";

@@ -67,7 +67,6 @@ export class ClrDatagridRow {
     @HostBinding("attr.role") role: string;
 
     private combinedLatestExpand: Observable<any>;
-    private latestExpandSubscribe: Subscription;
 
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,

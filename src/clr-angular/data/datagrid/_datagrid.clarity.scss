@@ -10,7 +10,7 @@
         display: flex;
         flex-flow: column nowrap;
         position: relative;
-        width: 100%;
+        // width: 100%;
     }
 
     .datagrid {
@@ -20,6 +20,7 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow: auto;
         height: 100%;
+        margin-top: 0.5rem;
     }
 
     .datagrid-container {
@@ -895,6 +896,7 @@
      * - Switch display mode for elements with projected content to calcualte sizes.
      */
     .datagrid-host.datagrid-calculate-mode {
+        display: block;
         // Hide parts of the display table not used for calculation.
         .datagrid, .datagrid-footer, .datagrid-row-master {
             display: none;
@@ -902,12 +904,14 @@
 
         .datagrid-calculation-table {
             display: table;
+            table-layout: auto;
 
             .datagrid-calculation-header {
                 display: table-header-group;
 
                 clr-dg-column {
                     display: table-cell;
+                    min-width: 4rem;
                 }
 
                 .datagrid-column {
@@ -932,6 +936,7 @@
 
                 clr-dg-cell {
                     display: table-cell;
+                    min-width: 4rem;
                 }
                 .datagrid-cell {
                     // This is a hack b/c styles were not applied out of the box when moving columns into the

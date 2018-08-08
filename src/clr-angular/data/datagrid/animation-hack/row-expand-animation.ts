@@ -13,21 +13,20 @@ import {Directive, ElementRef, Renderer2} from "@angular/core";
 
 import {Expand} from "../../../utils/expand/providers/expand";
 import {DomAdapter} from "../render/dom-adapter";
-import {DatagridRenderOrganizer} from "../render/render-organizer";
 
 @Directive({selector: "clr-dg-row"})
 export class DatagridRowExpandAnimation {
     constructor(private el: ElementRef, private domAdapter: DomAdapter, private renderer: Renderer2,
-                private expand: Expand, private renderOrganizer: DatagridRenderOrganizer) {
+                private expand: Expand) {
         if (expand && expand.animate) {
-            // expand.animate.subscribe(() => {
-            //     // We already had an animation waiting, so we just have to run in, not prepare again
-            //     if (this.oldHeight) {
-            //         setTimeout(() => this.run());
-            //     } else {
-            //         this.animate();
-            //     }
-            // });
+            expand.animate.subscribe(() => {
+                // We already had an animation waiting, so we just have to run in, not prepare again
+                if (this.oldHeight) {
+                    setTimeout(() => this.run());
+                } else {
+                    this.animate();
+                }
+            });
         }
     }
 

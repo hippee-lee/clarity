@@ -76,6 +76,7 @@ export class DatagridHeaderRenderer implements OnDestroy {
             return;
         }
         this.renderer.removeClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
+        // Why is a width set, isn't this column suppsed to be flex: 1 1 auto?
         this.renderer.setStyle(this.el.nativeElement, "width", width + "px");
         this.widthSet = true;
     }

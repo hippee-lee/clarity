@@ -15,7 +15,7 @@ import IfExpandSpecs from "./if-expanded.spec";
 import ExpandSpecs from "./providers/expand.spec";
 
 describe("If Expand Directive", function() {
-    fdescribe("Providers", function() {
+    describe("Providers", function() {
         ExpandSpecs();
     });
     describe("Components", function() {

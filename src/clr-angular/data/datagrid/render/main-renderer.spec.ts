@@ -11,7 +11,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";  /
 import {ClrDatagridModule} from "../datagrid.module";
 import {TestContext} from "../helpers.spec";
 import {DatagridRenderStep} from "../interfaces/render-step.interface";
-import {Page} from "../providers/page";
 
 import {DatagridHeaderRenderer} from "./header-renderer";
 import {DatagridMainRenderer} from "./main-renderer";
@@ -69,7 +68,6 @@ export default function(): void {
                 expect(organizer.widths.length).toBe(0);
                 // Too lazy to do something other than casting right now.
                 organizer._renderStep.next(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS);
-                // (<any>organizer)._computeWidths.next();
                 expect(organizer.widths.length).toBe(context.clarityDirective.headers.length);
             });
         });
@@ -286,28 +284,4 @@ class DatagridHeightTest {
             this.pageSize = 5;  // after 3rd click
         }
     }
-}
-
-@Component({
-    template: `
-        <clr-datagrid>
-            <clr-dg-column>Number</clr-dg-column>
-            <clr-dg-row *clrDgItems="let number of numbers">
-                <clr-dg-cell>{{number}}</clr-dg-cell>
-                <clr-dg-row-detail *clrIfExpanded="expand">
-                    Lorem ipsum...
-                </clr-dg-row-detail>
-            </clr-dg-row>
-
-            <clr-dg-footer>
-                <clr-dg-pagination [clrDgPageSize]="pageSize"></clr-dg-pagination>
-            </clr-dg-footer>
-        </clr-datagrid>
-    `
-})
-class DatagridScrollbarTest {
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-    pageSize = 5;
-
-    expand: boolean = false;
 }

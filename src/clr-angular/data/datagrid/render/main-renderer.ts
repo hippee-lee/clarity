@@ -23,7 +23,6 @@ import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {Items} from "../providers/items";
 import {Page} from "../providers/page";
 import {TableSizeService} from "../providers/table-size.service";
-import {ClrWrappedColumn} from "../wrapped-column";
 
 import {DomAdapter} from "./dom-adapter";
 import {DatagridHeaderRenderer} from "./header-renderer";

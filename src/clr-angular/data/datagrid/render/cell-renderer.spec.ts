@@ -23,10 +23,10 @@ export default function(): void {
             organizer = <MockDatagridRenderOrganizer>context.getClarityProvider(DatagridRenderOrganizer);
         });
 
-        it("allows to set the width of the cell in pixels", function() {
-            expect(context.clarityElement.style.width).toBeFalsy();
-            context.clarityDirective.setWidth(false, 42);
+        it("sets proper width and class for strict width cells", function() {
+            context.clarityDirective.setWidth(true, 42);
             expect(context.clarityElement.style.width).toBe("42px");
+            expect(context.clarityElement.classList).toContain("datagrid-fixed-width");
         });
 
         it("makes the cell non-flexible if and only if the width is strict", function() {

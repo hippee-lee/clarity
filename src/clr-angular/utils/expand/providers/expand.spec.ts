@@ -11,9 +11,13 @@ export default function(): void {
             this.expand = new Expand();
         });
 
-        fit("starts with the correct default settings", function() {
+        it("starts with the correct default settings", function() {
+            let isExpanded = null;
+            this.expand.replace.subscribe(expandChange => {
+                isExpanded = expandChange;
+            });
             expect(this.expand.expandable).toBe(0, "not expandable");
-            expect(this.expand.replace).toBe(false, "not replacing the row");
+            expect(isExpanded).toBe(false, "not replacing the row");
             expect(this.expand.loading).toBe(false, "already loaded");
             expect(this.expand.expanded).toBe(false, "collapsed");
         });

@@ -5,8 +5,7 @@
  */
 
 
-import {Injectable, InjectionToken} from "@angular/core";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import {Subject} from "rxjs/Subject";
 

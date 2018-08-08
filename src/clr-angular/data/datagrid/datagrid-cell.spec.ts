@@ -3,10 +3,7 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {Component, EmbeddedViewRef} from "@angular/core";
-
-import {containerEnd} from "../../../../node_modules/@angular/core/src/render3/instructions";
-
+import {Component} from "@angular/core";
 import {ClrDatagridCell} from "./datagrid-cell";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
 import {TestContext} from "./helpers.spec";
@@ -44,10 +41,6 @@ export default function(): void {
             context.testComponent.signpostTest = true;
             context.detectChanges();
             expect(context.clarityElement.classList.contains("datagrid-signpost-trigger")).toBeTruthy();
-        });
-
-        it("returns a wrapped view for the cell", function() {
-            // ???
         });
     });
 }

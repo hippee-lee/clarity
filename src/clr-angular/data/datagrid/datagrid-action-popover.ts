@@ -9,7 +9,6 @@ import {Component, ElementRef, Inject, Injector, Optional} from "@angular/core";
 import {AbstractPopover} from "../../popover/common/abstract-popover";
 import {Point} from "../../popover/common/popover";
 import {POPOVER_HOST_ANCHOR} from "../../popover/common/popover-host-anchor.token";
-import {IfOpenService} from "../../utils/conditional/if-open.service";
 
 @Component({
     selector: "clr-dg-action-popover",

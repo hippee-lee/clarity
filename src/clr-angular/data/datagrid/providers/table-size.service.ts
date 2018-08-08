@@ -4,11 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import {ElementRef, Injectable, Renderer2} from "@angular/core";
-import {Subscription} from "rxjs/Subscription";
-
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
-import {DatagridRenderOrganizer} from "../render/render-organizer";
+import {ElementRef, Injectable} from "@angular/core";
 
 /**
  * @description
@@ -16,17 +12,14 @@ import {DatagridRenderOrganizer} from "../render/render-organizer";
  */
 @Injectable()
 export class TableSizeService {
-    private bodyRef: Element;
-    private columns: any;
-    private headerRef: Element;
     private tableRef: Element;
-    private subscription: Subscription;
 
-    constructor(private renderer: Renderer2, private renderOrganizer: DatagridRenderOrganizer) {}
+    constructor() {}
     public set table(table: ElementRef) {
         this.tableRef = table.nativeElement.querySelector(".datagrid-table");
     }
 
+    // Used when resizing columns to show the column border being dragged.
     getColumnDragHeight(): string {
         return `${this.tableRef.clientHeight}px`;
     }
