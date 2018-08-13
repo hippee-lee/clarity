@@ -7,7 +7,7 @@ import "../../../clr-icons/shapes/essential-shapes";
 
 import {Component} from "@angular/core";
 
-import {ClrDatagridSortOrder} from "../../../clr-angular/data/datagrid/interfaces/sort-order";
+import {ClrDatagridSortOrder} from "../../../clr-angular/data/datagrid/enums/sort-order.enum";
 import {User} from "../inventory/user";
 import {DatagridKitchenSinkData} from "../kitchen-sink/kitchen-sink-data";
 import {PokemonComparator} from "../utils/pokemon-comparator";

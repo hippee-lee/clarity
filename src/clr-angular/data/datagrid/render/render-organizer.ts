@@ -6,16 +6,21 @@
 
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
+import {filter} from "rxjs/operators/filter";
 import {Subject} from "rxjs/Subject";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
+import {DatagridRenderStep} from "../enums/render-step.enum";
 
 @Injectable()
 export class DatagridRenderOrganizer {
-    _renderStep: Subject<DatagridRenderStep> = new Subject<DatagridRenderStep>();
+    protected _renderStep: Subject<DatagridRenderStep> = new Subject<DatagridRenderStep>();
     public get renderStep(): Observable<DatagridRenderStep> {
         return this._renderStep.asObservable();
     }
+    public filterRenderSteps(step: DatagridRenderStep) {
+        return this.renderStep.pipe(filter(testStep => step === testStep));
+    }
+
     private alreadySized = false;
 
     public widths: {px: number, strict: boolean}[] = [];

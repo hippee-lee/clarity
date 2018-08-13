@@ -3,8 +3,9 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 
+import {DatagridRenderStep} from "./../enums/render-step.enum";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 /**
@@ -38,6 +39,7 @@ export default function(): void {
             this.organizer.resize();
             let step = 0;
             this.organizer.renderStep.subscribe(renderStep => {
+                // TODO: Re-visit use of step++ in the expect. It obscures whats going on.
                 if (renderStep === DatagridRenderStep.CALCULATE_MODE_ON) {
                     expect(step++).toBe(0);
                 } else if (renderStep === DatagridRenderStep.CLEAR_WIDTHS) {
@@ -59,6 +61,14 @@ export default function(): void {
             this.organizer.widths = [{px: 1, strict: false}, {px: 2, strict: true}];
             this.organizer.resize();
             expect(this.organizer.widths).toEqual([]);
+        });
+
+        it("provides a filtering utility that targets one step", function(this: UserContext) {
+            let currentStep: DatagridRenderStep = null;
+            this.organizer.filterRenderSteps(DatagridRenderStep.ALIGN_COLUMNS).subscribe(step => currentStep = step);
+            expect(currentStep).toBeNull();
+            this.organizer.resize();
+            expect(currentStep).toBe(DatagridRenderStep.ALIGN_COLUMNS);
         });
     });
 }

@@ -5,11 +5,12 @@
  */
 import {Component} from "@angular/core";
 
+import {DatagridRenderStep} from "../enums/render-step.enum";
 import {TestContext} from "../helpers.spec";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {HideableColumnService} from "../providers/hideable-column.service";
 
 import {DatagridCellRenderer} from "./cell-renderer";
+import {STRICT_WIDTH_CLASS} from "./constants";
 import {DatagridRenderOrganizer} from "./render-organizer";
 import {MOCK_ORGANIZER_PROVIDER, MockDatagridRenderOrganizer} from "./render-organizer.mock";
 
@@ -26,24 +27,24 @@ export default function(): void {
         it("sets proper width and class for strict width cells", function() {
             context.clarityDirective.setWidth(true, 42);
             expect(context.clarityElement.style.width).toBe("42px");
-            expect(context.clarityElement.classList).toContain("datagrid-fixed-width");
+            expect(context.clarityElement.classList).toContain(STRICT_WIDTH_CLASS);
         });
 
         it("makes the cell non-flexible if and only if the width is strict", function() {
             context.clarityDirective.setWidth(true, 42);
             expect(context.clarityElement.style.width).toBe("42px");
-            expect(context.clarityElement.classList).toContain("datagrid-fixed-width");
+            expect(context.clarityElement.classList).toContain(STRICT_WIDTH_CLASS);
             context.clarityDirective.setWidth(false, 42);
-            expect(context.clarityElement.classList).not.toContain("datagrid-fixed-width");
+            expect(context.clarityElement.classList).not.toContain(STRICT_WIDTH_CLASS);
         });
 
         it("resets the cell to default width when notified", function() {
             context.clarityDirective.setWidth(true, 42);
             expect(context.clarityElement.style.width).toBe("42px");
-            expect(context.clarityElement.classList).toContain("datagrid-fixed-width");
-            organizer._renderStep.next(DatagridRenderStep.CLEAR_WIDTHS);
+            expect(context.clarityElement.classList).toContain(STRICT_WIDTH_CLASS);
+            organizer.renderStep.next(DatagridRenderStep.CLEAR_WIDTHS);
             expect(context.clarityElement.style.width).toBeFalsy();
-            expect(context.clarityElement.classList).not.toContain("datagrid-fixed-width");
+            expect(context.clarityElement.classList).not.toContain(STRICT_WIDTH_CLASS);
         });
     });
 }

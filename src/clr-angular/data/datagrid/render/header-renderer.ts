@@ -3,10 +3,10 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
+import {AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 
 import {DatagridColumnResizer} from "./column-resizer";
 import {STRICT_WIDTH_CLASS} from "./constants";
@@ -14,19 +14,16 @@ import {DomAdapter} from "./dom-adapter";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 @Directive({selector: "clr-dg-column"})
-export class DatagridHeaderRenderer implements OnDestroy {
-    constructor(private el: ElementRef, private renderer: Renderer2, organizer: DatagridRenderOrganizer,
+export class DatagridHeaderRenderer implements AfterViewInit, OnDestroy {
+    constructor(private el: ElementRef, private renderer: Renderer2, private organizer: DatagridRenderOrganizer,
                 private domAdapter: DomAdapter, private columnResizer: DatagridColumnResizer) {
-        this.subscription = organizer.renderStep.subscribe(step => {
-            if (step === DatagridRenderStep.CLEAR_WIDTHS) {
-                this.clearWidth();
-            } else if (step === DatagridRenderStep.DETECT_STRICT_WIDTHS) {
-                this.detectStrictWidth();
-            }
-        });
+        // this.subscriptions.push(
+        //     organizer.filterRenderSteps(DatagridRenderStep.CLEAR_WIDTHS)
+        //         .subscribe( () =>  this.clearWidth() ));
+        // this.subscriptions.push(
+        //     organizer.filterRenderSteps(DatagridRenderStep.DETECT_STRICT_WIDTHS)
+        //         .subscribe( () =>  this.detectStrictWidth() ));
     }
-
-    private subscription: Subscription;
 
     /**
      * Indicates if the column has a strict width, so it doesn't shrink or expand based on the content.
@@ -34,8 +31,10 @@ export class DatagridHeaderRenderer implements OnDestroy {
     public strictWidth: number;
     private widthSet: boolean = false;
 
+
+    private subscriptions: Subscription[] = [];
     ngOnDestroy() {
-        this.subscription.unsubscribe();
+        this.subscriptions.forEach(sub => sub.unsubscribe());
     }
 
     private clearWidth() {
@@ -51,8 +50,7 @@ export class DatagridHeaderRenderer implements OnDestroy {
         if (this.columnResizer.columnResizeBy) {
             this.strictWidth = this.columnResizer.columnRectWidth + this.columnResizer.columnResizeBy;
         } else {
-            // this checks for a width set directly on clr-dg-column element
-            this.strictWidth = this.domAdapter.userDefinedWidth(this.el);
+            this.strictWidth = this.domAdapter.userDefinedWidth(this.el.nativeElement);
         }
     }
 
@@ -79,5 +77,12 @@ export class DatagridHeaderRenderer implements OnDestroy {
         // Why is a width set, isn't this column suppsed to be flex: 1 1 auto?
         this.renderer.setStyle(this.el.nativeElement, "width", width + "px");
         this.widthSet = true;
+    }
+
+    ngAfterViewInit() {
+        this.subscriptions.push(
+            this.organizer.filterRenderSteps(DatagridRenderStep.CLEAR_WIDTHS).subscribe(() => this.clearWidth()));
+        this.subscriptions.push(this.organizer.filterRenderSteps(DatagridRenderStep.DETECT_STRICT_WIDTHS)
+                                    .subscribe(() => this.detectStrictWidth()));
     }
 }

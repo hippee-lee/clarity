@@ -3,8 +3,8 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-
-import {ElementRef, Injectable} from "@angular/core";
+import {isPlatformBrowser} from "@angular/common";
+import {ElementRef, Inject, Injectable, PLATFORM_ID} from "@angular/core";
 
 /**
  * @description
@@ -14,9 +14,11 @@ import {ElementRef, Injectable} from "@angular/core";
 export class TableSizeService {
     private tableRef: Element;
 
-    constructor() {}
+    constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
     public set table(table: ElementRef) {
-        this.tableRef = table.nativeElement.querySelector(".datagrid-table");
+        if (isPlatformBrowser(this.platformId) && table.nativeElement) {
+            this.tableRef = table.nativeElement.querySelector(".datagrid-table");
+        }
     }
 
     // Used when resizing columns to show the column border being dragged.

@@ -34,6 +34,7 @@ import DatagridRowSpecs from "./datagrid-row.spec";
 import DatagridSpecs from "./datagrid.spec";
 import {addHelpers} from "./helpers.spec";
 import ColumnToggleButtonsServiceSpecs from "./providers/column-toggle-buttons.service.spec";
+import DisplayModeServiceSpecs from "./providers/display-mode.service.spec";
 import FiltersProviderSpecs from "./providers/filters.spec";
 import DatagridHideableColumnServiceSpecs from "./providers/hideable-column.service.spec";
 import ItemsProviderSpecs from "./providers/items.spec";
@@ -63,6 +64,7 @@ describe("Datagrid", function() {
         SelectionProviderSpecs();
         DatagridHideableColumnServiceSpecs();
         ColumnToggleButtonsServiceSpecs();
+        DisplayModeServiceSpecs();
     });
     describe("Components", function() {
         DatagridActionBarSpecs();

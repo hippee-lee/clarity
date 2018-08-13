@@ -9,8 +9,8 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import {Subject} from "rxjs/Subject";
 
-import {DatagridDisplayMode} from "../interfaces/display-mode.interface";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
+import {DatagridDisplayMode} from "../enums/display-mode.enum";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 import {DatagridRenderOrganizer} from "../render/render-organizer";
 
 @Injectable()
@@ -18,20 +18,13 @@ export class DisplayModeService {
     private _view: Subject<DatagridDisplayMode> = new Subject<DatagridDisplayMode>();
 
     constructor(renderOrganizer: DatagridRenderOrganizer) {
-        renderOrganizer.renderStep.subscribe(step => {
-            if (step === DatagridRenderStep.CALCULATE_MODE_ON) {
-                this.update(DatagridDisplayMode.CALCULATE);
-            } else if (step === DatagridRenderStep.CALCULATE_MODE_OFF) {
-                this.update(DatagridDisplayMode.DISPLAY);
-            }
-        });
+        renderOrganizer.filterRenderSteps(DatagridRenderStep.CALCULATE_MODE_ON)
+            .subscribe(() => this._view.next(DatagridDisplayMode.CALCULATE));
+        renderOrganizer.filterRenderSteps(DatagridRenderStep.CALCULATE_MODE_OFF)
+            .subscribe(() => this._view.next(DatagridDisplayMode.DISPLAY));
     }
 
     public get view(): Observable<DatagridDisplayMode> {
         return this._view.asObservable();
-    }
-
-    public update(view: DatagridDisplayMode) {
-        this._view.next(view);
     }
 }

@@ -9,8 +9,8 @@ import {ComponentFixture, TestBed} from "@angular/core/testing";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";  // Needed to recreate issue #1084
 
 import {ClrDatagridModule} from "../datagrid.module";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 import {TestContext} from "../helpers.spec";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
 
 import {DatagridHeaderRenderer} from "./header-renderer";
 import {DatagridMainRenderer} from "./main-renderer";

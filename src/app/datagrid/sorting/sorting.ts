@@ -5,7 +5,7 @@
  */
 import {Component} from "@angular/core";
 
-import {ClrDatagridSortOrder} from "../../../clr-angular/data/datagrid/interfaces/sort-order";
+import {ClrDatagridSortOrder} from "../../../clr-angular/data/datagrid/enums/sort-order.enum";
 import {Inventory} from "../inventory/inventory";
 import {User} from "../inventory/user";
 import {PokemonComparator} from "../utils/pokemon-comparator";

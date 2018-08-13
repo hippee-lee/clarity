@@ -30,7 +30,7 @@ import {LoadingListener} from "../../utils/loading/loading-listener";
 
 import {ClrDatagridCell} from "./datagrid-cell";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
-import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
+import {DatagridDisplayMode} from "./enums/display-mode.enum";
 import {DisplayModeService} from "./providers/display-mode.service";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";

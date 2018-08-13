@@ -25,7 +25,7 @@ import {ClrDatagridColumn} from "./datagrid-column";
 import {ClrDatagridItems, RowContext} from "./datagrid-items";
 import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
-import {DatagridDisplayMode} from "./interfaces/display-mode.interface";
+import {DatagridDisplayMode} from "./enums/display-mode.enum";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ColumnToggleButtonsService} from "./providers/column-toggle-buttons.service";
 import {DisplayModeService} from "./providers/display-mode.service";

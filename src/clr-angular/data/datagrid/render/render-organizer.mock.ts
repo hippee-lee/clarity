@@ -7,7 +7,7 @@
 import {Injectable} from "@angular/core";
 import {Subject} from "rxjs/Subject";
 
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 
 import {DatagridRenderOrganizer} from "./render-organizer";
 

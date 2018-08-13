@@ -19,7 +19,7 @@ import {
 import {Subscription} from "rxjs/Subscription";
 
 import {ClrDatagridColumn} from "../datagrid-column";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 import {Items} from "../providers/items";
 import {Page} from "../providers/page";
 import {TableSizeService} from "../providers/table-size.service";
@@ -47,11 +47,9 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, Af
     constructor(private organizer: DatagridRenderOrganizer, private items: Items, private page: Page,
                 private domAdapter: DomAdapter, private el: ElementRef, private renderer: Renderer2,
                 private tableSizeService: TableSizeService) {
-        this.subscriptions.push(this.organizer.renderStep.subscribe(step => {
-            if (step === DatagridRenderStep.COMPUTE_COLUMN_WIDTHS) {
-                this.computeHeadersWidth();
-            }
-        }));
+        this.subscriptions.push(this.organizer.filterRenderSteps(DatagridRenderStep.COMPUTE_COLUMN_WIDTHS)
+                                    .subscribe(() => this.computeHeadersWidth()));
+
         this.subscriptions.push(this.page.sizeChange.subscribe(() => {
             if (this._heightSet) {
                 this.resetDatagridHeight();
@@ -74,10 +72,8 @@ export class DatagridMainRenderer implements AfterContentInit, AfterViewInit, Af
     // Initialize and set Table width for horizontal scrolling here.
     ngAfterViewInit() {
         this.tableSizeService.table = this.el;
-        // this.tableSizeService.updateRowWidth();
     }
 
-    // Try putting in ngAfterViewInit
     ngAfterViewChecked() {
         if (this.shouldStabilizeColumns) {
             this.stabilizeColumns();

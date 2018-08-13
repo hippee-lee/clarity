@@ -6,8 +6,8 @@
 import {Component} from "@angular/core";
 
 import {DatagridWillyWonka} from "../chocolate/datagrid-willy-wonka";
+import {DatagridRenderStep} from "../enums/render-step.enum";
 import {TestContext} from "../helpers.spec";
-import {DatagridRenderStep} from "../interfaces/render-step.interface";
 import {DisplayModeService} from "../providers/display-mode.service";
 import {FiltersProvider} from "../providers/filters";
 import {ExpandableRowsCount} from "../providers/global-expandable-rows";

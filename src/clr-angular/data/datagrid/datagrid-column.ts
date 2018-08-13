@@ -24,8 +24,8 @@ import {DatagridPropertyComparator} from "./built-in/comparators/datagrid-proper
 import {DatagridPropertyStringFilter} from "./built-in/filters/datagrid-property-string-filter";
 import {DatagridStringFilterImpl} from "./built-in/filters/datagrid-string-filter-impl";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
+import {ClrDatagridSortOrder} from "./enums/sort-order.enum";
 import {ClrDatagridComparatorInterface} from "./interfaces/comparator.interface";
-import {ClrDatagridSortOrder} from "./interfaces/sort-order";
 import {CustomFilter} from "./providers/custom-filter";
 import {DragDispatcher} from "./providers/drag-dispatcher";
 import {FiltersProvider} from "./providers/filters";
