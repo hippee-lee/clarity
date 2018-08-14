@@ -6,6 +6,8 @@
 import "rxjs/add/operator/combineLatest";
 
 import {
+    AfterContentInit,
+    AfterViewInit,
     Component,
     ContentChildren,
     ElementRef,
@@ -14,13 +16,13 @@ import {
     HostListener,
     Injector,
     Input,
+    OnDestroy,
     Output,
     QueryList,
     Renderer2,
     ViewChild,
     ViewContainerRef
 } from "@angular/core";
-import {Observable} from "rxjs/Observable";
 import {combineLatest} from "rxjs/observable/combineLatest";
 import {Subscription} from "rxjs/Subscription";
 
@@ -50,7 +52,7 @@ let nbRow: number = 0;
     },
     providers: [Expand, {provide: LoadingListener, useExisting: Expand}]
 })
-export class ClrDatagridRow {
+export class ClrDatagridRow implements AfterContentInit, AfterViewInit, OnDestroy {
     public id: string;
 
     /* reference to the enum so that template can access */
@@ -65,8 +67,7 @@ export class ClrDatagridRow {
     @Input("clrDgItem") item: any;
 
     @HostBinding("attr.role") role: string;
-
-    private combinedLatestExpand: Observable<any>;
+    public replaced;
 
     constructor(public selection: Selection, public rowActionService: RowActionService,
                 public globalExpandable: ExpandableRowsCount, public expand: Expand,
@@ -75,22 +76,18 @@ export class ClrDatagridRow {
         this.id = "clr-dg-row" + (nbRow++);
         this.role = selection.rowSelectionMode ? "button" : null;
 
-        // Listen to both the expand.replace and the expand.expandChange observables
-        this.combinedLatestExpand = combineLatest(this.expand.replace, this.expand.expandChange);
-
-        this.subscriptions.push(this.combinedLatestExpand.subscribe(latestValues => {
-            const [expandReplaceValue, expandChangeValue] = latestValues;
-
-            if (expandReplaceValue && expandChangeValue) {  // replaced and expanding
-                this.renderer.addClass(this.el.nativeElement, "datagrid-row-replaced");
-            } else if (!expandReplaceValue && !expandChangeValue) {  // not replaced and collapsing
-                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
-            } else if (expandReplaceValue && !expandChangeValue) {  // replaced and collapsing
-                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
-            } else if (!expandReplaceValue && expandChangeValue) {  // not replaced and expanding
-                this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
-            }
-        }));
+        this.subscriptions.push(combineLatest(this.expand.replace, this.expand.expandChange)
+                                    .subscribe(([expandReplaceValue, expandChangeValue]) => {
+                                        if (expandReplaceValue && expandChangeValue) {  // replaced and expanding
+                                            this.replaced = true;
+                                            this.renderer.addClass(this.el.nativeElement, "datagrid-row-replaced");
+                                        } else {
+                                            this.replaced = false;
+                                            // Handles these cases: not replaced and collapsing & replaced and
+                                            // collapsing and not replaced and expanding.
+                                            this.renderer.removeClass(this.el.nativeElement, "datagrid-row-replaced");
+                                        }
+                                    }));
     }
 
     private _selected = false;
@@ -204,9 +201,6 @@ export class ClrDatagridRow {
                 this.updateCellsForColumns(columnList);
             }
         }));
-        this.dgCells.filter((cell, index) => index > 0).forEach((cell) => {
-            this.scrollableCells.insert(cell.view);
-        });
     }
 
     ngAfterViewInit() {
@@ -228,9 +222,6 @@ export class ClrDatagridRow {
                 this.displayCells = true;
             }
         }));
-        // Insert views the first time? Fixed the pagination issue after discussing w/ Eude.
-        this.dgCells.forEach(cell => this.scrollableCells.insert(cell.view));
-        this.displayCells = true;
     }
 
     /**********

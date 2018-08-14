@@ -17,7 +17,6 @@ class TestComponent {
     constructor(public elementRef: ElementRef) {}
 }
 
-// TODO - rename this properly, add better coverage.
 describe("TableSizeService", function() {
     let fixture: ComponentFixture<any>;
 
@@ -28,7 +27,7 @@ describe("TableSizeService", function() {
     });
 
     it("sets a tableRef property with an elementReference", function() {
-        const table: TableSizeService = new TableSizeService();
+        const table: TableSizeService = new TableSizeService({});
         table.tableRef = fixture.debugElement.componentInstance.elementRef;
         expect(table.tableRef).toBe(fixture.debugElement.componentInstance.elementRef);
     });

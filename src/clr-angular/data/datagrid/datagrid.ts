@@ -206,10 +206,6 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
             this.items.all = this.rows.map((row: ClrDatagridRow) => row.item);
         }
 
-        this.rows.forEach(row => {
-            this.displayedRows.insert(row.view);
-        });
-
         this._subscriptions.push(this.rows.changes.subscribe(() => {
             if (!this.items.smart) {
                 this.items.all = this.rows.map((row: ClrDatagridRow) => row.item);
@@ -270,15 +266,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 });
             }
         });
-        // Make sure columns get added when datagrid is first created.
-        this.columns.forEach(column => {
-            this.projectedDisplayColumns.insert(column.view);
-        });
-
-        // Moving here to try fixing conditional pagination issue.
     }
-
-    public display = true;
 
     /**
      * Subscriptions to all the services and queries changes
@@ -297,5 +285,5 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
     @ViewChild("projectedCalculationColumns", {read: ViewContainerRef}) projectedCalculationColumns: ViewContainerRef;
     @ViewChild("displayedRows", {read: ViewContainerRef}) displayedRows: ViewContainerRef;
     @ViewChild("calculationRows", {read: ViewContainerRef}) calculationRows: ViewContainerRef;
-    public showDisplayTable = false;  // Init to calculate when a datagrid is created.
+    public showDisplayTable;
 }

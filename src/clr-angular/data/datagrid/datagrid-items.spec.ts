@@ -45,6 +45,13 @@ export default function(): void {
             expect(this.itemsProvider.displayed).toEqual([1, 2, 3, 4, 5]);
         });
 
+        it("subscribes to changes in the datagrid Items (_items)", function() {
+            // testing the observable subscription in the constructore
+            this.testComponent.numbers.push(6);
+            this.fixture.detectChanges();
+            expect(this.itemsProvider.displayed).toEqual([1, 2, 3, 4, 5, 6]);
+        });
+
         it("handles a null input for the array of items", function() {
             this.testComponent.numbers = null;
             this.fixture.detectChanges();

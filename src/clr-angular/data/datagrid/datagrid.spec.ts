@@ -9,11 +9,13 @@ import {Subject} from "rxjs/Subject";
 import {DatagridPropertyStringFilter} from "./built-in/filters/datagrid-property-string-filter";
 import {DatagridStringFilterImpl} from "./built-in/filters/datagrid-string-filter-impl";
 import {ClrDatagrid} from "./datagrid";
+import {DatagridDisplayMode} from "./enums/display-mode.enum";
 import {TestContext} from "./helpers.spec";
 import {ClrDatagridComparatorInterface} from "./interfaces/comparator.interface";
 import {ClrDatagridFilterInterface} from "./interfaces/filter.interface";
 import {ClrDatagridStateInterface} from "./interfaces/state.interface";
 import {ClrDatagridStringFilterInterface} from "./interfaces/string-filter.interface";
+import {DisplayModeService} from "./providers/display-mode.service";
 import {FiltersProvider} from "./providers/filters";
 import {ExpandableRowsCount} from "./providers/global-expandable-rows";
 import {HideableColumnService} from "./providers/hideable-column.service";
@@ -208,6 +210,79 @@ export default function(): void {
 
             it("projects the footer", function() {
                 expect(context.clarityElement.querySelector(".datagrid-footer")).not.toBeNull();
+            });
+        });
+
+        describe("Content Projection", function() {
+            let context: TestContext<ClrDatagrid, FullTest>;
+            let displayMode: DisplayModeService;
+            describe("when displaying", function() {
+                let displayHeader: Element;
+                let displayColumns: NodeList;
+                let displayTable: Element;
+                let displayRows: NodeList;
+
+                beforeEach(function() {
+                    context = this.create(ClrDatagrid, FullTest, [HideableColumnService]);
+                    displayMode = context.getClarityProvider(DisplayModeService);
+                });
+
+                it("moves columns into the display container", function() {
+                    context.clarityDirective.displayMode.view.subscribe(mode => {
+                        displayHeader = context.clarityElement.querySelector(".datagrid-header");
+                        displayColumns = displayHeader.querySelectorAll(".datagrid-column");
+                        if (mode === DatagridDisplayMode.DISPLAY) {
+                            expect(displayColumns.length).toBe(2);
+                        }
+                    });
+                    displayMode.updateView(DatagridDisplayMode.DISPLAY);
+                });
+
+                it("moves rows into the display container", function() {
+                    context.clarityDirective.displayMode.view.subscribe(mode => {
+                        displayTable = context.clarityElement.querySelector(".datagrid-table");
+                        displayRows = displayTable.querySelectorAll(".datagrid-row");
+                        if (mode === DatagridDisplayMode.DISPLAY) {
+                            expect(displayRows.length).toBe(4);
+                        }
+                    });
+                    displayMode.updateView(DatagridDisplayMode.DISPLAY);
+                });
+            });
+
+            describe("when calculating", function() {
+                let calculationHeader: Element;
+                let calculationColumns: NodeList;
+                let calculationTable: Element;
+                let calculationRows: NodeList;
+
+                beforeEach(function() {
+                    context = this.create(ClrDatagrid, FullTest, [HideableColumnService]);
+                    displayMode = context.getClarityProvider(DisplayModeService);
+                });
+
+                it("moves columns into the calculation container", function() {
+                    context.clarityDirective.displayMode.view.subscribe(mode => {
+                        calculationHeader = context.clarityElement.querySelector(".datagrid-calculation-header");
+                        calculationColumns = calculationHeader.querySelectorAll(".datagrid-column");
+                        if (mode === DatagridDisplayMode.CALCULATE) {
+                            expect(calculationColumns.length).toBe(2);
+                        }
+                    });
+                    displayMode.updateView(DatagridDisplayMode.CALCULATE);
+                });
+
+                it("moves the rows into the calculation container", function() {
+                    context.clarityDirective.displayMode.view.subscribe(mode => {
+                        calculationTable = context.clarityElement.querySelector(".datagrid-calculation-table");
+                        calculationRows = calculationTable.querySelectorAll(".datagrid-row");
+                        if (mode === DatagridDisplayMode.CALCULATE) {
+                            console.log("calc rows: ", mode, calculationTable, calculationRows);
+                            expect(calculationRows.length).toBe(3);
+                        }
+                    });
+                    displayMode.updateView(DatagridDisplayMode.CALCULATE);
+                });
             });
         });
 

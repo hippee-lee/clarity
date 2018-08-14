@@ -10,7 +10,6 @@
         display: flex;
         flex-flow: column nowrap;
         position: relative;
-        // width: 100%;
     }
 
     .datagrid {
@@ -81,11 +80,31 @@
         }
 
         &.datagrid-row-replaced {
-          .datagrid-scrolling-cells {
-            display: none;
-          }
+            .datagrid-scrolling-cells {
+                flex-wrap: nowrap;
+
+                clr-dg-cell {
+                    display: none;
+                }
+            }
+
           .datagrid-row-detail {
-            padding-top: 11px; // Added this in as a visual fix for expandable refactor changes.
+              .datagrid-cell {
+                  display: block;
+                  padding-top: 11px;
+                  border-top: $clr-default-borderwidth solid $clr-table-border-color;
+              }
+              .datagrid-expandable-caret {
+                  padding-top: 2px;
+              }
+              &.datagrid-container {
+                //   padding: 0;
+                  border-top: $clr-default-borderwidth solid $clr-table-border-color;
+
+                  .datagrid-cell {
+                      border-top: none;
+                  }
+              }
           }
         }
 
@@ -192,10 +211,6 @@
                 padding-top: 0;
                 border: none;
             }
-
-            clr-dg-cell {
-                border: none;
-            }
         }
 
         .datagrid-select {
@@ -255,7 +270,19 @@
 
     .datagrid-scrolling-cells, .datagrid-scrolling-details {
         display: flex;
-        //height: 100%; // commenting this out fixes cell height when row is expanded.
+        flex-flow: row wrap;
+    }
+
+    .datagrid-scrolling-cells {
+        .datagrid-replaceable-cells {
+            display: flex; 
+            flex-flow: row nowrap; 
+            flex: 1 1 auto;
+
+            &.is-replaced {
+                flex: 0 0 auto;
+            }
+        }
     }
 
     .datagrid-action-bar {
@@ -299,19 +326,15 @@
     }
 
     .datagrid-table {
-        //flex: 1 1;
         display: flex;
         flex-direction: column;
         align-content: flex-start;
         width: auto;
         min-height: 3rem; // Includes header and space for a single (non existing) row
         position: relative;
-        //height: 100%; // when there is a fixed  height datagrid and it has a placeholder this positions the placeholder
 
         .datagrid-body {
             width: auto;
-            //min-height: 3rem; // Preserves original design but could this be updated to 1.5 rem for single row / null data states?
-                              // Was an issue that users complained about for the spinner size.
         }
 
         .datagrid-column {
@@ -389,7 +412,6 @@
             }
 
             .datagrid-filter {
-                //position: relative;
                 top: 100%;
                 right: 0;
                 margin-top: 0.2rem;
@@ -483,7 +505,6 @@
                     top: $clr-datagrid-column-handle-tracker-top;
                     display: none;
                     width: 0;
-                    //height: 100vh;
                     border-right: $clr-default-borderwidth dotted $clr-action-blue-lighter;
                 }
                 .exceeded-max {
@@ -551,7 +572,6 @@
 
         .datagrid-placeholder {
             background: $clr-table-bgcolor;
-            //border-top: $clr-default-borderwidth solid $clr-table-border-color;
             width: 100%;
 
             &.datagrid-empty {
@@ -943,7 +963,6 @@
                     // calculation container element
                     font-size: $clr-table-fontsize;
                     line-height: $clr-table-lineheight;
-                    //border-top: $clr-table-borderwidth solid $clr-tablerow-bordercolor;
                     padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
                     vertical-align: top;
                 }

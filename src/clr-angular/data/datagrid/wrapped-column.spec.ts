@@ -11,7 +11,7 @@ import {ClrWrappedColumn} from "./wrapped-column";
 
 @Component({
     template: `
-        <clr-wrapped-column #wrapper>Hello World!</clr-wrapped-column>
+        <dg-wrapped-column #wrapper>Hello World!</dg-wrapped-column>
     `
 })
 class WrappedColumn {

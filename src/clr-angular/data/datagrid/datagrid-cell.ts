@@ -56,7 +56,7 @@ export class ClrDatagridCell implements OnInit {
     private hiddenStateSubscription: Subscription;
 
     constructor(public hideableColumnService: HideableColumnService, private _el: ElementRef,
-                private _renderer: Renderer2, private vcr: ViewContainerRef, el: ElementRef) {}
+                private _renderer: Renderer2, private vcr: ViewContainerRef) {}
 
     private mapHideableColumn(columnId: string) {
         if (!columnId) {

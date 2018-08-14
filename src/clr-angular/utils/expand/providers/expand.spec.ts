@@ -22,6 +22,16 @@ export default function(): void {
             expect(this.expand.expanded).toBe(false, "collapsed");
         });
 
+        it("notifies when cells are replaced", function() {
+            let isReplaced = null;
+            this.expand.replace.subscribe(replaceChange => {
+                isReplaced = replaceChange;
+            });
+            expect(isReplaced).toBe(false);
+            this.expand.setReplace(true);
+            expect(isReplaced).toBe(true);
+        });
+
         it("implements LoadingListener", function() {
             this.expand.startLoading();
             expect(this.expand.loading).toBe(true);

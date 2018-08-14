@@ -32,16 +32,15 @@ export class ClrDatagridItems<T> implements OnChanges, DoCheck {
         this._rawItems = items ? items : [];
     }
     private _differ: IterableDiffer<any>;
-    displayed: Array<any> = [];
     constructor(public template: TemplateRef<RowContext<T>>, private _differs: IterableDiffers, private _items: Items,
                 private vcr: ViewContainerRef) {
         _items.smartenUp();
         _items.change.subscribe(items => {
-            this.displayed = items;
+            const displayed = items;
             this.vcr.clear();  // It is additive if I don't clear the datagrids vcr
             // Will need to use IterableDiff to properly account for trackBy
             // TODO revisit detectChanges() here, even thought it fixes conditionalPaginition, it isn't ideal.
-            for (const item of this.displayed) {
+            for (const item of displayed) {
                 this.vcr.createEmbeddedView(this.template, {$implicit: item}).detectChanges();
             }
         });

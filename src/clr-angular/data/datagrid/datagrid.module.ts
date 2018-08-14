@@ -24,7 +24,6 @@ import {ExpandableOompaLoompa} from "./chocolate/expandable-oompa-loompa";
 import {ClrDatagrid} from "./datagrid";
 import {ClrDatagridActionBar} from "./datagrid-action-bar";
 import {ClrDatagridActionOverflow} from "./datagrid-action-overflow";
-import {ClrDatagridActionPopover} from "./datagrid-action-popover";
 import {ClrDatagridCell} from "./datagrid-cell";
 import {ClrDatagridColumn} from "./datagrid-column";
 import {ClrDatagridColumnToggle} from "./datagrid-column-toggle";
@@ -55,11 +54,11 @@ import {ClrWrappedRow} from "./wrapped-row";
 
 export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     // Core
-    ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridActionPopover, ClrDatagridColumn,
-    ClrDatagridColumnToggle, ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy,
-    ClrDatagridRow, ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter,
-    ClrDatagridPagination, ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle,
-    ClrWrappedCell, ClrWrappedColumn, ClrWrappedRow,
+    ClrDatagrid, ClrDatagridActionBar, ClrDatagridActionOverflow, ClrDatagridColumn, ClrDatagridColumnToggle,
+    ClrDatagridHideableColumn, ClrDatagridFilter, ClrDatagridItems, ClrDatagridItemsTrackBy, ClrDatagridRow,
+    ClrDatagridRowDetail, DatagridDetailRegisterer, ClrDatagridCell, ClrDatagridFooter, ClrDatagridPagination,
+    ClrDatagridPlaceholder, ClrDatagridColumnToggleButton, ClrDatagridColumnToggleTitle, ClrWrappedCell,
+    ClrWrappedColumn, ClrWrappedRow,
 
     // Renderers
     DatagridMainRenderer, DatagridHeaderRenderer, DatagridColumnResizer, DatagridRowRenderer, DatagridCellRenderer,

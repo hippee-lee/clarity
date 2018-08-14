@@ -12,7 +12,15 @@ import {ElementRef, Inject, Injectable, PLATFORM_ID} from "@angular/core";
  */
 @Injectable()
 export class TableSizeService {
-    private tableRef: Element;
+    private _tableRef: Element;
+
+    public get tableRef(): Element {
+        return this._tableRef;
+    }
+
+    public set tableRef(element: Element) {
+        this._tableRef = element;
+    }
 
     constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
     public set table(table: ElementRef) {

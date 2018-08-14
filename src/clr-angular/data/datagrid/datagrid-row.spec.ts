@@ -13,6 +13,7 @@ import {LoadingListener} from "../../utils/loading/loading-listener";
 import {DatagridWillyWonka} from "./chocolate/datagrid-willy-wonka";
 import {DatagridHideableColumnModel} from "./datagrid-hideable-column.model";
 import {ClrDatagridRow} from "./datagrid-row";
+import {DatagridDisplayMode} from "./enums/display-mode.enum";
 import {TestContext} from "./helpers.spec";
 import {DisplayModeService} from "./providers/display-mode.service";
 import {FiltersProvider} from "./providers/filters";
@@ -39,12 +40,34 @@ export default function(): void {
             // Until we can properly type "this"
             let context: TestContext<ClrDatagridRow, FullTest>;
             let renderer: DatagridRenderOrganizer;
+            let displayMode: DisplayModeService;
 
             beforeEach(function() {
                 context = this.create(ClrDatagridRow, FullTest, PROVIDERS);
                 renderer = context.getClarityProvider(DatagridRenderOrganizer);
+                displayMode = context.getClarityProvider(DisplayModeService);
                 context.detectChanges();
                 renderer.resize();
+            });
+
+            it("initialzes in display mode", function() {
+                expect(context.clarityDirective.displayCells).toBe(true);
+                // this.displayCells = false; when viewChange === DatagridDisplayMode.CALCULATE
+                // this.displayCells = true when viewChange === DatagridDisplayMode.DISPLAY
+            });
+
+            it("responds when display mode is calculate", function() {
+                displayMode.updateView(DatagridDisplayMode.CALCULATE);
+                expect(context.clarityDirective.displayCells).toBe(false);
+            });
+
+            it("responds when display mode is display", function() {
+                displayMode.updateView(DatagridDisplayMode.DISPLAY);
+                expect(context.clarityDirective.displayCells).toBe(true);
+            });
+
+            it("provides a wrapped view for the content", function() {
+                expect(context.clarityDirective.view).toBeDefined();
             });
 
             it("adds the .datagrid-row class to the host", function() {
@@ -296,6 +319,36 @@ export default function(): void {
                    context.clarityElement.querySelector(".datagrid-expandable-caret button").click();
                    flushAnimations();
                    expect(context.testComponent.expanded).toBe(false);
+               }));
+
+            it("adds the correct class when replaced and expanded", fakeAsync(function() {
+                   expect(context.clarityElement.classList.contains("datagrid-row-replaced")).toBeFalsy();
+                   context.testComponent.expanded = true;
+                   expand.setReplace(true);
+                   flushAnimations();
+                   expect(context.clarityElement.classList.contains("datagrid-row-replaced")).toBeTruthy();
+               }));
+
+            it("adds the correct class when collapsed", fakeAsync(function() {
+                   // covers both collapsed+replaced and collapsed+not_replaced
+                   expect(context.clarityElement.classList.contains("datagrid-row-replaced")).toBeFalsy();
+               }));
+
+            it("adds the correct class when not replaced and expanded", fakeAsync(function() {
+                   expect(context.clarityElement.classList.contains("datagrid-row-replaced")).toBeFalsy();
+                   context.testComponent.expanded = true;
+                   flushAnimations();
+                   expect(context.clarityElement.classList.contains("datagrid-row-replaced")).toBeFalsy();
+               }));
+
+            it("adds 'is-replaced' class to the replacement cell container when cells are replaced",
+               fakeAsync(function() {
+                   const replaceableCells = context.clarityElement.querySelector("div.datagrid-replaceable-cells");
+                   expect(replaceableCells.classList.contains("is-replaced")).toBeFalsy();
+                   context.testComponent.expanded = true;
+                   expand.setReplace(true);
+                   flushAnimations();
+                   expect(replaceableCells.classList.contains("is-replaced")).toBeTruthy();
                }));
 
             function flushAnimations() {

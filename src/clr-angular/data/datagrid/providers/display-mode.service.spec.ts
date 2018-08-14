@@ -36,10 +36,40 @@ export default function(): void {
                 displayChangeCount++;
                 currentChange = viewChange;
             });
-            expect(currentChange).toBeUndefined();
+            expect(currentChange).toBe((DatagridDisplayMode.DISPLAY);
             this.organizer.resize();
             expect(currentChange).toBe(DatagridDisplayMode.DISPLAY);
-            expect(displayChangeCount).toBe(2);
+            expect(displayChangeCount).toBe(3); // +1 b/c of the behavior subject.
+        });
+
+        it("it defaults to DatagridDisplayMode.DISPLAY", function() {
+            const viewObservable = this.displayService.view;
+            let currentView = null;
+            viewObservable.subscribe(viewChange => {
+                currentView = viewChange;
+            });
+            expect(currentView).toBe(DatagridDisplayMode.DISPLAY);
+        });
+
+        it("updates the view for DatagridDisplayMode.DISPLAY", function() {
+            const viewObservable = this.displayService.view;
+            let currentView = null;
+            viewObservable.subscribe(viewChange => {
+                currentView = viewChange;
+            });
+            this.displayService.updateView(DatagridDisplayMode.DISPLAY);
+            expect(currentView).toBe(DatagridDisplayMode.DISPLAY);
+        });
+
+        it("updates the view for DatagridDisplayMode.CALCULATE", function() {
+            const viewObservable = this.displayService.view;
+            let currentView = null;
+            viewObservable.subscribe(viewChange => {
+                currentView = viewChange;
+            });
+            expect(currentView).not.toBe(DatagridDisplayMode.CALCULATE);
+            this.displayService.updateView(DatagridDisplayMode.CALCULATE);
+            expect(currentView).toBe(DatagridDisplayMode.CALCULATE);
         });
     });
 }

@@ -8,7 +8,7 @@ import {AfterViewInit, Component, EmbeddedViewRef, TemplateRef, ViewChild} from 
 import {DynamicWrapper} from "../../utils/host-wrapping/dynamic-wrapper";
 
 @Component({
-    selector: "clr-wrapped-column",
+    selector: "dg-wrapped-column",
     template: `        
         <ng-template #columnPortal>
             <ng-content></ng-content>

@@ -10,7 +10,7 @@ import {ClrWrappedCell} from "./wrapped-cell";
 
 @Component({
     template: `
-        <clr-wrapped-cell #wrapper>Hello World!</clr-wrapped-cell>
+        <dg-wrapped-cell #wrapper>Hello World!</dg-wrapped-cell>
     `
 })
 class WrappedCell {
