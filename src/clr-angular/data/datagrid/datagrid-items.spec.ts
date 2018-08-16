@@ -86,7 +86,7 @@ export default function(): void {
 
 @Component({template: `<div *clrDgItems="let n of numbers; trackBy: trackBy">{{n}}</div>`})
 class FullTest {
-    @ViewChild(ClrDatagridItems) datagridItems: ClrDatagridItems;
+    @ViewChild(ClrDatagridItems) datagridItems: ClrDatagridItems<any>;
 
     numbers = [1, 2, 3, 4, 5];
 

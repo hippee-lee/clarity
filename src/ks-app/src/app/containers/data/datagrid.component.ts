@@ -89,8 +89,8 @@ export class KSDatagrid {
     private aClrDatagridHideableColumnDirective: ClrDatagridHideableColumn;
     private aDatagridFilter: DatagridFilter;
     private aClrDatagridFilter: ClrDatagridFilter;
-    private aDatagridItems: DatagridItems;
-    private aClrDatagridItems: ClrDatagridItems;
+    private aDatagridItems: DatagridItems<any>;
+    private aClrDatagridItems: ClrDatagridItems<any>;
     private aDatagridRow: DatagridRow;
     private aClrDatagridRow: ClrDatagridRow;
     private aDatagridRowDetail: DatagridRowDetail;
