@@ -41,6 +41,7 @@ import ItemsProviderSpecs from "./providers/items.spec";
 import PageProviderSpecs from "./providers/page.spec";
 import SelectionProviderSpecs from "./providers/selection.spec";
 import SortProviderSpecs from "./providers/sort.spec";
+import TableSizeServiceSpec from "./providers/table-size.service.spec";
 import DatagridCellRendererSpecs from "./render/cell-renderer.spec";
 import DatagridColumnResizerSpecs from "./render/column-resizer.spec";
 import DomAdapterSpecs from "./render/dom-adapter.spec";
@@ -56,7 +57,7 @@ import WrappedRowSpec from "./wrapped-row.spec";
 describe("Datagrid", function() {
     addHelpers();
 
-    describe("Providers", function() {
+    fdescribe("Providers", function() {
         SortProviderSpecs();
         FiltersProviderSpecs();
         PageProviderSpecs();
@@ -65,6 +66,7 @@ describe("Datagrid", function() {
         DatagridHideableColumnServiceSpecs();
         ColumnToggleButtonsServiceSpecs();
         DisplayModeServiceSpecs();
+        TableSizeServiceSpec();
     });
     describe("Components", function() {
         DatagridActionBarSpecs();

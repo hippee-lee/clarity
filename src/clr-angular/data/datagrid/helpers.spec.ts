@@ -59,11 +59,8 @@ export function addHelpers(): void {
          */
         this.create = <D, C>(clarityDirective: Type<D>, testComponent: Type<C>, providers: any[] = [],
                              extraDirectives: Type<any>[] = []) => {
-            TestBed.configureTestingModule({
-                imports: [ClarityModule.forRoot()],
-                declarations: [testComponent, ...extraDirectives],
-                providers: providers
-            });
+            TestBed.configureTestingModule(
+                {imports: [ClarityModule], declarations: [testComponent, ...extraDirectives], providers: providers});
             return this._context = new TestContext<D, C>(clarityDirective, testComponent);
         };
 

@@ -22,9 +22,9 @@ export class DatagridRowExpandAnimation {
             expand.animate.subscribe(() => {
                 // We already had an animation waiting, so we just have to run in, not prepare again
                 if (this.oldHeight) {
-                    // setTimeout(() => this.run());
+                    setTimeout(() => this.run());
                 } else {
-                    // this.animate();
+                    this.animate();
                 }
             });
         }

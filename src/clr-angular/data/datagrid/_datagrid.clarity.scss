@@ -66,7 +66,7 @@
         width: auto;
 
         &:hover {
-            .datagrid-row-sticky, .datagrid-row-scrollable {
+            .datagrid-row-sticky, .datagrid-row-scrollable, .datagrid-row-detail {
                 background-color: $clr-datagrid-row-hover;
             }
         }
@@ -74,14 +74,15 @@
         &.datagrid-selected {
             color: $clr-black;
 
-            .datagrid-row-sticky, .datagrid-row-scrollable {
+            .datagrid-row-sticky, .datagrid-row-scrollable, .datagrid-row-detail {
                 background-color: $clr-global-selection-color;
             }
         }
 
         &.datagrid-row-replaced {
             .datagrid-scrolling-cells {
-                flex-wrap: nowrap;
+                // flex-wrap: nowrap;
+
 
                 clr-dg-cell {
                     display: none;
@@ -254,14 +255,24 @@
         flex: 1 1 auto;
         display: flex;
         flex-flow: column nowrap;
+
+        &.is-replaced {
+            flex-direction: row;
+
+            .datagrid-scrolling-cells {
+                flex: 0 0 auto;
+            }
+        }
     }
 
     .datagrid-row-flex {
         flex: 1 1 auto;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
 
         .datagrid-row-detail {
+            display: fles;
+            flex-flow: row nowrap;
             .datagrid-cell {
                 padding-top: 0;
             }
@@ -270,19 +281,8 @@
 
     .datagrid-scrolling-cells, .datagrid-scrolling-details {
         display: flex;
-        flex-flow: row wrap;
-    }
-
-    .datagrid-scrolling-cells {
-        .datagrid-replaceable-cells {
-            display: flex; 
-            flex-flow: row nowrap; 
-            flex: 1 1 auto;
-
-            &.is-replaced {
-                flex: 0 0 auto;
-            }
-        }
+        flex: 1 1 auto;
+        flex-flow: row nowrap;
     }
 
     .datagrid-action-bar {

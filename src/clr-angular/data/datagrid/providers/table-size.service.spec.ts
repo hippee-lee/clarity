@@ -3,32 +3,76 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
+
 import {Component, ElementRef} from "@angular/core";
 import {ComponentFixture, TestBed} from "@angular/core/testing";
 
+import {DomAdapter} from "../render/dom-adapter";
+import {DatagridRenderOrganizer} from "../render/render-organizer";
+
+import {ClarityModule} from "./../../../clr-angular.module";
+import {DragDispatcher} from "./drag-dispatcher";
+import {FiltersProvider} from "./filters";
+import {Page} from "./page";
+import {Sort} from "./sort";
+import {StateDebouncer} from "./state-debouncer.provider";
 import {TableSizeService} from "./table-size.service";
 
 @Component({
     template: `
-        <div>Datagrid Table</div>
-    `
+        <div [style.height.px]="height">
+            <clr-dg-column [style.width.px]="202">Col 1</clr-dg-column>
+            <clr-dg-column [style.width.px]="122">Col 2</clr-dg-column>
+            <clr-dg-column [style.width.px]="302">Col 3</clr-dg-column>
+            <clr-dg-column [style.width.px]="42">Col 4</clr-dg-column>
+        </div>
+    `,
+    providers: [TableSizeService]
 })
 class TestComponent {
     constructor(public elementRef: ElementRef) {}
+
+    public height = 300;
 }
 
-describe("TableSizeService", function() {
-    let fixture: ComponentFixture<any>;
+interface TestContext {
+    fixture: ComponentFixture<TestComponent>;
+    sizeService: TableSizeService;
+    table: HTMLElement;
+}
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({declarations: [TestComponent]});
-        fixture = TestBed.createComponent(TestComponent);
-        fixture.detectChanges();
-    });
+const PROVIDERS_NEEDED =
+    [Sort, FiltersProvider, DatagridRenderOrganizer, DomAdapter, DragDispatcher, Page, StateDebouncer];
 
-    it("sets a tableRef property with an elementReference", function() {
-        const table: TableSizeService = new TableSizeService({});
-        table.tableRef = fixture.debugElement.componentInstance.elementRef;
-        expect(table.tableRef).toBe(fixture.debugElement.componentInstance.elementRef);
+export default function(): void {
+    describe("TableSizeService", function() {
+        beforeEach(function(this: TestContext) {
+            TestBed.configureTestingModule(
+                {imports: [ClarityModule], declarations: [TestComponent], providers: [PROVIDERS_NEEDED]});
+            this.fixture = TestBed.createComponent(TestComponent);
+            this.sizeService = this.fixture.debugElement.injector.get(TableSizeService);
+            this.fixture.detectChanges();
+            this.table = this.fixture.elementRef.nativeElement.children[0];  // reference to the TestComponnt table
+            this.sizeService.tableRef = this.table;  // setting service up with the component table for testing
+        });
+
+        it("sets a tableRef property with an elementReference", function() {
+            let testTable: Element;
+            testTable = this.sizeService.tableRef;  // service getter
+            expect(testTable).toEqual(this.table);  // should equal TestComponent element
+        });
+
+        it("updates row width with the correct size", function(this: TestContext) {
+            expect(this.table.style.width).toBeFalsy();
+            this.sizeService.updateRowWidth();
+            expect(this.table.style.width).toBe("668px");
+        });
+
+        it("calculates the correct columm drag height", function(this: TestContext) {
+            expect(this.sizeService.getColumnDragHeight()).toEqual("300px");
+            this.fixture.componentInstance.height = 422;
+            this.fixture.detectChanges();
+            expect(this.sizeService.getColumnDragHeight()).toEqual("422px");
+        });
     });
-});
+}
