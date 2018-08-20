@@ -16,7 +16,7 @@ import {ClrIfExpandModule} from "../../utils/expand/if-expand.module";
 import {ClrLoadingModule} from "../../utils/loading/loading.module";
 import {ClrOutsideClickModule} from "../../utils/outside-click/outside-click.module";
 
-import {DatagridRowExpandAnimation} from "./animation-hack/row-expand-animation";
+// import {DatagridRowExpandAnimation} from "./animation-hack/row-expand-animation";
 import {DatagridStringFilter} from "./built-in/filters/datagrid-string-filter";
 import {ActionableOompaLoompa} from "./chocolate/actionable-oompa-loompa";
 import {DatagridWillyWonka} from "./chocolate/datagrid-willy-wonka";
@@ -67,7 +67,7 @@ export const CLR_DATAGRID_DIRECTIVES: Type<any>[] = [
     DatagridWillyWonka, ActionableOompaLoompa, ExpandableOompaLoompa,
 
     // Animation hack
-    DatagridRowExpandAnimation,
+    // DatagridRowExpandAnimation, // TODO: fix animation issues related to render refactor
 
     // Built-in shortcuts
     DatagridStringFilter
