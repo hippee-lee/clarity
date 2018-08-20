@@ -3,8 +3,6 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {DatagridRenderStep} from "../enums/render-step.enum";
-
 import {DatagridRenderStep} from "./../enums/render-step.enum";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
@@ -37,24 +35,18 @@ export default function(): void {
         it("follows the correct rendering order", function(this: UserContext) {
             // Initial sizing to make sure clearWidths is included in the next one.
             this.organizer.resize();
-            let step = 0;
+            const stepsRecieved: DatagridRenderStep[] = [];
             this.organizer.renderStep.subscribe(renderStep => {
-                // TODO: Re-visit use of step++ in the expect. It obscures whats going on.
-                if (renderStep === DatagridRenderStep.CALCULATE_MODE_ON) {
-                    expect(step++).toBe(0);
-                } else if (renderStep === DatagridRenderStep.CLEAR_WIDTHS) {
-                    expect(step++).toBe(1);
-                } else if (renderStep === DatagridRenderStep.DETECT_STRICT_WIDTHS) {
-                    expect(step++).toBe(2);
-                } else if (renderStep === DatagridRenderStep.COMPUTE_COLUMN_WIDTHS) {
-                    expect(step++).toBe(3);
-                } else if (renderStep === DatagridRenderStep.ALIGN_COLUMNS) {
-                    expect(step++).toBe(4);
-                } else if (renderStep === DatagridRenderStep.CALCULATE_MODE_OFF) {
-                    expect(step++).toBe(5);
-                }
+                stepsRecieved.push(renderStep);
             });
             this.organizer.resize();
+
+            expect(stepsRecieved).toEqual([
+                DatagridRenderStep.CALCULATE_MODE_ON, DatagridRenderStep.CLEAR_WIDTHS,
+                DatagridRenderStep.DETECT_STRICT_WIDTHS, DatagridRenderStep.COMPUTE_COLUMN_WIDTHS,
+                DatagridRenderStep.ALIGN_COLUMNS, DatagridRenderStep.CALCULATE_MODE_OFF,
+                DatagridRenderStep.UPDATE_ROW_WIDTH
+            ]);
         });
 
         it("clears the widths when when resizing", function(this: UserContext) {

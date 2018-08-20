@@ -43,6 +43,9 @@ export class TableSizeService implements OnDestroy {
 
     // Used when resizing columns to show the column border being dragged.
     getColumnDragHeight(): string {
+        if (!this.tableRef) {
+            return;
+        }
         return `${this.tableRef.clientHeight}px`;
     }
 
@@ -53,6 +56,9 @@ export class TableSizeService implements OnDestroy {
     }
 
     updateRowWidth(): void {
+        if (!this.tableRef) {
+            return;
+        }
         let newWidth: number = 0;
         this.renderer.removeStyle(this.tableRef, "width");
         this.columns = Array.from(this.tableRef.querySelectorAll(".datagrid-column"));

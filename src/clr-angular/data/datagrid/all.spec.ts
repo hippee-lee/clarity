@@ -57,7 +57,7 @@ import WrappedRowSpec from "./wrapped-row.spec";
 describe("Datagrid", function() {
     addHelpers();
 
-    fdescribe("Providers", function() {
+    describe("Providers", function() {
         SortProviderSpecs();
         FiltersProviderSpecs();
         PageProviderSpecs();
@@ -89,6 +89,7 @@ describe("Datagrid", function() {
         WrappedCellSpec();
         WrappedColumnSpec();
         WrappedRowSpec();
+        // DatagridProjectionSpec();
     });
     describe("Render", function() {
         DomAdapterSpecs();

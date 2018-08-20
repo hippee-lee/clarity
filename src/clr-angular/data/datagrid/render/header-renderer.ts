@@ -3,7 +3,7 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import {AfterViewInit, Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
+import {Directive, ElementRef, OnDestroy, Renderer2} from "@angular/core";
 import {Subscription} from "rxjs/Subscription";
 
 import {DatagridRenderStep} from "../enums/render-step.enum";
@@ -14,15 +14,13 @@ import {DomAdapter} from "./dom-adapter";
 import {DatagridRenderOrganizer} from "./render-organizer";
 
 @Directive({selector: "clr-dg-column"})
-export class DatagridHeaderRenderer implements AfterViewInit, OnDestroy {
+export class DatagridHeaderRenderer implements OnDestroy {
     constructor(private el: ElementRef, private renderer: Renderer2, private organizer: DatagridRenderOrganizer,
                 private domAdapter: DomAdapter, private columnResizer: DatagridColumnResizer) {
-        // this.subscriptions.push(
-        //     organizer.filterRenderSteps(DatagridRenderStep.CLEAR_WIDTHS)
-        //         .subscribe( () =>  this.clearWidth() ));
-        // this.subscriptions.push(
-        //     organizer.filterRenderSteps(DatagridRenderStep.DETECT_STRICT_WIDTHS)
-        //         .subscribe( () =>  this.detectStrictWidth() ));
+        this.subscriptions.push(
+            this.organizer.filterRenderSteps(DatagridRenderStep.CLEAR_WIDTHS).subscribe(() => this.clearWidth()));
+        this.subscriptions.push(this.organizer.filterRenderSteps(DatagridRenderStep.DETECT_STRICT_WIDTHS)
+                                    .subscribe(() => this.detectStrictWidth()));
     }
 
     /**
@@ -74,15 +72,7 @@ export class DatagridHeaderRenderer implements AfterViewInit, OnDestroy {
             return;
         }
         this.renderer.removeClass(this.el.nativeElement, STRICT_WIDTH_CLASS);
-        // Why is a width set, isn't this column suppsed to be flex: 1 1 auto?
         this.renderer.setStyle(this.el.nativeElement, "width", width + "px");
         this.widthSet = true;
-    }
-
-    ngAfterViewInit() {
-        this.subscriptions.push(
-            this.organizer.filterRenderSteps(DatagridRenderStep.CLEAR_WIDTHS).subscribe(() => this.clearWidth()));
-        this.subscriptions.push(this.organizer.filterRenderSteps(DatagridRenderStep.DETECT_STRICT_WIDTHS)
-                                    .subscribe(() => this.detectStrictWidth()));
     }
 }

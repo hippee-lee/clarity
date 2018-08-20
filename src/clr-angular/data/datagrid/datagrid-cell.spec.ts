@@ -21,7 +21,7 @@ export default function(): void {
 
         it("provides a wrapped view for the content", function() {
             this.directive = context.clarityDirective;
-            expect(this.directive.view).toBeDefined();
+            expect(this.directive._view).toBeDefined();
         });
 
         it("projects content", function() {

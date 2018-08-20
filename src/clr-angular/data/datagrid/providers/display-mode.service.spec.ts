@@ -6,20 +6,22 @@
 
 import {Observable} from "rxjs/Observable";
 
-import {DatagridDisplayMode} from "../enums/display-mode.enum";
 import {MockDatagridRenderOrganizer} from "../render/render-organizer.mock";
-import {DisplayModeService} from "./display-mode.service";
+
+import {DatagridDisplayMode} from "./../enums/display-mode.enum";
+import {DatagridRenderStep} from "./../enums/render-step.enum";
+import {MockDisplayModeService} from "./display-mode.mock";
 
 interface UserContext {
     organizer: MockDatagridRenderOrganizer;
-    displayService: DisplayModeService;
+    displayService: MockDisplayModeService;
 }
 
 export default function(): void {
     describe("DisplayMode Service", () => {
         beforeEach(function(this: UserContext) {
             this.organizer = new MockDatagridRenderOrganizer();
-            this.displayService = new DisplayModeService(this.organizer);
+            this.displayService = new MockDisplayModeService(this.organizer);
         });
 
         it("exposes an Observable for display mode view state", function() {
@@ -29,17 +31,16 @@ export default function(): void {
         });
 
         it("properly updates the view mode when organizer resizes", function(this: UserContext) {
-            // I need to mock the DisplayModeService
             let currentChange: DatagridDisplayMode;
             let displayChangeCount = 0;
             this.displayService.view.subscribe(viewChange => {
                 displayChangeCount++;
                 currentChange = viewChange;
             });
-            expect(currentChange).toBe((DatagridDisplayMode.DISPLAY);
+            expect(currentChange).toBe(DatagridDisplayMode.DISPLAY);
             this.organizer.resize();
             expect(currentChange).toBe(DatagridDisplayMode.DISPLAY);
-            expect(displayChangeCount).toBe(3); // +1 b/c of the behavior subject.
+            expect(displayChangeCount).toBe(3);  // +1 b/c of the behavior subject.
         });
 
         it("it defaults to DatagridDisplayMode.DISPLAY", function() {
@@ -57,7 +58,7 @@ export default function(): void {
             viewObservable.subscribe(viewChange => {
                 currentView = viewChange;
             });
-            this.displayService.updateView(DatagridDisplayMode.DISPLAY);
+            this.organizer.renderStep.next(DatagridRenderStep.CALCULATE_MODE_OFF);
             expect(currentView).toBe(DatagridDisplayMode.DISPLAY);
         });
 
@@ -67,8 +68,7 @@ export default function(): void {
             viewObservable.subscribe(viewChange => {
                 currentView = viewChange;
             });
-            expect(currentView).not.toBe(DatagridDisplayMode.CALCULATE);
-            this.displayService.updateView(DatagridDisplayMode.CALCULATE);
+            this.organizer.renderStep.next(DatagridRenderStep.CALCULATE_MODE_ON);
             expect(currentView).toBe(DatagridDisplayMode.CALCULATE);
         });
     });

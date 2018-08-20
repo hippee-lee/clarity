@@ -30,4 +30,9 @@ export class DatagridSmartIteratorDemo {
         inventory.reset();
         this.users = inventory.all;
     }
+
+    changeUser() {
+        this.users[0].id = Math.random();
+        console.log(this.users);
+    }
 }

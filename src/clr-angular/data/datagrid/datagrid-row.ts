@@ -206,20 +206,24 @@ export class ClrDatagridRow implements AfterContentInit, AfterViewInit, OnDestro
     ngAfterViewInit() {
         this.subscriptions.push(this.displayMode.view.subscribe(viewChange => {
             // Listen for view changes and move cells around depending on the current displayType
-            while (this.scrollableCells.detach()) {
-            }  // remove cells containers
-            while (this.calculatedCells.detach()) {
-            }  // remove cells containers
+            // remove cell views from display view
+            for (let i = this.scrollableCells.length; i > 0; i--) {
+                this.scrollableCells.detach();
+            }
+            // remove cell views from calculated view
+            for (let i = this.calculatedCells.length; i > 0; i--) {
+                this.calculatedCells.detach();
+            }
             if (viewChange === DatagridDisplayMode.CALCULATE) {
-                this.dgCells.forEach(cell => {
-                    this.calculatedCells.insert(cell.view);
-                });
                 this.displayCells = false;
-            } else {
                 this.dgCells.forEach(cell => {
-                    this.scrollableCells.insert(cell.view);
+                    this.calculatedCells.insert(cell._view);
                 });
+            } else {
                 this.displayCells = true;
+                this.dgCells.forEach(cell => {
+                    this.scrollableCells.insert(cell._view);
+                });
             }
         }));
     }
@@ -259,7 +263,7 @@ export class ClrDatagridRow implements AfterContentInit, AfterViewInit, OnDestro
         this.wrappedInjector = new HostWrapper(ClrWrappedRow, this.vcr);
     }
 
-    public get view() {
+    public get _view() {
         return this.wrappedInjector.get(ClrWrappedRow, this.vcr).rowView;
     }
 }

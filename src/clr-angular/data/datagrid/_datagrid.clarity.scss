@@ -79,36 +79,6 @@
             }
         }
 
-        &.datagrid-row-replaced {
-            .datagrid-scrolling-cells {
-                // flex-wrap: nowrap;
-
-
-                clr-dg-cell {
-                    display: none;
-                }
-            }
-
-          .datagrid-row-detail {
-              .datagrid-cell {
-                  display: block;
-                  padding-top: 11px;
-                  border-top: $clr-default-borderwidth solid $clr-table-border-color;
-              }
-              .datagrid-expandable-caret {
-                  padding-top: 2px;
-              }
-              &.datagrid-container {
-                //   padding: 0;
-                  border-top: $clr-default-borderwidth solid $clr-table-border-color;
-
-                  .datagrid-cell {
-                      border-top: none;
-                  }
-              }
-          }
-        }
-
         .datagrid-action-overflow {
             position: absolute;
             background: $clr-datagrid-popover-bg-color;
@@ -271,7 +241,7 @@
         flex-flow: column nowrap;
 
         .datagrid-row-detail {
-            display: fles;
+            display: flex;
             flex-flow: row nowrap;
             .datagrid-cell {
                 padding-top: 0;
@@ -596,6 +566,35 @@
                 }
             }
         }
+    }
+
+    .datagrid-row-replaced {
+        .datagrid-scrolling-cells {
+            .datagrid-cell {
+                // Keep row action cells so they can be used.
+                &:not(.datagrid-expandable-caret):not(.datagrid-row-actions):not(.datagrid-select) {
+                    display: none;
+                }
+            }
+        }
+
+      .datagrid-row-detail {
+          .datagrid-cell {
+              display: block;
+              padding-top: 11px;
+              border-top: $clr-default-borderwidth solid $clr-table-border-color;
+          }
+          .datagrid-expandable-caret {
+              padding-top: 2px;
+          }
+          &.datagrid-container {
+              border-top: $clr-default-borderwidth solid $clr-table-border-color;
+
+              .datagrid-cell {
+                  border-top: none;
+              }
+          }
+      }
     }
 
     .datagrid-footer {
@@ -929,7 +928,7 @@
             .datagrid-calculation-header {
                 display: table-header-group;
 
-                clr-dg-column {
+                .datagrid-column {
                     display: table-cell;
                     min-width: 4rem;
                 }
@@ -951,16 +950,13 @@
                     margin-bottom: 0;
                 }
             }
-            clr-dg-row {
+            .datagrid-row {
                 display: table-row;
-
-                clr-dg-cell {
-                    display: table-cell;
-                    min-width: 4rem;
-                }
                 .datagrid-cell {
                     // This is a hack b/c styles were not applied out of the box when moving columns into the
                     // calculation container element
+                    display: table-cell;
+                    min-width: 4rem;
                     font-size: $clr-table-fontsize;
                     line-height: $clr-table-lineheight;
                     padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;

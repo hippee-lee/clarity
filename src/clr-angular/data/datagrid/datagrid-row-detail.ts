@@ -26,22 +26,16 @@ import {Selection, SelectionType} from "./providers/selection";
             <!-- space for multiselection state -->
             <div class="datagrid-cell datagrid-select datagrid-fixed-column"
                 *ngIf="selection.selectionType === SELECTION_TYPE.Multi">
-                <span class="datagrid-column-title"></span>
-                <div class="datagrid-column-separator"></div>
             </div>
             <!-- space for single selection state -->
             <div class="datagrid-cell datagrid-select datagrid-fixed-column"
                 *ngIf="selection.selectionType === SELECTION_TYPE.Single">
-                <div class="datagrid-column-separator"></div>
             </div>
             <!-- space for single row action; only displayType if we have at least one actionable row in datagrid -->
             <div class="datagrid-cell datagrid-row-actions datagrid-fixed-column"
                 *ngIf="rowActionService.hasActionableRow">
-                <div class="datagrid-column-separator"></div>
             </div>
             <!-- space for expandable caret action; only displayType if we have at least one expandable row in datagrid -->
-            <!--<div *ngIf="expandableRows.hasExpandableRow"
-                class="datagrid-expandable-caret datagrid-fixed-column datagrid-cell"></div>-->
             <div *ngIf="expandableRows.hasExpandableRow"
                         class="datagrid-expandable-caret datagrid-fixed-column datagrid-cell">
             </div>

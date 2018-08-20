@@ -22,7 +22,7 @@ import {
 import {Subscription} from "rxjs/Subscription";
 
 import {ClrDatagridColumn} from "./datagrid-column";
-import {ClrDatagridItems, RowContext} from "./datagrid-items";
+import {ClrDatagridItems} from "./datagrid-items";
 import {ClrDatagridPlaceholder} from "./datagrid-placeholder";
 import {ClrDatagridRow} from "./datagrid-row";
 import {DatagridDisplayMode} from "./enums/display-mode.enum";
@@ -63,7 +63,7 @@ import {DatagridRenderOrganizer} from "./render/render-organizer";
     ],
     host: {"[class.datagrid-host]": "true"}
 })
-export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
+export class ClrDatagrid<T = any> implements AfterContentInit, AfterViewInit, OnDestroy {
     constructor(private columnService: HideableColumnService, private organizer: DatagridRenderOrganizer,
                 public items: Items, public expandableRows: ExpandableRowsCount, public selection: Selection,
                 public rowActionService: RowActionService, private stateProvider: StateProvider,
@@ -100,7 +100,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
      * We grab the smart iterator from projected content
      */
     // TODO - Add correct type - rebase with: https://github.com/vmware/clarity/pull/2347
-    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems<RowContext<any>>;
+    @ContentChild(ClrDatagridItems) public iterator: ClrDatagridItems<T>;
 
     /**
      * Set the state of the pinned first column
@@ -211,7 +211,7 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
                 this.items.all = this.rows.map((row: ClrDatagridRow) => row.item);
             }
             this.rows.forEach(row => {
-                this.displayedRows.insert(row.view);
+                this.displayedRows.insert(row._view);
             });
         }));
 
@@ -238,31 +238,35 @@ export class ClrDatagrid implements AfterContentInit, AfterViewInit, OnDestroy {
             }
         }));
         this.displayMode.view.subscribe(viewChange => {
-            while (this.projectedDisplayColumns.detach()) {
+            for (let i = this.projectedDisplayColumns.length; i > 0; i--) {
+                this.projectedDisplayColumns.detach();
             }
-            while (this.projectedCalculationColumns.detach()) {
+            for (let i = this.projectedCalculationColumns.length; i > 0; i--) {
+                this.projectedCalculationColumns.detach();
             }
-            while (this.calculationRows.detach()) {
+            for (let i = this.calculationRows.length; i > 0; i--) {
+                this.calculationRows.detach();
             }
-            while (this.displayedRows.detach()) {
+            for (let i = this.displayedRows.length; i > 0; i--) {
+                this.displayedRows.detach();
             }
             if (viewChange === DatagridDisplayMode.DISPLAY) {
                 this.showDisplayTable = true;
                 this.renderer.removeClass(this.el.nativeElement, "datagrid-calculate-mode");
                 this.columns.forEach(column => {
-                    this.projectedDisplayColumns.insert(column.view);
+                    this.projectedDisplayColumns.insert(column._view);
                 });
                 this.rows.forEach(row => {
-                    this.displayedRows.insert(row.view);
+                    this.displayedRows.insert(row._view);
                 });
-            } else if (viewChange === DatagridDisplayMode.CALCULATE) {
+            } else {
                 this.showDisplayTable = false;
                 this.renderer.addClass(this.el.nativeElement, "datagrid-calculate-mode");
                 this.columns.forEach(column => {
-                    this.projectedCalculationColumns.insert(column.view);
+                    this.projectedCalculationColumns.insert(column._view);
                 });
                 this.rows.forEach(row => {
-                    this.calculationRows.insert(row.view);
+                    this.calculationRows.insert(row._view);
                 });
             }
         });

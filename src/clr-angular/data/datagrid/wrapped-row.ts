@@ -19,7 +19,7 @@ export class ClrWrappedRow implements DynamicWrapper, AfterViewInit {
     _dynamic = false;
 
     @ViewChild("rowPortal") templateRef: TemplateRef<void>;
-    rowView: EmbeddedViewRef<void>;  // the columns projected view (in memory)
+    rowView: EmbeddedViewRef<void>;  // the rows projected view (in memory)
 
     ngAfterViewInit() {
         // Create the cells view in memory, not the DOM.

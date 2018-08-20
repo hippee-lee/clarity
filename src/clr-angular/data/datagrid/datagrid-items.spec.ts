@@ -46,22 +46,24 @@ export default function(): void {
         });
 
         it("subscribes to changes in the datagrid Items (_items)", function() {
-            // testing the observable subscription in the constructore
+            const initialContent = this.fixture.elementRef.nativeElement.textContent;
+            expect(initialContent.trim()).toEqual("12345");
             this.testComponent.numbers.push(6);
             this.fixture.detectChanges();
-            expect(this.itemsProvider.displayed).toEqual([1, 2, 3, 4, 5, 6]);
+            const updatedContent = this.fixture.elementRef.nativeElement.textContent;
+            expect(updatedContent.trim()).toEqual("123456");
         });
 
         it("handles a null input for the array of items", function() {
             this.testComponent.numbers = null;
             this.fixture.detectChanges();
-            expect(this.clarityDirective._rawItems).toEqual([]);
+            expect(this.clarityDirective.iterableProxy.ngForOf).toEqual([]);
         });
 
         it("handles an undefined input for the array of items", function() {
             this.testComponent.numbers = undefined;
             this.fixture.detectChanges();
-            expect(this.clarityDirective._rawItems).toEqual([]);
+            expect(this.clarityDirective.iterableProxy.ngForOf).toEqual([]);
         });
 
         it("keeps the Items provider up to date with array changes", function() {
@@ -75,20 +77,51 @@ export default function(): void {
         });
 
         it("receives an input for the trackBy option", function() {
-            expect(this.itemsProvider.trackBy).toBeUndefined();
+            expect(this.clarityDirective.iterableProxyngForTrackBy).toBeUndefined();
             this.testComponent.trackBy = (index: number, item: any) => index;
             this.fixture.detectChanges();
-            expect(this.itemsProvider.trackBy).toBe(this.testComponent.trackBy);
+            expect(this.clarityDirective.iterableProxy.ngForTrackBy).toBe(this.testComponent.trackBy);
+        });
+
+        it("correctly mutates and resets an array with trackBy", function() {
+            // Initial state
+            this.fixture.nativeElement.querySelectorAll("li:first-child").forEach(li => li.style.color = "red");
+            const firstItem = this.fixture.nativeElement.querySelector("li");
+            expect(firstItem.style.color).toBe("red");
+            expect(firstItem.textContent.trim()).toBe("1");
+
+            // First mutation
+            this.testComponent.numbers.unshift(42);
+            this.fixture.detectChanges();
+            const unshiftedItem = this.fixture.nativeElement.querySelector("li");
+            expect(this.itemsProvider.displayed).toEqual([42, 1, 2, 3, 4, 5]);
+            expect(unshiftedItem.style.color).toBe("red");
+
+            // Second mutation
+            this.testComponent.numbers.unshift(42);
+            this.fixture.detectChanges();
+
+            // Resetting
+            this.testComponent.numbers = [42];
+            this.fixture.detectChanges();
+            const replacedItem = this.fixture.nativeElement.querySelector("li");
+            expect(replacedItem.style.color).toBe("red");
         });
     });
 }
 
 
-@Component({template: `<div *clrDgItems="let n of numbers; trackBy: trackBy">{{n}}</div>`})
+@Component({
+    template: `
+<ul>
+    <li *clrDgItems="let n of numbers; trackBy: trackBy">{{n}}</li>
+</ul>
+`
+})
 class FullTest {
     @ViewChild(ClrDatagridItems) datagridItems: ClrDatagridItems<any>;
 
     numbers = [1, 2, 3, 4, 5];
 
-    trackBy: (index: number, item: any) => any;
+    trackBy = (index, item) => index;
 }

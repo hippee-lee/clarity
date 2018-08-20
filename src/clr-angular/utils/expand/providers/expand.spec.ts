@@ -12,12 +12,12 @@ export default function(): void {
         });
 
         it("starts with the correct default settings", function() {
-            let isExpanded = null;
+            let doesReplace = null;
             this.expand.replace.subscribe(expandChange => {
-                isExpanded = expandChange;
+                doesReplace = expandChange;
             });
             expect(this.expand.expandable).toBe(0, "not expandable");
-            expect(isExpanded).toBe(false, "not replacing the row");
+            expect(doesReplace).toBe(false, "not replacing the row");
             expect(this.expand.loading).toBe(false, "already loaded");
             expect(this.expand.expanded).toBe(false, "collapsed");
         });

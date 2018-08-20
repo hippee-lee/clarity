@@ -15,7 +15,7 @@ import {DatagridRenderOrganizer} from "../render/render-organizer";
 
 @Injectable()
 export class DisplayModeService {
-    private _view: BehaviorSubject<DatagridDisplayMode> =
+    protected _view: BehaviorSubject<DatagridDisplayMode> =
         new BehaviorSubject<DatagridDisplayMode>(DatagridDisplayMode.DISPLAY);
 
     constructor(renderOrganizer: DatagridRenderOrganizer) {
@@ -23,10 +23,6 @@ export class DisplayModeService {
             .subscribe(() => this._view.next(DatagridDisplayMode.CALCULATE));
         renderOrganizer.filterRenderSteps(DatagridRenderStep.CALCULATE_MODE_OFF)
             .subscribe(() => this._view.next(DatagridDisplayMode.DISPLAY));
-    }
-
-    public updateView(mode: DatagridDisplayMode) {
-        this._view.next(mode);
     }
 
     public get view(): Observable<DatagridDisplayMode> {

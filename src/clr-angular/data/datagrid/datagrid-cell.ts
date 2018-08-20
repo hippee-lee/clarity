@@ -91,7 +91,7 @@ export class ClrDatagridCell implements OnInit {
         }
     }
 
-    public get view() {
+    public get _view() {
         return this.wrappedInjector.get(ClrWrappedCell, this.vcr).cellView;
     }
 }

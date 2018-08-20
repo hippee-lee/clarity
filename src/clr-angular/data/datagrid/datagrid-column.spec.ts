@@ -160,7 +160,7 @@ export default function(): void {
             it("provides a wrapped view for the content", function() {
                 this.context = this.create(ClrDatagridColumn, SimpleTest, PROVIDERS_NEEDED);
                 this.directive = this.context.clarityDirective;
-                expect(this.directive.view).toBeDefined();
+                expect(this.directive._view).toBeDefined();
             });
             it("receives an input for the comparator", function() {
                 this.context = this.create(ClrDatagridColumn, SimpleTest, PROVIDERS_NEEDED);
@@ -334,7 +334,7 @@ export default function(): void {
         });
 
         describe("View filters", function() {
-            it("doesn't displayType any filter by default", function() {
+            it("doesn't display any filter by default", function() {
                 this.context = this.create(ClrDatagridColumn, SimpleTest, PROVIDERS_NEEDED);
                 expect(this.context.clarityElement.querySelector("clr-dg-filter")).toBeNull();
             });

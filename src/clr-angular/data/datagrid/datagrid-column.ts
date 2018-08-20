@@ -356,7 +356,7 @@ export class ClrDatagridColumn extends DatagridFilterRegistrar<DatagridStringFil
         this.wrappedInjector = new HostWrapper(ClrWrappedColumn, this.vcr);
     }
 
-    public get view() {
+    public get _view() {
         return this.wrappedInjector.get(ClrWrappedColumn, this.vcr).columnView;
     }
 }

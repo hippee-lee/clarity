@@ -3,6 +3,7 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
+import {NgForOf, NgForOfContext} from "@angular/common";
 import {
     Directive,
     DoCheck,
@@ -10,6 +11,7 @@ import {
     IterableDiffer,
     IterableDiffers,
     OnChanges,
+    SimpleChange,
     SimpleChanges,
     TemplateRef,
     TrackByFunction,
@@ -18,54 +20,48 @@ import {
 
 import {Items} from "./providers/items";
 
-export type RowContext<T> = {
-    $implicit: T
-};
-
 @Directive({
     selector: "[clrDgItems][clrDgItemsOf]",
 })
 export class ClrDatagridItems<T> implements OnChanges, DoCheck {
+    private iterableProxy: NgForOf<T>;
     private _rawItems: T[];
+    private _differ: IterableDiffer<T>|null = null;
+
     @Input("clrDgItemsOf")
     public set rawItems(items: T[]) {
-        this._rawItems = items ? items : [];
+        this._rawItems = items ? items : [];  // local copy for ngOnChange diffing
+        this._items.all = this._rawItems;     // initial copy for the iterableProxy
     }
-    private _differ: IterableDiffer<any>;
-    constructor(public template: TemplateRef<RowContext<T>>, private _differs: IterableDiffers, private _items: Items,
-                private vcr: ViewContainerRef) {
+
+    @Input("clrDgItemsTrackBy")
+    set trackBy(value: TrackByFunction<T>) {
+        this.iterableProxy.ngForTrackBy = value;
+    }
+
+    constructor(public template: TemplateRef<NgForOfContext<T>>, private differs: IterableDiffers,
+                private _items: Items, private vcr: ViewContainerRef, private _differs: IterableDiffers) {
         _items.smartenUp();
+        this.iterableProxy = new NgForOf<T>(this.vcr, this.template, this.differs);
         _items.change.subscribe(items => {
-            const displayed = items;
-            this.vcr.clear();  // It is additive if I don't clear the datagrids vcr
-            // Will need to use IterableDiff to properly account for trackBy
-            // TODO revisit detectChanges() here, even thought it fixes conditionalPaginition, it isn't ideal.
-            for (const item of displayed) {
-                this.vcr.createEmbeddedView(this.template, {$implicit: item}).detectChanges();
-            }
+            this.iterableProxy.ngForOf = items;
+            this.iterableProxy.ngDoCheck();
         });
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        if ("rawItems" in changes) {
-            const currentItems = changes.rawItems.currentValue;
-            if (!this._differ && currentItems) {
-                this._differ = this._differs.find(currentItems).create(this._items.trackBy);
-            }
-        }
-    }
-
-    @Input("clrDgItemsTrackBy")
-    set trackBy(value: TrackByFunction<any>) {
-        this._items.trackBy = value;
+        // TODO: REMOVE WHEN THIS IS UPGRADED TO ANGULAR 6.1 (consumers will have compile errors)
+        changes.ngForOf = new SimpleChange(undefined, this._items.displayed, true);
+        this.iterableProxy.ngOnChanges(changes);
     }
 
     ngDoCheck() {
+        if (!this._differ) {
+            this._differ = this._differs.find(this._rawItems).create(this.iterableProxy.ngForTrackBy);
+        }
         if (this._differ) {
             const changes = this._differ.diff(this._rawItems);
             if (changes) {
-                // TODO: not very efficient right now,
-                // but premature optimization is the root of all evil.
                 this._items.all = this._rawItems;
             }
         }
