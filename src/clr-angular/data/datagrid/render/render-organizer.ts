@@ -25,8 +25,6 @@ export class DatagridRenderOrganizer {
 
     public widths: {px: number, strict: boolean}[] = [];
 
-    constructor() {}
-
     public resize() {
         this.widths.length = 0;
         this._renderStep.next(DatagridRenderStep.CALCULATE_MODE_ON);
