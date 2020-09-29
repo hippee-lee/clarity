@@ -1,4 +1,8 @@
+export declare class CdsIconCustomTag {
+}
+
 export declare class ClarityModule {
+    constructor();
 }
 
 export declare const CLR_ALERT_DIRECTIVES: Type<any>[];
@@ -534,6 +538,7 @@ export declare class ClrDatagridColumn<T = any> extends DatagridFilterRegistrar<
     showSeparator: boolean;
     get sortBy(): ClrDatagridComparatorInterface<T> | string;
     set sortBy(comparator: ClrDatagridComparatorInterface<T> | string);
+    sortDirection: Directions | null;
     sortIcon: string | null;
     get sortOrder(): ClrDatagridSortOrder;
     set sortOrder(value: ClrDatagridSortOrder);
@@ -1782,10 +1787,10 @@ export declare class ClrTimelineStepHeader {
 
 export declare enum ClrTimelineStepState {
     NOT_STARTED = "not-started",
-    CURRENT = "current",
+    CURRENT = "info",
     PROCESSING = "processing",
     SUCCESS = "success",
-    ERROR = "error"
+    ERROR = "danger"
 }
 
 export declare class ClrTimelineStepTitle {
