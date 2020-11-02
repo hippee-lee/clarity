@@ -27,10 +27,9 @@ module.exports = {
     algolia: {
       apiKey: '88df2445b3dc4bf5e8bc4caafa9fbc50',
       indexName: 'next_clarity',
-      inputSelector: '#algolia-search-input'
+      inputSelector: '#algolia-search-input',
     },
     lastUpdated: false,
-    search: true,
     sidebar,
   },
   markdown: {

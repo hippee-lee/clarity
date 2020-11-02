@@ -280,3 +280,9 @@
   for = "/*.json"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+# Handle 404s in our app, SPA redirect config
+[[redirects]]
+from = "/*"
+to = "/"
+status = 200
