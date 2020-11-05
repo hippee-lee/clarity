@@ -284,5 +284,5 @@
 # Handle 404s in our app, SPA redirect config
 [[redirects]]
 from = "/*"
-to = "/"
+to = "/index.html"
 status = 200
