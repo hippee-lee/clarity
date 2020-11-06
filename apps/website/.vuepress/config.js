@@ -71,13 +71,13 @@ module.exports = {
         ga: 'UA-86120402-1',
       },
     ],
-    [
-      'vuepress-plugin-clean-urls',
-      {
-        normalSuffix: '',
-        notFoundPath: '/404.html',
-      },
-    ],
+    // [
+    //   'vuepress-plugin-clean-urls',
+    //   {
+    //     normalSuffix: '',
+    //     notFoundPath: '/404.html',
+    //   },
+    // ],
     [
       'robots',
       {
