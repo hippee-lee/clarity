@@ -6,8 +6,8 @@
 
 export enum ClrTimelineStepState {
   NOT_STARTED = 'not-started',
-  CURRENT = 'info',
+  CURRENT = 'current',
   PROCESSING = 'processing',
   SUCCESS = 'success',
-  ERROR = 'danger',
+  ERROR = 'error',
 }

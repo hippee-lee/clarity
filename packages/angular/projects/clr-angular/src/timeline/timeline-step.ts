@@ -18,7 +18,7 @@ import { isPlatformBrowser } from '@angular/common';
     <span class="clr-sr-only">{{ stepTitleText }}</span>
     <ng-container *ngIf="!isProcessing; else processing">
       <cds-icon
-        [attr.status]="state"
+        [attr.status]="iconStatus"
         [attr.shape]="iconShape"
         [attr.aria-label]="iconAriaLabel"
         [attr.aria-current]="iconAriaCurrent"
@@ -64,6 +64,10 @@ export class ClrTimelineStep {
 
   get iconShape(): string {
     return this.iconAttributeService.getIconShape(this.state);
+  }
+
+  get iconStatus(): string {
+    return this.iconAttributeService.getIconStatus(this.state);
   }
 
   get isProcessing(): boolean {
