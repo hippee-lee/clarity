@@ -48,6 +48,7 @@ import {
   blockIcon,
   animationIcon,
   betaIcon,
+  imageIcon,
 } from '@cds/core/icon';
 
 ClarityIcons.addIcons(
@@ -72,7 +73,8 @@ ClarityIcons.addIcons(
   blockIcon,
   animationIcon,
   betaIcon,
-  copyToClipboardIcon
+  copyToClipboardIcon,
+  imageIcon
 );
 loadCoreIconSet();
 

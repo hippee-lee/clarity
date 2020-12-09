@@ -31,6 +31,12 @@ Third party library's and custom form control components are often created to fu
 
 Clarity form controls have the same basic anatomy independent of the type of input that is used.
 
+<TourControl />
+
+1. **Label** - describe the form control.
+2. **Control** - users interact with inputs.
+3. **Supplemental text** - additional text to provide context and provide information to the user
+
 :::
 
 ::: component-section-level-two-title

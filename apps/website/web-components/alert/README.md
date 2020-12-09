@@ -191,63 +191,15 @@ In the case there are multiples of each sub-type, group them by sub-type and sho
 
 :::
 
-:::component-section-level-three-title
+:::component-section-level-two
 
-1. Container
+1. Container - an element that contains the alert icon, message and buttons.
+2. Icon - iconic representation for the type, status and content of the alert.
+3. Message - The message is left-aligned.
+4. Action (optional) - An alert can have up to two actions. Actions are right-aligned.
+5. Dismiss button (optional)- A dismiss button is right-aligned.
 
-:::
-
-:::component-section-level-three
-
-The container of standard alerts strectch across the entire content width or component width.
-
-:::
-
-:::component-section-level-three-title
-
-2. Icon
-
-:::
-
-:::component-section-level-three
-
-The container of standard alerts strectch across the entire content width or component width.
-
-:::
-
-:::component-section-level-three-title
-
-3. Message
-
-:::
-
-:::component-section-level-three
-
-The message is left-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-4. Action (optional)
-
-:::
-
-:::component-section-level-three
-
-An alert can have up to two actions. Actions are right-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-5. Dismiss (optional)
-
-:::
-
-:::component-section-level-three
-
-The optional dismiss button is right-aligned.
+<TourAlertStandard />
 
 :::
 
@@ -397,63 +349,15 @@ Provides info to user’s in context. Be careful not to overuse to replace regul
 
 :::
 
-:::component-section-level-three-title
+:::component-section-level-two
 
-1. Container
+1. Container - an element that contains the alert icon, message and buttons.
+2. Icon - iconic representation for the type, status and content of the alert.
+3. Message - The message is left-aligned.
+4. Action (optional) - An alert can have up to two actions. Actions are right-aligned.
+5. Dismiss button (optional)- A dismiss button is right-aligned.
 
-:::
-
-:::component-section-level-three
-
-The container of app-level alerts stretch across the entire global context width.
-
-:::
-
-:::component-section-level-three-title
-
-2. Icon
-
-:::
-
-:::component-section-level-three
-
-The icon shows the severity of the alert. Icons are centered-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-3. Message
-
-:::
-
-:::component-section-level-three
-
-The message is center-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-4. Action (optional)
-
-:::
-
-:::component-section-level-three
-
-An alert can have up to two actions. Actions are center-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-5. Dismiss (optional)
-
-:::
-
-:::component-section-level-three
-
-The dismiss button is right-aligned.
+<TourAlertAppLevel />
 
 :::
 
@@ -595,43 +499,21 @@ In the case there are multiple of each sub-type, show one at a time and start wi
 
 :::component-section-level-two-title
 
+:::component-section-level-two-title
+
 ### Anatomy
 
 :::
 
-:::component-section-level-three-title
+:::component-section-level-two
 
-1. Icon
+1. Container - an element that contains the alert icon, message and buttons.
+2. Icon - iconic representation for the type, status and content of the alert.
+3. Message - The message is left-aligned.
+4. Action (optional) - An alert can have up to two actions. Actions are right-aligned.
+5. Dismiss button (optional)- A dismiss button is right-aligned.
 
-:::
-
-:::component-section-level-three
-
-The icon shows the severity of the alert. The icon is left-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-2. Message
-
-:::
-
-:::component-section-level-three
-
-The message is left-aligned.
-
-:::
-
-:::component-section-level-three-title
-
-3. Action (optional)
-
-:::
-
-:::component-section-level-three
-
-An alert can have up to two actions. Actions are right-aligned.
+<TourAlertLightweight />
 
 :::
 

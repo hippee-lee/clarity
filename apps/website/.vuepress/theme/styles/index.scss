@@ -11,9 +11,10 @@
 
 @import './fonts.scss';
 
-@import './a11y-light.scss';
+@import './a11y-light';
 @import './containers';
 @import './spaces';
 @import './layout';
-@import './overrides.scss';
+@import './overrides';
 @import './demo';
+@import './component-tour';

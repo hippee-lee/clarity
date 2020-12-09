@@ -33,27 +33,14 @@ Badges have a colorful, bold, and filled style that makes them stand out when ap
 
 :::
 
-::: component-section-level-three-title
-
-### Container
-
-:::
-
-:::component-section-level-three
+:::component-section-level-two
 
 Badges have a more rounded border radius, similar to [tags](/web-components/tag), to distinguish them from primary buttons.
 
-:::
+1. **Container** - The badge container has a more rounded border radius, similar to labels, to distinguish them from primary buttons.
+2. **Label** - Use integers as labels within badges.
 
-::: component-section-level-three-title
-
-### Content
-
-:::
-
-:::component-section-level-three
-
-Use integers within badges.
+<TourBadge />
 
 :::
 

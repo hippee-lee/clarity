@@ -13,6 +13,26 @@ An accordion is a collection of vertically stacked sections with multiple conten
 
 ::: component-section-level-one-title
 
+## Anatomy
+
+:::
+
+:::component-section-level-one
+
+There are
+
+1. Container - an element that contains all accordion panels.
+2. Panel - an element that contains a elements for a header and content.
+3. Header - an element that contains a panel (step) header.
+4. Content - an element that contains a panel (step) content.
+5. Disabled - a panel can be disabled.
+
+<TourAccordion />
+
+:::
+
+::: component-section-level-one-title
+
 ## Usage
 
 :::
