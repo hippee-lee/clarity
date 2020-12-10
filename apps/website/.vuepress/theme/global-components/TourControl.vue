@@ -36,7 +36,7 @@ export default {
       },
       steps: [
         {
-          target: '#control-step-0', // The shadow DOM is tricky.
+          target: '#control-step-0',
           header: {
             title: 'Control Label',
           },
@@ -47,11 +47,11 @@ export default {
           },
         },
         {
-          target: '#control-tour input', // The shadow DOM is tricky.
+          target: '#control-tour input', // Finding things in the shadow DOM is tricky.
           header: {
             title: 'Control Input',
           },
-          content: 'Users users interact with custom form inputs.',
+          content: 'Users interact with custom form inputs.',
           params: {
             enableScrolling: false,
           },

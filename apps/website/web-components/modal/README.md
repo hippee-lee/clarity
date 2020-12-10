@@ -41,6 +41,8 @@ Anatomy
 
 :::component-section-level-one
 
+<TourModal />
+
 <DocInset style="display: contents">
 <div style="position: relative; height: 400px">
 !!!include(.vuepress/public/core-usage-demos/modal/basic.html)!!!

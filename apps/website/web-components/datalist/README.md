@@ -67,6 +67,8 @@ Use a select:
 </div>
 </DocInset>
 
+<TourDatalist />
+
 1. Datalist label - describes the category of options for user choice
 2. Input value - describes the chosen option (or displays placeholder text if no choice is selected)
 3. Input line - outlines the bottom of the input and can use color to show focus, success, error and disabled states
