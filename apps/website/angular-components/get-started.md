@@ -65,7 +65,7 @@ We need to make the build system aware of some CSS and JavaScript files so it ca
 
 ```javascript
 "styles": [
-  "node_modules/@clr/icons/clr-icons.min.css",
+  "node_modules/@clr/icons/cds-icons.min.css",
   "node_modules/@clr/ui/clr-ui.min.css",
   "... any other styles"
 ],
@@ -73,7 +73,7 @@ We need to make the build system aware of some CSS and JavaScript files so it ca
   "... any existing scripts",
   "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
   "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
-  "node_modules/@clr/icons/clr-icons.min.js"
+  "node_modules/@clr/icons/cds-icons.min.js"
 ]
 ```
 
@@ -85,10 +85,10 @@ If you are not using the CLI, you'll need to add the files listed above to your 
 
 ```html
 <link rel="stylesheet" href="path/to/node_modules/@clr/ui/clr-ui.min.css" />
-<link rel="stylesheet" href="path/to/node_modules/@clr/icons/clr-icons.min.css" />
+<link rel="stylesheet" href="path/to/node_modules/@clr/icons/cds-icons.min.css" />
 <script src="path/to/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
 <script src="path/to/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-<script src="path/to/node_modules/@clr/icons/clr-icons.min.js"></script>
+<script src="path/to/node_modules/@clr/icons/cds-icons.min.js"></script>
 ```
 
 </doc-code>

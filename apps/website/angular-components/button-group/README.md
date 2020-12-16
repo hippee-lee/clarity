@@ -589,7 +589,7 @@ Override a Button type in a Button Group by extending the Button type class dire
 
 ### Icons
 
-Text wrapped in `.clr-icon-title` is only displayed in the Overflow Menu.
+Text wrapped in `.cds-icon-title` is only displayed in the Overflow Menu.
 
 <doc-demo style="min-height: 7rem">
 !!!include(.vuepress/code/demos/button-group/icons-css.html)!!!

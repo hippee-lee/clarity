@@ -15,6 +15,8 @@ export default ({
   isServer,
 }) => {
   if (!isServer) {
+    import('./core');
+
     Vue.use(VueResource);
     Vue.use(Hotjar, {
       id: '1762865',

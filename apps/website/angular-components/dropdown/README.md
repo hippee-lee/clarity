@@ -103,7 +103,7 @@ If screen space isn’t available to the right of the root menu, the nested menu
     <div class="alert-items">
       <div class="alert-item static">
         <div class="alert-icon-wrapper">
-          <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+          <cds-icon class="alert-icon" shape="exclamation-circle"></cds-icon>
         </div>
         <span class="alert-text">
           Clarity static (HTML/CSS) component does not come pre-baked with all the necessary ARIA attributes. The application developer should follow the guidelines below in their implementation.

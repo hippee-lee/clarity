@@ -162,18 +162,18 @@ We recommend you **choose an icon that best describes the action** that the user
 
 <div class="clr-col-sm-12 clr-col-lg-6 doc-do">
 <div class="doc-example">
-<button class="btn btn-primary btn-icon" style="margin-right: 0.6rem"><clr-icon shape="check"></clr-icon></button>
-<button class="btn btn-icon" style="margin-right: 0.6rem"><clr-icon shape="folder"></clr-icon></button>
-<button class="btn btn-icon btn-link"><clr-icon shape="cog"></clr-icon></button>
+<button class="btn btn-primary btn-icon" style="margin-right: 0.6rem"><cds-icon shape="check"></cds-icon></button>
+<button class="btn btn-icon" style="margin-right: 0.6rem"><cds-icon shape="folder"></cds-icon></button>
+<button class="btn btn-icon btn-link"><cds-icon shape="cog"></cds-icon></button>
 </div>
 Icon buttons are available in the solid, outline, and flat types. It’s also best to use the normal (36px) sized ones. This makes them easier to recognize and to click.
 </div>
 
 <div class="clr-col-sm-12 clr-col-lg-6 doc-dont">
 <div class="doc-example">
-<button class="btn btn-sm btn-primary btn-icon" style="margin-right: 0.6rem"><clr-icon shape="check"></clr-icon></button>
-<button class="btn btn-sm btn-icon" style="margin-right: 0.6rem"><clr-icon shape="folder"></clr-icon></button>
-<button class="btn btn-icon btn-sm btn-link"><clr-icon shape="cog"></clr-icon></button>
+<button class="btn btn-sm btn-primary btn-icon" style="margin-right: 0.6rem"><cds-icon shape="check"></cds-icon></button>
+<button class="btn btn-sm btn-icon" style="margin-right: 0.6rem"><cds-icon shape="folder"></cds-icon></button>
+<button class="btn btn-icon btn-sm btn-link"><cds-icon shape="cog"></cds-icon></button>
 </div>
 Use small icon buttons in most cases. They are difficult to see and distinguish what the icon is or represents. They also create smaller click targets, making them harder to click.
 </div>

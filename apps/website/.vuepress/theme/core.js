@@ -50,5 +50,5 @@ if (typeof window !== 'undefined') {
   loadMiniIconSet();
 }
 
-class LegacyIcon extends CdsIcon {}
-customElements.define('clr-icon', LegacyIcon);
+// class LegacyIcon extends CdsIcon {}
+// customElements.define('cds-icon', LegacyIcon);
