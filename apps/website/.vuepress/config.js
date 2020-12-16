@@ -22,6 +22,9 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['link', { rel: 'apple-touch-icon', href: '/images/icons/icon-152x152.png' }],
   ],
+  enhanceAppFiles () {
+    return [path.resolve(__dirname, './theme/core.js')];
+  },
   dest: '../../dist/website',
   themeConfig: {
     algolia: {

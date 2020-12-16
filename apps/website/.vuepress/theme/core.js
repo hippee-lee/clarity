@@ -23,58 +23,32 @@ import '@cds/core/time/register.js';
 import '@cds/core/toggle/register.js';
 
 import {
+  // load all icons
   CdsIcon,
-  ClarityIcons,
-  linkIcon,
-  fileIcon,
-  popOutIcon,
-  downloadIcon,
-  copyIcon,
-  pencilIcon,
-  folderOpenIcon,
-  bookmarkIcon,
-  imageGalleryIcon,
-  videoGalleryIcon,
-  cloudIcon,
   loadCoreIconSet,
-  dotCircleIcon,
-  circleIcon,
-  successStandardIcon,
-  errorStandardIcon,
-  copyToClipboardIcon,
-  pinIcon,
-  envelopeIcon,
-  uploadIcon,
-  blockIcon,
-  animationIcon,
-  betaIcon,
+  loadChartIconSet,
+  loadEssentialIconSet,
+  loadCommerceIconSet,
+  loadMediaIconSet,
+  loadSocialIconSet,
+  loadTechnologyIconSet,
+  loadTextEditIconSet,
+  loadTravelIconSet,
+  loadMiniIconSet,
 } from '@cds/core/icon';
 
-ClarityIcons.addIcons(
-  linkIcon,
-  fileIcon,
-  pencilIcon,
-  folderOpenIcon,
-  cloudIcon,
-  bookmarkIcon,
-  popOutIcon,
-  imageGalleryIcon,
-  videoGalleryIcon,
-  downloadIcon,
-  copyIcon,
-  dotCircleIcon,
-  circleIcon,
-  successStandardIcon,
-  errorStandardIcon,
-  pinIcon,
-  envelopeIcon,
-  uploadIcon,
-  blockIcon,
-  animationIcon,
-  betaIcon,
-  copyToClipboardIcon
-);
-loadCoreIconSet();
+if (typeof window !== 'undefined') {
+  loadCoreIconSet();
+  loadChartIconSet();
+  loadEssentialIconSet();
+  loadCommerceIconSet();
+  loadMediaIconSet();
+  loadSocialIconSet();
+  loadTechnologyIconSet();
+  loadTextEditIconSet();
+  loadTravelIconSet();
+  loadMiniIconSet();
+}
 
 class LegacyIcon extends CdsIcon {}
 customElements.define('clr-icon', LegacyIcon);

@@ -19,26 +19,26 @@ import {
   textEditCollectionAliases as textEditAliases,
   technologyCollectionAliases as technologyAliases,
   // load
-  loadChartIconSet,
-  loadEssentialIconSet,
-  loadCommerceIconSet,
-  loadMediaIconSet,
-  loadSocialIconSet,
-  loadTechnologyIconSet,
-  loadTextEditIconSet,
-  loadTravelIconSet,
+  // loadChartIconSet,
+  // loadEssentialIconSet,
+  // loadCommerceIconSet,
+  // loadMediaIconSet,
+  // loadSocialIconSet,
+  // loadTechnologyIconSet,
+  // loadTextEditIconSet,
+  // loadTravelIconSet,
 } from '@cds/core/icon';
 
-if (typeof window !== 'undefined') {
-  loadChartIconSet();
-  loadEssentialIconSet();
-  loadCommerceIconSet();
-  loadMediaIconSet();
-  loadSocialIconSet();
-  loadTechnologyIconSet();
-  loadTextEditIconSet();
-  loadTravelIconSet();
-}
+// if (typeof window !== 'undefined') {
+//   loadChartIconSet();
+//   loadEssentialIconSet();
+//   loadCommerceIconSet();
+//   loadMediaIconSet();
+//   loadSocialIconSet();
+//   loadTechnologyIconSet();
+//   loadTextEditIconSet();
+//   loadTravelIconSet();
+// }
 
 const ICONS_TO_HIDE = ['vm-bug', 'vm-bug-inverse'];
 
