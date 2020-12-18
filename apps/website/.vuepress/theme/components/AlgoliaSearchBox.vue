@@ -1,7 +1,7 @@
 <template>
   <form id="search" class="algolia-search-wrapper search-box" role="search" :class="{ focused: focused }">
     <label for="algolia-search-input" cds-layout="display:screen-reader-only">Search Clarity</label>
-    <cds-icon shape="search"></cds-icon>
+    <DelayedIcon shape="search" />
     <input
       id="algolia-search-input"
       v-on:focus="focused = true"

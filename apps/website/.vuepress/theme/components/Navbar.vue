@@ -23,7 +23,7 @@
         class="btn btn-outline btn-inverse"
         cds-layout="m-t:md display:none display@md:block"
       >
-        Return to Current Website <cds-icon shape="pop-out"></cds-icon>
+        Return to Current Website <DelayedIcon shape="pop-out" />
       </a>
     </div>
   </header>

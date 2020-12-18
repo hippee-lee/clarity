@@ -32,15 +32,7 @@
                   >
                     <span class="nav-text">
                       {{ childItem.title }}
-                      <cds-icon
-                        aria-label="beta"
-                        status="info"
-                        solid
-                        v-if="isBeta(childItem) === true"
-                        shape="beta"
-                        size="md"
-                        style="margin-left: -0.15rem; margin-top: -0.75rem;"
-                      ></cds-icon>
+                      <NavLinkBetaTag :item="childItem" />
                     </span>
                   </router-link>
                   <a
@@ -125,6 +117,7 @@
 
 <script>
 import { removePathExt } from '../util/remove-path-ext';
+import { NavLinkBetaTag } from '../global-components/NavLinkBetaTag';
 
 export default {
   name: 'Sidebar',
