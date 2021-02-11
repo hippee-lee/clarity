@@ -1,0 +1,67 @@
+/*!
+ * Copyright (c) 2016-2021 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
+@import './../styles/tokens/generated/index';
+
+:host {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+  //background: var(--background);
+  line-height: var(--line-height);
+  width: 100%;
+}
+
+:host(:not([expanded])) {
+  max-width: var(--cds-navigation-vertical-width);
+}
+
+:host(:hover:not([disabled])),
+:host([has-focus]) {
+  background: var(--cds-alias-object-interaction-background-hover);
+}
+
+:host(:active),
+:host([active]) {
+  background: #{$cds-alias-object-interaction-background-active};
+}
+
+:host([selected]) {
+  background: #{$cds-alias-object-interaction-background-selected};
+}
+
+:host([disabled]) {
+  --color: #{$cds-alias-object-interaction-color-disabled};
+
+  &:hover {
+    --background: inherit; // conflicts with the container element bg
+  }
+
+  ::slotted(a) {
+    cursor: not-allowed;
+  }
+}
+
+::slotted([cds-layout~='align:bottom']) {
+  margin-top: auto !important;
+}
+
+::slotted([cds-layout~='align:right']) {
+  margin-left: auto !important;
+}
+
+::slotted(a) {
+  padding: var(--navigation-padding);
+  color: var(--color);
+  text-decoration: none;
+}
+
+.group-item {
+  ::slotted(a) {
+    padding: var(--group-item-padding);
+  }
+}
