@@ -1,0 +1,33 @@
+@import './../styles/tokens/generated/index';
+@import './../styles/mixins/mixins';
+
+:host {
+  background-color: var(--cds-global-color-gray-200, #{--cds-global-color-gray-200});
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: inherit !important; // Why so important??
+  overflow-y: auto;
+}
+
+:host(:not([expanded])) {
+  max-width: 4rem;
+}
+
+:host([expanded]:not([layout='horizontal'])) {
+  --border-color: deepskyblue;
+  // expanded width is 12 rem when expanded attr
+  --width: calc(5 * #{$cds-global-space-12}); // 12rem
+  //width: var(--width);
+  max-width: var(--width);
+}
+
+:host([layout='horizontal']) {
+  height: 2rem !important;
+  overflow-y: unset;
+  overflow-x: auto;
+}
+
+.private-host {
+  height: inherit;
+}
