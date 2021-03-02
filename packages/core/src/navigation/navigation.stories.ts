@@ -39,6 +39,68 @@ export function basicVertical() {
           <cds-icon shape="link" direction="left" size="md"></cds-icon>
         </cds-navigation-header>
         <cds-navigation-item>
+          <a href="#">link <cds-icon shape="home" size="md"></cds-icon></a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link <cds-icon shape="home" size="md"></cds-icon></a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
           <cds-icon shape="home" size="md"></cds-icon>
           <a href="#">link</a>
         </cds-navigation-item>
@@ -109,7 +171,7 @@ export function basicVertical() {
           <a href="#">link</a>
         </cds-navigation-item>
         <cds-navigation-item cds-layout="align:bottom">
-          <a href="#">link</a>
+          <a href="#">align:bottom link</a>
         </cds-navigation-item>
       </cds-navigation>
       <cds-navigation layout="vertical" expanded>
@@ -122,92 +184,181 @@ export function basicVertical() {
         <cds-navigation-item>
           <a href="#">link</a>
         </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">link</a>
+        </cds-navigation-item>
         <cds-navigation-item cds-layout="align:bottom">
-          <a href="#">link</a>
+          <a href="#">align:bottom link</a>
         </cds-navigation-item>
         <cds-navigation-item>
           <a href="#">link</a>
         </cds-navigation-item>
       </cds-navigation>
-      <cds-navigation layout="horizontal">
-        <cds-navigation-header>
-          Collapsed
-        </cds-navigation-header>
-        <cds-navigation-item>
-          <a href="#">
-            <cds-icon shape="home" size="md" cds-layout="m-x:lg"></cds-icon>
-            link
-          </a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <cds-icon shape="home" size="md"></cds-icon>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <cds-icon shape="home" size="md"></cds-icon>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <cds-icon shape="home" size="md"></cds-icon>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <cds-icon shape="home" size="md"></cds-icon>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <cds-icon shape="home" size="md"></cds-icon>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item>
-          <a href="#">link</a>
-        </cds-navigation-item>
-        <cds-navigation-item cds-layout="align:right">
-          <a href="#" style="width: 100%">
-            link
-            <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
-          </a>
-        </cds-navigation-item>
-      </cds-navigation>
+      <div cds-layout="vertical gap:md">
+        <cds-navigation layout="horizontal">
+          <cds-navigation-header>
+            Collapsed
+          </cds-navigation-header>
+          <cds-navigation-item>
+            <a href="#">
+              <cds-icon shape="home" size="md" cds-layout="m-x:lg"></cds-icon>
+              link
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <cds-icon shape="home" size="md"></cds-icon>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item cds-layout="align:right">
+            <a href="#" style="width: 100%">
+              link
+              <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
+            </a>
+          </cds-navigation-item>
+        </cds-navigation>
+        <cds-navigation layout="horizontal">
+          <cds-navigation-header>
+            Collapsed
+          </cds-navigation-header>
+          <cds-navigation-item>
+            <a href="#">
+              <cds-icon shape="home" size="md" cds-layout="m-x:lg"></cds-icon>
+              link
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#">link</a>
+          </cds-navigation-item>
+
+          <cds-navigation-item cds-layout="align:right">
+            <a href="#" style="width: 100%">
+              link
+              <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
+            </a>
+          </cds-navigation-item>
+        </cds-navigation>
+      </div>
     </div>
   `;
 }

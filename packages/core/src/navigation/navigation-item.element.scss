@@ -10,3 +10,13 @@
   //width: 100%;
   border: 1px solid deepskyblue;
 }
+
+// Hack - try to break up the text and add the screen reader only class to a span around the rest of the content
+// or, can I
+:host([layout='vertical']:not([expanded])) {
+  ::slotted(:not(cds-icon)) {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

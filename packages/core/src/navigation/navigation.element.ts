@@ -71,7 +71,6 @@ export class CdsNavigation extends LitElement {
   @i18n() i18n = I18nService.keys.navigation;
 
   private toggle() {
-    console.log('header click');
     this.expanded ? this.removeAttribute('expanded') : this.setAttribute('expanded', '');
     this.expandedChange.emit(!this.expanded);
   }
@@ -89,7 +88,9 @@ export class CdsNavigation extends LitElement {
               <slot name="cds-navigation-header"></slot>
             </cds-button>
           </header>
-          <slot name="cds-navigation-item"></slot>
+          <div class="navigation-body" cds-layout="vertical align:horizontal-stretch">
+            <slot name="cds-navigation-item"></slot>
+          </div>
         `;
     }
   }

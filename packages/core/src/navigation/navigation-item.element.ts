@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { addAttributeValue, baseStyles, i18n, I18nService, property } from '@cds/core/internal';
+import { addAttributeValue, baseStyles, i18n, I18nService, property, querySlot } from '@cds/core/internal';
 import { styles } from './navigation-item.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
@@ -33,7 +33,7 @@ export class CdsNavigationItem extends LitElement {
 
   @i18n() i18n = I18nService.keys.navigation;
 
-  // @querySlot('cds-icon', cds-icon{ assign: 'item-icon' }) protected itemIcon: HTMLLabelElement;
+  @querySlot('cds-icon', { assign: 'item-icon' }) protected itemIcon: HTMLLabelElement;
 
   // private get defaultIconTemplate() {
   //   return html` <cds-icon shape="link" direction="left" size="md"></cds-icon> `;
@@ -47,6 +47,7 @@ export class CdsNavigationItem extends LitElement {
     return html`
       <span cds-layout="no-scrolling wrap:none">
         <slot></slot>
+        <slot name="item-icon"></slot>
       </span>
     `;
   }
