@@ -41,27 +41,13 @@
   overflow: auto;
   width: 100%;
   height: 100%;
-  //border: 4px solid darkolivegreen;
 }
 
-:host {
-  //::slotted(cds-navigation-item[cds-layout]) {
-  //  margin-top: auto!important;
-  //}
-
-  ::slotted([cds-layout~='align:bottom']) {
-    margin-top: auto !important;
-    border: 1px solid deepskyblue;
-  }
-
-  ::slotted([cds-layout~='align:right']) {
-    margin-left: auto !important;
-  }
+::slotted([cds-layout~='align:bottom']) {
+  margin-top: auto !important;
+  border: 1px solid deepskyblue;
 }
 
-//::slotted(*) {
-//  //border: 1px solid deepskyblue;
-//  &[cds-layout~='align:bottom'] {
-//    margin-top: auto!important;
-//  }
-//}
+::slotted([cds-layout~='align:right']) {
+  margin-left: auto !important;
+}

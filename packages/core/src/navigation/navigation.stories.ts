@@ -47,10 +47,13 @@ export function basicVertical() {
             <a href="#">link</a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">link</a>
+            <a href="#">
+              <span>desktop</span>
+              <cds-icon shape="home" size="md"></cds-icon>
+            </a>
           </cds-navigation-item>
-          <cds-navigation-item cds-layout="align:bottom">
-            <a href="#">align:bottom link</a>
+          <cds-navigation-item slot="cds-navigation-footer" cds-layout="align:bottom">
+            <a href="#">align:bottom link (no footer)</a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-navigation layout="vertical" expanded>
@@ -92,6 +95,12 @@ export function basicVertical() {
           </cds-navigation-item>
           <cds-navigation-item>
             <a href="#">link</a>
+          </cds-navigation-item>
+          <cds-navigation-item slot="cds-navigation-footer">
+            <a href="#">footer link</a>
+          </cds-navigation-item>
+          <cds-navigation-item slot="cds-navigation-footer">
+            <a href="#">Footer link</a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-navigation expanded>
@@ -228,11 +237,11 @@ export function basicVertical() {
           <cds-navigation-item>
             <a href="#">link</a>
           </cds-navigation-item>
-          <cds-navigation-item>
-            <a href="#">link</a>
+          <cds-navigation-item slot="cds-navigation-footer">
+            <a href="#">footer link</a>
           </cds-navigation-item>
-          <cds-navigation-item cds-layout="align:bottom">
-            <a href="#">align:bottom link</a>
+          <cds-navigation-item slot="cds-navigation-footer">
+            <a href="#">Footer link</a>
           </cds-navigation-item>
         </cds-navigation>
       </div>
@@ -258,9 +267,9 @@ export function basicVertical() {
             <a href="#">link</a>
           </cds-navigation-item>
 
-          <cds-navigation-item cds-layout="align:right">
+          <cds-navigation-item slot="cds-navigation-footer">
             <a href="#" style="width: 100%">
-              link
+              footer here
               <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
             </a>
           </cds-navigation-item>

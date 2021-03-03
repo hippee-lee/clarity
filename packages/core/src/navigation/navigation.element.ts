@@ -91,7 +91,7 @@ export class CdsNavigation extends LitElement {
           <div class="navigation-body" cds-layout="vertical align:horizontal-stretch">
             <slot name="cds-navigation-item"></slot>
           </div>
-          <footer>
+          <footer cds-layout="vertical">
             <slot name="cds-navigation-footer"></slot>
           </footer>
         `;
