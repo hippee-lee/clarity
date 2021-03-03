@@ -5,7 +5,7 @@
   background-color: var(--cds-global-color-gray-200, #{--cds-global-color-gray-200});
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  //flex-grow: 1;
   height: inherit;
   width: inherit !important; // Why so important??
   //overflow-y: auto;
@@ -27,13 +27,13 @@
 
 :host([layout='horizontal']) {
   height: 2rem !important;
-  overflow-y: unset;
-  overflow-x: auto;
+  overflow: unset;
   width: inherit !important;
 }
 
 .private-host {
   height: inherit;
+  overflow: auto;
 }
 
 .navigation-body {
@@ -43,3 +43,25 @@
   height: 100%;
   //border: 4px solid darkolivegreen;
 }
+
+:host {
+  //::slotted(cds-navigation-item[cds-layout]) {
+  //  margin-top: auto!important;
+  //}
+
+  ::slotted([cds-layout~='align:bottom']) {
+    margin-top: auto !important;
+    border: 1px solid deepskyblue;
+  }
+
+  ::slotted([cds-layout~='align:right']) {
+    margin-left: auto !important;
+  }
+}
+
+//::slotted(*) {
+//  //border: 1px solid deepskyblue;
+//  &[cds-layout~='align:bottom'] {
+//    margin-top: auto!important;
+//  }
+//}

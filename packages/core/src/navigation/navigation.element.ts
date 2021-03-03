@@ -6,7 +6,7 @@
 
 import { html, LitElement } from 'lit-element';
 import {
-  addAttributeValue,
+  // addAttributeValue,
   baseStyles,
   event,
   EventEmitter,
@@ -91,6 +91,9 @@ export class CdsNavigation extends LitElement {
           <div class="navigation-body" cds-layout="vertical align:horizontal-stretch">
             <slot name="cds-navigation-item"></slot>
           </div>
+          <footer>
+            <slot name="cds-navigation-footer"></slot>
+          </footer>
         `;
     }
   }
@@ -128,11 +131,11 @@ export class CdsNavigation extends LitElement {
     super.updated(props);
 
     // This will get more complicated when drawer layout is added
-    addAttributeValue(
-      this,
-      'cds-layout',
-      `${this.layout === 'horizontal' ? 'horizontal gap:md wrap:none' : 'vertical wrap:none gap:md'}`
-    );
+    // addAttributeValue(
+    //   this,
+    //   'cds-layout',
+    //   `${this.layout === 'horizontal' ? 'horizontal gap:md wrap:none' : 'vertical wrap:none gap:md'}`
+    // );
     this.updateChildrenProps();
   }
 
