@@ -75,38 +75,34 @@ export class CdsNavigation extends LitElement {
     this.expandedChange.emit(!this.expanded);
   }
 
-  protected getLayoutTemplate(layout: NavigationLayout) {
-    switch (layout) {
-      case 'horizontal':
-        this.setAttribute('expanded', '');
-        return html`<slot name="cds-navigation-item"></slot>`;
-      default:
-        // vertical
-        return html`
-          <header cds-layout="horizontal align:fill">
-            <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
-              <slot name="cds-navigation-header"></slot>
-            </cds-button>
-          </header>
-          <div class="navigation-body" cds-layout="vertical align:horizontal-stretch">
-            <slot name="cds-navigation-item"></slot>
-          </div>
-          <footer cds-layout="vertical">
-            <slot name="cds-navigation-footer"></slot>
-          </footer>
-        `;
-    }
-  }
-
   render() {
-    return html` <nav
+    return html`<nav
       class="private-host"
       role="navigation"
       aria-label="${this.i18n.navigationLabel}"
       aria-expanded="${this.expanded}"
       cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md"
     >
-      ${this.getLayoutTemplate(this.layout)}
+      <header>
+        ${this.layout === 'vertical' || '' // default axis
+          ? html`
+              <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+                <slot name="cds-navigation-header"></slot>
+              </cds-button>
+            `
+          : html`
+              <div cds-layout="horizontal align:fill p:none">
+                <slot name="cds-navigation-header"></slot>
+              </div>
+            `}
+      </header>
+      <div class="navigation-body" cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none">
+        items
+        <slot name="cds-navigation-item"></slot>
+      </div>
+      <footer cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md">
+        <slot name="cds-navigation-footer"></slot>
+      </footer>
     </nav>`;
   }
 
@@ -129,13 +125,6 @@ export class CdsNavigation extends LitElement {
 
   firstUpdated(props: Map<string, any>) {
     super.updated(props);
-
-    // This will get more complicated when drawer layout is added
-    // addAttributeValue(
-    //   this,
-    //   'cds-layout',
-    //   `${this.layout === 'horizontal' ? 'horizontal gap:md wrap:none' : 'vertical wrap:none gap:md'}`
-    // );
     this.updateChildrenProps();
   }
 
