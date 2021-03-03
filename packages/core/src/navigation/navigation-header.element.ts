@@ -64,7 +64,9 @@ export class CdsNavigationHeader extends LitElement {
   }
 
   render() {
-    return this.getLayoutTemplate(this.layout);
+    // TODO(matthew): fix this tempalate for horizontal and vertical with default toggle icon
+    // return this.getLayoutTemplate(this.layout);
+    return html`<slot></slot>`;
   }
 
   firstUpdated(props: Map<string, any>) {

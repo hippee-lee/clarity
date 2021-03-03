@@ -75,6 +75,28 @@ export class CdsNavigation extends LitElement {
     this.expandedChange.emit(!this.expanded);
   }
 
+  protected get headerTemplate() {
+    if (this.navigationHeader) {
+      return html`
+        ${this.layout === 'vertical' || '' // default axis
+          ? html`
+              <header>
+                <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+                  <slot name="cds-navigation-header"></slot>
+                </cds-button>
+              </header>
+            `
+          : html`
+              <div cds-layout="horizontal align:fill p:none">
+                <slot name="cds-navigation-header"></slot>
+              </div>
+            `}
+      `;
+    } else {
+      return '';
+    }
+  }
+
   render() {
     return html`<nav
       class="private-host"
@@ -83,21 +105,8 @@ export class CdsNavigation extends LitElement {
       aria-expanded="${this.expanded}"
       cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md"
     >
-      <header>
-        ${this.layout === 'vertical' || '' // default axis
-          ? html`
-              <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
-                <slot name="cds-navigation-header"></slot>
-              </cds-button>
-            `
-          : html`
-              <div cds-layout="horizontal align:fill p:none">
-                <slot name="cds-navigation-header"></slot>
-              </div>
-            `}
-      </header>
+      ${this.headerTemplate}
       <div class="navigation-body" cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none">
-        items
         <slot name="cds-navigation-item"></slot>
       </div>
       <footer cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md">
