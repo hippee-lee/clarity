@@ -1,10 +1,25 @@
-/*
+/*!
  * Copyright (c) 2016-2021 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-export * from './navigation.element.js';
-export * from './navigation-group.element.js';
-export * from './navigation-header.element.js';
-export * from './navigation-item.element.js';
+:host {
+}
+
+.navigation-group-items {
+  height: 0;
+  overflow-y: hidden;
+}
+
+:host([expanded]) {
+  .navigation-group-items {
+    height: auto;
+  }
+}
+
+.private-host {
+}
+
+.navigation-group-header {
+}

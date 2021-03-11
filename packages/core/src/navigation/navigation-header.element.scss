@@ -9,7 +9,17 @@
 
 :host {
   --cds-navigation-bg-color: var(--cds-global-color-gray-200, #{--cds-global-color-gray-200});
-  // Icon only width is default
+  width: 100% !important;
+}
+
+.private-host {
   width: 100%;
-  border: 1px deepskyblue;
+}
+
+::slotted([cds-layout~='align:bottom']) {
+  margin-top: auto !important;
+}
+
+::slotted([cds-layout~='align:right']) {
+  margin-left: auto !important;
 }

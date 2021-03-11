@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { addAttributeValue, baseStyles, i18n, I18nService, property, querySlot } from '@cds/core/internal';
+import { baseStyles, i18n, I18nService, property, querySlot } from '@cds/core/internal';
 import { styles } from './navigation-item.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
@@ -45,14 +45,9 @@ export class CdsNavigationItem extends LitElement {
 
   render() {
     return html`
-      <span cds-layout="no-scrolling wrap:none">
+      <span cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md no-scrolling">
         <slot></slot>
-        <slot name="item-icon"></slot>
       </span>
     `;
-  }
-
-  firstUpdated() {
-    addAttributeValue(this, 'cds-layout', `${this.layout === 'horizontal' ? 'align:vertical-center' : ''}`);
   }
 }

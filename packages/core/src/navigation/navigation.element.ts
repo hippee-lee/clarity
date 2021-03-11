@@ -21,8 +21,10 @@ import { styles } from './navigation.element.css.js';
 
 import { defaultNavigationLayout } from './utils/index';
 import { NavigationLayout } from './utils/interfaces';
+import { CdsNavigationGroup } from '@cds/core/navigation/navigation-group.element';
 import { CdsNavigationHeader } from '@cds/core/navigation/navigation-header.element';
 import { CdsNavigationItem } from '@cds/core/navigation/navigation-item.element';
+import { CdsDivider } from '@cds/core/divider/index.js';
 
 /**
  * Web component modal.
@@ -45,12 +47,18 @@ export class CdsNavigation extends LitElement {
     return [baseStyles, styles];
   }
 
-  @querySlot('cds-navigation-header', { assign: 'cds-navigation-header' })
+  // The specific child selectorprevents grabbing headers nested in a group element.
+  @querySlot('cds-navigation > cds-navigation-header', { assign: 'cds-navigation-header' })
   protected navigationHeader: CdsNavigationHeader;
 
-  @querySlotAll('cds-navigation-item', { assign: 'cds-navigation-item' }) protected navigationItems: NodeListOf<
-    CdsNavigationItem
-  >;
+  @querySlotAll('cds-navigation > cds-navigation-item', { assign: 'cds-navigation-group-or-item' })
+  protected navigationItems: NodeListOf<CdsNavigationItem>;
+
+  @querySlotAll('cds-navigation > cds-divider', { assign: 'cds-navigation-group-or-item' })
+  protected dividers: NodeListOf<CdsDivider>;
+
+  @querySlotAll('cds-navigation > cds-navigation-group', { assign: 'cds-navigation-group-or-item' })
+  protected navigationGroups: NodeListOf<CdsNavigationGroup>;
 
   /**
    * @type {horizontal | vertical | drawer}
@@ -80,7 +88,7 @@ export class CdsNavigation extends LitElement {
       return html`
         ${this.layout === 'vertical' || '' // default axis
           ? html`
-              <header>
+              <header class="navigation-header">
                 <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
                   <slot name="cds-navigation-header"></slot>
                 </cds-button>
@@ -106,10 +114,19 @@ export class CdsNavigation extends LitElement {
       cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md"
     >
       ${this.headerTemplate}
-      <div class="navigation-body" cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none">
-        <slot name="cds-navigation-item"></slot>
+      <div
+        class="navigation-body"
+        cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none ${this.layout === 'horizontal'
+          ? 'align:vertical-center'
+          : ''}"
+      >
+        <slot name="cds-navigation-group-or-item"></slot>
       </div>
-      <footer cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md">
+      <footer
+        cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
+          ? 'align:vertical-center'
+          : ''} wrap:none gap:md"
+      >
         <slot name="cds-navigation-footer"></slot>
       </footer>
     </nav>`;
@@ -127,6 +144,13 @@ export class CdsNavigation extends LitElement {
         syncProps(item, this, {
           layout: true,
           expanded: this.expanded === !!this.expanded,
+        });
+      });
+    }
+    if (this.navigationGroups.length > 0) {
+      this.navigationGroups.forEach(item => {
+        syncProps(item, this, {
+          layout: true,
         });
       });
     }

@@ -6,16 +6,19 @@
 
 import { registerElementSafely } from '@cds/core/internal';
 import { CdsNavigation } from './navigation.element.js';
+import { CdsNavigationGroup } from './navigation-group.element.js';
 import { CdsNavigationHeader } from './navigation-header.element.js';
 import { CdsNavigationItem } from './navigation-item.element.js';
 
 registerElementSafely('cds-navigation', CdsNavigation);
+registerElementSafely('cds-navigation-group', CdsNavigationGroup);
 registerElementSafely('cds-navigation-header', CdsNavigationHeader);
 registerElementSafely('cds-navigation-item', CdsNavigationItem);
 
 declare global {
   interface HTMLElementTagNameMap {
     'cds-navigation': CdsNavigation;
+    'cds-navigation-group': CdsNavigationGroup;
     'cds-navigation-header': CdsNavigationHeader;
     'cds-navigation-item': CdsNavigationItem;
   }
