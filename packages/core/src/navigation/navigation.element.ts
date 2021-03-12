@@ -48,6 +48,8 @@ export class CdsNavigation extends LitElement {
   }
 
   // The specific child selectorprevents grabbing headers nested in a group element.
+  // No assignment m3eans it goes into the default slot.
+  // unnamed slot
   @querySlot('cds-navigation > cds-navigation-header', { assign: 'cds-navigation-header' })
   protected navigationHeader: CdsNavigationHeader;
 
@@ -71,6 +73,9 @@ export class CdsNavigation extends LitElement {
    * @type {boolean}
    * Set the width of a navigation element to show icon + text when expanded or icon only when not expanded.
    */
+  // REACT MAY HAVE ISSUES WITH BOOLEAN ATTRIBUTES that are used to add functionality
+  // react does expanded="true" and expanded="false" -> false is the issue because now we have to look at the boolean value.
+  //
   @property({ type: Boolean })
   expanded: boolean;
 
@@ -105,6 +110,7 @@ export class CdsNavigation extends LitElement {
     }
   }
 
+  // named slot for a header like sticky area to put search eg in
   render() {
     return html`<nav
       class="private-host"
@@ -156,12 +162,8 @@ export class CdsNavigation extends LitElement {
     }
   }
 
-  firstUpdated(props: Map<string, any>) {
+  updated(props: Map<string, any>) {
     super.updated(props);
-    this.updateChildrenProps();
-  }
-
-  updated() {
     this.updateChildrenProps();
   }
 }

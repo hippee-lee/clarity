@@ -135,7 +135,7 @@
     "typescript": "3.7.5"
   },
   "engines": {
-    "node": ">=12 <13",
+    "node": ">=12 <=14",
     "yarn": ">=1.22.4 <2",
     "npm": "     PLEASE USE YARN     "
   },

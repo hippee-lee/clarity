@@ -21,6 +21,7 @@ import { defaultNavigationLayout } from '@cds/core/navigation/utils';
 import { CdsNavigationItem } from '@cds/core/navigation/navigation-item.element';
 import { CdsNavigationHeader } from '@cds/core/navigation/navigation-header.element';
 import { addAttributeValue } from '@cds/core/internal';
+import { setAttributes } from '@cds/core/internal';
 
 /**
  * Web component modal.
@@ -48,11 +49,13 @@ export class CdsNavigationGroup extends LitElement {
   @querySlot('cds-navigation-header', { assign: 'group-header' })
   protected groupHeader: CdsNavigationHeader;
 
+  // ReaCT HAS ISSUES WITH EXPANDED="FALSE"
   @property({ type: Boolean })
   expanded: boolean;
 
   @event() protected expandedChange: EventEmitter<boolean>;
 
+  // Can make this @internalPrioperty instead
   @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
   // Weird, its like the group inherits the named slot from parent.
@@ -63,7 +66,7 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
-    this.expanded ? this.removeAttribute('expanded') : this.setAttribute('expanded', '');
+    setAttributes(this, ['expanded', this.expanded ? null : '']);
     this.expandedChange.emit(!this.expanded);
   }
 
@@ -101,17 +104,17 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
-  protected get itemWrapper() {
-    return html` <div
-      class="navigation-group-items"
-      cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
-        ? 'align:horizontal-stretch'
-        : ''} wrap:none gap:md"
-    >
-      <!-- why does this inherit the parental slot name?? -->
-      <slot name="group-items"></slot>
-    </div>`;
-  }
+  // protected get itemWrapper() {
+  //   return html` <div
+  //     class="navigation-group-items"
+  //     cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
+  //       ? 'align:horizontal-stretch'
+  //       : ''} wrap:none gap:md"
+  //   >
+  //     <!-- why does this inherit the parental slot name?? -->
+  //     <slot name="group-items"></slot>
+  //   </div>`;
+  // }
 
   render() {
     return html`
@@ -126,9 +129,11 @@ export class CdsNavigationGroup extends LitElement {
     `;
   }
 
-  firstUpdated() {
-    // TODO(matthew): what is hte core stance on handling this behavior? Do it dfor hte app or document it and put onus on consumer to add expanded for vertical groups?
+  updated(props: Map<string, any>) {
+    super.updated(props);
+    // TODO(matthew): what is the core stance on handling this behavior? Do it dfor hte app or document it and put onus on consumer to add expanded for vertical groups?
     if (this.layout === 'horizontal') {
+      // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');
     }
   }

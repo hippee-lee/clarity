@@ -29,6 +29,7 @@ import { defaultNavigationLayout } from '@cds/core/navigation/utils';
  */
 export class CdsNavigationHeader extends LitElement {
   @property({ type: Boolean }) expanded = false;
+  // React issue for expanded="false"
 
   @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
@@ -71,11 +72,6 @@ export class CdsNavigationHeader extends LitElement {
         <slot></slot>
       </div>
     `;
-  }
-
-  firstUpdated(props: Map<string, any>) {
-    super.updated(props);
-    // addAttributeValue(this, 'cds-layout', 'horizontal align:vertical-center');
   }
 
   static get styles() {
