@@ -11,6 +11,7 @@ import {
   EventEmitter,
   i18n,
   I18nService,
+  internalProperty,
   property,
   querySlot,
   querySlotAll,
@@ -50,14 +51,13 @@ export class CdsNavigationGroup extends LitElement {
   @querySlot('cds-navigation-header', { assign: 'group-header' })
   protected groupHeader: CdsNavigationHeader;
 
-  // ReaCT HAS ISSUES WITH EXPANDED="FALSE"
+  // React has issues with expanded="false"
   @property({ type: Boolean })
-  expanded: boolean;
+  expanded = false;
 
   @event() protected expandedChange: EventEmitter<boolean>;
 
-  // Can make this @internalPrioperty instead
-  @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
+  @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
   // Weird, its like the group inherits the named slot from parent.
   @querySlotAll('cds-navigation-item', { assign: 'group-items' })
@@ -68,13 +68,30 @@ export class CdsNavigationGroup extends LitElement {
 
   private toggle() {
     setOrRemoveAttribute(this, ['expanded', ''], () => {
-      console.log('setOrRemoveAttr??');
+      // add expanded when this is not false
       return !this.expanded;
     });
-    this.expandedChange.emit(!this.expanded);
+    this.handleTabIndex();
+    this.expandedChange.emit(this.expanded);
   }
 
-  // TODO(matthew): turn into a utility since this is done in two places?
+  private handleTabIndex() {
+    // TODO(matthew): handle this so that it doesn't propagate up or down.
+    // prevent tabbing to items and nested groups when they are hidden
+    this.groupItems.forEach(item => {
+      setOrRemoveAttribute(item, ['tabindex', '-1'], () => {
+        // prevent tabbing when this is not false
+        return !this.expanded;
+      });
+    });
+    this.nestedGroup.forEach(group => {
+      setOrRemoveAttribute(group, ['tabindex', '-1'], () => {
+        // prevent tabbing when this is not false
+        return !this.expanded;
+      });
+    });
+  }
+
   protected get headerTemplate() {
     if (this.groupHeader) {
       // TODO(matthew): do I need to do something special to import the core button styles?
@@ -123,12 +140,11 @@ export class CdsNavigationGroup extends LitElement {
 
   updated(props: Map<string, any>) {
     super.updated(props);
-    // TODO(matthew): what is the core stance on handling this behavior? Do it dfor hte app or document it and put onus on consumer to add expanded for vertical groups?
+    this.handleTabIndex();
     if (this.layout === 'horizontal') {
       // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');
     }
-
     if (this.nestedGroup.length > 0) {
       this.nestedGroup.forEach(item => {
         syncProps(item, this, {

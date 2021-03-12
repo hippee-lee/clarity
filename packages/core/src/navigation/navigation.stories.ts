@@ -43,7 +43,7 @@ export function basicVertical() {
               <cds-icon shape="cog" size="md" cds-layout="align:right"></cds-icon>
             </cds-navigation-header>
             <cds-navigation-item>
-              <a href="#" cds-layout="horizontal">
+              <a href="#">
                 grp 1.1
                 <cds-icon shape="home" size="md" cds-layout="align:right"></cds-icon>
               </a>
@@ -84,16 +84,18 @@ export function basicVertical() {
           </cds-navigation-group>
           <cds-divider cds-layout="m-y:md"></cds-divider>
           <cds-navigation-item>
-            <a href="#" cds-layout="horizontal">
-              <span>desktop</span>
+            <a href="#" cds-layout="horizontal m-x:md">
+              <span>desktop 2</span>
               <cds-icon cds-layout="align:right" shape="home" size="md"></cds-icon>
             </a>
           </cds-navigation-item>
           <cds-navigation-group cds-layout="vertical gap:md align:bottom">
             <cds-navigation-header>grp header</cds-navigation-header>
             <cds-navigation-item>
-              <cds-icon shape="home" size="md"></cds-icon>
-              <a href="#">navigation bottom</a>
+              <a href="#">
+                navigation bottom
+                <cds-icon shape="home" size="md"></cds-icon>
+              </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">link</a>
@@ -213,14 +215,15 @@ export function basicVertical() {
             Header & footer
             <cds-icon shape="link" direction="left" size="md"></cds-icon>
           </cds-navigation-header>
-          <cds-divider></cds-divider>
-          <cds-navigation-item>
+          <div slot="cds-navigation-subheader">
+            <cds-divider></cds-divider>
             <cds-input layout="vertical" cds-layout="m-t:md">
               <label>Search</label>
               <input type="text" />
               <cds-control-message>Filter navigation</cds-control-message>
             </cds-input>
-          </cds-navigation-item>
+            <cds-divider cds-layout="m-t:md"></cds-divider>
+          </div>
           <cds-navigation-group>
             <cds-navigation-header>
               NavGroup 1

@@ -47,19 +47,19 @@ export class CdsNavigation extends LitElement {
     return [baseStyles, styles];
   }
 
-  // The specific child selectorprevents grabbing headers nested in a group element.
+  // The specific child selectorp revents grabbing headers nested in a group element.
   // No assignment m3eans it goes into the default slot.
   // unnamed slot
   @querySlot('cds-navigation > cds-navigation-header', { assign: 'cds-navigation-header' })
   protected navigationHeader: CdsNavigationHeader;
 
-  @querySlotAll('cds-navigation > cds-navigation-item', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-navigation-item')
   protected navigationItems: NodeListOf<CdsNavigationItem>;
 
-  @querySlotAll('cds-navigation > cds-divider', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-divider')
   protected dividers: NodeListOf<CdsDivider>;
 
-  @querySlotAll('cds-navigation > cds-navigation-group', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-navigation-group')
   protected navigationGroups: NodeListOf<CdsNavigationGroup>;
 
   /**
@@ -73,9 +73,6 @@ export class CdsNavigation extends LitElement {
    * @type {boolean}
    * Set the width of a navigation element to show icon + text when expanded or icon only when not expanded.
    */
-  // REACT MAY HAVE ISSUES WITH BOOLEAN ATTRIBUTES that are used to add functionality
-  // react does expanded="true" and expanded="false" -> false is the issue because now we have to look at the boolean value.
-  //
   @property({ type: Boolean })
   expanded: boolean;
 
@@ -89,25 +86,26 @@ export class CdsNavigation extends LitElement {
   }
 
   protected get headerTemplate() {
-    if (this.navigationHeader) {
-      return html`
-        ${this.layout === 'vertical' || '' // default axis
-          ? html`
-              <header class="navigation-header">
-                <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
-                  <slot name="cds-navigation-header"></slot>
-                </cds-button>
-              </header>
-            `
-          : html`
-              <div cds-layout="horizontal align:fill p:none">
-                <slot name="cds-navigation-header"></slot>
-              </div>
-            `}
-      `;
-    } else {
+    if (!this.navigationHeader) {
       return '';
     }
+
+    return html`
+      ${this.layout === 'vertical' || '' // default axis
+        ? html`
+            <header class="navigation-header">
+              <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+                <slot name="cds-navigation-header"></slot>
+              </cds-button>
+              <slot name="cds-navigation-subheader"></slot>
+            </header>
+          `
+        : html`
+            <div cds-layout="horizontal align:fill p:none">
+              <slot name="cds-navigation-header"></slot>
+            </div>
+          `}
+    `;
   }
 
   // named slot for a header like sticky area to put search eg in
@@ -126,7 +124,7 @@ export class CdsNavigation extends LitElement {
           ? 'align:vertical-center'
           : ''}"
       >
-        <slot name="cds-navigation-group-or-item"></slot>
+        <slot></slot>
       </div>
       <footer
         cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
