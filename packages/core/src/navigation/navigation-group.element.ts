@@ -14,6 +14,7 @@ import {
   property,
   querySlot,
   querySlotAll,
+  syncProps,
 } from '@cds/core/internal';
 import { styles } from './navigation-group.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
@@ -21,7 +22,7 @@ import { defaultNavigationLayout } from '@cds/core/navigation/utils';
 import { CdsNavigationItem } from '@cds/core/navigation/navigation-item.element';
 import { CdsNavigationHeader } from '@cds/core/navigation/navigation-header.element';
 import { addAttributeValue } from '@cds/core/internal';
-import { setAttributes } from '@cds/core/internal';
+import { setOrRemoveAttribute } from '@cds/core/internal';
 
 /**
  * Web component modal.
@@ -66,7 +67,10 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
-    setAttributes(this, ['expanded', this.expanded ? null : '']);
+    setOrRemoveAttribute(this, ['expanded', ''], () => {
+      console.log('setOrRemoveAttr??');
+      return !this.expanded;
+    });
     this.expandedChange.emit(!this.expanded);
   }
 
@@ -104,18 +108,6 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
-  // protected get itemWrapper() {
-  //   return html` <div
-  //     class="navigation-group-items"
-  //     cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
-  //       ? 'align:horizontal-stretch'
-  //       : ''} wrap:none gap:md"
-  //   >
-  //     <!-- why does this inherit the parental slot name?? -->
-  //     <slot name="group-items"></slot>
-  //   </div>`;
-  // }
-
   render() {
     return html`
       <div
@@ -135,6 +127,14 @@ export class CdsNavigationGroup extends LitElement {
     if (this.layout === 'horizontal') {
       // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');
+    }
+
+    if (this.nestedGroup.length > 0) {
+      this.nestedGroup.forEach(item => {
+        syncProps(item, this, {
+          layout: true,
+        });
+      });
     }
   }
 }
