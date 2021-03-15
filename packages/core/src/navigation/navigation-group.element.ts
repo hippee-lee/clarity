@@ -67,10 +67,15 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
-    setOrRemoveAttribute(this, ['expanded', ''], () => {
-      // add expanded when this is not false
-      return !this.expanded;
-    });
+    // TODO
+    // don't mutate here, only emit so that frameworks can handle it.
+    // Same for top level expand/collapse just notify and let hose app control state of show/hide
+    //
+    // emit the event and let the host app
+    // setOrRemoveAttribute(this, ['expanded', ''], () => {
+    //   // add expanded when this is not false
+    //   return !this.expanded;
+    // });
     this.handleTabIndex();
     this.expandedChange.emit(this.expanded);
   }
@@ -105,6 +110,7 @@ export class CdsNavigationGroup extends LitElement {
               </header>
             `
           : html``}
+        // why group headers are not rendering
       `;
     } else {
       return '';
@@ -135,6 +141,8 @@ export class CdsNavigationGroup extends LitElement {
   updated(props: Map<string, any>) {
     super.updated(props);
     this.handleTabIndex();
+
+    // Don't need to mutate state, just emit changes
     if (this.layout === 'horizontal') {
       // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');

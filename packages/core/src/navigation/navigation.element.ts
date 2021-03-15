@@ -119,9 +119,7 @@ export class CdsNavigation extends LitElement {
       ${this.headerTemplate}
       <div
         class="navigation-body"
-        cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none ${this.layout === 'horizontal'
-          ? 'align:vertical-center'
-          : ''}"
+        cds-layout="${this.layout} wrap:none ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
       >
         <slot></slot>
       </div>
@@ -135,6 +133,7 @@ export class CdsNavigation extends LitElement {
     </nav>`;
   }
 
+  //
   updateChildrenProps() {
     if (this.navigationHeader) {
       syncProps(this.navigationHeader, this, {

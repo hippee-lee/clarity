@@ -1066,6 +1066,7 @@ export function verticalNestedGroup() {
           <cds-icon shape="angle-double" direction="left"></cds-icon>
         </cds-navigation-header>
         <cds-navigation-group expanded>
+          <cds-navigation-header>Group 2</cds-navigation-header>
           <cds-navigation-item>
             <a href="#" cds-layout="horizontal m-x:md">
               Navigation Item
@@ -1084,7 +1085,8 @@ export function verticalNestedGroup() {
               <cds-icon shape="link" cds-layout="align:right"></cds-icon>
             </a>
           </cds-navigation-item>
-          <cds-navigation-group expanded>
+          <cds-navigation-group>
+            <cds-navigation-header>Group 2</cds-navigation-header>
             <cds-navigation-item>
               <a href="#" cds-layout="horizontal m-x:md">
                 Navigation Item
@@ -1275,7 +1277,7 @@ export function horizontalFooter() {
 
 export function horizontalScrolling() {
   return html`
-    <div stuyle="width: 500px">
+    <div style="width: 500px">
       <cds-navigation layout="horizontal">
         <cds-navigation-header>
           Custom Header 2

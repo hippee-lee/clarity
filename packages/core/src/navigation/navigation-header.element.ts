@@ -54,6 +54,8 @@ export class CdsNavigationHeader extends LitElement {
     </cds-button>`;
   }
 
+  // TODO try adding defaultIconTemplate inside the slot so that
+
   // TODO: Need to differentiate between top level headers and group level headers.
 
   protected get textLayout(): string {
