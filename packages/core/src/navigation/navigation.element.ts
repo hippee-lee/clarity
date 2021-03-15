@@ -101,7 +101,7 @@ export class CdsNavigation extends LitElement {
             </header>
           `
         : html`
-            <div cds-layout="horizontal align:fill p:none">
+            <div cds-layout="horizontal">
               <slot name="cds-navigation-header"></slot>
             </div>
           `}

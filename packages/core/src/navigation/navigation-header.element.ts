@@ -43,11 +43,9 @@ export class CdsNavigationHeader extends LitElement {
     if (this.layout === 'horizontal') {
       return '';
     }
-
-    console.log(this.headerIcon);
-
+    //      <!--<span cds-layout="${this.textlayout}"> -->
     return html` <cds-button action="flat" cds-layout="horizontal">
-      <span cds-layout="${this.textlayout}">
+      <span>
         <slot></slot>
       </span>
       <span cds-layout="${this.expanded ? 'align:right' : 'align:horizontal-center'}">
