@@ -111,20 +111,6 @@ export class CdsNavigationGroup extends LitElement {
     }
   }
 
-  protected get horizontalItems() {
-    return html` <div class="navigation-group-items" cds-layout="horizontal gap:md wrap:none align:vertical-center">
-      <!-- why does this inherit the parental slot name?? -->
-      <slot name="group-items"></slot>
-    </div>`;
-  }
-
-  protected get verticalItems() {
-    return html` <div class="navigation-group-items" cds-layout="vertical gap:md">
-      <!-- why does this inherit the parental slot name?? -->
-      <slot name="group-items"></slot>
-    </div>`;
-  }
-
   render() {
     return html`
       <div
@@ -133,7 +119,15 @@ export class CdsNavigationGroup extends LitElement {
           ? 'align:horizontal-fill'
           : ''} wrap:none gap:md"
       >
-        ${this.headerTemplate} ${this.layout === 'horizontal' ? this.horizontalItems : this.verticalItems}
+        ${this.headerTemplate}
+        <div
+          class="navigation-group-items"
+          cds-layout="${this.layout === 'horizontal'
+            ? 'horizontal wrap:none align:vertical-center'
+            : 'vertical'} gap:md"
+        >
+          <slot name="group-items"></slot>
+        </div>
       </div>
     `;
   }
@@ -149,6 +143,7 @@ export class CdsNavigationGroup extends LitElement {
       this.nestedGroup.forEach(item => {
         syncProps(item, this, {
           layout: true,
+          expanded: true,
         });
       });
     }

@@ -115,7 +115,6 @@ export function basicVertical() {
         <cds-navigation layout="vertical" expanded>
           <cds-navigation-header>
             Header, no footer
-            <cds-icon cds-layout="align:right" shape="angle" size="md"></cds-icon>
           </cds-navigation-header>
           <cds-navigation-group expanded>
             <cds-navigation-header>grp header</cds-navigation-header>

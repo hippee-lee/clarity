@@ -93,8 +93,8 @@ export class CdsNavigation extends LitElement {
     return html`
       ${this.layout === 'vertical' || '' // default axis
         ? html`
-            <header class="navigation-header">
-              <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+            <header class="navigation-header" cds-layout="vertical">
+              <cds-button @click="${() => this.toggle()}" action="flat">
                 <slot name="cds-navigation-header"></slot>
               </cds-button>
               <slot name="cds-navigation-subheader"></slot>
@@ -108,7 +108,6 @@ export class CdsNavigation extends LitElement {
     `;
   }
 
-  // named slot for a header like sticky area to put search eg in
   render() {
     return html`<nav
       class="private-host"

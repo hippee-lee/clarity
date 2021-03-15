@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { baseStyles, i18n, I18nService, property } from '@cds/core/internal';
+import { baseStyles, i18n, I18nService, internalProperty } from '@cds/core/internal';
 import { styles } from './navigation-item.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
@@ -33,7 +33,7 @@ export class CdsNavigationItem extends LitElement {
 
   @i18n() i18n = I18nService.keys.navigation;
 
-  @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
+  @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
   render() {
     return html`
