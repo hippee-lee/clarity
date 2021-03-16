@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { baseStyles, i18n, I18nService, internalProperty } from '@cds/core/internal';
+import { baseStyles, i18n, I18nService, internalProperty, property, querySlot } from '@cds/core/internal';
 import { styles } from './navigation-item.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
