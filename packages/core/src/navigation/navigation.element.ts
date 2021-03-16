@@ -47,19 +47,19 @@ export class CdsNavigation extends LitElement {
     return [baseStyles, styles];
   }
 
-  // The specific child selectorprevents grabbing headers nested in a group element.
+  // The specific child selector prevents grabbing headers nested in a group element.
   // No assignment m3eans it goes into the default slot.
   // unnamed slot
   @querySlot('cds-navigation > cds-navigation-header', { assign: 'cds-navigation-header' })
   protected navigationHeader: CdsNavigationHeader;
 
-  @querySlotAll('cds-navigation > cds-navigation-item', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-navigation-item')
   protected navigationItems: NodeListOf<CdsNavigationItem>;
 
-  @querySlotAll('cds-navigation > cds-divider', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-divider')
   protected dividers: NodeListOf<CdsDivider>;
 
-  @querySlotAll('cds-navigation > cds-navigation-group', { assign: 'cds-navigation-group-or-item' })
+  @querySlotAll('cds-navigation > cds-navigation-group')
   protected navigationGroups: NodeListOf<CdsNavigationGroup>;
 
   /**
@@ -73,7 +73,7 @@ export class CdsNavigation extends LitElement {
    * @type {boolean}
    * Set the width of a navigation element to show icon + text when expanded or icon only when not expanded.
    */
-  // REACT MAY HAVE ISSUES WITH BOOLEAN ATTRIBUTES that are used to add functionality
+  // React may have issues with boolean attributes that are used to add functionality
   // react does expanded="true" and expanded="false" -> false is the issue because now we have to look at the boolean value.
   //
   @property({ type: Boolean })
@@ -87,6 +87,30 @@ export class CdsNavigation extends LitElement {
     this.expanded ? this.removeAttribute('expanded') : this.setAttribute('expanded', '');
     this.expandedChange.emit(!this.expanded);
   }
+
+  // TODO: Can I use this form instead?
+  // protected get headerTemplate() {
+  //   if (!this.navigationHeader) {
+  //     return '';
+  //   }
+  //
+  //   return html`
+  //     ${this.layout === 'vertical' || '' // default axis
+  //     ? html`
+  //           <header class="navigation-header" cds-layout="vertical">
+  //             <cds-button @click="${() => this.toggle()}" action="flat">
+  //               <slot name="cds-navigation-header"></slot>
+  //             </cds-button>
+  //             <slot name="cds-navigation-subheader"></slot>
+  //           </header>
+  //         `
+  //     : html`
+  //           <div cds-layout="horizontal">
+  //             <slot name="cds-navigation-header"></slot>
+  //           </div>
+  //         `}
+  //   `;
+  // }
 
   protected get headerTemplate() {
     if (this.navigationHeader) {
@@ -110,7 +134,7 @@ export class CdsNavigation extends LitElement {
     }
   }
 
-  // named slot for a header like sticky area to put search eg in
+  // Add a named slot for a header like sticky area to put search input into
   render() {
     return html`<nav
       class="private-host"
@@ -122,11 +146,9 @@ export class CdsNavigation extends LitElement {
       ${this.headerTemplate}
       <div
         class="navigation-body"
-        cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none ${this.layout === 'horizontal'
-          ? 'align:vertical-center'
-          : ''}"
+        cds-layout="${this.layout} wrap:none ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
       >
-        <slot name="cds-navigation-group-or-item"></slot>
+        <slot></slot>
       </div>
       <footer
         cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'

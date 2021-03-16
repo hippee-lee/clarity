@@ -7,14 +7,18 @@
 @import './../styles/tokens/generated/index';
 
 :host {
-  //width: 100%;
+  width: 100%;
   //border: 1px solid deepskyblue;
 }
 
-//:host([layout='vertical']:not([expanded])) {
-//  ::slotted(:not(cds-icon)) {
-//    display: none;
-//    margin-left: auto;
-//    margin-right: auto;
-//  }
-//}
+.private-host > * {
+  width: 100%;
+}
+
+::slotted([cds-layout~='align:bottom']) {
+  margin-top: auto !important;
+}
+
+::slotted([cds-layout~='align:right']) {
+  margin-left: auto !important;
+}

@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { baseStyles, i18n, I18nService, property, querySlot } from '@cds/core/internal';
+import { baseStyles, i18n, I18nService, internalProperty } from '@cds/core/internal';
 import { styles } from './navigation-item.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
@@ -35,17 +35,19 @@ export class CdsNavigationItem extends LitElement {
 
   @querySlot('cds-icon', { assign: 'item-icon' }) protected itemIcon: HTMLLabelElement;
 
+  // TODO: can this handle default icon projection? Look at shijirs PR for usage in the pagination component
+
   // private get defaultIconTemplate() {
   //   return html` <cds-icon shape="link" direction="left" size="md"></cds-icon> `;
   // }
 
   @property({ type: Boolean }) expanded = false;
 
-  @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
+  @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
   render() {
     return html`
-      <span cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md no-scrolling">
+      <span cds-layout="${this.layout} wrap:none gap:md no-scrolling">
         <slot></slot>
       </span>
     `;

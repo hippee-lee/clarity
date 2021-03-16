@@ -30,7 +30,7 @@ export default {
 //   `;
 // }
 
-export function basicVertical() {
+export function dev() {
   return html`
     <div cds-layout="vertical gap:md">
       <h1>Hello Navigation 🧭</h1>
@@ -43,7 +43,7 @@ export function basicVertical() {
               <cds-icon shape="cog" size="md" cds-layout="align:right"></cds-icon>
             </cds-navigation-header>
             <cds-navigation-item>
-              <a href="#" cds-layout="horizontal">
+              <a href="#">
                 grp 1.1
                 <cds-icon shape="home" size="md" cds-layout="align:right"></cds-icon>
               </a>
@@ -84,16 +84,18 @@ export function basicVertical() {
           </cds-navigation-group>
           <cds-divider cds-layout="m-y:md"></cds-divider>
           <cds-navigation-item>
-            <a href="#" cds-layout="horizontal">
-              <span>desktop</span>
+            <a href="#" cds-layout="horizontal m-x:md">
+              <span>desktop 2</span>
               <cds-icon cds-layout="align:right" shape="home" size="md"></cds-icon>
             </a>
           </cds-navigation-item>
           <cds-navigation-group cds-layout="vertical gap:md align:bottom">
             <cds-navigation-header>grp header</cds-navigation-header>
             <cds-navigation-item>
-              <cds-icon shape="home" size="md"></cds-icon>
-              <a href="#">navigation bottom</a>
+              <a href="#">
+                navigation bottom
+                <cds-icon shape="home" size="md"></cds-icon>
+              </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">link</a>
@@ -213,14 +215,15 @@ export function basicVertical() {
             Header & footer
             <cds-icon shape="link" direction="left" size="md"></cds-icon>
           </cds-navigation-header>
-          <cds-divider></cds-divider>
-          <cds-navigation-item>
+          <div slot="cds-navigation-subheader">
+            <cds-divider></cds-divider>
             <cds-input layout="vertical" cds-layout="m-t:md">
               <label>Search</label>
               <input type="text" />
               <cds-control-message>Filter navigation</cds-control-message>
             </cds-input>
-          </cds-navigation-item>
+            <cds-divider cds-layout="m-t:md"></cds-divider>
+          </div>
           <cds-navigation-group>
             <cds-navigation-header>
               NavGroup 1
@@ -673,30 +676,835 @@ export function basicVertical() {
   `;
 }
 
-export function collapsedVertical() {
+export function verticalBasic() {
   return html`
-    <cds-navigation>
-      <cds-navigation-header>
-        Header
-      </cds-navigation-header>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-    </cds-navigation>
+    <div style="height: 500px">
+      <cds-navigation expanded>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
   `;
 }
 
-export function basicHorizontal() {
+export function verticalDefaultHeader() {
   return html`
-    <cds-navigation layout="horizontal">
-      <cds-navigation-header>
-        Header
-      </cds-navigation-header>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-      <cds-navigation-item>item</cds-navigation-item>
-    </cds-navigation>
+    <div style="height: 500px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Default Header
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalCustomHeader() {
+  return html`
+    <div style="height: 500px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalAlignBottom() {
+  return html`
+    <div style="height: 500px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom">
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalScrolling() {
+  return html`
+    <div style="height: 200px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m-x:md">
+            Footer Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalFooter() {
+  return html`
+    <div style="height: 300px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom" slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m:md">
+            FooterItem
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalGroup() {
+  return html`
+    <div style="height: 300px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-group expanded>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+        </cds-navigation-group>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom" slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m:md">
+            FooterItem
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function verticalNestedGroup() {
+  return html`
+    <div style="height: 300px">
+      <cds-navigation expanded>
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-group expanded>
+          <cds-navigation-header>Group 2</cds-navigation-header>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-group>
+            <cds-navigation-header>Group 2</cds-navigation-header>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+          </cds-navigation-group>
+        </cds-navigation-group>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom" slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m:md">
+            FooterItem
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalBasic() {
+  return html`
+    <div>
+      <cds-navigation layout="horizontal">
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalHeader() {
+  return html`
+    <div>
+      <h4>TODO: Fix the bug</h4>
+      <cds-navigation layout="horizontal">
+        <cds-navigation-header>
+          Custom Header 2
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalAlignRight() {
+  return html`
+    <div>
+      <cds-navigation layout="horizontal">
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:right">
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalFooter() {
+  return html`
+    <div>
+      <cds-navigation layout="horizontal">
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalScrolling() {
+  return html`
+    <div style="width: 500px">
+      <cds-navigation layout="horizontal">
+        <cds-navigation-header>
+          Custom Header 2
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m-x:md">
+            Footer Item
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalGroup() {
+  return html`
+    <div style="height: 300px">
+      <cds-navigation expanded layout="horizontal">
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-group expanded>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+        </cds-navigation-group>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom" slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m:md">
+            FooterItem
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
+  `;
+}
+
+export function horizontalNestedGroup() {
+  return html`
+    <div style="height: 300px">
+      <cds-navigation expanded layout="horizontal">
+        <cds-navigation-header>
+          Custom Header
+          <cds-icon shape="angle-double" direction="left"></cds-icon>
+        </cds-navigation-header>
+        <cds-navigation-group expanded>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal m-x:md">
+              Navigation Item
+              <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-group expanded>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#" cds-layout="horizontal m-x:md">
+                Navigation Item
+                <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+              </a>
+            </cds-navigation-item>
+          </cds-navigation-group>
+        </cds-navigation-group>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#" cds-layout="horizontal m-x:md">
+            Navigation Item
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+        <cds-navigation-item cds-layout="align:bottom" slot="cds-navigation-footer">
+          <a href="#" cds-layout="horizontal m:md">
+            FooterItem
+            <cds-icon shape="link" cds-layout="align:right"></cds-icon>
+          </a>
+        </cds-navigation-item>
+      </cds-navigation>
+    </div>
   `;
 }

@@ -11,6 +11,7 @@ import {
   EventEmitter,
   i18n,
   I18nService,
+  internalProperty,
   property,
   querySlot,
   querySlotAll,
@@ -50,14 +51,13 @@ export class CdsNavigationGroup extends LitElement {
   @querySlot('cds-navigation-header', { assign: 'group-header' })
   protected groupHeader: CdsNavigationHeader;
 
-  // ReaCT HAS ISSUES WITH EXPANDED="FALSE"
+  // React has issues with expanded="false"
   @property({ type: Boolean })
-  expanded: boolean;
+  expanded = false;
 
   @event() protected expandedChange: EventEmitter<boolean>;
 
-  // Can make this @internalPrioperty instead
-  @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
+  @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
   // Weird, its like the group inherits the named slot from parent.
   @querySlotAll('cds-navigation-item', { assign: 'group-items' })
@@ -67,14 +67,36 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
-    setOrRemoveAttribute(this, ['expanded', ''], () => {
-      console.log('setOrRemoveAttr??');
-      return !this.expanded;
-    });
-    this.expandedChange.emit(!this.expanded);
+    // TODO
+    // don't mutate here, only emit so that frameworks can handle it.
+    // Same for top level expand/collapse just notify and let hose app control state of show/hide
+    //
+    // emit the event and let the host app handle mutation
+    // setOrRemoveAttribute(this, ['expanded', ''], () => {
+    //   // add expanded when this is not false
+    //   return !this.expanded;
+    // });
+    this.handleTabIndex();
+    this.expandedChange.emit(this.expanded);
   }
 
-  // TODO(matthew): turn into a utility since this is done in two places?
+  private handleTabIndex() {
+    // TODO(matthew): handle this so that it doesn't propagate up or down.
+    // prevent tabbing to items and nested groups when they are hidden
+    this.groupItems.forEach(item => {
+      setOrRemoveAttribute(item, ['tabindex', '-1'], () => {
+        // prevent tabbing when this is not false
+        return !this.expanded;
+      });
+    });
+    this.nestedGroup.forEach(group => {
+      setOrRemoveAttribute(group, ['tabindex', '-1'], () => {
+        // prevent tabbing when this is not false
+        return !this.expanded;
+      });
+    });
+  }
+
   protected get headerTemplate() {
     if (this.groupHeader) {
       // TODO(matthew): do I need to do something special to import the core button styles?
@@ -88,6 +110,7 @@ export class CdsNavigationGroup extends LitElement {
               </header>
             `
           : html``}
+        // why group headers are not rendering
       `;
     } else {
       return '';
@@ -108,6 +131,28 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
+  // New render? from scotts fixes branch??
+  // render() {
+  //   return html`
+  //     <div
+  //       class="private-host"
+  //       cds-layout="${this.layout ? this.layout : 'horizontal'} ${this.layout === 'horizontal'
+  //     ? 'align:horizontal-fill'
+  //     : ''} wrap:none gap:md"
+  //     >
+  //       ${this.headerTemplate}
+  //       <div
+  //         class="navigation-group-items"
+  //         cds-layout="${this.layout === 'horizontal'
+  //     ? 'horizontal wrap:none align:vertical-center'
+  //     : 'vertical'} gap:md"
+  //       >
+  //         <slot name="group-items"></slot>
+  //       </div>
+  //     </div>
+  //   `;
+  // }
+
   render() {
     return html`
       <div
@@ -123,16 +168,18 @@ export class CdsNavigationGroup extends LitElement {
 
   updated(props: Map<string, any>) {
     super.updated(props);
-    // TODO(matthew): what is the core stance on handling this behavior? Do it dfor hte app or document it and put onus on consumer to add expanded for vertical groups?
+    this.handleTabIndex();
+
+    // Don't need to mutate state, just emit changes
     if (this.layout === 'horizontal') {
       // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');
     }
-
     if (this.nestedGroup.length > 0) {
       this.nestedGroup.forEach(item => {
         syncProps(item, this, {
           layout: true,
+          expanded: true,
         });
       });
     }
