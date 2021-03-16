@@ -67,6 +67,15 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
+    // TODO
+    // don't mutate here, only emit so that frameworks can handle it.
+    // Same for top level expand/collapse just notify and let hose app control state of show/hide
+    //
+    // emit the event and let the host app
+    // setOrRemoveAttribute(this, ['expanded', ''], () => {
+    //   // add expanded when this is not false
+    //   return !this.expanded;
+    // });
     setOrRemoveAttribute(this, ['expanded', ''], () => {
       // add expanded when this is not false
       return !this.expanded;
@@ -105,6 +114,7 @@ export class CdsNavigationGroup extends LitElement {
               </header>
             `
           : html``}
+        // why group headers are not rendering
       `;
     } else {
       return '';
@@ -125,6 +135,28 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
+  // New render? from scotts fixes branch??
+  // render() {
+  //   return html`
+  //     <div
+  //       class="private-host"
+  //       cds-layout="${this.layout ? this.layout : 'horizontal'} ${this.layout === 'horizontal'
+  //     ? 'align:horizontal-fill'
+  //     : ''} wrap:none gap:md"
+  //     >
+  //       ${this.headerTemplate}
+  //       <div
+  //         class="navigation-group-items"
+  //         cds-layout="${this.layout === 'horizontal'
+  //     ? 'horizontal wrap:none align:vertical-center'
+  //     : 'vertical'} gap:md"
+  //       >
+  //         <slot name="group-items"></slot>
+  //       </div>
+  //     </div>
+  //   `;
+  // }
+
   render() {
     return html`
       <div
@@ -141,6 +173,8 @@ export class CdsNavigationGroup extends LitElement {
   updated(props: Map<string, any>) {
     super.updated(props);
     this.handleTabIndex();
+
+    // Don't need to mutate state, just emit changes
     if (this.layout === 'horizontal') {
       // do setAttributes here instead
       addAttributeValue(this, 'expanded', '');
@@ -149,6 +183,7 @@ export class CdsNavigationGroup extends LitElement {
       this.nestedGroup.forEach(item => {
         syncProps(item, this, {
           layout: true,
+          expanded: true,
         });
       });
     }

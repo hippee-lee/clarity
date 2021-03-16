@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement } from 'lit-element';
-import { baseStyles, i18n, I18nService, property, querySlot } from '@cds/core/internal';
+import { baseStyles, i18n, I18nService, internalProperty, property, querySlot } from '@cds/core/internal';
 import { styles } from './navigation-header.element.css.js';
 import { NavigationLayout } from '@cds/core/navigation/utils/interfaces';
 import { defaultNavigationLayout } from '@cds/core/navigation/utils';
@@ -30,12 +30,9 @@ import { CdsIcon } from '@cds/core/icon';
  */
 export class CdsNavigationHeader extends LitElement {
   @property({ type: Boolean }) expanded = false;
-  // React issue for expanded="false"
-
-  @property({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
-
+  // TODO: React issue for expanded="false" ???
+  @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
   @i18n() i18n = I18nService.keys.navigation;
-
   @querySlot('cds-icon', { assign: 'header-icon' }) protected headerIcon: CdsIcon;
 
   private get defaultIconTemplate() {
@@ -45,6 +42,39 @@ export class CdsNavigationHeader extends LitElement {
   }
 
   // Need two layout template, vertical and horizontal
+
+  // Which branch is right?
+  // protected getLayoutTemplate() {
+  //   // do not put headers into horizontal navigation
+  //   if (this.layout === 'horizontal') {
+  //     return '';
+  //   }
+  //   //      <!--<span cds-layout="${this.textlayout}"> -->
+  //   return html` <cds-button action="flat" cds-layout="horizontal">
+  //     <span>
+  //       <slot></slot>
+  //     </span>
+  //     <span cds-layout="${this.expanded ? 'align:right' : 'align:horizontal-center'}">
+  //       ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
+  //     </span>
+  //   </cds-button>`;
+  // }
+  //
+  // // TODO try adding defaultIconTemplate inside the slot so that
+  //
+  // // TODO: Need to differentiate between top level headers and group level headers.
+
+  // I need to know if this is has cds-navigation parent or cds-navigation-group parent
+  // isNestedGroup() {
+  //   const parent = this.parentElement?.tagName;
+  //   console.log('group parent', parent === 'CDS-NAVIGATION-GROUP');
+  //   return parent === 'CDS-NAVIGATION-GROUP';
+  // }
+  //
+  // isNavigationHeader() {
+  //   const hasNavigationHeader = this.parentElement?.tagName;
+  //   return hasNavigationHeader === 'CDS-NAVIGATION';
+  // }
 
   protected getLayoutTemplate(layout: NavigationLayout) {
     switch (layout) {
