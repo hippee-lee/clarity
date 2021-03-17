@@ -104,50 +104,31 @@ export class CdsNavigation extends LitElement {
           </div>
         `);
 
-    // if (this.navigationHeader && this.layout === 'vertical') {
-    //   returnHTML = html`
-    //     <header class="navigation-header">
-    //       <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
-    //         <slot name="cds-navigation-header"></slot>
-    //       </cds-button>
-    //       <slot name="cds-navigation-subheader"></slot>
-    //     </header>
-    //   `;
-    // } else if (this.navigationHeader && this.layout === 'horizontal') {
-    //   returnHTML = html`
-    //     <div class="navigation-header" cds-layout="horizontal">
-    //       <slot name="cds-navigation-header"></slot>
-    //     </div>
-    //   `;
-    // } else {
-    //   returnHTML = '';
-    // }
-
     return returnHTML;
   }
 
-  // Add a named slot for a header like sticky area to put search input into
   render() {
     return html`<nav
       class="private-host"
       role="navigation"
       aria-label="${this.i18n.navigationLabel}"
       aria-expanded="${this.expanded}"
-      cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none ${this.layout === 'horizontal'
-        ? 'align:vertical-center'
-        : ''}"
+      cds-layout="${this.layout ? this.layout : 'vertical'}
+                  wrap:none
+                  ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
     >
       ${this.headerTemplate}
       <div
         class="navigation-body"
-        cds-layout="${this.layout} wrap:none ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
+        cds-layout="${this.layout}
+                    wrap:none
+                    ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
       >
         <slot></slot>
       </div>
       <footer
-        cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
-          ? 'align:vertical-center'
-          : ''} wrap:none"
+        cds-layout="${this.layout ? this.layout : 'vertical'}
+                    ${this.layout === 'horizontal' ? 'align:vertical-center' : ''} wrap:none"
       >
         <slot name="cds-navigation-footer"></slot>
       </footer>
