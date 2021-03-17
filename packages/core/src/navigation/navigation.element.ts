@@ -87,50 +87,31 @@ export class CdsNavigation extends LitElement {
     this.expandedChange.emit(!this.expanded);
   }
 
-  // TODO: Can I use this form instead?
-  // protected get headerTemplate() {
-  //   if (!this.navigationHeader) {
-  //     return '';
-  //   }
-  //
-  //   return html`
-  //     ${this.layout === 'vertical' || '' // default axis
-  //     ? html`
-  //           <header class="navigation-header" cds-layout="vertical">
-  //             <cds-button @click="${() => this.toggle()}" action="flat">
-  //               <slot name="cds-navigation-header"></slot>
-  //             </cds-button>
-  //             <slot name="cds-navigation-subheader"></slot>
-  //           </header>
-  //         `
-  //     : html`
-  //           <div cds-layout="horizontal">
-  //             <slot name="cds-navigation-header"></slot>
-  //           </div>
-  //         `}
-  //   `;
-  // }
-
   protected get headerTemplate() {
-    if (this.navigationHeader) {
-      return html`
-        ${this.layout === 'vertical' || '' // default axis
-          ? html`
-              <header class="navigation-header">
-                <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
-                  <slot name="cds-navigation-header"></slot>
-                </cds-button>
-              </header>
-            `
-          : html`
-              <div cds-layout="horizontal align:fill p:none">
-                <slot name="cds-navigation-header"></slot>
-              </div>
-            `}
+    let returnHTML;
+
+    console.log(this);
+
+    if (this.navigationHeader && this.layout === 'vertical') {
+      returnHTML = html`
+        <header class="navigation-header">
+          <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+            <slot name="cds-navigation-header"></slot>
+          </cds-button>
+          <slot name="cds-navigation-subheader"></slot>
+        </header>
+      `;
+    } else if (this.navigationHeader && this.layout === 'horizontal') {
+      returnHTML = html`
+        <div class="navigation-header" cds-layout="horizontal">
+          <slot name="cds-navigation-header"></slot>
+        </div>
       `;
     } else {
-      return '';
+      returnHTML = '';
     }
+
+    return returnHTML;
   }
 
   // Add a named slot for a header like sticky area to put search input into

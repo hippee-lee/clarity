@@ -212,7 +212,7 @@ export function dev() {
         <!-- Header + body + footer -->
         <cds-navigation expanded>
           <cds-navigation-header>
-            Header & footer
+            Header & body & footer
             <cds-icon shape="link" direction="left" size="md"></cds-icon>
           </cds-navigation-header>
           <div slot="cds-navigation-subheader">
@@ -446,7 +446,7 @@ export function dev() {
             </a>
           </cds-navigation-item>
         </cds-navigation>
-        <!-- Body + footer -->
+        <!-- Header + Body -->
         <cds-navigation layout="horizontal" cds-layout="p:md">
           <cds-navigation-header>
             Header, no footer
@@ -547,7 +547,7 @@ export function dev() {
         <!-- Header + body + footer -->
         <cds-navigation layout="horizontal" cds-layout="p:md">
           <cds-navigation-header>
-            Header & footer
+            Header & body & footer
             <cds-icon shape="link" direction="left" size="md"></cds-icon>
           </cds-navigation-header>
           <cds-navigation-group expanded>
@@ -1506,5 +1506,137 @@ export function horizontalNestedGroup() {
         </cds-navigation-item>
       </cds-navigation>
     </div>
+  `;
+}
+
+export function horizontalFull() {
+  return html`
+    <cds-navigation layout="horizontal" cds-layout="p:md">
+      <cds-navigation-header>
+        Header & body & footer
+        <cds-icon shape="link" direction="left" size="md"></cds-icon>
+      </cds-navigation-header>
+      <cds-divider cds-layout="m-x:md" orientation="vertical"></cds-divider>
+      <cds-navigation-group expanded>
+        <cds-navigation-header>grp header</cds-navigation-header>
+        <cds-navigation-item>
+          <cds-icon shape="home" size="md"></cds-icon>
+          <a href="#">grp 1</a>
+        </cds-navigation-item>
+        <cds-navigation-item>
+          <a href="#">grp 2</a>
+        </cds-navigation-item>
+      </cds-navigation-group>
+      <cds-navigation-item>
+        <a href="#">
+          <cds-icon shape="home" size="md" cds-layout="m-x:lg"></cds-icon>
+          link
+        </a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <cds-icon shape="home" size="md"></cds-icon>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item>
+        <a href="#">link</a>
+      </cds-navigation-item>
+      <cds-navigation-item slot="cds-navigation-footer" cds-layout="align:right">
+        <a href="#">
+          footer link
+          <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
+        </a>
+      </cds-navigation-item>
+    </cds-navigation>
   `;
 }

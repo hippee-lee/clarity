@@ -78,7 +78,7 @@ export class CdsNavigationHeader extends LitElement {
   protected getLayoutTemplate(layout: NavigationLayout) {
     switch (layout) {
       case 'horizontal':
-        return html``; // TODO(matthew): remove this, it the parent should never project anything here for x-axis
+        return html`<slot></slot>`;
       default:
         // vertical
         return html`
