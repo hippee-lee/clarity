@@ -4,7 +4,8 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, LitElement } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit-element';
+
 import {
   baseStyles,
   event,
@@ -59,7 +60,6 @@ export class CdsNavigationGroup extends LitElement {
 
   @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
 
-  // Weird, its like the group inherits the named slot from parent.
   @querySlotAll('cds-navigation-item', { assign: 'group-items' })
   protected groupItems: NodeListOf<CdsNavigationItem>;
 
@@ -104,13 +104,12 @@ export class CdsNavigationGroup extends LitElement {
         ${this.layout === 'vertical' || '' // default axis
           ? html`
               <header class="navigation-group-header">
-                <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+                <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal">
                   <slot name="group-header"></slot>
                 </cds-button>
               </header>
             `
           : html``}
-        // why group headers are not rendering
       `;
     } else {
       return '';
@@ -166,7 +165,7 @@ export class CdsNavigationGroup extends LitElement {
     `;
   }
 
-  updated(props: Map<string, any>) {
+  updated(props: PropertyValues<this>) {
     super.updated(props);
     this.handleTabIndex();
 
@@ -179,8 +178,14 @@ export class CdsNavigationGroup extends LitElement {
       this.nestedGroup.forEach(item => {
         syncProps(item, this, {
           layout: true,
-          expanded: true,
+          // expanded: true,
         });
+      });
+    }
+    if (this.groupHeader) {
+      syncProps(this.groupHeader, this, {
+        layout: true,
+        expanded: true,
       });
     }
   }

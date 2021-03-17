@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, LitElement } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit-element';
 import {
   // addAttributeValue,
   baseStyles,
@@ -48,8 +48,7 @@ export class CdsNavigation extends LitElement {
   }
 
   // The specific child selector prevents grabbing headers nested in a group element.
-  // No assignment m3eans it goes into the default slot.
-  // unnamed slot
+  // No assignment means it goes into the default slot.
   @querySlot('cds-navigation > cds-navigation-header', { assign: 'cds-navigation-header' })
   protected navigationHeader: CdsNavigationHeader;
 
@@ -184,7 +183,7 @@ export class CdsNavigation extends LitElement {
     }
   }
 
-  updated(props: Map<string, any>) {
+  updated(props: PropertyValues<this>) {
     super.updated(props);
     this.updateChildrenProps();
   }

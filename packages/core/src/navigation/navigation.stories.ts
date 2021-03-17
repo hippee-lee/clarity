@@ -37,7 +37,7 @@ export function dev() {
       <div cds-layout="horizontal wrap:none gap:md" style="height: 50vh; /*box-shadow: 0 0 0 4px deeppink*/">
         <!-- Body + footer -->
         <cds-navigation expanded>
-          <cds-navigation-group cds-layout="m-t:md">
+          <cds-navigation-group expanded cds-layout="m-t:md">
             <cds-navigation-header>
               NavGroup 1
               <cds-icon shape="cog" size="md" cds-layout="align:right"></cds-icon>

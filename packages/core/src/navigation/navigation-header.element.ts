@@ -83,11 +83,10 @@ export class CdsNavigationHeader extends LitElement {
         // vertical
         return html`
           <div cds-layout="horizontal align:vertical-center">
-            hello
-            <span cds-layout="${this.expanded ? '' : 'display:screen-reader-only'}">
+            <span cds-layout="${this.expanded ? '' : ''}">
               <slot></slot>
             </span>
-            <span cds-layout="${this.expanded ? 'align:right' : 'align:horizontal-center'}">
+            <span cds-layout="align:right">
               ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
             </span>
           </div>
