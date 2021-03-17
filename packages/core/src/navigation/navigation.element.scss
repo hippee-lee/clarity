@@ -3,12 +3,8 @@
 
 :host {
   background-color: var(--cds-global-color-gray-200, #{--cds-global-color-gray-200});
-  //display: flex;
-  //flex-direction: column;
-  //flex-grow: 1;
   height: inherit;
   width: inherit !important; // Why so important??
-  //overflow-y: auto;
 }
 
 :host(:not([expanded])) {
@@ -24,16 +20,10 @@
   width: var(--width) !important;
   max-width: var(--width) !important;
   min-width: var(--width) !important;
-  //border: 4px solid var(--border-color);
 }
-
-//:host([layout='horizontal']) {
-//  overflow-y: auto;
-//}
 
 :host([layout='horizontal']) {
   height: auto;
-  //overflow-x: auto;
   width: inherit !important;
   max-width: unset;
 }
@@ -47,6 +37,7 @@
 // Thinking to be specific about the overflow behavior.
 :host([layout='horizontal']) {
   .navigation-body {
+    flex-grow: 1;
     overflow-x: auto;
   }
 }
@@ -58,8 +49,6 @@
 }
 
 .navigation-body {
-  flex: 1;
-  //overflow: auto;
   width: 100%;
   height: 100%;
 }

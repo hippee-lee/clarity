@@ -117,14 +117,14 @@ export class CdsNavigationGroup extends LitElement {
   }
 
   protected get horizontalItems() {
-    return html` <div class="navigation-group-items" cds-layout="horizontal gap:md wrap:none align:vertical-center">
+    return html` <div class="navigation-group-items" cds-layout="horizontal wrap:none align:vertical-center">
       <!-- why does this inherit the parental slot name?? -->
       <slot name="group-items"></slot>
     </div>`;
   }
 
   protected get verticalItems() {
-    return html` <div class="navigation-group-items" cds-layout="vertical gap:md">
+    return html` <div class="navigation-group-items" cds-layout="vertical">
       <!-- why does this inherit the parental slot name?? -->
       <slot name="group-items"></slot>
     </div>`;
@@ -144,7 +144,7 @@ export class CdsNavigationGroup extends LitElement {
   //         class="navigation-group-items"
   //         cds-layout="${this.layout === 'horizontal'
   //     ? 'horizontal wrap:none align:vertical-center'
-  //     : 'vertical'} gap:md"
+  //     : 'vertical'}"
   //       >
   //         <slot name="group-items"></slot>
   //       </div>
@@ -158,7 +158,7 @@ export class CdsNavigationGroup extends LitElement {
         class="private-host"
         cds-layout="${this.layout ? this.layout : 'horizontal'} ${this.layout === 'horizontal'
           ? 'align:horizontal-fill'
-          : ''} wrap:none gap:md"
+          : ''} wrap:none"
       >
         ${this.headerTemplate} ${this.layout === 'horizontal' ? this.horizontalItems : this.verticalItems}
       </div>

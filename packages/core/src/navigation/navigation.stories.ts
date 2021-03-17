@@ -32,7 +32,7 @@ export default {
 
 export function dev() {
   return html`
-    <div cds-layout="vertical gap:md">
+    <div cds-layout="vertical gap:md" style="overflow: auto">
       <h1>Hello Navigation 🧭</h1>
       <div cds-layout="horizontal wrap:none gap:md" style="height: 50vh; /*box-shadow: 0 0 0 4px deeppink*/">
         <!-- Body + footer -->
@@ -409,17 +409,17 @@ export function dev() {
       </div>
       <div cds-layout="vertical wrap:none gap:md" style="height: 30vh; /*box-shadow: 0 0 0 4px deeppink*/">
         <!-- Body + footer -->
-        <cds-navigation layout="horizontal" cds-layout="p:md">
+        <cds-navigation layout="horizontal">
           <cds-navigation-item>Item 1</cds-navigation-item>
           <cds-navigation-group>
             <cds-navigation-header>
               NavGroup solo
-              <cds-icon shape="cog" size="md" cds-layout="align:right"></cds-icon>
+              <cds-icon shape="cog" size="md"></cds-icon>
             </cds-navigation-header>
             <cds-navigation-item>
               <a href="#" cds-layout="horizontal">
                 solo group item
-                <cds-icon shape="home" size="md" cds-layout="align:right"></cds-icon>
+                <cds-icon shape="home" size="md"></cds-icon>
               </a>
             </cds-navigation-item>
           </cds-navigation-group>
@@ -440,7 +440,7 @@ export function dev() {
           </cds-navigation-item>
 
           <cds-navigation-item cds-layout="align:right">
-            <a href="#" style="width: 100%">
+            <a href="#">
               align:right
               <cds-icon shape="cog" size="md" cds-layout="m-x:md"></cds-icon>
             </a>

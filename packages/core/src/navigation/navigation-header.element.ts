@@ -34,11 +34,11 @@ export class CdsNavigationHeader extends LitElement {
   @i18n() i18n = I18nService.keys.navigation;
   @querySlot('cds-icon', { assign: 'header-icon' }) protected headerIcon: CdsIcon;
 
-  private get defaultIconTemplate() {
-    return html`
-      <cds-icon shape="angle" direction="left" direction="${this.expanded ? 'left' : 'right'}" size="md"></cds-icon>
-    `;
-  }
+  // private get defaultIconTemplate() {
+  //   return html`
+  //     <cds-icon shape="angle" direction="left" direction="${this.expanded ? 'left' : 'right'}" size="md"></cds-icon>
+  //   `;
+  // }
 
   // Need two layout template, vertical and horizontal
 
@@ -98,7 +98,11 @@ export class CdsNavigationHeader extends LitElement {
     // TODO(matthew): fix this template for horizontal and vertical with default toggle icon
     // return this.getLayoutTemplate(this.layout);
     return html`
-      <div class="private-host" cds-layout="horizontal">
+      <div
+        class="private-host"
+        cds-layout="horizontal
+            ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
+      >
         <slot></slot>
       </div>
     `;

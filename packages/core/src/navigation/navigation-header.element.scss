@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+:host([layout~='horizontal']) {
+  border: 1px solid dodgerblue;
+}
+
 ::slotted([cds-layout~='align:bottom']) {
   margin-top: auto !important;
 }

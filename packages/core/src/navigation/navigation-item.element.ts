@@ -47,7 +47,7 @@ export class CdsNavigationItem extends LitElement {
 
   render() {
     return html`
-      <span cds-layout="${this.layout} wrap:none gap:md no-scrolling">
+      <span cds-layout="${this.layout} wrap:none no-scrolling">
         <slot></slot>
       </span>
     `;

@@ -83,33 +83,45 @@ export class CdsNavigation extends LitElement {
   @i18n() i18n = I18nService.keys.navigation;
 
   private toggle() {
-    this.expanded ? this.removeAttribute('expanded') : this.setAttribute('expanded', '');
     this.expandedChange.emit(!this.expanded);
   }
 
   protected get headerTemplate() {
     let returnHTML;
 
-    console.log(this);
-
-    if (this.navigationHeader && this.layout === 'vertical') {
-      returnHTML = html`
-        <header class="navigation-header">
-          <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+    this.navigationHeader && this.layout === 'vertical'
+      ? (returnHTML = html`
+          <header class="navigation-header">
+            <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal">
+              <slot name="cds-navigation-header"></slot>
+            </cds-button>
+            <slot name="cds-navigation-subheader"></slot>
+          </header>
+        `)
+      : (returnHTML = html`
+          <div class="navigation-header" cds-layout="horizontal">
             <slot name="cds-navigation-header"></slot>
-          </cds-button>
-          <slot name="cds-navigation-subheader"></slot>
-        </header>
-      `;
-    } else if (this.navigationHeader && this.layout === 'horizontal') {
-      returnHTML = html`
-        <div class="navigation-header" cds-layout="horizontal">
-          <slot name="cds-navigation-header"></slot>
-        </div>
-      `;
-    } else {
-      returnHTML = '';
-    }
+          </div>
+        `);
+
+    // if (this.navigationHeader && this.layout === 'vertical') {
+    //   returnHTML = html`
+    //     <header class="navigation-header">
+    //       <cds-button @click="${() => this.toggle()}" action="flat" cds-layout="horizontal align:fill p:none">
+    //         <slot name="cds-navigation-header"></slot>
+    //       </cds-button>
+    //       <slot name="cds-navigation-subheader"></slot>
+    //     </header>
+    //   `;
+    // } else if (this.navigationHeader && this.layout === 'horizontal') {
+    //   returnHTML = html`
+    //     <div class="navigation-header" cds-layout="horizontal">
+    //       <slot name="cds-navigation-header"></slot>
+    //     </div>
+    //   `;
+    // } else {
+    //   returnHTML = '';
+    // }
 
     return returnHTML;
   }
@@ -121,7 +133,9 @@ export class CdsNavigation extends LitElement {
       role="navigation"
       aria-label="${this.i18n.navigationLabel}"
       aria-expanded="${this.expanded}"
-      cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none gap:md"
+      cds-layout="${this.layout ? this.layout : 'vertical'} wrap:none ${this.layout === 'horizontal'
+        ? 'align:vertical-center'
+        : ''}"
     >
       ${this.headerTemplate}
       <div
@@ -133,7 +147,7 @@ export class CdsNavigation extends LitElement {
       <footer
         cds-layout="${this.layout ? this.layout : 'vertical'} ${this.layout === 'horizontal'
           ? 'align:vertical-center'
-          : ''} wrap:none gap:md"
+          : ''} wrap:none"
       >
         <slot name="cds-navigation-footer"></slot>
       </footer>
