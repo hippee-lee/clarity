@@ -32,78 +32,24 @@ export class CdsNavigationHeader extends LitElement {
   // TODO: React issue for expanded="false" ???
   @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
   @i18n() i18n = I18nService.keys.navigation;
-  @querySlot('cds-icon', { assign: 'header-icon' }) protected headerIcon: CdsIcon;
-
-  // private get defaultIconTemplate() {
-  //   return html`
-  //     <cds-icon shape="angle" direction="left" direction="${this.expanded ? 'left' : 'right'}" size="md"></cds-icon>
-  //   `;
-  // }
-
-  // Need two layout template, vertical and horizontal
-
-  // Which branch is right?
-  // protected getLayoutTemplate() {
-  //   // do not put headers into horizontal navigation
-  //   if (this.layout === 'horizontal') {
-  //     return '';
-  //   }
-  //   //      <!--<span cds-layout="${this.textlayout}"> -->
-  //   return html` <cds-button action="flat" cds-layout="horizontal">
-  //     <span>
-  //       <slot></slot>
-  //     </span>
-  //     <span cds-layout="${this.expanded ? 'align:right' : 'align:horizontal-center'}">
-  //       ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
-  //     </span>
-  //   </cds-button>`;
-  // }
-  //
-  // // TODO try adding defaultIconTemplate inside the slot so that
-  //
-  // // TODO: Need to differentiate between top level headers and group level headers.
-
-  // I need to know if this is has cds-navigation parent or cds-navigation-group parent
-  // isNestedGroup() {
-  //   const parent = this.parentElement?.tagName;
-  //   console.log('group parent', parent === 'CDS-NAVIGATION-GROUP');
-  //   return parent === 'CDS-NAVIGATION-GROUP';
-  // }
-  //
-  // isNavigationHeader() {
-  //   const hasNavigationHeader = this.parentElement?.tagName;
-  //   return hasNavigationHeader === 'CDS-NAVIGATION';
-  // }
-
-  // protected getLayoutTemplate(layout: NavigationLayout) {
-  //   switch (layout) {
-  //     case 'horizontal':
-  //       return html`<slot></slot>`;
-  //     default:
-  //       // vertical
-  //       return html`
-  //         <div cds-layout="horizontal align:vertical-center">
-  //           <span cds-layout="${this.expanded ? '' : ''}">
-  //             <slot></slot>
-  //           </span>
-  //           <span cds-layout="align:right">
-  //             ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
-  //           </span>
-  //         </div>
-  //       `;
-  //   }
-  // }
+  @querySlot('cds-icon') protected headerIcon: CdsIcon;
+  @querySlot('span', { assign: 'header-text' }) protected headerText: HTMLSpanElement;
 
   render() {
-    // TODO(matthew): fix this template for horizontal and vertical with default toggle icon
-    // return this.getLayoutTemplate(this.layout);
     return html`
       <div
         class="private-host"
         cds-layout="horizontal
-            ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
+                    ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
       >
-        <slot></slot>
+        <span cds-layout="${this.expanded ? '' : 'display:screen-reader-only'}">
+          <slot name="header-text"></slot>
+        </span>
+        <slot>
+          ${this.headerIcon
+            ? html`<cds-icon shape="angle" direction="${this.expanded ? 'right' : 'left'}"></cds-icon>`
+            : ''}
+        </slot>
       </div>
     `;
   }

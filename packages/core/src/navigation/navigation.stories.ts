@@ -111,10 +111,10 @@ export function dev() {
             <a href="#">align:bottom link (no footer)</a>
           </cds-navigation-item>
         </cds-navigation>
-        <!-- Body + footer -->
+        <!-- Header & Body -->
         <cds-navigation layout="vertical" expanded>
           <cds-navigation-header>
-            Header, no footer
+            <span>Header no footer</span>
             <cds-icon cds-layout="align:right" shape="angle" size="md"></cds-icon>
           </cds-navigation-header>
           <cds-navigation-group expanded>
