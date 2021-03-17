@@ -75,33 +75,33 @@ export class CdsNavigationHeader extends LitElement {
   //   return hasNavigationHeader === 'CDS-NAVIGATION';
   // }
 
-  protected getLayoutTemplate(layout: NavigationLayout) {
-    switch (layout) {
-      case 'horizontal':
-        return html`<slot></slot>`;
-      default:
-        // vertical
-        return html`
-          <div cds-layout="horizontal align:vertical-center">
-            <span cds-layout="${this.expanded ? '' : ''}">
-              <slot></slot>
-            </span>
-            <span cds-layout="align:right">
-              ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
-            </span>
-          </div>
-        `;
-    }
-  }
+  // protected getLayoutTemplate(layout: NavigationLayout) {
+  //   switch (layout) {
+  //     case 'horizontal':
+  //       return html`<slot></slot>`;
+  //     default:
+  //       // vertical
+  //       return html`
+  //         <div cds-layout="horizontal align:vertical-center">
+  //           <span cds-layout="${this.expanded ? '' : ''}">
+  //             <slot></slot>
+  //           </span>
+  //           <span cds-layout="align:right">
+  //             ${this.headerIcon ? html`<slot name="header-icon"></slot>` : this.defaultIconTemplate}
+  //           </span>
+  //         </div>
+  //       `;
+  //   }
+  // }
 
   render() {
     // TODO(matthew): fix this template for horizontal and vertical with default toggle icon
-    return this.getLayoutTemplate(this.layout);
-    // return html`
-    //   <div class="private-host" cds-layout="horizontal">
-    //     <slot></slot>
-    //   </div>
-    // `;
+    // return this.getLayoutTemplate(this.layout);
+    return html`
+      <div class="private-host" cds-layout="horizontal">
+        <slot></slot>
+      </div>
+    `;
   }
 
   static get styles() {
