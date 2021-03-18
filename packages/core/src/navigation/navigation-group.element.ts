@@ -52,7 +52,6 @@ export class CdsNavigationGroup extends LitElement {
   @querySlot('cds-navigation-header', { assign: 'group-header' })
   protected groupHeader: CdsNavigationHeader;
 
-  // React has issues with expanded="false"
   @property({ type: Boolean })
   expanded = false;
 
@@ -67,15 +66,6 @@ export class CdsNavigationGroup extends LitElement {
   protected nestedGroup: NodeListOf<CdsNavigationItem>;
 
   private toggle() {
-    // TODO
-    // don't mutate here, only emit so that frameworks can handle it.
-    // Same for top level expand/collapse just notify and let hose app control state of show/hide
-    //
-    // emit the event and let the host app handle mutation
-    // setOrRemoveAttribute(this, ['expanded', ''], () => {
-    //   // add expanded when this is not false
-    //   return !this.expanded;
-    // });
     this.handleTabIndex();
     this.expandedChange.emit(this.expanded);
   }
@@ -95,6 +85,11 @@ export class CdsNavigationGroup extends LitElement {
         return !this.expanded;
       });
     });
+  }
+
+  private get isGroupHeader(): boolean {
+    console.log('isGroupHeader', this.parentElement.tagName === 'CDS-NAVIGATION-GROUP');
+    return this.parentElement.tagName === 'CDS-NAVIGATION-GROUP';
   }
 
   protected get headerTemplate() {
@@ -130,28 +125,6 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
-  // New render? from scotts fixes branch??
-  // render() {
-  //   return html`
-  //     <div
-  //       class="private-host"
-  //       cds-layout="${this.layout ? this.layout : 'horizontal'} ${this.layout === 'horizontal'
-  //     ? 'align:horizontal-fill'
-  //     : ''} wrap:none gap:md"
-  //     >
-  //       ${this.headerTemplate}
-  //       <div
-  //         class="navigation-group-items"
-  //         cds-layout="${this.layout === 'horizontal'
-  //     ? 'horizontal wrap:none align:vertical-center'
-  //     : 'vertical'}"
-  //       >
-  //         <slot name="group-items"></slot>
-  //       </div>
-  //     </div>
-  //   `;
-  // }
-
   render() {
     return html`
       <div
@@ -160,7 +133,8 @@ export class CdsNavigationGroup extends LitElement {
           ? 'align:horizontal-fill'
           : ''} wrap:none"
       >
-        ${this.headerTemplate} ${this.layout === 'horizontal' ? this.horizontalItems : this.verticalItems}
+        ${this.isGroupHeader ? 'group' : ''} ${this.headerTemplate}
+        ${this.layout === 'horizontal' ? this.horizontalItems : this.verticalItems}
       </div>
     `;
   }

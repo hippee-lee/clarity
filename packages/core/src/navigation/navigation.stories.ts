@@ -223,7 +223,7 @@ export function dev() {
             </cds-input>
             <cds-divider cds-layout="m-t:md"></cds-divider>
           </div>
-          <cds-navigation-group>
+          <cds-navigation-group expanded>
             <cds-navigation-header>
               NavGroup 1
               <cds-icon shape="cog" size="md" cds-layout="align:right"></cds-icon>
