@@ -6,7 +6,7 @@
 
 import { html, LitElement, PropertyValues } from 'lit-element';
 import {
-  // addAttributeValue,
+  addAttributeValue,
   baseStyles,
   event,
   EventEmitter,
@@ -162,5 +162,9 @@ export class CdsNavigation extends LitElement {
   updated(props: PropertyValues<this>) {
     super.updated(props);
     this.updateChildrenProps();
+    // NOTE: I do this so that header text doesn't get screen-reader-only display setting.
+    if (this.layout === 'horizontal') {
+      addAttributeValue(this, 'expanded', '');
+    }
   }
 }

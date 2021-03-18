@@ -125,6 +125,16 @@ export class CdsNavigationGroup extends LitElement {
     </div>`;
   }
 
+  protected get itemsTemplate() {
+    return html` <div
+      class="navigation-group-items"
+      cds-layout="${this.layout === 'horizontal' ? 'horizontal align:vertical-center' : 'vertical'} wrap:none"
+    >
+      <!-- why does this inherit the parental slot name?? -->
+      <slot name="group-items"></slot>
+    </div>`;
+  }
+
   render() {
     return html`
       <div
@@ -133,7 +143,7 @@ export class CdsNavigationGroup extends LitElement {
           ? 'align:horizontal-fill'
           : ''} wrap:none"
       >
-        ${this.isGroupHeader ? 'group' : ''} ${this.headerTemplate}
+        ${this.isGroupHeader ? 'group' : ''} ${this.headerTemplate} ${this.itemsTemplate}
         ${this.layout === 'horizontal' ? this.horizontalItems : this.verticalItems}
       </div>
     `;
