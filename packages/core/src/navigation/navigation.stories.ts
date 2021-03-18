@@ -114,8 +114,7 @@ export function dev() {
         <!-- Header & Body -->
         <cds-navigation layout="vertical" expanded>
           <cds-navigation-header>
-            <span>Header no footer</span>
-            <cds-icon cds-layout="align:right" shape="angle" size="md"></cds-icon>
+            Header no footer
           </cds-navigation-header>
           <cds-navigation-group expanded>
             <cds-navigation-header>grp header</cds-navigation-header>

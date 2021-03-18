@@ -32,24 +32,23 @@ export class CdsNavigationHeader extends LitElement {
   // TODO: React issue for expanded="false" ???
   @internalProperty({ type: String }) layout: NavigationLayout = defaultNavigationLayout;
   @i18n() i18n = I18nService.keys.navigation;
-  @querySlot('cds-icon') protected headerIcon: CdsIcon;
+  @querySlot('cds-icon', { assign: 'cds-icon-slot' }) protected headerIcon: CdsIcon;
   @querySlot('span', { assign: 'header-text' }) protected headerText: HTMLSpanElement;
 
   render() {
     return html`
-      <div
-        class="private-host"
-        cds-layout="horizontal
-                    ${this.layout === 'horizontal' ? 'align:vertical-center' : ''}"
-      >
+      <div class="private-host" cds-layout="horizontal align:vertical-center">
         <span cds-layout="${this.expanded ? '' : 'display:screen-reader-only'}">
-          <slot name="header-text"></slot>
+          <slot></slot>
         </span>
-        <slot>
-          ${this.headerIcon
-            ? html`<cds-icon shape="angle" direction="${this.expanded ? 'right' : 'left'}"></cds-icon>`
-            : ''}
-        </slot>
+        <span cds-layout="align:right">
+          <slot name="cds-icon-slot">
+            ${this.headerIcon
+              ? ''
+              : html`<cds-icon cds-layout="align:right" shape="angle" direction="${this.expanded ? 'left' : 'right'}">
+                </cds-icon>`}
+          </slot>
+        </span>
       </div>
     `;
   }
