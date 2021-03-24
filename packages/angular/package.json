@@ -26,7 +26,7 @@
     "dev": "ng build dev --prod --progress=false",
     "dev:dark": "ng build dev -c dark --prod --progress=false",
     "test": "npm-run-all test:unit:clr test:unit:cds test:golden",
-    "test:unit:clr": "ng test clr-angular --watch false",
+    "test:unit:clr": "ng test clr-angular --watch false --source-map=false",
     "test:unit:cds": "ng test cds-angular --watch false",
     "test:unit:coverage": "ng test clr-angular --watch false --code-coverage",
     "pretest:golden": "ts-api-guardian --out ./dist/golden/clr-angular.d.ts --stripExportPattern '^Çlr' ./dist/clr-angular/index.d.ts",
