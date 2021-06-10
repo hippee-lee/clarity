@@ -12,13 +12,12 @@ export const DEFAULT_NAVIGATION_LAYOUT = 'vertical';
 
 export type FocusableElement = CdsNavigationItem | CdsNavigationStart;
 
-export function expandedGroupEvent(event: KeyboardEvent): boolean {
+export function isExpandedGroupEvent(event: KeyboardEvent): boolean {
   const element = event.target as HTMLElement;
   return element?.parentElement?.tagName === 'CDS-NAVIGATION-GROUP' && element?.parentElement?.hasAttribute('expanded');
 }
 
-// Something wrong here
-export function expandedNavigation(event: KeyboardEvent): boolean {
+export function isExpandedNavigationEvent(event: KeyboardEvent): boolean {
   const element = event.target as HTMLElement;
   return element?.parentElement?.tagName === 'CDS-NAVIGATION' && element?.parentElement?.hasAttribute('expanded');
 }
@@ -38,13 +37,11 @@ export function getStartGroupElement(event: KeyboardEvent): CdsNavigationStart |
   }
 }
 
-// NOTE: Tradeoff to having this as a util is that I need to pass in the array of focusable elements
 export function getNextFocusElement(current: FocusableElement, elements: FocusableElement[]): FocusableElement {
   const idx = elements.indexOf(current);
   return elements[idx + 1] ? elements[idx + 1] : elements[0];
 }
 
-// NOTE: Tradeoff to having this as a util is that I need to pass in the array of focusable elements
 export function getPreviousFocusElement(current: FocusableElement, elements: FocusableElement[]): FocusableElement {
   const idx = elements.indexOf(current);
   return elements[idx - 1] ? elements[idx - 1] : elements[elements.length - 1];
@@ -58,7 +55,7 @@ export function getToggleIconDirection(element: CdsNavigationStart): Directions 
   }
 }
 
-export function isRootStart(event: KeyboardEvent): boolean {
+export function isRootStartEvent(event: KeyboardEvent): boolean {
   const element = event.target as HTMLElement;
   if (element?.parentElement?.tagName === 'CDS-NAVIGATION-ITEM') {
     return false;

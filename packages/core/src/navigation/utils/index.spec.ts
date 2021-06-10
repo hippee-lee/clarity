@@ -4,14 +4,14 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html } from 'lit-html';
+import { html } from 'lit';
 import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
 
 import { CdsNavigation, CdsNavigationGroup, CdsNavigationItem, CdsNavigationStart } from '@cds/core/navigation';
 import '@cds/core/navigation/register.js';
 import {
-  expandedGroupEvent,
-  expandedNavigation,
+  isExpandedGroupEvent,
+  isExpandedNavigationEvent,
   fireGroupExpandedChangeEvent,
   FocusableElement,
   getNextFocusElement,
@@ -20,7 +20,7 @@ import {
   getToggleIconDirection,
   isGroupItemEvent,
   isGroupStartEvent,
-  isRootStart,
+  isRootStartEvent,
   removeFocus,
   setFocus,
   visibleElement,
@@ -110,15 +110,15 @@ describe('navigation internal utilities', () => {
     });
 
     it('determines when an event is not an expanded group element', () => {
-      expect(expandedGroupEvent(arrowDown)).toBe(false);
+      expect(isExpandedGroupEvent(arrowDown)).toBe(false);
     });
 
     it('determines when events are not from expanded root elements', () => {
-      expect(expandedNavigation(arrowDown)).toBe(false);
+      expect(isExpandedNavigationEvent(arrowDown)).toBe(false);
     });
 
     it('determines events not from root start elements', () => {
-      expect(isRootStart(arrowDown)).toBe(false);
+      expect(isRootStartEvent(arrowDown)).toBe(false);
     });
 
     it('determines events not from group items', () => {
@@ -161,9 +161,9 @@ describe('navigation internal utilities', () => {
 
     it('identifies root cds-navigation-start elements', () => {
       groupStart.dispatchEvent(arrowDown);
-      expect(isRootStart(arrowDown)).toBe(false);
+      expect(isRootStartEvent(arrowDown)).toBe(false);
       rootStart.dispatchEvent(arrowDown);
-      expect(isRootStart(arrowDown)).toBe(true);
+      expect(isRootStartEvent(arrowDown)).toBe(true);
     });
 
     it('ignores some arrow events on root item elements', async () => {
@@ -171,7 +171,7 @@ describe('navigation internal utilities', () => {
       const anchor = rootItem.querySelector('a');
       anchor.dispatchEvent(arrowDown);
       await componentIsStable(component);
-      expect(isRootStart(arrowDown)).toBe(false);
+      expect(isRootStartEvent(arrowDown)).toBe(false);
     });
 
     it('returns a CdsGroupStart element for events', () => {
@@ -195,15 +195,15 @@ describe('navigation internal utilities', () => {
       groupStart.dispatchEvent(arrowDown);
       groupElement.removeAttribute('expanded');
       groupStart.dispatchEvent(arrowDown);
-      expect(expandedGroupEvent(arrowDown)).toBe(false);
+      expect(isExpandedGroupEvent(arrowDown)).toBe(false);
     });
 
     it('detects expanded cds-navigation events', () => {
       rootStart.dispatchEvent(arrowDown);
-      expect(expandedNavigation(arrowDown)).toBe(true);
+      expect(isExpandedNavigationEvent(arrowDown)).toBe(true);
       component.removeAttribute('expanded');
       rootStart.dispatchEvent(arrowDown);
-      expect(expandedNavigation(arrowDown)).toBe(false);
+      expect(isExpandedNavigationEvent(arrowDown)).toBe(false);
     });
   });
 

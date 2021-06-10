@@ -5,9 +5,9 @@
  */
 
 import '@cds/core/navigation/register.js';
-import { getElementStorybookArgs, getElementStorybookArgTypes, spreadProps } from '@cds/core/internal';
+import { getElementStorybookArgTypes } from '@cds/core/internal';
 import customElements from '../../dist/core/custom-elements.json';
-import { html } from 'lit-html';
+import { html } from 'lit';
 import { CdsNavigation } from '@cds/core/navigation';
 import { CdsNavigationGroup } from '@cds/core/navigation';
 import { CdsIcon } from '@cds/core/icon';
@@ -25,29 +25,29 @@ export default {
   },
 };
 
-export function API(args: any) {
-  return html`
-    <div style="height: 375px" cds-layout="horizontal gap:md align:vertical-stretch wrap:none">
-      <cds-navigation expanded ...="${spreadProps(getElementStorybookArgs(args))}">
-        <cds-navigation-start>Navigation toggle button</cds-navigation-start>
-        <cds-navigation-item><a>Root item one</a></cds-navigation-item>
-        <cds-navigation-item><a>Root item two</a></cds-navigation-item>
-        <cds-navigation-item><a>Root item three</a></cds-navigation-item>
-        <cds-navigation-item><a>Root item four</a></cds-navigation-item>
-        <cds-navigation-group expanded>
-          <cds-navigation-start>Group toggle button</cds-navigation-start>
-          <cds-navigation-item><a>Group item one</a></cds-navigation-item>
-          <cds-navigation-item><a>Group item two</a></cds-navigation-item>
-          <cds-navigation-item><a>Group item three</a></cds-navigation-item>
-          <cds-navigation-item><a>Group item four</a></cds-navigation-item>
-        </cds-navigation-group>
-      </cds-navigation>
-      <cds-demo layout style="height: 100%; width:  100%;">
-        <a href="#">I'm tabbable content</a>
-      </cds-demo>
-    </div>
-  `;
-}
+// export function API(args: any) {
+//   return html`
+//     <div style="height: 375px" cds-layout="horizontal gap:md align:vertical-stretch wrap:none">
+//       <cds-navigation expanded ...="${spreadProps(getElementStorybookArgs(args))}">
+//         <cds-navigation-start>Navigation toggle button</cds-navigation-start>
+//         <cds-navigation-item><a>Root item one</a></cds-navigation-item>
+//         <cds-navigation-item><a>Root item two</a></cds-navigation-item>
+//         <cds-navigation-item><a>Root item three</a></cds-navigation-item>
+//         <cds-navigation-item><a>Root item four</a></cds-navigation-item>
+//         <cds-navigation-group expanded>
+//           <cds-navigation-start>Group toggle button</cds-navigation-start>
+//           <cds-navigation-item><a>Group item one</a></cds-navigation-item>
+//           <cds-navigation-item><a>Group item two</a></cds-navigation-item>
+//           <cds-navigation-item><a>Group item three</a></cds-navigation-item>
+//           <cds-navigation-item><a>Group item four</a></cds-navigation-item>
+//         </cds-navigation-group>
+//       </cds-navigation>
+//       <cds-demo layout style="height: 100%; width:  100%;">
+//         <a href="#">I'm tabbable content</a>
+//       </cds-demo>
+//     </div>
+//   `;
+// }
 
 export function verticalBasic() {
   return html`

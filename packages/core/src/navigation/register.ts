@@ -19,8 +19,9 @@ import { CdsNavigation, CdsNavigationTagName } from './navigation.element.js';
 import { CdsNavigationGroup, CdsNavigationGroupTagName } from './navigation-group.element.js';
 import { CdsNavigationStart, CdsNavigationStartTagName } from './navigation-start.element.js';
 import { CdsNavigationItem, CdsNavigationItemTagName } from './navigation-item.element.js';
-import { ClarityIcons, angleDoubleIcon } from '@cds/core/icon';
+import { ClarityIcons, angleIcon, angleDoubleIcon } from '@cds/core/icon';
 
+ClarityIcons.addIcons(angleIcon);
 ClarityIcons.addIcons(angleDoubleIcon);
 ClarityMotion.add(AnimationNavigationGroupOpenName, AnimationNavigationGroupOpenConfig);
 ClarityMotion.add(AnimationNavigationOpenName, AnimationNavigationOpenConfig);

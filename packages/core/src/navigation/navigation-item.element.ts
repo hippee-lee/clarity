@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, LitElement, PropertyValues } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit';
 import {
   baseStyles,
   createId,
@@ -12,21 +12,39 @@ import {
   EventEmitter,
   i18n,
   I18nService,
-  internalProperty,
+  state,
   property,
   querySlot,
   querySlotAll,
   setAttributes,
   spanWrapper,
+  addSpanClass,
 } from '@cds/core/internal';
-import { styles } from './navigation-item.element.css.js';
-import { NavigationLayout } from './interfaces/navigation-layout.interface.js';
-import { DEFAULT_NAVIGATION_LAYOUT, manageScreenReaderElements, NAVIGATION_ITEM_TEXT } from './utils/index.js';
+import styles from './navigation-item.element.scss';
+import { manageScreenReaderElements, NAVIGATION_ITEM_TEXT } from './utils/index.js';
 import { CdsIcon } from '@cds/core/icon';
-import { FocusableItem } from './interfaces/focusable-item.interface.js';
+import { FocusableItem, NavigationFocusState } from './interfaces/navigation.interfaces.js';
 
 export const CdsNavigationItemTagName = 'cds-navigation-item';
 
+/**
+ * ```typescript
+ * import '@cds/core/navigation/register.js';
+ * ```
+ *
+ * ```html
+ *  <cds-navigation-item><a href="/home">Home</cds-navigation-item>
+ * ```
+ *
+ * @beta
+ * @element cds-navigation-item
+ * @cssprop --color
+ * @cssprop --font-size
+ * @cssprop --font-weight
+ * @cssprop --letter-spacing
+ * @cssprop --padding
+ * @slot
+ */
 export class CdsNavigationItem extends LitElement implements FocusableItem {
   @event() activeChange: EventEmitter<boolean>;
 
@@ -34,7 +52,7 @@ export class CdsNavigationItem extends LitElement implements FocusableItem {
 
   @i18n() i18n = I18nService.keys.navigation;
 
-  @internalProperty({ type: Boolean, reflect: true })
+  @state({ type: Boolean, reflect: true })
   protected expandedGroup = true;
 
   @property({ type: Boolean, reflect: true })
@@ -50,13 +68,10 @@ export class CdsNavigationItem extends LitElement implements FocusableItem {
   groupItem: boolean;
 
   @property({ type: Boolean, reflect: true })
-  hasFocus = false;
+  hasFocus: NavigationFocusState = false;
 
   @property({ type: String, reflect: true, attribute: 'id' })
   id: string = createId();
-
-  @property({ type: String })
-  layout: NavigationLayout = DEFAULT_NAVIGATION_LAYOUT;
 
   @querySlot('a')
   focusElement: HTMLElement;
@@ -69,8 +84,12 @@ export class CdsNavigationItem extends LitElement implements FocusableItem {
 
   firstUpdated() {
     this.childNodes.forEach(child => {
-      spanWrapper(child.childNodes, NAVIGATION_ITEM_TEXT);
-      child.childNodes.forEach(grandChild => spanWrapper(grandChild.childNodes, NAVIGATION_ITEM_TEXT));
+      spanWrapper(child.childNodes);
+      addSpanClass(child.childNodes, NAVIGATION_ITEM_TEXT);
+      child.childNodes.forEach(grandChild => {
+        spanWrapper(grandChild.childNodes);
+        addSpanClass(grandChild.childNodes, NAVIGATION_ITEM_TEXT);
+      });
     });
   }
 
@@ -79,7 +98,7 @@ export class CdsNavigationItem extends LitElement implements FocusableItem {
       <div
         role="listitem"
         class="private-host ${this.groupItem ? 'group-item' : ''}"
-        cds-layout="horizontal align:stretch"
+        cds-layout="horizontal align:horizontal-stretch wrap:none"
       >
         <slot></slot>
       </div>

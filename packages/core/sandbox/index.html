@@ -9,26 +9,151 @@
       type="image/svg+xml"
     />
     <link href="./index.css" rel="stylesheet" />
+    <style>
+      .override {
+        /*--background: lightgray;*/
+        /*--color: darkred;*/
+        /*--line-height: 5rem;*/
+        /*--collapsed-width: 4rem;*/
+        /*--expanded-width: 19rem;*/
+        /*--font-size: 1.9rem;*/
+        /*--font-weight: 700 ;*/
+        /*--letter-spacing: 1.5;*/
+        /*--navigation-padding: 0 0;*/
+      }
+    </style>
   </head>
-  <body cds-theme="dark" cds-text="body">
-    <section cds-layout="vertical gap:lg p:xl container:sm container:center">
-      <h1 cds-text="heading">Clarity Core Sandbox</h1>
+  <body cds-theme="light" cds-text="body">
+    <article cds-layout="vertical align:stretch">
+      <header class="demo-header" cds-layout="p:md p@md:lg">
+        header
+      </header>
+      <div cds-layout="horizontal align:vertical-stretch wrap:none" style="height: calc(100vh - 75px);">
+        <cds-navigation class="override">
+          <cds-navigation-start>
+            Start Text
+          </cds-navigation-start>
+          <cds-navigation-item disabled>
+            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
+          </cds-navigation-item>
+          <cds-divider></cds-divider>
+          <cds-navigation-group expanded active id="group1">
+            <cds-navigation-start>
+              <cds-icon shape="user" size="sm"></cds-icon>
+              Group One
+            </cds-navigation-start>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="user" size="sm"></cds-icon>
+                Navigation One
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="bolt" size="sm"></cds-icon>
+                Navigation Two
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item active>
+              <a href="#">
+                <cds-icon shape="sad-face" size="sm"></cds-icon>
+                Navigation Active
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="shield" size="sm"></cds-icon>
+                Navigation Selected
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item disabled>
+              <a href="#">
+                <cds-icon shape="certificate" size="sm"></cds-icon>
+                Navigation Disabled
+              </a>
+            </cds-navigation-item>
+          </cds-navigation-group>
+          <cds-navigation-group id="group2">
+            <cds-navigation-start>
+              <cds-icon shape="user" size="sm"></cds-icon>
+              Group One
+            </cds-navigation-start>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="user" size="sm"></cds-icon>
+                Navigation One
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item disabled>
+              <a href="#">
+                <cds-icon shape="bolt" size="sm"></cds-icon>
+                Navigation Two
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="sad-face" size="sm"></cds-icon>
+                Navigation Active
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item>
+              <a href="#">
+                <cds-icon shape="shield" size="sm"></cds-icon>
+                Navigation Selected
+              </a>
+            </cds-navigation-item>
+            <cds-navigation-item disabled>
+              <a href="#">
+                <cds-icon shape="certificate" size="sm"></cds-icon>
+                Navigation Disabled
+              </a>
+            </cds-navigation-item>
+          </cds-navigation-group>
+          <cds-divider></cds-divider>
+          <cds-navigation-item cds-layout="align:bottom">
+            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
+          </cds-navigation-item>
+          <cds-navigation-item slot="cds-navigation-end">
+            <a href="#">
+              <cds-icon shape="cog" size="sm"></cds-icon>
+              nav end slot
+            </a>
+          </cds-navigation-item>
+        </cds-navigation>
+        <cds-divider class="demo-divider" orientation="vertical"></cds-divider>
+        <div cds-layout="vertical align:stretch">
+          <div class="demo-content demo-scrollable-content">
+            <div cds-layout="vertical gap:md p:lg">
+              ,
+            </div>
+          </div>
+          <cds-divider class="demo-divider"></cds-divider>
+          <footer class="demo-footer" cds-layout="p-y:md p-x:lg">footer</footer>
+        </div>
+      </div>
+    </article>
 
-      <p cds-text="body">
-        This is a sandbox enviroment that allows you to test your component locally. All imports will automatically be
-        mapped to the local <code cds-text="code">dist</code> output of the build.
-      </p>
+    <!--  <section cds-layout="vertical gap:lg p:xl container:sm container:center">-->
+    <!--      <h1 cds-text="heading">Clarity Core Sandbox</h1>-->
 
-      <cds-alert status="warning">Do not commit sandbox changes to source control.</cds-alert>
+    <!--      <p cds-text="body">-->
+    <!--        This is a sandbox enviroment that allows you to test your component locally. All imports will automatically be-->
+    <!--        mapped to the local <code cds-text="code">dist</code> output of the build.-->
+    <!--      </p>-->
 
-      <cds-button status="primary">Hello There</cds-button>
+    <!--      <cds-alert status="warning">Do not commit sandbox changes to source control.</cds-alert>-->
 
-      <cds-alert-group status="danger" hidden>
-        <cds-alert closable>
-          General Kenobi, you are a bold one...
-        </cds-alert>
-      </cds-alert-group>
-    </section>
+    <!--      <cds-button status="primary">Hello There</cds-button>-->
+
+    <!--      <cds-alert-group status="danger" hidden>-->
+    <!--        <cds-alert closable>-->
+    <!--          General Kenobi, you are a bold one...-->
+    <!--        </cds-alert>-->
+    <!--      </cds-alert-group>-->
+    <!--    </section>-->
 
     <script type="module" src="./index.js"></script>
   </body>

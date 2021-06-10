@@ -10,7 +10,6 @@
   --animation-duration: #{$cds-global-animation-duration-secondary};
   --animation-easing: #{$cds-global-animation-easing-primary};
   --background: inherit;
-  width: 100%;
 }
 
 .navigation-group-items {
@@ -45,10 +44,6 @@
 
 .group-items-container,
 .group-items-wrapper {
-  width: 100%;
-}
-
-.navigation-group-start {
   width: 100%;
 }
 

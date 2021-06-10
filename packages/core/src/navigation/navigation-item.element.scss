@@ -7,13 +7,12 @@
 @import './../styles/tokens/generated/index';
 
 :host {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  letter-spacing: var(--letter-spacing);
-  //background: var(--background);
-  line-height: var(--line-height);
-  width: 100%;
+  --color: inherit;
+  --line-height: inherit;
+  --font-size: inherit;
+  --font-weight: inherit;
+  --letter-spacing: inherit;
+  --padding: inherit;
 }
 
 :host(:not([expanded])) {
@@ -37,13 +36,18 @@
 :host([disabled]) {
   --color: #{$cds-alias-object-interaction-color-disabled};
 
+  // disabled items should not respond to hover
   &:hover {
-    --background: inherit; // conflicts with the container element bg
+    --background: inherit;
   }
 
   ::slotted(a) {
     cursor: not-allowed;
   }
+}
+
+:host([group-item]) {
+  padding: var(--padding);
 }
 
 ::slotted([cds-layout~='align:bottom']) {
@@ -54,14 +58,21 @@
   margin-left: auto !important;
 }
 
-::slotted(a) {
-  padding: var(--navigation-padding);
-  color: var(--color);
-  text-decoration: none;
+::slotted(cds-icon) {
+  color: inherit;
 }
 
-.group-item {
-  ::slotted(a) {
-    padding: var(--group-item-padding);
-  }
+::slotted(a) {
+  color: var(--color);
+  padding: var(--padding);
+  text-decoration: none;
+  outline: none;
+}
+
+.private-host {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  width: 100%;
 }

@@ -1,19 +1,26 @@
-import { Meta, Props, Story, Preview, API } from '@storybook/addon-docs/blocks';
-import { html, LitElement } from 'lit-element';
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html, LitElement } from 'lit';
 import '@cds/core/navigation/register.js';
 
 <Meta title="Components/Navigation" />
+
+<cds-alert-group status="warning" cds-layout="m-b:lg">
+  <cds-alert>
+    This component or utility is offered as a preview. This means we are currently working on it and seeking feedback.
+    Please be aware that this component or utility may have breaking changes before we finish working on it.
+  </cds-alert>
+</cds-alert-group>
 
 # Navigation
 
 A sound navigation layout offers a high degree of discoverability and feedback, letting users know where they are at all
 times and ensuring they can easily get to where they want to go.
 
-Navigation enables discoverability and feedback forms users. It lets them know where they are at all times and ensures
+Navigation enables discoverability and feedback from users. It lets them know where they are at all times and ensures
 they can easily get where they want to go.
 
-Core navigation includes features that enables developers to create multiple navigation layouts from one component that
-facilitates a variety of use cases. The current beta version of navigation ships with the default layout (vertical).
+Core navigation provides vertical navigation elements with the following features that can be used to organize
+application navigation patterns before users to find application content.
 
 ## Installation
 

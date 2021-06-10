@@ -4,8 +4,9 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, LitElement, PropertyValues, TemplateResult } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit';
 import {
+  addSpanClass,
   baseStyles,
   createId,
   Directions,
@@ -16,16 +17,10 @@ import {
   querySlotAll,
   spanWrapper,
 } from '@cds/core/internal';
-import { styles } from './navigation-start.element.css.js';
-import { NavigationLayout } from './interfaces/navigation-layout.interface.js';
-import {
-  DEFAULT_NAVIGATION_LAYOUT,
-  getToggleIconDirection,
-  manageScreenReaderElements,
-  NAVIGATION_ITEM_TEXT,
-} from './utils/index.js';
+import styles from './navigation-start.element.scss';
+import { getToggleIconDirection, manageScreenReaderElements, NAVIGATION_ITEM_TEXT } from './utils/index.js';
 import { CdsIcon } from '@cds/core/icon';
-import { FocusableItem } from './interfaces/focusable-item.interface.js';
+import { FocusableItem, NavigationExpandedState, NavigationFocusState } from './interfaces/navigation.interfaces.js';
 
 export const CdsNavigationStartTagName = 'cds-navigation-start';
 
@@ -37,50 +32,42 @@ export const CdsNavigationStartTagName = 'cds-navigation-start';
  * ```
  *
  * ```html
- * <cds-navigation-start>
- *
- * </cds-navigation-start>
+ * <cds-navigation-start>Start text</cds-navigation-start>
  * ```
- *
+ * @beta
  * @element cds-navigation-start
+ * @cssprop --color: inherit
+ * @cssprop --line-height: inherit
+ * @cssprop --font-size: inherit
+ * @cssprop --font-weight: inherit
  * @slot
- * @slot cds-navigation-start-icon
+ * @slot cds-navigation-start-icon - customize the default start toggle icon
  */
 export class CdsNavigationStart extends LitElement implements FocusableItem {
   @i18n() i18n = I18nService.keys.navigation;
 
   /**
    * @desc
-   * Used to render the correct template for layout. Default is vertical. Will stay protected even
-   * after horizontal, sub and responsive layouts are added.
-   *
-   * @public
-   */
-  @property({ type: String })
-  layout: NavigationLayout = DEFAULT_NAVIGATION_LAYOUT;
-
-  /**
-   * @desc
-   * Describes the state of a vertical layout navigation element.
+   * Describes the groups expanded state
    *
    * @public
    */
   @property({ type: Boolean })
-  expanded = false;
+  expanded: NavigationExpandedState = false;
 
   /**
    * @desc
    * Synced down from the root navigation element. Determines if the vertical navigation is wide or narrow.
    */
   @property({ type: Boolean })
-  expandedRoot = false;
+  expandedRoot: NavigationExpandedState = false;
 
   /**
    * @desc
    * Is set to true by the root cds-navigation element when the instance is focused.
    */
   @property({ type: Boolean, reflect: true })
-  hasFocus = false;
+  hasFocus: NavigationFocusState = false;
 
   /**
    * @desc
@@ -118,68 +105,50 @@ export class CdsNavigationStart extends LitElement implements FocusableItem {
     if (button) {
       this.focusElement = button;
     }
-    spanWrapper(this.childNodes, NAVIGATION_ITEM_TEXT);
+    spanWrapper(this.childNodes);
+    addSpanClass(this.childNodes, NAVIGATION_ITEM_TEXT);
   }
 
-  private internalGroupStart(): TemplateResult {
-    return html`
-      <button
-        aria-expanded="${this.expanded}"
-        cds-layout="horizontal align:stretch align:vertical-center"
-        class="group-start-action"
-        id="${this.navigationGroupId}"
-        type="button"
-      >
-        <div cds-layout="horizontal align:vertical-center">
-          <span>
-            <slot></slot>
-          </span>
-          <span class="icon-slot" cds-layout="${this.expandedRoot && this.isGroupStart ? 'align:right' : 'align:left'}">
-            <slot name="cds-icon-slot">
-              ${this.startIcon
-                ? ''
-                : html`<cds-icon
-                    size="${!this.expandedRoot && this.isGroupStart ? 'xs' : 'sm'}"
-                    shape="${this.isGroupStart ? 'angle' : 'angle-double'}"
-                    direction="${this.toggleIconDirection}"
-                  >
-                  </cds-icon>`}
-            </slot>
-          </span>
-        </div>
-      </button>
-    `;
+  private getGroupIconAlignment() {
+    return this.expandedRoot && this.isGroupStart ? 'align:right' : 'align:left';
   }
 
-  private internalRootStart(): TemplateResult {
-    return html`
-      <button class="root-start-action" cds-layout="horizontal align:vertical-center" role="switch" type="button">
-        <span>
-          <slot></slot>
-        </span>
-        <span class="icon-slot" cds-layout="${this.expandedRoot && !this.isGroupStart ? 'align:right' : 'align:left'}">
-          <slot name="cds-icon-slot">
-            ${this.startIcon
-              ? ''
-              : html`<cds-icon
-                  size="${!this.expandedRoot && this.isGroupStart ? 'xs' : 'sm'}"
-                  shape="${this.isGroupStart ? 'angle' : 'angle-double'}"
-                  direction="${this.toggleIconDirection}"
-                >
-                </cds-icon>`}
-          </slot>
-        </span>
-        <label cds-layout="display:screen-reader-only" for="cds-navigation">
-          ${this.expandedRoot ? this.i18n.navigationUnabridgedText : this.i18n.navigationAbridgedText}</label
-        >
-      </button>
-    `;
+  private getRootIconAlignment() {
+    return this.expandedRoot && !this.isGroupStart ? 'align:right' : 'align:left';
   }
 
   render() {
     return html`
       <div class="private-host">
-        ${this.isGroupStart ? this.internalGroupStart() : this.internalRootStart()}
+        <button
+          aria-expanded="${this.expanded}"
+          cds-layout="horizontal align:stretch align:vertical-center"
+          class="private-host"
+          id="${this.isGroupStart ? this.navigationGroupId : ''}"
+          type="button"
+          part="start-button"
+        >
+          <div cds-layout="horizontal align:vertical-center">
+            <span>
+              <slot></slot>
+            </span>
+            <span
+              class="icon-slot"
+              cds-layout="${this.isGroupStart ? this.getGroupIconAlignment() : this.getRootIconAlignment()}"
+            >
+              <slot name="cds-icon-slot">
+                ${this.startIcon
+                  ? ''
+                  : html`<cds-icon
+                      size="${!this.expandedRoot && this.isGroupStart ? 'xs' : 'sm'}"
+                      shape="${this.isGroupStart ? 'angle' : 'angle-double'}"
+                      direction="${this.toggleIconDirection}"
+                    >
+                    </cds-icon>`}
+              </slot>
+            </span>
+          </div>
+        </button>
       </div>
     `;
   }

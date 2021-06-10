@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, LitElement, PropertyValues } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit';
 import {
   Animatable,
   animate,
@@ -13,8 +13,7 @@ import {
   EventEmitter,
   i18n,
   I18nService,
-  id,
-  internalProperty,
+  state,
   isVisible,
   onKey,
   property,
@@ -23,31 +22,32 @@ import {
   reverseAnimation,
   setAttributes,
   syncProps,
+  onKeyCombo,
 } from '@cds/core/internal';
-import { styles } from './navigation.element.css.js';
+import styles from './navigation.element.scss';
 
 import {
   DEFAULT_NAVIGATION_LAYOUT,
-  expandedGroupEvent,
+  isExpandedGroupEvent,
   fireGroupExpandedChangeEvent,
   FocusableElement,
   getNextFocusElement,
   getPreviousFocusElement,
   getStartGroupElement,
-  isRootStart,
+  isRootStartEvent,
   isGroupItemEvent,
   isGroupStartEvent,
   removeFocus,
   setFocus,
   visibleElement,
-  expandedNavigation,
+  isExpandedNavigationEvent,
 } from './utils/index.js';
-import { NavigationLayout } from './interfaces/navigation-layout.interface.js';
 import { CdsNavigationGroup } from './navigation-group.element.js';
 import { CdsNavigationStart } from './navigation-start.element.js';
 import { CdsNavigationItem } from './navigation-item.element.js';
 import { CdsDivider } from '@cds/core/divider/index.js';
 import { AnimationNavigationOpenName } from '../internal/motion/animations/cds-navigation-open.js';
+import { NavigationExpandedState } from './interfaces/navigation.interfaces';
 
 export const CdsNavigationTagName = 'cds-navigation';
 
@@ -65,21 +65,22 @@ export const CdsNavigationTagName = 'cds-navigation';
  *
  * @beta
  * @element cds-navigation
- * @slot
- * @slot - cds-navigation-substart
- * @slot - cds-navigation-end
- * @cssprop --background-color
- * @cssprop --color
+ * @event expandedChange - notify when the user has clicked the navigation expand/collapse button
+ * @event cdsMotionChange - notify when a motion is started or ended
+ * @cssprop --animation-duration
+ * @cssprop --animation-easing
+ * @cssprop --background
  * @cssprop --collapsed-width
- * @cssprop --divider-color
  * @cssprop --expanded-width
  * @cssprop --font-size
  * @cssprop --font-weight
- * @cssprop --group-item-padding
- * @cssprop --horizontal-height
- * @cssprop --letter-spacing˚
+ * @cssprop --letter-spacing
  * @cssprop --line-height
- * @cssprop --navigation-padding
+ * @cssprop --nested-padding
+ * @cssprop --padding
+ * @slot
+ * @slot - cds-navigation-substart - project content below the navigation toggle button
+ * @slot - cds-navigation-end - project content below the scrollable section
  */
 @animate({
   expanded: {
@@ -94,12 +95,10 @@ export class CdsNavigation extends LitElement implements Animatable {
   cdsMotion = 'on';
 
   @event()
+  protected expandedChange: EventEmitter<boolean>;
+
+  @event()
   cdsMotionChange: EventEmitter<string>;
-
-  @event() protected expandedChange: EventEmitter<boolean>;
-
-  // TODO: why do I need this? What happens when I comment it out?
-  @id() uniqId: string;
 
   /**
    * This is used to sync down the information to this.navigationGroupItems
@@ -107,23 +106,14 @@ export class CdsNavigation extends LitElement implements Animatable {
    * @type { boolean }
    * @protected
    */
-  @internalProperty({ type: Boolean })
+  @state({ type: Boolean })
   protected groupItem = true;
 
   /**
    * Set and update the aria-active descended value onto the navigation.
    */
   @property({ type: String, reflect: true, attribute: 'aria-activedescendant' })
-  ariaActiveDescendant: string;
-  /**
-   *
-   * Used to set up child element layouts. When horizontal et. al are added this will need to reflect.
-   *
-   * @type { NavigationLayout }
-   *
-   */
-  @property({ type: String })
-  layout: NavigationLayout = DEFAULT_NAVIGATION_LAYOUT;
+  ariaActiveDescendant: any;
 
   /**
    *
@@ -133,9 +123,8 @@ export class CdsNavigation extends LitElement implements Animatable {
 
    * @type {boolean}
    */
-  // State of the abridged / unabridged (old expanded/collapsed)
   @property({ type: Boolean })
-  expanded = false;
+  expanded: NavigationExpandedState = false;
 
   @i18n() i18n = I18nService.keys.navigation;
 
@@ -145,7 +134,6 @@ export class CdsNavigation extends LitElement implements Animatable {
   @querySlot('[slot="cds-navigation-end"]', { assign: 'cds-navigation-end' })
   protected navigationEnd: HTMLElement;
 
-  // List for managing arrow key navigation of the component
   /**
    * This slot query is used to identify and manage all focusable elements needed for arrow key navigation
    */
@@ -200,6 +188,14 @@ export class CdsNavigation extends LitElement implements Animatable {
   @querySlotAll('cds-navigation-group')
   protected navigationGroupRefs: NodeListOf<CdsNavigationGroup>;
 
+  private destroyAriaActiveDescendant() {
+    console.log('cleanup aria active descendant', event);
+    if (this.currentActiveItem) {
+      removeFocus(this.currentActiveItem);
+      this.ariaActiveDescendant = null;
+    }
+  }
+
   private initAriaActiveDescendant() {
     /**
      * If there is a currentActiveItem, focus on that
@@ -208,12 +204,6 @@ export class CdsNavigation extends LitElement implements Animatable {
     const focusElement = this.currentActiveItem ? this.currentActiveItem : this.allNavigationElements[0];
     setFocus(focusElement);
     this.ariaActiveDescendant = focusElement.id;
-  }
-
-  private blurActiveElement() {
-    if (this.currentActiveItem) {
-      removeFocus(this.currentActiveItem);
-    }
   }
 
   /**
@@ -242,6 +232,22 @@ export class CdsNavigation extends LitElement implements Animatable {
    */
   private keyboardNavigationHandler = (e: KeyboardEvent) => {
     const focusableElements = Array.from(this.allNavigationElements).filter(visibleElement);
+
+    // TODO: fix bug with shift+tab not setting current active item tabindex to -1
+    // Has something to do with a race condition, when debugging it ends up with tabindex=-1, when not debugging it stays 0
+    onKeyCombo('shift+tab', e, () => {
+      if (this.currentActiveItem) {
+        removeFocus(this.currentActiveItem);
+        console.log('shift+tab: need to remove tabidx from current active item', this.currentActiveItem);
+      }
+    });
+
+    onKey('tab', e, () => {
+      if (this.currentActiveItem) {
+        removeFocus(this.currentActiveItem);
+      }
+    });
+
     onKey('arrow-down', e, () => {
       if (this.currentActiveItem) {
         removeFocus(this.currentActiveItem);
@@ -262,14 +268,14 @@ export class CdsNavigation extends LitElement implements Animatable {
       }
     });
 
-    // Is it a start and inside a group? is the group not expanded?
-    // trigger the groups expanded change event
     onKey('arrow-right', e, () => {
-      if (isGroupStartEvent(e) && !expandedGroupEvent(e)) {
+      // Is it a start and inside a group? is the group not expanded?
+      // trigger the groups expanded change event
+      if (isGroupStartEvent(e) && !isExpandedGroupEvent(e)) {
         fireGroupExpandedChangeEvent(e);
       }
 
-      if (isRootStart(e) && !expandedNavigation(e)) {
+      if (isRootStartEvent(e) && !isExpandedNavigationEvent(e)) {
         this.toggle();
       }
     });
@@ -280,7 +286,7 @@ export class CdsNavigation extends LitElement implements Animatable {
       // is this a start element inside of a group?
       // is the group expanded?
       // => emit the group expandedChange event
-      if (isGroupStartEvent(e) && expandedGroupEvent(e)) {
+      if (isGroupStartEvent(e) && isExpandedGroupEvent(e)) {
         fireGroupExpandedChangeEvent(e);
       }
 
@@ -293,7 +299,7 @@ export class CdsNavigation extends LitElement implements Animatable {
         setFocus(startGroupParent as FocusableElement);
       }
 
-      if (isRootStart(e) && expandedNavigation(e)) {
+      if (isRootStartEvent(e) && isExpandedNavigationEvent(e)) {
         this.toggle();
       }
     });
@@ -325,10 +331,10 @@ export class CdsNavigation extends LitElement implements Animatable {
     return this.visibleChildren.find(c => c.id === this.ariaActiveDescendant);
   }
 
-  protected get footerTemplate() {
+  protected get endTemplate() {
     return this.navigationEnd
       ? html`
-          <div role="region" class="navigation-end">
+          <div role="region" class="navigation-end" cds-layout="vertical align:horizontal-stretch">
             <slot name="cds-navigation-end"></slot>
           </div>
         `
@@ -338,9 +344,13 @@ export class CdsNavigation extends LitElement implements Animatable {
   protected get startTemplate() {
     let returnHTML;
 
+    // similar to forms, that inherit from the base controller
+    // when I inherit i can override this getter
+    // leaning towards cds-header and cds-subnav
+    // inheritance may not be the best strategy
     this.rootNavigationStart
       ? (returnHTML = html`
-          <div role="region" class="navigation-start" cds-layout="vertical">
+          <div role="region" class="navigation-start" cds-layout="vertical align:horizontal-stretch">
             <slot name="navigation-start"></slot>
             <cds-divider class="start-divider"></cds-divider>
           </div>
@@ -377,8 +387,9 @@ export class CdsNavigation extends LitElement implements Animatable {
     super.connectedCallback();
     this.tabIndex = 0;
     this.addEventListener('focus', this.initAriaActiveDescendant);
+    // this.addEventListener('focusout', this.destroyAriaActiveDescendant);
     this.addEventListener('keydown', this.keyboardNavigationHandler);
-    this.addEventListener('blur', this.blurActiveElement);
+    this.addEventListener('tab', this.destroyAriaActiveDescendant);
     this.addEventListener('expandedChange', event => {
       if (this.currentActiveItem && event.target instanceof CdsNavigationGroup) {
         setFocus(this.currentActiveItem);
@@ -398,16 +409,11 @@ export class CdsNavigation extends LitElement implements Animatable {
       ${this.startTemplate}
       <slot name="cds-navigation-substart"></slot>
       <div class="navigation-body-wrapper" role="list" cds-layout="p-y:xxs">
-        <div
-          class="navigation-body"
-          role="presentation"
-          cds-layout="${this.layout}
-                    wrap:none"
-        >
+        <div class="navigation-body" role="presentation" cds-layout="vertical wrap:none align:horizontal-stretch">
           <slot name="navigation-body"></slot>
         </div>
       </div>
-      ${this.footerTemplate}
+      ${this.endTemplate}
     </nav>`;
   }
 

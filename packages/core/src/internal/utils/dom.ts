@@ -149,14 +149,22 @@ export function isVisible(element: HTMLElement) {
   return !!element && element?.offsetHeight > 0 && element?.hasAttribute('hidden') === false;
 }
 
-export function spanWrapper(nodeList: NodeListOf<ChildNode>, spanClass?: string): void {
+export function spanWrapper(nodeList: NodeListOf<ChildNode>): void {
   Array.from(nodeList)
     .filter(node => node.textContent && node.textContent.trim().length > 0 && node.nodeType === 3 && node.parentElement)
     .forEach(node => {
       const spanWrapper = document.createElement('span');
-      spanClass ? spanWrapper.classList.add('navigation-item-text') : null;
       node.after(spanWrapper);
       spanWrapper.appendChild(node);
+    });
+}
+
+export function addSpanClass(nodeList: NodeListOf<ChildNode>, className: string): void {
+  Array.from(nodeList)
+    .filter(node => node.nodeType === 1)
+    .forEach(node => {
+      const span = node as HTMLElement;
+      span.tagName === 'SPAN' && span.classList.add(className);
     });
 }
 

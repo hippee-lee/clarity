@@ -4,4 +4,12 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-export type NavigationLayout = 'drawer' | 'horizontal' | 'subnav' | 'vertical';
+export interface FocusableItem {
+  id: string;
+  hasFocus: boolean;
+  focusElement: HTMLElement;
+}
+
+export type NavigationExpandedState = true | false;
+
+export type NavigationFocusState = true | false;

@@ -4,32 +4,27 @@
 :host {
   --animation-duration: #{$cds-global-animation-duration-secondary};
   --animation-easing: #{$cds-global-animation-easing-primary};
-  --background-color: #{$cds-alias-object-app-background};
+  --background: #{$cds-alias-object-container-background};
   --color: #{$cds-global-typography-color-500};
   --collapsed-width: var(--cds-global-layout-space-xl);
-  --divider-color: #{$cds-global-color-gray-400};
   --expanded-width: calc(var(--cds-global-space-6) * 20);
+  --line-height: #{$cds-global-space-11};
   --font-size: #{$cds-global-typography-font-size-4};
   --font-weight: #{$cds-global-typography-font-weight-regular};
-  --group-item-padding: 0 #{$cds-global-space-7};
-  --horizontal-height: 3rem;
   --letter-spacing: #{$cds-global-typography-body-letter-spacing};
-  --line-height: #{$cds-global-space-11};
-  --navigation-padding: 0 #{$cds-global-space-4};
-
-  background: var(--background-color);
+  --nested-padding: #{$cds-global-space-4};
+  --padding: 0 #{$cds-global-space-4};
+  // Note: putting height property on .private host doesn't affect component behavior in DOM.
+  // We need to inherit the explicit height of the parent container to get scrolling / cds-layout
+  // behaviors to work.
   height: inherit;
-  width: var(--collapsed-width);
-  min-width: var(--collapsed-width);
 }
 
 :host([expanded]) {
-  width: var(--expanded-width);
-  min-width: var(--expanded-width);
-}
-
-:host([layout='horizontal']) {
-  height: auto;
+  .private-host {
+    width: var(--expanded-width);
+    min-width: var(--expanded-width);
+  }
 }
 
 :host([cds-motion='off']) {
@@ -49,56 +44,6 @@
   transform: none;
 }
 
-:host(:not([_cds-animation-status='ready'])) {
-  ::slotted(cds-navigation-item) {
-    a {
-      border: 1px solid deeppink;
-    }
-  }
-}
-
-.private-host {
-  height: inherit;
-}
-
-:host([layout='horizontal']) {
-  height: var(--cds-navigation-horizontal-height);
-
-  .navigation-body {
-    flex-grow: 1;
-    overflow-x: auto;
-  }
-}
-
-:host([layout='vertical']) {
-  .navigation-start {
-    width: inherit;
-
-    .start-toggle-action {
-      width: 100%;
-    }
-  }
-
-  .navigation-body {
-    height: 100%;
-    width: 100%;
-  }
-
-  .navigation-end {
-    width: 100%;
-  }
-}
-
-::slotted(cds-divider) {
-  margin-top: var(--cds-global-layout-space-xxs);
-}
-
-.navigation-body-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
 ::slotted([cds-layout~='align:bottom']) {
   margin-top: auto !important;
 }
@@ -111,6 +56,20 @@
   width: 100%;
 }
 
-.start-divider {
-  --color: var(--divider-color);
+.private-host {
+  color: var(--color);
+  background: var(--background);
+  height: inherit;
+  width: var(--collapsed-width);
+  min-width: var(--collapsed-width);
+}
+
+.navigation-body {
+  height: 100%;
+}
+
+.navigation-body-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }

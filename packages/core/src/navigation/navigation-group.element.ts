@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, internalProperty, LitElement, PropertyValues } from 'lit-element';
+import { html, LitElement, PropertyValues } from 'lit';
 
 import {
   Animatable,
@@ -21,13 +21,13 @@ import {
   querySlot,
   querySlotAll,
   reverseAnimation,
+  state,
   syncProps,
 } from '@cds/core/internal';
-import { styles } from './navigation-group.element.css.js';
-import { NavigationLayout } from './interfaces/navigation-layout.interface.js';
-import { DEFAULT_NAVIGATION_LAYOUT } from './utils/index.js';
+import styles from './navigation-group.element.scss';
 import { CdsNavigationItem } from './navigation-item.element';
 import { CdsNavigationStart } from './navigation-start.element';
+import { NavigationExpandedState } from './interfaces/navigation.interfaces';
 
 export const CdsNavigationGroupTagName = 'cds-navigation-group';
 
@@ -39,11 +39,19 @@ export const CdsNavigationGroupTagName = 'cds-navigation-group';
  *
  * ```html
  * <cds-navigation-group>
- *
+ *   <cds-navigation-start></cds-navigation-start>
+ *    <cds-navigation-item><a href="/home">Home</cds-navigation-item>
+ *    <cds-navigation-item><a href="/account">Account</cds-navigation-item>
  * </cds-navigation-group>
  * ```
  *
+ * @beta
  * @element cds-navigation-group
+ * @event expandedChange - notify when the user has clicked the navigation expand/collapse button
+ * @event cdsMotionChange - notify when a motion is started or ended
+ * @cssprop --animation-duration
+ * @cssprop --animation-easing
+ * @cssprop --background
  * @slot
  */
 @animate({
@@ -57,10 +65,10 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
   cdsMotion = 'on';
 
   @event()
-  cdsMotionChange: EventEmitter<string>;
+  expandedChange: EventEmitter<boolean>;
 
   @event()
-  expandedChange: EventEmitter<boolean>;
+  cdsMotionChange: EventEmitter<string>;
 
   /**
    * @desc
@@ -82,7 +90,7 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
    *
    * @private
    */
-  @internalProperty()
+  @state()
   private get isGroupStart(): boolean {
     return !!this.groupStart;
   }
@@ -93,13 +101,10 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
    * active item.
    */
   @property({ type: String, reflect: true, attribute: 'id' })
-  id: string = createId();
-
-  @internalProperty()
-  protected layout: NavigationLayout = DEFAULT_NAVIGATION_LAYOUT;
+  id = createId();
 
   @property({ type: Boolean, reflect: true })
-  expanded = false;
+  expanded: NavigationExpandedState = false;
 
   @property({ type: Boolean })
   active: boolean;
@@ -109,9 +114,11 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
    * The value of this property is passed down to start and item children. It is used to query for visible items when
    * managing focus with key events in the root cds-navigation element.
    *
+   * Note: eslint-disable  @typescript-eslint/no-unused-vars isn't ignoring the line
+   // eslint error happens because the value is set but never read.
+
    * @private
    */
-  // Note: eslint-disable  @typescript-eslint/no-unused-vars isn't ignoring the line
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   private expandedGroup = false;
@@ -135,23 +142,19 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
   @querySlotAll(':scope > cds-navigation-group', { assign: 'group-items' })
   protected nestedGroups: NodeListOf<CdsNavigationItem>;
 
-  protected get itemsTemplate() {
-    return html` <div
-      class="navigation-group-items"
-      aria-expanded="${this.expanded}"
-      cds-layout="vertical wrap:none p:xxs"
-    >
-      <slot name="group-items"></slot>
-    </div>`;
-  }
-
   render() {
     return html`
-      <div role="listitem" class="private-host" cds-layout="vertical wrap:none">
+      <div role="listitem" class="private-host" cds-layout="vertical wrap:none align:horizontal-stretch">
         <slot name="group-start"></slot>
         <div role="region" class="group-items-wrapper" aria-labelledby="${this.navigationGroupId}">
           <div role="list" class="group-items-container">
-            ${this.itemsTemplate}
+            <div
+              class="navigation-group-items"
+              aria-expanded="${this.expanded}"
+              cds-layout="vertical wrap:none p:xxs align:horizontal-stretch"
+            >
+              <slot name="group-items"></slot>
+            </div>
           </div>
         </div>
       </div>
@@ -176,7 +179,6 @@ export class CdsNavigationGroup extends LitElement implements Animatable {
 
   updated(props: PropertyValues<this>) {
     super.updated(props);
-
     if (props.has('expanded')) {
       this.expandedGroup = this.expanded;
     }
