@@ -10,7 +10,36 @@ import customElements from '../../dist/core/custom-elements.json';
 import { html } from 'lit';
 import { CdsNavigation } from '@cds/core/navigation';
 import { CdsNavigationGroup } from '@cds/core/navigation';
-import { CdsIcon } from '@cds/core/icon/icon.element.js';
+
+import '@cds/core/icon/register.js';
+import { ClarityIcons } from '@cds/core/icon/icon.service.js';
+
+import {
+  CdsIcon,
+  applicationsIcon,
+  cogIcon,
+  dashboardIcon,
+  dollarIcon,
+  fileIcon,
+  helpInfoIcon,
+  lineChartIcon,
+  userIcon,
+  imageIcon,
+  homeIcon,
+} from '@cds/core/icon';
+
+ClarityIcons.addIcons(
+  applicationsIcon,
+  cogIcon,
+  dashboardIcon,
+  dollarIcon,
+  fileIcon,
+  helpInfoIcon,
+  lineChartIcon,
+  imageIcon,
+  homeIcon,
+  userIcon
+);
 
 export default {
   title: 'Stories/Navigation',
@@ -426,118 +455,107 @@ export function navigationGroups() {
       navigation.expanded = !navigation.expanded;
     },
   };
-
   const onExpandGroupChange = {
     handleEvent(e: Event) {
       const group = e.target as CdsNavigationGroup;
       group.expanded = !group.expanded;
     },
   };
-
-  return html`
+  const demo = html`
     <div style="height: 500px" cds-layout="vertical gap:md">
-      <a href="#">I'm tabbable</a>
+      <a href="#">
+        <cds-icon shape="image" solid size="xl"></cds-icon>
+        Application Inc.
+      </a>
       <div cds-layout="horizontal wrap:none" style="height: 100%">
-        <cds-navigation @expandedChange="${onExpandChange}">
-          <cds-navigation-start>
-            Start Text
-          </cds-navigation-start>
-          <cds-navigation-item disabled>
-            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
-          </cds-navigation-item>
+        <cds-navigation expanded @expandedChange="${onExpandChange}">
+          <cds-navigation-start></cds-navigation-start>
           <cds-navigation-item>
-            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
+            <a href="#" cds-layout="horizontal align:vertical-center gap:md">
+              <cds-icon cds-layout="m-y:md" shape="home" size="sm"></cds-icon>
+              Home
+            </a>
           </cds-navigation-item>
-          <cds-divider></cds-divider>
-          <cds-navigation-group expanded active @expandedChange="${onExpandGroupChange}">
+          <cds-navigation-group @expandedChange="${onExpandGroupChange}">
             <cds-navigation-start>
-              <cds-icon shape="user" size="sm"></cds-icon>
-              Group One
+              <cds-icon cds-layout="m-y:md m-r:md" shape="applications" size="sm"></cds-icon>
+              Account
             </cds-navigation-start>
             <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="user" size="sm"></cds-icon>
-                Navigation One
+                <cds-icon shape="dashboard" size="sm"></cds-icon>
+                Dashboard
               </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="bolt" size="sm"></cds-icon>
-                Navigation Two
-              </a>
-            </cds-navigation-item>
-            <cds-navigation-item active>
-              <a href="#">
-                <cds-icon shape="sad-face" size="sm"></cds-icon>
-                Navigation Active
+                <cds-icon shape="line-chart" size="sm"></cds-icon>
+                Analytics
               </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="shield" size="sm"></cds-icon>
-                Navigation Selected
-              </a>
-            </cds-navigation-item>
-            <cds-navigation-item disabled>
-              <a href="#">
-                <cds-icon shape="certificate" size="sm"></cds-icon>
-                Navigation Disabled
+                <cds-icon shape="dollar" size="sm"></cds-icon>
+                Billing
               </a>
             </cds-navigation-item>
           </cds-navigation-group>
           <cds-navigation-group @expandedChange="${onExpandGroupChange}">
             <cds-navigation-start>
-              <cds-icon shape="user" size="sm"></cds-icon>
-              Group One
+              <cds-icon cds-layout="m-y:md m-r:md" shape="user" size="sm"></cds-icon>
+              People
             </cds-navigation-start>
-            <cds-navigation-item cds-layout="align:horizontal-center">
+            <cds-navigation-item>
               <a href="#">
                 <cds-icon shape="user" size="sm"></cds-icon>
-                Navigation One
-              </a>
-            </cds-navigation-item>
-            <cds-navigation-item disabled>
-              <a href="#">
-                <cds-icon shape="bolt" size="sm"></cds-icon>
-                Navigation Two
+                Matthew
               </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="sad-face" size="sm"></cds-icon>
-                Navigation Active
+                <cds-icon shape="user" size="sm"></cds-icon>
+                Melissa
               </a>
             </cds-navigation-item>
             <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="shield" size="sm"></cds-icon>
-                Navigation Selected
+                <cds-icon shape="user" size="sm"></cds-icon>
+                Harry
               </a>
             </cds-navigation-item>
-            <cds-navigation-item disabled>
+            <cds-navigation-item>
               <a href="#">
-                <cds-icon shape="certificate" size="sm"></cds-icon>
-                Navigation Disabled
+                <cds-icon shape="user" size="sm"></cds-icon>
+                Hermione
               </a>
             </cds-navigation-item>
           </cds-navigation-group>
-          <cds-divider></cds-divider>
-          <cds-navigation-item cds-layout="align:bottom">
-            <a href="#"> <cds-icon shape="user" size="sm"></cds-icon> bottom </a>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal align:vertical-center gap:md">
+              <cds-icon cds-layout="m-y:md" shape="help-info" size="sm"></cds-icon>
+              Help
+            </a>
+          </cds-navigation-item>
+          <cds-navigation-item>
+            <a href="#" cds-layout="horizontal align:vertical-center gap:md">
+              <cds-icon cds-layout="m-y:md" shape="file" size="sm"></cds-icon>
+              Documentation
+            </a>
           </cds-navigation-item>
           <cds-navigation-item slot="cds-navigation-end">
-            <a href="#">
-              <cds-icon shape="cog" size="sm"></cds-icon>
-              nav end slot
+            <a href="#" cds-layout="horizontal align:vertical-center gap:md">
+              <cds-icon cds-layout="m-y:md" shape="cog" size="sm"></cds-icon>
+              Configuration
             </a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-demo layout style="height: 100%; width:  100%;">
-          <a href="#">I'm tabbable content</a>
+          <a href="#">Application content link</a>
         </cds-demo>
       </div>
     </div>
   `;
+  return demo;
 }
 
 /** @website */
